@@ -1,0 +1,9 @@
+D:\Anderson\Proyecto ManejoFondo\ManejoFondo\Fuentes\ManejoFondo\ManejoFondo\bin\Debug\ManejoFondo.exe.config
+D:\Anderson\Proyecto ManejoFondo\ManejoFondo\Fuentes\ManejoFondo\ManejoFondo\bin\Debug\ManejoFondo.exe
+D:\Anderson\Proyecto ManejoFondo\ManejoFondo\Fuentes\ManejoFondo\ManejoFondo\bin\Debug\ManejoFondo.pdb
+D:\Anderson\Proyecto ManejoFondo\ManejoFondo\Fuentes\ManejoFondo\ManejoFondo\obj\Debug\ManejoFondo.csprojResolveAssemblyReference.cache
+D:\Anderson\Proyecto ManejoFondo\ManejoFondo\Fuentes\ManejoFondo\ManejoFondo\obj\Debug\ManejoFondo.Properties.Resources.resources
+D:\Anderson\Proyecto ManejoFondo\ManejoFondo\Fuentes\ManejoFondo\ManejoFondo\obj\Debug\ManejoFondo.csproj.GenerateResource.Cache
+D:\Anderson\Proyecto ManejoFondo\ManejoFondo\Fuentes\ManejoFondo\ManejoFondo\obj\Debug\ManejoFondo.csproj.CoreCompileInputs.cache
+D:\Anderson\Proyecto ManejoFondo\ManejoFondo\Fuentes\ManejoFondo\ManejoFondo\obj\Debug\ManejoFondo.exe
+D:\Anderson\Proyecto ManejoFondo\ManejoFondo\Fuentes\ManejoFondo\ManejoFondo\obj\Debug\ManejoFondo.pdb
