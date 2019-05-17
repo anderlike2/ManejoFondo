@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,8 @@ namespace ManejoFondo
         {
             DominioService dominioService = new DominioService();
             List<FondoDominios> lstDominios = dominioService.ConsultarDominios();
+            label1.Text = lstDominios.FirstOrDefault().V_Codigo;
+            //label1.Text = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "\\BaseDatos\\manejoFondo.sqlite";
         }
     }
 }
