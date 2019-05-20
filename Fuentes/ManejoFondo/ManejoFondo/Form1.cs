@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -23,7 +24,8 @@ namespace ManejoFondo
             try
             {
                 DominioService dominioService = new DominioService();
-                label1.Text = dominioService.ConsultarDominios().FirstOrDefault().V_Codigo;
+                //label1.Text = dominioService.ConsultarDominios().FirstOrDefault().V_Codigo;
+                label1.Text = ConfigurationManager.AppSettings["filepathBaseDatos"];
             }
             catch (Exception ex) {
                 label1.Text = ex.Message;
