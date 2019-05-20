@@ -20,8 +20,15 @@ namespace ManejoFondo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DominioService dominioService = new DominioService();
-            label1.Text = dominioService.ConsultarDominios().FirstOrDefault().V_Codigo;
+            try
+            {
+                DominioService dominioService = new DominioService();
+                label1.Text = dominioService.ConsultarDominios().FirstOrDefault().V_Codigo;
+            }
+            catch (Exception ex) {
+                label1.Text = ex.Message;
+            }
+            
         }
     }
 }
