@@ -10,7 +10,7 @@ namespace ManejoFondo.Services
 {
     public class DominioService
     {
-        public List<FondoDominios> ConsultarDominios()
+        public List<FondoDominiosEntity> ConsultarDominios()
         {
             DominioDao dominioDao = new DominioDao();
             return dominioDao.ConsultarDominios();

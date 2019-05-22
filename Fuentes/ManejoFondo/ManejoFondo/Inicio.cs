@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ManejoFondo
 {
-    static class Program
+    static class Inicio
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
@@ -16,7 +16,7 @@ namespace ManejoFondo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormLogin());
         }
     }
 }

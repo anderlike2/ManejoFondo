@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ManejoFondo.Entities
 {
-    public class FondoDominios
+    /// <summary>
+    /// Clase para el manejo de la tabla FondoDominio
+    /// Autor: Anderson Benavides
+    /// 2019-05-22
+    /// </summary>
+    public class FondoDominiosEntity :  ErrorEntity
     {
         public int N_Id { get; set; }
         public string V_Codigo { get; set; }
