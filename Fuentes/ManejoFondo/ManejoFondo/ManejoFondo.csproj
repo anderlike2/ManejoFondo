@@ -169,6 +169,7 @@
   <ItemGroup>
     <Content Include="Resources\Images\loginBackground.jpg" />
     <Content Include="Resources\Images\loginLogo.png" />
+    <Content Include="Resources\Images\loginLogo2.png" />
     <Content Include="x64\SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
