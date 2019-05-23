@@ -158,6 +158,7 @@
             this.loginButtonAceptar.TabIndex = 6;
             this.loginButtonAceptar.Text = "Aceptar";
             this.loginButtonAceptar.UseVisualStyleBackColor = false;
+            this.loginButtonAceptar.Click += new System.EventHandler(this.Login);
             // 
             // loginPanelLineUsername
             // 

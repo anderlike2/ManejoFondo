@@ -115,10 +115,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\BusinessException.cs" />
+    <Compile Include="Common\Constantes.cs" />
+    <Compile Include="Common\General.cs" />
     <Compile Include="Common\SqlLiteConexion.cs" />
-    <Compile Include="Daos\DominioDao.cs" />
+    <Compile Include="Daos\FondoDominiosDao.cs" />
+    <Compile Include="Daos\FondoLoginDao.cs" />
     <Compile Include="Entities\ErrorEntity.cs" />
+    <Compile Include="Entities\FondoAhorroMensualEntity.cs" />
+    <Compile Include="Entities\FondoAyudaGobEntity.cs" />
     <Compile Include="Entities\FondoDominiosEntity.cs" />
+    <Compile Include="Entities\FondoFamiliaEntity.cs" />
+    <Compile Include="Entities\FondoIngresosEntity.cs" />
+    <Compile Include="Entities\FondoLoginEntity.cs" />
+    <Compile Include="Entities\FondoParametrosEntity.cs" />
+    <Compile Include="Entities\FondoProcUsuarioEntity.cs" />
+    <Compile Include="Entities\FondoUsuarioEntity.cs" />
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,7 +139,8 @@
     </Compile>
     <Compile Include="Inicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DominioService.cs" />
+    <Compile Include="Services\FondoDominiosService.cs" />
+    <Compile Include="Services\FondoLoginService.cs" />
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>

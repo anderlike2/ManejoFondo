@@ -9,8 +9,19 @@ using System.Threading.Tasks;
 
 namespace ManejoFondo.Daos
 {
-    public class DominioDao
+    /// <summary>
+    /// Clase realizar las consultas a la tabla FondoDominios
+    /// Autor: Anderson Benavides
+    /// 2019-05-22
+    /// </summary>
+    public class FondoDominiosDao
     {
+        /// <summary>
+        /// Metodo para consultar todos los dominios
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
         public List<FondoDominiosEntity> ConsultarDominios()
         {
             using (var cnn = SqlLiteConexion.SimpleDbConnection())

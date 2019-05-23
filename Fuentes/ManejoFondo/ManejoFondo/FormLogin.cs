@@ -1,4 +1,6 @@
-﻿using ManejoFondo.Services;
+﻿using ManejoFondo.Common;
+using ManejoFondo.Entities;
+using ManejoFondo.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,11 +14,49 @@ using System.Windows.Forms;
 
 namespace ManejoFondo
 {
+    /// <summary>
+    /// Clase para iniciar el formulario de Login
+    /// Autor: Anderson Benavides
+    /// 2019-05-22
+    /// </summary>
     public partial class FormLogin : Form
     {
+
+        /// <summary>
+        /// Inicializa el componente de Login
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
         public FormLogin()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Metodo para iniciar sesion
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
+        private void Login(object sender, EventArgs e)
+        {
+            try
+            {
+                FondoLoginService fondoLoginServie = new FondoLoginService();
+                //Consulta de usuario
+                FondoLoginEntity respuesta =
+                    fondoLoginServie.ConsultarUsuario(loginTextBoxUsername.Text, loginTextBoxPassword.Text);
+                //Actualizacion inicio de sesion
+                fondoLoginServie.ActualizarFechaInicioSesion(respuesta.N_Id);
+
+            }
+            catch (BusinessException ex)
+            {
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }
