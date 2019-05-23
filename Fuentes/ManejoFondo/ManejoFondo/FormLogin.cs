@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace ManejoFondo
 {
@@ -43,12 +44,14 @@ namespace ManejoFondo
         {
             try
             {
-                FondoLoginService fondoLoginServie = new FondoLoginService();
+                FormErrorDialog firn = new FormErrorDialog();
+                firn.ShowDialog();
+                //FondoLoginService fondoLoginServie = new FondoLoginService();
                 //Consulta de usuario
-                FondoLoginEntity respuesta =
-                    fondoLoginServie.ConsultarUsuario(loginTextBoxUsername.Text, loginTextBoxPassword.Text);
+                //FondoLoginEntity respuesta =
+                    //fondoLoginServie.ConsultarUsuario(loginTextBoxUsername.Text, loginTextBoxPassword.Text);
                 //Actualizacion inicio de sesion
-                fondoLoginServie.ActualizarFechaInicioSesion(respuesta.N_Id);
+                //fondoLoginServie.ActualizarFechaInicioSesion(respuesta.N_Id);
 
             }
             catch (BusinessException ex)
