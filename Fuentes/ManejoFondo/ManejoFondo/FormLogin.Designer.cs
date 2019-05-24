@@ -149,6 +149,7 @@
             // loginButtonAceptar
             // 
             this.loginButtonAceptar.BackColor = System.Drawing.Color.White;
+            this.loginButtonAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButtonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButtonAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(60)))), ((int)(((byte)(112)))));

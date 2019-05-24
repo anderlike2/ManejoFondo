@@ -32,5 +32,21 @@ namespace ManejoFondo
             //Datos del usuario
             opcionLabelUsername.Text = usuario.V_Username;
         }
+
+        /// <summary>
+        /// Cerrar Sesion del usuario
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CerrarSesion(object sender, EventArgs e)
+        {
+            //Se inicia el formulario de login
+            FormLogin formLogin = new FormLogin();
+            Hide();
+            formLogin.ShowDialog();
+            Close();
+        }
     }
 }

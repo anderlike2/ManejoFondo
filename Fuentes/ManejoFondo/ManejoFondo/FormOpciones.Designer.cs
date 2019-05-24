@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOpciones));
+            this.opcionesPanelCerrarSesion = new System.Windows.Forms.Panel();
+            this.opcionesLabelCerrarSesion = new System.Windows.Forms.Label();
             this.panelDifuminadoOpciones = new ManejoFondo.PanelDifuminado();
-            this.opcionLabelUsername = new System.Windows.Forms.Label();
-            this.opcionLabelBienvenido = new System.Windows.Forms.Label();
-            this.opcionElegirOpcion = new System.Windows.Forms.Label();
-            this.opcionLabelAhorra = new System.Windows.Forms.Label();
-            this.opcionPanelLinea = new System.Windows.Forms.Panel();
             this.opcionesPanelParametrizacion = new System.Windows.Forms.Panel();
             this.opcionesPanelCambiarClave = new System.Windows.Forms.Panel();
             this.opcionesPanelSolicitudCredito = new System.Windows.Forms.Panel();
@@ -43,10 +40,37 @@
             this.opcionesPanelAhorro = new System.Windows.Forms.Panel();
             this.opcionesPanelAsociado = new System.Windows.Forms.Panel();
             this.opcionesPanelConsultarUsuarios = new System.Windows.Forms.Panel();
+            this.opcionLabelUsername = new System.Windows.Forms.Label();
+            this.opcionLabelBienvenido = new System.Windows.Forms.Label();
+            this.opcionElegirOpcion = new System.Windows.Forms.Label();
+            this.opcionLabelAhorra = new System.Windows.Forms.Label();
+            this.opcionPanelLinea = new System.Windows.Forms.Panel();
             this.loginPicture = new System.Windows.Forms.PictureBox();
             this.panelDifuminadoOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).BeginInit();
             this.SuspendLayout();
+            // 
+            // opcionesPanelCerrarSesion
+            // 
+            this.opcionesPanelCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.opcionesPanelCerrarSesion.BackgroundImage = global::ManejoFondo.Properties.Resources.cerrarSesion;
+            this.opcionesPanelCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.opcionesPanelCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opcionesPanelCerrarSesion.Location = new System.Drawing.Point(419, 512);
+            this.opcionesPanelCerrarSesion.Name = "opcionesPanelCerrarSesion";
+            this.opcionesPanelCerrarSesion.Size = new System.Drawing.Size(72, 64);
+            this.opcionesPanelCerrarSesion.TabIndex = 1;
+            this.opcionesPanelCerrarSesion.Click += new System.EventHandler(this.CerrarSesion);
+            // 
+            // opcionesLabelCerrarSesion
+            // 
+            this.opcionesLabelCerrarSesion.AutoSize = true;
+            this.opcionesLabelCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opcionesLabelCerrarSesion.Location = new System.Drawing.Point(412, 579);
+            this.opcionesLabelCerrarSesion.Name = "opcionesLabelCerrarSesion";
+            this.opcionesLabelCerrarSesion.Size = new System.Drawing.Size(90, 16);
+            this.opcionesLabelCerrarSesion.TabIndex = 14;
+            this.opcionesLabelCerrarSesion.Text = "Cerrar Sesión";
             // 
             // panelDifuminadoOpciones
             // 
@@ -71,12 +95,100 @@
             this.panelDifuminadoOpciones.Size = new System.Drawing.Size(906, 481);
             this.panelDifuminadoOpciones.TabIndex = 0;
             // 
+            // opcionesPanelParametrizacion
+            // 
+            this.opcionesPanelParametrizacion.BackColor = System.Drawing.Color.Transparent;
+            this.opcionesPanelParametrizacion.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionParametrizacion;
+            this.opcionesPanelParametrizacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.opcionesPanelParametrizacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opcionesPanelParametrizacion.Location = new System.Drawing.Point(678, 344);
+            this.opcionesPanelParametrizacion.Name = "opcionesPanelParametrizacion";
+            this.opcionesPanelParametrizacion.Size = new System.Drawing.Size(221, 137);
+            this.opcionesPanelParametrizacion.TabIndex = 13;
+            // 
+            // opcionesPanelCambiarClave
+            // 
+            this.opcionesPanelCambiarClave.BackColor = System.Drawing.Color.Transparent;
+            this.opcionesPanelCambiarClave.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionCambiarClave;
+            this.opcionesPanelCambiarClave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.opcionesPanelCambiarClave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opcionesPanelCambiarClave.Location = new System.Drawing.Point(455, 344);
+            this.opcionesPanelCambiarClave.Name = "opcionesPanelCambiarClave";
+            this.opcionesPanelCambiarClave.Size = new System.Drawing.Size(221, 137);
+            this.opcionesPanelCambiarClave.TabIndex = 12;
+            // 
+            // opcionesPanelSolicitudCredito
+            // 
+            this.opcionesPanelSolicitudCredito.BackColor = System.Drawing.Color.Transparent;
+            this.opcionesPanelSolicitudCredito.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionSolicitud;
+            this.opcionesPanelSolicitudCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.opcionesPanelSolicitudCredito.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opcionesPanelSolicitudCredito.Location = new System.Drawing.Point(678, 206);
+            this.opcionesPanelSolicitudCredito.Name = "opcionesPanelSolicitudCredito";
+            this.opcionesPanelSolicitudCredito.Size = new System.Drawing.Size(221, 137);
+            this.opcionesPanelSolicitudCredito.TabIndex = 11;
+            // 
+            // opcionesPanelIndicadores
+            // 
+            this.opcionesPanelIndicadores.BackColor = System.Drawing.Color.Transparent;
+            this.opcionesPanelIndicadores.BackgroundImage = global::ManejoFondo.Properties.Resources.opcionIndicador;
+            this.opcionesPanelIndicadores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.opcionesPanelIndicadores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opcionesPanelIndicadores.Location = new System.Drawing.Point(232, 344);
+            this.opcionesPanelIndicadores.Name = "opcionesPanelIndicadores";
+            this.opcionesPanelIndicadores.Size = new System.Drawing.Size(221, 137);
+            this.opcionesPanelIndicadores.TabIndex = 10;
+            // 
+            // opcionesPanelReportes
+            // 
+            this.opcionesPanelReportes.BackColor = System.Drawing.Color.Transparent;
+            this.opcionesPanelReportes.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionReporte;
+            this.opcionesPanelReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.opcionesPanelReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opcionesPanelReportes.Location = new System.Drawing.Point(9, 344);
+            this.opcionesPanelReportes.Name = "opcionesPanelReportes";
+            this.opcionesPanelReportes.Size = new System.Drawing.Size(221, 137);
+            this.opcionesPanelReportes.TabIndex = 10;
+            // 
+            // opcionesPanelAhorro
+            // 
+            this.opcionesPanelAhorro.BackColor = System.Drawing.Color.Transparent;
+            this.opcionesPanelAhorro.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionAhorro;
+            this.opcionesPanelAhorro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.opcionesPanelAhorro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opcionesPanelAhorro.Location = new System.Drawing.Point(455, 206);
+            this.opcionesPanelAhorro.Name = "opcionesPanelAhorro";
+            this.opcionesPanelAhorro.Size = new System.Drawing.Size(221, 137);
+            this.opcionesPanelAhorro.TabIndex = 10;
+            // 
+            // opcionesPanelAsociado
+            // 
+            this.opcionesPanelAsociado.BackColor = System.Drawing.Color.Transparent;
+            this.opcionesPanelAsociado.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionAsociado;
+            this.opcionesPanelAsociado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.opcionesPanelAsociado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opcionesPanelAsociado.Location = new System.Drawing.Point(232, 206);
+            this.opcionesPanelAsociado.Name = "opcionesPanelAsociado";
+            this.opcionesPanelAsociado.Size = new System.Drawing.Size(221, 137);
+            this.opcionesPanelAsociado.TabIndex = 10;
+            // 
+            // opcionesPanelConsultarUsuarios
+            // 
+            this.opcionesPanelConsultarUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.opcionesPanelConsultarUsuarios.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionConsultarUsuarios;
+            this.opcionesPanelConsultarUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.opcionesPanelConsultarUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opcionesPanelConsultarUsuarios.Location = new System.Drawing.Point(9, 206);
+            this.opcionesPanelConsultarUsuarios.Name = "opcionesPanelConsultarUsuarios";
+            this.opcionesPanelConsultarUsuarios.Size = new System.Drawing.Size(221, 137);
+            this.opcionesPanelConsultarUsuarios.TabIndex = 9;
+            // 
             // opcionLabelUsername
             // 
             this.opcionLabelUsername.AutoSize = true;
             this.opcionLabelUsername.BackColor = System.Drawing.Color.Transparent;
             this.opcionLabelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.opcionLabelUsername.Location = new System.Drawing.Point(740, 23);
+            this.opcionLabelUsername.Location = new System.Drawing.Point(768, 23);
             this.opcionLabelUsername.Name = "opcionLabelUsername";
             this.opcionLabelUsername.Size = new System.Drawing.Size(0, 16);
             this.opcionLabelUsername.TabIndex = 8;
@@ -86,7 +198,7 @@
             this.opcionLabelBienvenido.AutoSize = true;
             this.opcionLabelBienvenido.BackColor = System.Drawing.Color.Transparent;
             this.opcionLabelBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.opcionLabelBienvenido.Location = new System.Drawing.Point(649, 23);
+            this.opcionLabelBienvenido.Location = new System.Drawing.Point(677, 23);
             this.opcionLabelBienvenido.Name = "opcionLabelBienvenido";
             this.opcionLabelBienvenido.Size = new System.Drawing.Size(85, 16);
             this.opcionLabelBienvenido.TabIndex = 7;
@@ -122,86 +234,6 @@
             this.opcionPanelLinea.Size = new System.Drawing.Size(253, 2);
             this.opcionPanelLinea.TabIndex = 4;
             // 
-            // opcionesPanelParametrizacion
-            // 
-            this.opcionesPanelParametrizacion.BackColor = System.Drawing.Color.Transparent;
-            this.opcionesPanelParametrizacion.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionParametrizacion;
-            this.opcionesPanelParametrizacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.opcionesPanelParametrizacion.Location = new System.Drawing.Point(678, 344);
-            this.opcionesPanelParametrizacion.Name = "opcionesPanelParametrizacion";
-            this.opcionesPanelParametrizacion.Size = new System.Drawing.Size(221, 137);
-            this.opcionesPanelParametrizacion.TabIndex = 13;
-            // 
-            // opcionesPanelCambiarClave
-            // 
-            this.opcionesPanelCambiarClave.BackColor = System.Drawing.Color.Transparent;
-            this.opcionesPanelCambiarClave.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionCambiarClave;
-            this.opcionesPanelCambiarClave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.opcionesPanelCambiarClave.Location = new System.Drawing.Point(455, 344);
-            this.opcionesPanelCambiarClave.Name = "opcionesPanelCambiarClave";
-            this.opcionesPanelCambiarClave.Size = new System.Drawing.Size(221, 137);
-            this.opcionesPanelCambiarClave.TabIndex = 12;
-            // 
-            // opcionesPanelSolicitudCredito
-            // 
-            this.opcionesPanelSolicitudCredito.BackColor = System.Drawing.Color.Transparent;
-            this.opcionesPanelSolicitudCredito.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionSolicitud;
-            this.opcionesPanelSolicitudCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.opcionesPanelSolicitudCredito.Location = new System.Drawing.Point(678, 206);
-            this.opcionesPanelSolicitudCredito.Name = "opcionesPanelSolicitudCredito";
-            this.opcionesPanelSolicitudCredito.Size = new System.Drawing.Size(221, 137);
-            this.opcionesPanelSolicitudCredito.TabIndex = 11;
-            // 
-            // opcionesPanelIndicadores
-            // 
-            this.opcionesPanelIndicadores.BackColor = System.Drawing.Color.Transparent;
-            this.opcionesPanelIndicadores.BackgroundImage = global::ManejoFondo.Properties.Resources.opcionIndicador;
-            this.opcionesPanelIndicadores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.opcionesPanelIndicadores.Location = new System.Drawing.Point(232, 344);
-            this.opcionesPanelIndicadores.Name = "opcionesPanelIndicadores";
-            this.opcionesPanelIndicadores.Size = new System.Drawing.Size(221, 137);
-            this.opcionesPanelIndicadores.TabIndex = 10;
-            // 
-            // opcionesPanelReportes
-            // 
-            this.opcionesPanelReportes.BackColor = System.Drawing.Color.Transparent;
-            this.opcionesPanelReportes.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionReporte;
-            this.opcionesPanelReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.opcionesPanelReportes.Location = new System.Drawing.Point(9, 344);
-            this.opcionesPanelReportes.Name = "opcionesPanelReportes";
-            this.opcionesPanelReportes.Size = new System.Drawing.Size(221, 137);
-            this.opcionesPanelReportes.TabIndex = 10;
-            // 
-            // opcionesPanelAhorro
-            // 
-            this.opcionesPanelAhorro.BackColor = System.Drawing.Color.Transparent;
-            this.opcionesPanelAhorro.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionAhorro;
-            this.opcionesPanelAhorro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.opcionesPanelAhorro.Location = new System.Drawing.Point(455, 206);
-            this.opcionesPanelAhorro.Name = "opcionesPanelAhorro";
-            this.opcionesPanelAhorro.Size = new System.Drawing.Size(221, 137);
-            this.opcionesPanelAhorro.TabIndex = 10;
-            // 
-            // opcionesPanelAsociado
-            // 
-            this.opcionesPanelAsociado.BackColor = System.Drawing.Color.Transparent;
-            this.opcionesPanelAsociado.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionAsociado;
-            this.opcionesPanelAsociado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.opcionesPanelAsociado.Location = new System.Drawing.Point(232, 206);
-            this.opcionesPanelAsociado.Name = "opcionesPanelAsociado";
-            this.opcionesPanelAsociado.Size = new System.Drawing.Size(221, 137);
-            this.opcionesPanelAsociado.TabIndex = 10;
-            // 
-            // opcionesPanelConsultarUsuarios
-            // 
-            this.opcionesPanelConsultarUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.opcionesPanelConsultarUsuarios.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionConsultarUsuarios;
-            this.opcionesPanelConsultarUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.opcionesPanelConsultarUsuarios.Location = new System.Drawing.Point(9, 206);
-            this.opcionesPanelConsultarUsuarios.Name = "opcionesPanelConsultarUsuarios";
-            this.opcionesPanelConsultarUsuarios.Size = new System.Drawing.Size(221, 137);
-            this.opcionesPanelConsultarUsuarios.TabIndex = 9;
-            // 
             // loginPicture
             // 
             this.loginPicture.BackColor = System.Drawing.Color.Transparent;
@@ -217,7 +249,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 498);
+            this.ClientSize = new System.Drawing.Size(910, 655);
+            this.Controls.Add(this.opcionesLabelCerrarSesion);
+            this.Controls.Add(this.opcionesPanelCerrarSesion);
             this.Controls.Add(this.panelDifuminadoOpciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -227,6 +261,7 @@
             this.panelDifuminadoOpciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -247,5 +282,7 @@
         private System.Windows.Forms.Panel opcionesPanelCambiarClave;
         private System.Windows.Forms.Panel opcionesPanelSolicitudCredito;
         private System.Windows.Forms.Panel opcionesPanelIndicadores;
+        private System.Windows.Forms.Panel opcionesPanelCerrarSesion;
+        private System.Windows.Forms.Label opcionesLabelCerrarSesion;
     }
 }
