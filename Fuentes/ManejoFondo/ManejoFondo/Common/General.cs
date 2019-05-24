@@ -16,7 +16,7 @@ namespace ManejoFondo.Common
     public class General
     {
 
-        private static byte[] Clave = Encoding.ASCII.GetBytes("ManejoFondoLinaresTeam");
+        private static byte[] Clave = Encoding.ASCII.GetBytes("4FC76A4EB7BBA");
         private static byte[] IV = Encoding.ASCII.GetBytes("Devjoker7.37hAES");
 
         /// <summary>

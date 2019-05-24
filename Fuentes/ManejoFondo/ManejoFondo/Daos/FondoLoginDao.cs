@@ -40,15 +40,15 @@ namespace ManejoFondo.Daos
         /// 2019-05-23
         /// </summary>
         /// <param name="usuario"></param>
-        public FondoLoginEntity ActualizarFechaInicioSesion(FondoLoginEntity usuario)
+        public bool ActualizarFechaInicioSesion(FondoLoginEntity usuario)
         {
             using (var cnn = SqlLiteConexion.SimpleDbConnection())
             {
-                FondoLoginEntity result = cnn.Query<FondoLoginEntity>(
+                int result = cnn.Execute(
                     @"UPDATE FONDOLOGIN SET F_ULTIMO_INICIO_SESION = @F_ULTIMO_INICIO_SESION
                     WHERE N_ID = @N_ID",
-                    new { usuario.F_Ultimo_Inicio_Sesion, usuario.N_Id }).FirstOrDefault();
-                return result;
+                    new { usuario.F_Ultimo_Inicio_Sesion, usuario.N_Id });
+                return result > 0;
             }
         }
     }

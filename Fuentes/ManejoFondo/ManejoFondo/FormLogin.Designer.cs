@@ -29,8 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
+            this.loginPanelLinea = new System.Windows.Forms.Panel();
+            this.loginLabelBienvenido = new System.Windows.Forms.Label();
+            this.loginLabelInicioSesion = new System.Windows.Forms.Label();
             this.loginPicture = new System.Windows.Forms.PictureBox();
             this.loginPanelDerecho = new System.Windows.Forms.Panel();
+            this.loginLabelObligPassword = new System.Windows.Forms.Label();
+            this.loginLabelObligUsername = new System.Windows.Forms.Label();
             this.loginPanelLineaPassword = new System.Windows.Forms.Panel();
             this.loginPanelLineUsername = new System.Windows.Forms.Panel();
             this.loginButtonAceptar = new System.Windows.Forms.Button();
@@ -38,23 +43,48 @@
             this.loginTextBoxUsername = new System.Windows.Forms.TextBox();
             this.loginLabelPassword = new System.Windows.Forms.Label();
             this.loginLabelUsername = new System.Windows.Forms.Label();
-            this.loginPanelLinea = new System.Windows.Forms.Panel();
-            this.loginLabelAhorra = new System.Windows.Forms.Label();
-            this.loginLabelInicioSesion = new System.Windows.Forms.Label();
-            this.loginLabelObligUsername = new System.Windows.Forms.Label();
-            this.loginLabelObligPassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).BeginInit();
             this.loginPanelDerecho.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // loginPanelLinea
+            // 
+            this.loginPanelLinea.AutoScroll = true;
+            this.loginPanelLinea.BackColor = System.Drawing.Color.Black;
+            this.loginPanelLinea.Location = new System.Drawing.Point(98, 124);
+            this.loginPanelLinea.Name = "loginPanelLinea";
+            this.loginPanelLinea.Size = new System.Drawing.Size(253, 2);
+            this.loginPanelLinea.TabIndex = 1;
+            // 
+            // loginLabelBienvenido
+            // 
+            this.loginLabelBienvenido.AutoSize = true;
+            this.loginLabelBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginLabelBienvenido.Location = new System.Drawing.Point(269, 129);
+            this.loginLabelBienvenido.Name = "loginLabelBienvenido";
+            this.loginLabelBienvenido.Size = new System.Drawing.Size(82, 16);
+            this.loginLabelBienvenido.TabIndex = 4;
+            this.loginLabelBienvenido.Text = "Bienvenid@";
+            // 
+            // loginLabelInicioSesion
+            // 
+            this.loginLabelInicioSesion.AutoSize = true;
+            this.loginLabelInicioSesion.BackColor = System.Drawing.Color.Transparent;
+            this.loginLabelInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginLabelInicioSesion.Location = new System.Drawing.Point(148, 176);
+            this.loginLabelInicioSesion.Name = "loginLabelInicioSesion";
+            this.loginLabelInicioSesion.Size = new System.Drawing.Size(164, 24);
+            this.loginLabelInicioSesion.TabIndex = 4;
+            this.loginLabelInicioSesion.Text = "INICIAR SESIÓN";
             // 
             // loginPicture
             // 
             this.loginPicture.BackColor = System.Drawing.Color.Transparent;
             this.loginPicture.BackgroundImage = global::ManejoFondo.Properties.Resources.loginLogo;
             this.loginPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.loginPicture.Location = new System.Drawing.Point(165, 12);
+            this.loginPicture.Location = new System.Drawing.Point(177, 7);
             this.loginPicture.Name = "loginPicture";
-            this.loginPicture.Size = new System.Drawing.Size(139, 111);
+            this.loginPicture.Size = new System.Drawing.Size(116, 111);
             this.loginPicture.TabIndex = 2;
             this.loginPicture.TabStop = false;
             // 
@@ -75,6 +105,30 @@
             this.loginPanelDerecho.Name = "loginPanelDerecho";
             this.loginPanelDerecho.Size = new System.Drawing.Size(470, 260);
             this.loginPanelDerecho.TabIndex = 1;
+            // 
+            // loginLabelObligPassword
+            // 
+            this.loginLabelObligPassword.AutoSize = true;
+            this.loginLabelObligPassword.BackColor = System.Drawing.Color.Transparent;
+            this.loginLabelObligPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginLabelObligPassword.ForeColor = System.Drawing.Color.Red;
+            this.loginLabelObligPassword.Location = new System.Drawing.Point(260, 110);
+            this.loginLabelObligPassword.Name = "loginLabelObligPassword";
+            this.loginLabelObligPassword.Size = new System.Drawing.Size(14, 16);
+            this.loginLabelObligPassword.TabIndex = 8;
+            this.loginLabelObligPassword.Text = "*";
+            // 
+            // loginLabelObligUsername
+            // 
+            this.loginLabelObligUsername.AutoSize = true;
+            this.loginLabelObligUsername.BackColor = System.Drawing.Color.Transparent;
+            this.loginLabelObligUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginLabelObligUsername.ForeColor = System.Drawing.Color.Red;
+            this.loginLabelObligUsername.Location = new System.Drawing.Point(260, 49);
+            this.loginLabelObligUsername.Name = "loginLabelObligUsername";
+            this.loginLabelObligUsername.Size = new System.Drawing.Size(14, 16);
+            this.loginLabelObligUsername.TabIndex = 7;
+            this.loginLabelObligUsername.Text = "*";
             // 
             // loginPanelLineaPassword
             // 
@@ -135,9 +189,9 @@
             this.loginLabelPassword.ForeColor = System.Drawing.Color.Black;
             this.loginLabelPassword.Location = new System.Drawing.Point(269, 106);
             this.loginLabelPassword.Name = "loginLabelPassword";
-            this.loginLabelPassword.Size = new System.Drawing.Size(78, 20);
+            this.loginLabelPassword.Size = new System.Drawing.Size(92, 20);
             this.loginLabelPassword.TabIndex = 3;
-            this.loginLabelPassword.Text = "Password";
+            this.loginLabelPassword.Text = "Contraseña";
             // 
             // loginLabelUsername
             // 
@@ -147,63 +201,9 @@
             this.loginLabelUsername.ForeColor = System.Drawing.Color.Black;
             this.loginLabelUsername.Location = new System.Drawing.Point(269, 44);
             this.loginLabelUsername.Name = "loginLabelUsername";
-            this.loginLabelUsername.Size = new System.Drawing.Size(83, 20);
+            this.loginLabelUsername.Size = new System.Drawing.Size(64, 20);
             this.loginLabelUsername.TabIndex = 2;
-            this.loginLabelUsername.Text = "Username";
-            // 
-            // loginPanelLinea
-            // 
-            this.loginPanelLinea.AutoScroll = true;
-            this.loginPanelLinea.BackColor = System.Drawing.Color.Black;
-            this.loginPanelLinea.Location = new System.Drawing.Point(98, 124);
-            this.loginPanelLinea.Name = "loginPanelLinea";
-            this.loginPanelLinea.Size = new System.Drawing.Size(253, 2);
-            this.loginPanelLinea.TabIndex = 1;
-            // 
-            // loginLabelAhorra
-            // 
-            this.loginLabelAhorra.AutoSize = true;
-            this.loginLabelAhorra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabelAhorra.Location = new System.Drawing.Point(227, 129);
-            this.loginLabelAhorra.Name = "loginLabelAhorra";
-            this.loginLabelAhorra.Size = new System.Drawing.Size(128, 16);
-            this.loginLabelAhorra.TabIndex = 4;
-            this.loginLabelAhorra.Text = "Ahorra con nosotros";
-            // 
-            // loginLabelInicioSesion
-            // 
-            this.loginLabelInicioSesion.AutoSize = true;
-            this.loginLabelInicioSesion.BackColor = System.Drawing.Color.Transparent;
-            this.loginLabelInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabelInicioSesion.Location = new System.Drawing.Point(148, 176);
-            this.loginLabelInicioSesion.Name = "loginLabelInicioSesion";
-            this.loginLabelInicioSesion.Size = new System.Drawing.Size(164, 24);
-            this.loginLabelInicioSesion.TabIndex = 4;
-            this.loginLabelInicioSesion.Text = "INICIAR SESIÓN";
-            // 
-            // loginLabelObligUsername
-            // 
-            this.loginLabelObligUsername.AutoSize = true;
-            this.loginLabelObligUsername.BackColor = System.Drawing.Color.Transparent;
-            this.loginLabelObligUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabelObligUsername.ForeColor = System.Drawing.Color.Red;
-            this.loginLabelObligUsername.Location = new System.Drawing.Point(260, 49);
-            this.loginLabelObligUsername.Name = "loginLabelObligUsername";
-            this.loginLabelObligUsername.Size = new System.Drawing.Size(14, 16);
-            this.loginLabelObligUsername.TabIndex = 7;
-            this.loginLabelObligUsername.Text = "*";
-            // 
-            // loginLabelObligPassword
-            // 
-            this.loginLabelObligPassword.AutoSize = true;
-            this.loginLabelObligPassword.BackColor = System.Drawing.Color.Transparent;
-            this.loginLabelObligPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabelObligPassword.ForeColor = System.Drawing.Color.Red;
-            this.loginLabelObligPassword.Location = new System.Drawing.Point(260, 110);
-            this.loginLabelObligPassword.Name = "loginLabelObligPassword";
-            this.loginLabelObligPassword.Size = new System.Drawing.Size(14, 16);
-            this.loginLabelObligPassword.TabIndex = 8;
-            this.loginLabelObligPassword.Text = "*";
+            this.loginLabelUsername.Text = "Usuario";
             // 
             // FormLogin
             // 
@@ -211,13 +211,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 459);
             this.Controls.Add(this.loginLabelInicioSesion);
-            this.Controls.Add(this.loginLabelAhorra);
+            this.Controls.Add(this.loginLabelBienvenido);
             this.Controls.Add(this.loginPicture);
             this.Controls.Add(this.loginPanelDerecho);
             this.Controls.Add(this.loginPanelLinea);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormLogin";
-            this.Text = "LOGIN";
+            this.Text = "INICIO DE SESIÓN";
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).EndInit();
             this.loginPanelDerecho.ResumeLayout(false);
             this.loginPanelDerecho.PerformLayout();
@@ -235,7 +236,7 @@
         private System.Windows.Forms.Button loginButtonAceptar;
         private System.Windows.Forms.TextBox loginTextBoxPassword;
         private System.Windows.Forms.TextBox loginTextBoxUsername;
-        private System.Windows.Forms.Label loginLabelAhorra;
+        private System.Windows.Forms.Label loginLabelBienvenido;
         private System.Windows.Forms.Label loginLabelInicioSesion;
         private System.Windows.Forms.Panel loginPanelLineaPassword;
         private System.Windows.Forms.Panel loginPanelLineUsername;

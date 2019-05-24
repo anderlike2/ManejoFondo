@@ -35,7 +35,12 @@ namespace ManejoFondo.Services
                 V_Username = username,
                 V_Password = General.EncriptarCadena(password)
             };
-            return fondoLoginDao.ConsultarUsuario(usuarioFiltro);
+            FondoLoginEntity respuesta = fondoLoginDao.ConsultarUsuario(usuarioFiltro);
+            if (respuesta == null) {
+                throw new BusinessException(Constantes.MsjLoginInvalido);
+            }
+
+            return respuesta;
         }
 
         /// <summary>
@@ -44,15 +49,15 @@ namespace ManejoFondo.Services
         /// 2019-05-23
         /// </summary>
         /// <param name="id"></param>
-        public FondoLoginEntity ActualizarFechaInicioSesion(int id)
+        public bool ActualizarFechaInicioSesion(int id)
         {
             FondoLoginDao fondoLoginDao = new FondoLoginDao();
             FondoLoginEntity usuarioFiltro = new FondoLoginEntity
             {
                 N_Id = id,
-                F_Ultimo_Inicio_Sesion = new DateTime()
+                F_Ultimo_Inicio_Sesion = DateTime.Now
             };
-            return fondoLoginDao.ConsultarUsuario(usuarioFiltro);
+            return fondoLoginDao.ActualizarFechaInicioSesion(usuarioFiltro);
         }
     }
 }

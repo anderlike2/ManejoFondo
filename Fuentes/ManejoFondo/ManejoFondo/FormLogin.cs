@@ -32,7 +32,7 @@ namespace ManejoFondo
         public FormLogin()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         /// <summary>
@@ -49,9 +49,15 @@ namespace ManejoFondo
                 //Consulta de usuario
                 FondoLoginEntity respuesta =
                     fondoLoginServie.ConsultarUsuario(loginTextBoxUsername.Text, loginTextBoxPassword.Text);
+                
                 //Actualizacion inicio de sesion
                 fondoLoginServie.ActualizarFechaInicioSesion(respuesta.N_Id);
 
+                //Se inicia el formulario de opciones
+                FormOpciones formOpciones = new FormOpciones(respuesta);
+                Hide();
+                formOpciones.ShowDialog();
+                Close();
             }
             catch (BusinessException ex)
             {

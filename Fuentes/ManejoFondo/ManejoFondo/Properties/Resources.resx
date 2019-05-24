@@ -118,6 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="opcionIndicador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\opcionIndicador.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpcionConsultarUsuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\OpcionConsultarUsuarios.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpcionAsociado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\OpcionAsociado.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpcionReporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\OpcionReporte.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loginLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\loginLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -126,5 +138,17 @@
   </data>
   <data name="loginLogo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\loginLogo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpcionCambiarClave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\OpcionCambiarClave.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpcionSolicitud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\OpcionSolicitud.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpcionAhorro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\OpcionAhorro.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpcionParametrizacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\OpcionParametrizacion.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

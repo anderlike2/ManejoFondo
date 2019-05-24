@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panelDifuminadoError = new ManejoFondo.PanelDifuminado();
+            this.labelCerrarError = new System.Windows.Forms.Label();
             this.labelDescripcionError = new System.Windows.Forms.Label();
             this.labelTipoError = new System.Windows.Forms.Label();
-            this.labelCerrarError = new System.Windows.Forms.Label();
             this.panelDifuminadoError.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,12 +48,24 @@
             this.panelDifuminadoError.Size = new System.Drawing.Size(420, 223);
             this.panelDifuminadoError.TabIndex = 0;
             // 
+            // labelCerrarError
+            // 
+            this.labelCerrarError.AutoSize = true;
+            this.labelCerrarError.BackColor = System.Drawing.Color.Transparent;
+            this.labelCerrarError.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCerrarError.Location = new System.Drawing.Point(388, 9);
+            this.labelCerrarError.Name = "labelCerrarError";
+            this.labelCerrarError.Size = new System.Drawing.Size(20, 19);
+            this.labelCerrarError.TabIndex = 2;
+            this.labelCerrarError.Text = "X";
+            this.labelCerrarError.Click += new System.EventHandler(this.CerrarError);
+            // 
             // labelDescripcionError
             // 
             this.labelDescripcionError.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.labelDescripcionError.BackColor = System.Drawing.Color.Transparent;
-            this.labelDescripcionError.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescripcionError.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescripcionError.Location = new System.Drawing.Point(12, 87);
             this.labelDescripcionError.Name = "labelDescripcionError";
             this.labelDescripcionError.Size = new System.Drawing.Size(396, 104);
@@ -68,18 +80,6 @@
             this.labelTipoError.Name = "labelTipoError";
             this.labelTipoError.Size = new System.Drawing.Size(0, 34);
             this.labelTipoError.TabIndex = 0;
-            // 
-            // labelCerrarError
-            // 
-            this.labelCerrarError.AutoSize = true;
-            this.labelCerrarError.BackColor = System.Drawing.Color.Transparent;
-            this.labelCerrarError.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCerrarError.Location = new System.Drawing.Point(388, 9);
-            this.labelCerrarError.Name = "labelCerrarError";
-            this.labelCerrarError.Size = new System.Drawing.Size(20, 19);
-            this.labelCerrarError.TabIndex = 2;
-            this.labelCerrarError.Text = "X";
-            this.labelCerrarError.Click += new System.EventHandler(this.CerrarError);
             // 
             // FormErrorDialog
             // 
