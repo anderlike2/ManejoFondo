@@ -13,10 +13,19 @@ namespace ManejoFondo.Common
     /// </summary>
     static class Constantes
     {
+        #region Codigos
+        public const int CodigoError = 1;
+        public const int CodigoExito = 2;
+        public const int CodigoWarning = 3;
+        public const string DescripcionError = "Error!";
+        public const string DescripcionExito = "Muy bien!";
+        public const string DescripcionWarning = "Cuidado!";
+        #endregion
+
         #region Mensajes
-        public const string LoginInvalido = "El Usuario o la Contraseña es incorrecta, por favor verifique e inténtelo nuevamente.";
-        public const string CamposObligatorios = "Los siguientes campos son Obligatorios: <camposObligatorios>";
-        public const string ErrorInesperado = "Ha ocurrido un error inesperado, por favor contactar al Administrador del sistema.";
+        public const string MsjLoginInvalido = "El Usuario o la Contraseña es incorrecta, por favor verifique e inténtelo nuevamente.";
+        public const string MsjCamposObligatorios = "Los siguientes campos son Obligatorios: <camposObligatorios>";
+        public const string MsjErrorInesperado = "Ha ocurrido un error inesperado, por favor contactar al Administrador del sistema.";
         #endregion
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace ManejoFondo
 {
     /// <summary>
-    /// Clase para el manejo de las modales (Error, Succes, Warning)
+    /// Clase para el manejo del color de la modal
     /// Autor: Anderson Benavides
     /// 2019-05-22
     /// </summary>

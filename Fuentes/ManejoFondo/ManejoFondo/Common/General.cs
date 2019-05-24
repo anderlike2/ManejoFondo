@@ -67,5 +67,33 @@ namespace ManejoFondo.Common
             }
             return textoLimpio;
         }
+
+        /// <summary>
+        /// Metodo para mostrar el panel de error, succes o warning
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <param name="descripcion"></param>
+        public static void MostrarPanelError(int codigo, String descripcion)
+        {
+            FormErrorDialog formError = new FormErrorDialog(codigo, descripcion);
+            formError.ShowDialog();
+        }
+
+        /// <summary>
+        /// Metodo para validar un string vacio o null
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="texto"></param>
+        /// <param name="descripcion"></param>
+        public static bool EsVacioNulo(String texto)
+        {
+            if (texto != null && texto != "") {
+                return false;
+            }
+            return true;
+        }
     }
 }

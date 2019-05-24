@@ -25,6 +25,10 @@ namespace ManejoFondo.Services
         /// <param name="password"></param>
         public FondoLoginEntity ConsultarUsuario(String username, String password)
         {
+            if (General.EsVacioNulo(username) || General.EsVacioNulo(password)) {
+                throw new BusinessException(Constantes.MsjCamposObligatorios);
+            }
+
             FondoLoginDao fondoLoginDao = new FondoLoginDao();
             FondoLoginEntity usuarioFiltro = new FondoLoginEntity
             {

@@ -32,6 +32,7 @@ namespace ManejoFondo
         public FormLogin()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         /// <summary>
@@ -44,21 +45,21 @@ namespace ManejoFondo
         {
             try
             {
-                FormErrorDialog firn = new FormErrorDialog();
-                firn.ShowDialog();
-                //FondoLoginService fondoLoginServie = new FondoLoginService();
+                FondoLoginService fondoLoginServie = new FondoLoginService();
                 //Consulta de usuario
-                //FondoLoginEntity respuesta =
-                    //fondoLoginServie.ConsultarUsuario(loginTextBoxUsername.Text, loginTextBoxPassword.Text);
+                FondoLoginEntity respuesta =
+                    fondoLoginServie.ConsultarUsuario(loginTextBoxUsername.Text, loginTextBoxPassword.Text);
                 //Actualizacion inicio de sesion
-                //fondoLoginServie.ActualizarFechaInicioSesion(respuesta.N_Id);
+                fondoLoginServie.ActualizarFechaInicioSesion(respuesta.N_Id);
 
             }
             catch (BusinessException ex)
             {
+                General.MostrarPanelError(Constantes.CodigoWarning, ex.Message);
             }
             catch (Exception ex)
             {
+                General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
             }
         }
     }
