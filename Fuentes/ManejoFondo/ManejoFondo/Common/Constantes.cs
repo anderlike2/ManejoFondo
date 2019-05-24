@@ -24,7 +24,7 @@ namespace ManejoFondo.Common
 
         #region Mensajes
         public const string MsjLoginInvalido = "El Usuario o la Contraseña es incorrecta, por favor verifique e inténtelo nuevamente.";
-        public const string MsjCamposObligatorios = "Los siguientes campos son Obligatorios: <camposObligatorios>";
+        public const string MsjCamposObligatorios = "Existen campos obligatorios, por favor verifique su información.";
         public const string MsjErrorInesperado = "Ha ocurrido un error inesperado, por favor contactar al Administrador del sistema.";
         #endregion
     }

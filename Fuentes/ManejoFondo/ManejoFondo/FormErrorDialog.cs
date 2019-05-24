@@ -31,17 +31,25 @@ namespace ManejoFondo
             if (codigo == Constantes.CodigoError)
             {
                 labelTipoError.Text = Constantes.DescripcionError;
+                panelDifuminadoError.ColorArriba = ColorTranslator.FromHtml("#D4453F");
+                panelDifuminadoError.ColorAbajo = ColorTranslator.FromHtml("#FF604B");
             }
             else if (codigo == Constantes.CodigoExito)
             {
                 labelTipoError.Text = Constantes.DescripcionExito;
+                panelDifuminadoError.ColorArriba = ColorTranslator.FromHtml("#679E00");
+                panelDifuminadoError.ColorAbajo = ColorTranslator.FromHtml("#A0D801");
             }
             else if (codigo == Constantes.CodigoWarning)
             {
                 labelTipoError.Text = Constantes.DescripcionWarning;
+                panelDifuminadoError.ColorArriba = ColorTranslator.FromHtml("#DC661B");
+                panelDifuminadoError.ColorAbajo = ColorTranslator.FromHtml("#FFC571");
             }
             else {
                 labelTipoError.Text = Constantes.DescripcionError;
+                panelDifuminadoError.ColorArriba = ColorTranslator.FromHtml("#D4453F");
+                panelDifuminadoError.ColorAbajo = ColorTranslator.FromHtml("#FF604B");
             }
             labelDescripcionError.Text = descripcion;
         }

@@ -30,16 +30,16 @@
         {
             this.loginPicture = new System.Windows.Forms.PictureBox();
             this.loginPanelDerecho = new System.Windows.Forms.Panel();
+            this.loginPanelLineaPassword = new System.Windows.Forms.Panel();
+            this.loginPanelLineUsername = new System.Windows.Forms.Panel();
+            this.loginButtonAceptar = new System.Windows.Forms.Button();
+            this.loginTextBoxPassword = new System.Windows.Forms.TextBox();
+            this.loginTextBoxUsername = new System.Windows.Forms.TextBox();
             this.loginLabelPassword = new System.Windows.Forms.Label();
             this.loginLabelUsername = new System.Windows.Forms.Label();
             this.loginPanelLinea = new System.Windows.Forms.Panel();
             this.loginLabelAhorra = new System.Windows.Forms.Label();
             this.loginLabelInicioSesion = new System.Windows.Forms.Label();
-            this.loginTextBoxUsername = new System.Windows.Forms.TextBox();
-            this.loginTextBoxPassword = new System.Windows.Forms.TextBox();
-            this.loginButtonAceptar = new System.Windows.Forms.Button();
-            this.loginPanelLineUsername = new System.Windows.Forms.Panel();
-            this.loginPanelLineaPassword = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).BeginInit();
             this.loginPanelDerecho.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +71,57 @@
             this.loginPanelDerecho.Size = new System.Drawing.Size(470, 260);
             this.loginPanelDerecho.TabIndex = 1;
             // 
+            // loginPanelLineaPassword
+            // 
+            this.loginPanelLineaPassword.BackColor = System.Drawing.Color.Transparent;
+            this.loginPanelLineaPassword.Location = new System.Drawing.Point(99, 155);
+            this.loginPanelLineaPassword.Name = "loginPanelLineaPassword";
+            this.loginPanelLineaPassword.Size = new System.Drawing.Size(253, 2);
+            this.loginPanelLineaPassword.TabIndex = 6;
+            // 
+            // loginPanelLineUsername
+            // 
+            this.loginPanelLineUsername.BackColor = System.Drawing.Color.Transparent;
+            this.loginPanelLineUsername.Location = new System.Drawing.Point(99, 90);
+            this.loginPanelLineUsername.Name = "loginPanelLineUsername";
+            this.loginPanelLineUsername.Size = new System.Drawing.Size(253, 2);
+            this.loginPanelLineUsername.TabIndex = 5;
+            // 
+            // loginButtonAceptar
+            // 
+            this.loginButtonAceptar.BackColor = System.Drawing.Color.White;
+            this.loginButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginButtonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButtonAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(60)))), ((int)(((byte)(112)))));
+            this.loginButtonAceptar.Location = new System.Drawing.Point(103, 184);
+            this.loginButtonAceptar.Name = "loginButtonAceptar";
+            this.loginButtonAceptar.Size = new System.Drawing.Size(253, 39);
+            this.loginButtonAceptar.TabIndex = 6;
+            this.loginButtonAceptar.Text = "Aceptar";
+            this.loginButtonAceptar.UseVisualStyleBackColor = false;
+            this.loginButtonAceptar.Click += new System.EventHandler(this.Login);
+            // 
+            // loginTextBoxPassword
+            // 
+            this.loginTextBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(220)))), ((int)(((byte)(235)))));
+            this.loginTextBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.loginTextBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginTextBoxPassword.Location = new System.Drawing.Point(99, 129);
+            this.loginTextBoxPassword.Name = "loginTextBoxPassword";
+            this.loginTextBoxPassword.PasswordChar = '*';
+            this.loginTextBoxPassword.Size = new System.Drawing.Size(253, 19);
+            this.loginTextBoxPassword.TabIndex = 5;
+            // 
+            // loginTextBoxUsername
+            // 
+            this.loginTextBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(220)))), ((int)(((byte)(235)))));
+            this.loginTextBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.loginTextBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginTextBoxUsername.Location = new System.Drawing.Point(99, 67);
+            this.loginTextBoxUsername.Name = "loginTextBoxUsername";
+            this.loginTextBoxUsername.Size = new System.Drawing.Size(253, 19);
+            this.loginTextBoxUsername.TabIndex = 4;
+            // 
             // loginLabelPassword
             // 
             this.loginLabelPassword.AutoSize = true;
@@ -79,9 +130,9 @@
             this.loginLabelPassword.ForeColor = System.Drawing.Color.White;
             this.loginLabelPassword.Location = new System.Drawing.Point(269, 106);
             this.loginLabelPassword.Name = "loginLabelPassword";
-            this.loginLabelPassword.Size = new System.Drawing.Size(78, 20);
+            this.loginLabelPassword.Size = new System.Drawing.Size(88, 20);
             this.loginLabelPassword.TabIndex = 3;
-            this.loginLabelPassword.Text = "Password";
+            this.loginLabelPassword.Text = "* Password";
             // 
             // loginLabelUsername
             // 
@@ -91,9 +142,9 @@
             this.loginLabelUsername.ForeColor = System.Drawing.Color.White;
             this.loginLabelUsername.Location = new System.Drawing.Point(269, 44);
             this.loginLabelUsername.Name = "loginLabelUsername";
-            this.loginLabelUsername.Size = new System.Drawing.Size(83, 20);
+            this.loginLabelUsername.Size = new System.Drawing.Size(93, 20);
             this.loginLabelUsername.TabIndex = 2;
-            this.loginLabelUsername.Text = "Username";
+            this.loginLabelUsername.Text = "* Username";
             // 
             // loginPanelLinea
             // 
@@ -124,57 +175,6 @@
             this.loginLabelInicioSesion.Size = new System.Drawing.Size(164, 24);
             this.loginLabelInicioSesion.TabIndex = 4;
             this.loginLabelInicioSesion.Text = "INICIAR SESIÓN";
-            // 
-            // loginTextBoxUsername
-            // 
-            this.loginTextBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(220)))), ((int)(((byte)(235)))));
-            this.loginTextBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.loginTextBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginTextBoxUsername.Location = new System.Drawing.Point(99, 67);
-            this.loginTextBoxUsername.Name = "loginTextBoxUsername";
-            this.loginTextBoxUsername.Size = new System.Drawing.Size(253, 19);
-            this.loginTextBoxUsername.TabIndex = 4;
-            // 
-            // loginTextBoxPassword
-            // 
-            this.loginTextBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(220)))), ((int)(((byte)(235)))));
-            this.loginTextBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.loginTextBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginTextBoxPassword.Location = new System.Drawing.Point(99, 129);
-            this.loginTextBoxPassword.Name = "loginTextBoxPassword";
-            this.loginTextBoxPassword.PasswordChar = '*';
-            this.loginTextBoxPassword.Size = new System.Drawing.Size(253, 19);
-            this.loginTextBoxPassword.TabIndex = 5;
-            // 
-            // loginButtonAceptar
-            // 
-            this.loginButtonAceptar.BackColor = System.Drawing.Color.White;
-            this.loginButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginButtonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButtonAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(60)))), ((int)(((byte)(112)))));
-            this.loginButtonAceptar.Location = new System.Drawing.Point(103, 184);
-            this.loginButtonAceptar.Name = "loginButtonAceptar";
-            this.loginButtonAceptar.Size = new System.Drawing.Size(253, 39);
-            this.loginButtonAceptar.TabIndex = 6;
-            this.loginButtonAceptar.Text = "Aceptar";
-            this.loginButtonAceptar.UseVisualStyleBackColor = false;
-            this.loginButtonAceptar.Click += new System.EventHandler(this.Login);
-            // 
-            // loginPanelLineUsername
-            // 
-            this.loginPanelLineUsername.BackColor = System.Drawing.Color.Transparent;
-            this.loginPanelLineUsername.Location = new System.Drawing.Point(99, 90);
-            this.loginPanelLineUsername.Name = "loginPanelLineUsername";
-            this.loginPanelLineUsername.Size = new System.Drawing.Size(253, 2);
-            this.loginPanelLineUsername.TabIndex = 5;
-            // 
-            // loginPanelLineaPassword
-            // 
-            this.loginPanelLineaPassword.BackColor = System.Drawing.Color.Transparent;
-            this.loginPanelLineaPassword.Location = new System.Drawing.Point(99, 155);
-            this.loginPanelLineaPassword.Name = "loginPanelLineaPassword";
-            this.loginPanelLineaPassword.Size = new System.Drawing.Size(253, 2);
-            this.loginPanelLineaPassword.TabIndex = 6;
             // 
             // FormLogin
             // 

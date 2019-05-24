@@ -72,6 +72,7 @@
             // labelCerrarError
             // 
             this.labelCerrarError.AutoSize = true;
+            this.labelCerrarError.BackColor = System.Drawing.Color.Transparent;
             this.labelCerrarError.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCerrarError.Location = new System.Drawing.Point(388, 9);
             this.labelCerrarError.Name = "labelCerrarError";
