@@ -192,9 +192,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Resources\Icons\login.ico" />
+    <Content Include="Resources\Images\iconoLogin.jpg" />
     <Content Include="Resources\Images\loginBackground.jpg" />
     <Content Include="Resources\Images\loginLogo.png" />
-    <Content Include="Resources\Images\loginLogo2.png" />
     <Content Include="x64\SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
