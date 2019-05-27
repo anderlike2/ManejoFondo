@@ -118,6 +118,7 @@
     <Compile Include="Common\BusinessException.cs" />
     <Compile Include="Common\Constantes.cs" />
     <Compile Include="Common\General.cs" />
+    <Compile Include="Common\Seguridad.cs" />
     <Compile Include="Common\SqlLiteConexion.cs" />
     <Compile Include="Daos\FondoDominiosDao.cs" />
     <Compile Include="Daos\FondoLoginDao.cs" />

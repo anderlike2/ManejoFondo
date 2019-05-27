@@ -99,7 +99,7 @@ namespace GeneracionArchivoClave
                 //Se obtiene el serial
                 String serialProcesadorArchivo = ObtenerSerialProcesador();
 
-                resultado = fechaInicioArchivo + palabraClaveArchivo + fechaFinArchivo + serialProcesadorArchivo;
+                resultado = GenerarCadena(fechaInicioArchivo, palabraClaveArchivo, fechaFinArchivo, serialProcesadorArchivo);
 
                 //Ruta del archivo
                 String pathFile = ConfigurationManager.AppSettings["filePathCrack"];
@@ -112,7 +112,9 @@ namespace GeneracionArchivoClave
                     return;
                 }
 
-                File.AppendAllText(pathFile, General.EncriptarCadena(resultado));
+                System.IO.File.WriteAllText(@pathFile, string.Empty);
+                File.AppendAllText(pathFile, General.EncriptarCadena(resultado));                
+                //File.AppendAllText(@pathFile, resultado);
 
                 message = "El archivo de configuración se ha generado con exito";
                 caption = "Exito!";
@@ -162,6 +164,24 @@ namespace GeneracionArchivoClave
                 }
             }
             return cpuInfo;
+        }
+
+        public static string GenerarCadena(string fechaInicioArchivo, string palabraClaveArchivo, string fechaFinArchivo, string serialProcesadorArchivo) {
+            string iniCadena = fechaInicioArchivo[0].ToString() + palabraClaveArchivo[0].ToString() +
+                fechaInicioArchivo[1].ToString() + palabraClaveArchivo[1].ToString() +
+                fechaInicioArchivo[2].ToString() + palabraClaveArchivo[2].ToString() +
+                fechaInicioArchivo[3].ToString() + palabraClaveArchivo[3].ToString() +
+                fechaInicioArchivo[4].ToString() + palabraClaveArchivo[4].ToString() +
+                fechaInicioArchivo[5].ToString() + fechaInicioArchivo[6].ToString() + fechaInicioArchivo[7].ToString();
+
+            string finCadena = fechaFinArchivo[0].ToString() + palabraClaveArchivo[5].ToString() +
+               fechaFinArchivo[1].ToString() + palabraClaveArchivo[6].ToString() +
+               fechaFinArchivo[2].ToString() + palabraClaveArchivo[7].ToString() +
+               fechaFinArchivo[3].ToString() + palabraClaveArchivo[8].ToString() +
+               fechaFinArchivo[4].ToString() + palabraClaveArchivo[9].ToString() +
+               fechaFinArchivo[5].ToString() + fechaFinArchivo[6].ToString() + fechaFinArchivo[7].ToString();
+
+            return iniCadena + finCadena + serialProcesadorArchivo;
         }
     }
 }

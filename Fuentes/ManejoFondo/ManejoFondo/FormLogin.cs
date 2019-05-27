@@ -48,6 +48,9 @@ namespace ManejoFondo
         {
             try
             {
+                //Validar Seguridad
+                Seguridad.CrackActivo();
+
                 FondoLoginService fondoLoginServie = new FondoLoginService();
                 //Consulta de usuario
                 FondoLoginEntity respuesta =
