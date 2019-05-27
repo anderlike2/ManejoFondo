@@ -63,9 +63,39 @@ namespace ManejoFondo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ayudasGobierno {
+            get {
+                object obj = ResourceManager.GetObject("ayudasGobierno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrarSesion {
             get {
                 object obj = ResourceManager.GetObject("cerrarSesion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap datosPersonales {
+            get {
+                object obj = ResourceManager.GetObject("datosPersonales", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ingresos {
+            get {
+                object obj = ResourceManager.GetObject("ingresos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +126,16 @@ namespace ManejoFondo.Properties {
         internal static System.Drawing.Bitmap loginLogo2 {
             get {
                 object obj = ResourceManager.GetObject("loginLogo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nucleoFamiliar {
+            get {
+                object obj = ResourceManager.GetObject("nucleoFamiliar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

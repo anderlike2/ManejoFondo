@@ -21,10 +21,16 @@ namespace ManejoFondo
     {
         //Variable para guardar el usuario que inicio sesion
         FondoLoginEntity usuarioSesion;
+        private Dictionary<TabPage, Color> TabColors = new Dictionary<TabPage, Color>();
 
         public FormIngresoAsociado(FondoLoginEntity usuario)
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+
+            //Width del tabControl
+            tabIngresarAsociado.ItemSize = new Size(tabIngresarAsociado.Width / tabIngresarAsociado.TabCount, 0);
+
             InicializarTooltips();
             usuarioSesion = usuario;
         }
