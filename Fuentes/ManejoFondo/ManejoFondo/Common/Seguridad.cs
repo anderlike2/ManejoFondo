@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -39,6 +40,15 @@ namespace ManejoFondo.Common
 
             //Se procede a realizar la consulta del permiso
             String info = General.DesencriptarCadena(crack);
+
+            //Validacion del serial
+            String procArchivo = info.Substring(26, info.Length - 26);
+            if(procArchivo != ObtenerSerialProcesador())
+            {
+                throw new BusinessException(Constantes.MsjErrorSeguridad);
+            }
+
+            //Validacion de las fechas
             String diaIni = info[0].ToString() + info[2].ToString();
             String mesIni = info[4].ToString() + info[6].ToString();
             String anioIni = info[8].ToString() + info[10].ToString() + info[11].ToString() + info[12].ToString();
@@ -71,6 +81,29 @@ namespace ManejoFondo.Common
             }
 
             return true;
+        }
+
+        /// <summary> 
+        /// Returns the processor ID of the first 
+        /// CPU found on the machine 
+        /// </summary> 
+        public static string ObtenerSerialProcesador()
+        {
+            string cpuInfo = String.Empty;
+            ManagementClass managementClass =
+                 new ManagementClass("Win32_Processor");
+            ManagementObjectCollection managementObjCol =
+                 managementClass.GetInstances();
+
+            foreach (ManagementObject managementObj in managementObjCol)
+            {
+                if (cpuInfo == String.Empty)
+                {
+                    cpuInfo =
+                    managementObj.Properties["ProcessorId"].Value.ToString();
+                }
+            }
+            return cpuInfo;
         }
     }
 }
