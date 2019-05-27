@@ -39,16 +39,23 @@ namespace ManejoFondo.Common
 
             //Se procede a realizar la consulta del permiso
             String info = General.DesencriptarCadena(crack);
-            String fechaInicialArchivo = (info[0] + info[2] + info[4] + info[6] + info[8] + info[10] + info[11] + info[12]).ToString();
-            String fechaFinalArchivo = (info[13] + info[15] + info[17] + info[19] + info[21] + info[23] + info[24] + info[25]).ToString();
+            String diaIni = info[0].ToString() + info[2].ToString();
+            String mesIni = info[4].ToString() + info[6].ToString();
+            String anioIni = info[8].ToString() + info[10].ToString() + info[11].ToString() + info[12].ToString();
+            String fechaInicialArchivo = diaIni + mesIni + anioIni;
+
+            String diaFin = info[13].ToString() + info[15].ToString();
+            String mesFin = info[17].ToString() + info[19].ToString();
+            String anioFin = info[21].ToString() + info[23].ToString() + info[24].ToString() + info[25].ToString();
+            String fechaFinalArchivo = diaFin + mesFin + anioFin;
             if(fechaInicialArchivo == "00000000" && fechaFinalArchivo == "00000000")
             {
                 return true;
             }
             else
             {
-                DateTime fechaIni = new DateTime(info[0] + info[2] + info[4] + info[6] + info[8] + info[10] + info[11] + info[12]);
-                DateTime fechaFin = new DateTime(info[13] + info[15] + info[17] + info[19] + info[21] + info[23] + info[24] + info[25]);
+                DateTime fechaIni = new DateTime(Convert.ToInt32(anioIni), Convert.ToInt32(mesIni), Convert.ToInt32(diaIni));
+                DateTime fechaFin = new DateTime(Convert.ToInt32(anioFin), Convert.ToInt32(mesFin), Convert.ToInt32(diaFin));
                 DateTime fechaSistema = DateTime.Now;
                 int fechaInicioCompare = DateTime.Compare(fechaSistema, fechaIni);
                 int fechaFinCompare = DateTime.Compare(fechaSistema, fechaFin);
