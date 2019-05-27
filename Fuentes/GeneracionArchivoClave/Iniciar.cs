@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace GeneracionArchivoClave
 {
-    static class Program
+    static class Iniciar
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
@@ -16,7 +16,7 @@ namespace GeneracionArchivoClave
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new GeneracionCrack());
         }
     }
 }
