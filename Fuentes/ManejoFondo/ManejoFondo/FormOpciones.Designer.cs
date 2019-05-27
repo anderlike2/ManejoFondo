@@ -171,6 +171,7 @@
             this.opcionesPanelAsociado.Name = "opcionesPanelAsociado";
             this.opcionesPanelAsociado.Size = new System.Drawing.Size(221, 137);
             this.opcionesPanelAsociado.TabIndex = 10;
+            this.opcionesPanelAsociado.Click += new System.EventHandler(this.AbrirFormularioIngresoAsociados);
             // 
             // opcionesPanelConsultarUsuarios
             // 

@@ -19,6 +19,9 @@ namespace ManejoFondo
     /// </summary>    
     public partial class FormOpciones : Form
     {
+        //Variable para guardar el usuario que inicio sesion
+        FondoLoginEntity usuarioSesion;
+
         /// <summary>
         /// Inicializa el componente de Opciones
         /// Autor: Anderson Benavides
@@ -29,6 +32,8 @@ namespace ManejoFondo
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+
+            usuarioSesion = usuario;
 
             //Datos del usuario
             opcionLabelUsername.Text = usuario.V_Username;
@@ -78,6 +83,20 @@ namespace ManejoFondo
             toolTip.SetToolTip(opcionesPanelIndicadores, Constantes.MsjTooltipIndicadores);
             toolTip.SetToolTip(opcionesPanelCambiarClave, Constantes.MsjTooltipCambiarClave);
             toolTip.SetToolTip(opcionesPanelParametrizacion, Constantes.MsjTooltipParametrizacion);
+        }
+
+        /// <summary>
+        /// Abrir Formulario Ingreso de Asociados
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void AbrirFormularioIngresoAsociados(object sender, EventArgs e)
+        {
+            //Se inicia el formulario de Ingreso de Asociados
+            FormIngresoAsociado formIngresoAsociado = new FormIngresoAsociado(usuarioSesion);
+            Hide();
+            formIngresoAsociado.ShowDialog();
+            Close();
         }
     }
 }
