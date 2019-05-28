@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Animations;
+using MaterialSkin.Controls;
+using MaterialSkin;
 
 namespace ManejoFondo
 {
@@ -17,7 +20,7 @@ namespace ManejoFondo
     /// Autor: Anderson Benavides
     /// 2019-05-22
     /// </summary>  
-    public partial class FormIngresoAsociado : Form
+    public partial class FormIngresoAsociado : MaterialForm
     {
         //Variable para guardar el usuario que inicio sesion
         FondoLoginEntity usuarioSesion;
