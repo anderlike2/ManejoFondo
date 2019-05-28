@@ -97,7 +97,7 @@ namespace GeneracionArchivoClave
                 }
 
                 //Se obtiene el serial
-                String serialProcesadorArchivo = ObtenerSerialProcesador();
+                String serialProcesadorArchivo = ObtenerSerialBios();
 
                 resultado = GenerarCadena(fechaInicioArchivo, palabraClaveArchivo, fechaFinArchivo, serialProcesadorArchivo);
 
@@ -144,26 +144,19 @@ namespace GeneracionArchivoClave
         }
 
         /// <summary> 
-        /// Returns the processor ID of the first 
+        /// Returns el serial de la Bios 
         /// CPU found on the machine 
         /// </summary> 
-        public static string ObtenerSerialProcesador()
+        public static string ObtenerSerialBios()
         {
-            string cpuInfo = String.Empty;
-            ManagementClass managementClass =
-                 new ManagementClass("Win32_Processor");
-            ManagementObjectCollection managementObjCol =
-                 managementClass.GetInstances();
+            string serialNumber = string.Empty;
 
-            foreach (ManagementObject managementObj in managementObjCol)
+            ManagementObjectSearcher MOS = new ManagementObjectSearcher(" Select * From Win32_BIOS ");
+            foreach (ManagementObject getserial in MOS.Get())
             {
-                if (cpuInfo == String.Empty)
-                {
-                    cpuInfo =
-                    managementObj.Properties["ProcessorId"].Value.ToString();
-                }
+                serialNumber = getserial["SerialNumber"].ToString();
             }
-            return cpuInfo;
+            return serialNumber;
         }
 
         public static string GenerarCadena(string fechaInicioArchivo, string palabraClaveArchivo, string fechaFinArchivo, string serialProcesadorArchivo) {

@@ -75,7 +75,7 @@
             this.tabDatosPersona.Location = new System.Drawing.Point(4, 27);
             this.tabDatosPersona.Name = "tabDatosPersona";
             this.tabDatosPersona.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDatosPersona.Size = new System.Drawing.Size(929, 461);
+            this.tabDatosPersona.Size = new System.Drawing.Size(954, 422);
             this.tabDatosPersona.TabIndex = 0;
             this.tabDatosPersona.Text = "Datos Persona";
             // 

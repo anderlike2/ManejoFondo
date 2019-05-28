@@ -43,7 +43,7 @@ namespace ManejoFondo.Common
 
             //Validacion del serial
             String procArchivo = info.Substring(26, info.Length - 26);
-            if(procArchivo != ObtenerSerialProcesador())
+            if(procArchivo != ObtenerSerialBios())
             {
                 throw new BusinessException(Constantes.MsjErrorSeguridad);
             }
@@ -84,26 +84,19 @@ namespace ManejoFondo.Common
         }
 
         /// <summary> 
-        /// Returns the processor ID of the first 
+        /// Returns el serial de la Bios 
         /// CPU found on the machine 
         /// </summary> 
-        public static string ObtenerSerialProcesador()
+        public static string ObtenerSerialBios()
         {
-            string cpuInfo = String.Empty;
-            ManagementClass managementClass =
-                 new ManagementClass("Win32_Processor");
-            ManagementObjectCollection managementObjCol =
-                 managementClass.GetInstances();
-
-            foreach (ManagementObject managementObj in managementObjCol)
+            string serialNumber = string.Empty;
+              
+            ManagementObjectSearcher MOS = new ManagementObjectSearcher(" Select * From Win32_BIOS ");
+            foreach (ManagementObject getserial in MOS.Get())
             {
-                if (cpuInfo == String.Empty)
-                {
-                    cpuInfo =
-                    managementObj.Properties["ProcessorId"].Value.ToString();
-                }
+                serialNumber = getserial["SerialNumber"].ToString();
             }
-            return cpuInfo;
+            return serialNumber;
         }
     }
 }
