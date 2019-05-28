@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Management;
+using ManejoFondo.Loggers;
 
 namespace ManejoFondo
 {
@@ -50,7 +51,8 @@ namespace ManejoFondo
             try
             {
                 //Validar Seguridad
-                Seguridad.CrackActivo();
+                Seguridad seguridad = new Seguridad();
+                seguridad.CrackActivo();
 
                 FondoLoginService fondoLoginServie = new FondoLoginService();
                 //Consulta de usuario

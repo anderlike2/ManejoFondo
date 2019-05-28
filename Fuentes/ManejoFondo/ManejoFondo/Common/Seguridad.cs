@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManejoFondo.Loggers;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -23,7 +24,7 @@ namespace ManejoFondo.Common
         /// </summary>
         /// <param name="texto"></param>
         /// <param name="descripcion"></param>
-        public static bool CrackActivo()
+        public bool CrackActivo()
         {
             //Lectura archivo Crack
             String path = ConfigurationManager.AppSettings["filePathCrack"];
@@ -87,7 +88,7 @@ namespace ManejoFondo.Common
         /// Returns el serial de la Bios 
         /// CPU found on the machine 
         /// </summary> 
-        public static string ObtenerSerialBios()
+        public string ObtenerSerialBios()
         {
             string serialNumber = string.Empty;
               
@@ -96,6 +97,7 @@ namespace ManejoFondo.Common
             {
                 serialNumber = getserial["SerialNumber"].ToString();
             }
+            Log.Registrar_Log("ObtenerSerialBios:" + serialNumber, "ObtenerSerialBios2: " + serialNumber, LogErrorEnumeration.Informacion);
             return serialNumber;
         }
     }
