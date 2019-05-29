@@ -1,10 +1,13 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ManejoFondo.Common
 {
@@ -94,6 +97,19 @@ namespace ManejoFondo.Common
                 return false;
             }
             return true;
+        }
+
+        /// <summary>
+        /// Metodo para inicializar temas del formulario
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        public static void InicializarTema(MaterialForm formulario)
+        {
+            var skinManejador = MaterialSkinManager.Instance;
+            skinManejador.AddFormToManage(formulario);
+            skinManejador.Theme = MaterialSkinManager.Themes.LIGHT;
+            skinManejador.ColorScheme = new ColorScheme(Primary.Blue400, Primary.Blue500, Primary.Blue600, Accent.Amber700, TextShade.WHITE);
         }
     }
 }

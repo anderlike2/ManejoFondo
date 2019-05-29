@@ -107,7 +107,7 @@
             this.tabAyudaGubernamental.Location = new System.Drawing.Point(4, 27);
             this.tabAyudaGubernamental.Name = "tabAyudaGubernamental";
             this.tabAyudaGubernamental.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAyudaGubernamental.Size = new System.Drawing.Size(929, 461);
+            this.tabAyudaGubernamental.Size = new System.Drawing.Size(954, 422);
             this.tabAyudaGubernamental.TabIndex = 1;
             this.tabAyudaGubernamental.Text = "Ayuda Gobierno";
             // 

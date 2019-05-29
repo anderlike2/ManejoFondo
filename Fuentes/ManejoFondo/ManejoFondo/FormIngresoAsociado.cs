@@ -36,6 +36,9 @@ namespace ManejoFondo
 
             InicializarTooltips();
             usuarioSesion = usuario;
+
+            //Cambiar Tema form
+            General.InicializarTema(this);
         }
 
         /// <summary>
