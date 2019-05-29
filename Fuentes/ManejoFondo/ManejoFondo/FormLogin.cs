@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Management;
 using ManejoFondo.Loggers;
+using Microsoft.Practices.EnterpriseLibrary.Logging;
 
 namespace ManejoFondo
 {
@@ -34,7 +35,7 @@ namespace ManejoFondo
         public FormLogin()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterScreen;            
             //Quitar
             loginTextBoxUsername.Text = "aab";
             loginTextBoxPassword.Text = "Admin1980";
@@ -74,6 +75,7 @@ namespace ManejoFondo
             }
             catch (Exception ex)
             {
+                Log.Registrar_Log(ex.Message, "FormLogin - Login", LogErrorEnumeration.Critico);
                 General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
             }
         }

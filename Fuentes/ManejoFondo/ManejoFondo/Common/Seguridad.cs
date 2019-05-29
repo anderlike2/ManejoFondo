@@ -97,7 +97,6 @@ namespace ManejoFondo.Common
             {
                 serialNumber = getserial["SerialNumber"].ToString();
             }
-            Log.Registrar_Log("ObtenerSerialBios:" + serialNumber, "ObtenerSerialBios2: " + serialNumber, LogErrorEnumeration.Informacion);
             return serialNumber;
         }
     }
