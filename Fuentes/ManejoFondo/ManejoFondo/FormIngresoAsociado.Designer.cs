@@ -45,6 +45,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.ingresoAsociadoAceptar = new System.Windows.Forms.Button();
             this.panelIngresoAsociadoRegresar = new System.Windows.Forms.Panel();
+            this.labelDatosPersonalesNombres = new System.Windows.Forms.Label();
+            this.labelDatosPersonalesApellidos = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxDatosPersonaNombres = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.textBoxDatosPersonasApellidos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tabIngresarAsociado.SuspendLayout();
             this.tabDatosPersona.SuspendLayout();
             this.tabAyudaGubernamental.SuspendLayout();
@@ -68,7 +74,13 @@
             // 
             // tabDatosPersona
             // 
-            this.tabDatosPersona.BackColor = System.Drawing.Color.Transparent;
+            this.tabDatosPersona.BackColor = System.Drawing.Color.White;
+            this.tabDatosPersona.Controls.Add(this.textBoxDatosPersonasApellidos);
+            this.tabDatosPersona.Controls.Add(this.textBoxDatosPersonaNombres);
+            this.tabDatosPersona.Controls.Add(this.label4);
+            this.tabDatosPersona.Controls.Add(this.label3);
+            this.tabDatosPersona.Controls.Add(this.labelDatosPersonalesApellidos);
+            this.tabDatosPersona.Controls.Add(this.labelDatosPersonalesNombres);
             this.tabDatosPersona.Controls.Add(this.labelTituloDatosPersonales);
             this.tabDatosPersona.Controls.Add(this.panelImagenDatosPersonales);
             this.tabDatosPersona.ForeColor = System.Drawing.Color.Transparent;
@@ -237,6 +249,92 @@
             this.panelIngresoAsociadoRegresar.TabIndex = 9;
             this.panelIngresoAsociadoRegresar.Click += new System.EventHandler(this.RegresarMenuPrincipal);
             // 
+            // labelDatosPersonalesNombres
+            // 
+            this.labelDatosPersonalesNombres.AutoSize = true;
+            this.labelDatosPersonalesNombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDatosPersonalesNombres.ForeColor = System.Drawing.Color.Black;
+            this.labelDatosPersonalesNombres.Location = new System.Drawing.Point(35, 139);
+            this.labelDatosPersonalesNombres.Name = "labelDatosPersonalesNombres";
+            this.labelDatosPersonalesNombres.Size = new System.Drawing.Size(79, 21);
+            this.labelDatosPersonalesNombres.TabIndex = 3;
+            this.labelDatosPersonalesNombres.Text = "Nombres";
+            // 
+            // labelDatosPersonalesApellidos
+            // 
+            this.labelDatosPersonalesApellidos.AutoSize = true;
+            this.labelDatosPersonalesApellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDatosPersonalesApellidos.ForeColor = System.Drawing.Color.Black;
+            this.labelDatosPersonalesApellidos.Location = new System.Drawing.Point(505, 139);
+            this.labelDatosPersonalesApellidos.Name = "labelDatosPersonalesApellidos";
+            this.labelDatosPersonalesApellidos.Size = new System.Drawing.Size(84, 21);
+            this.labelDatosPersonalesApellidos.TabIndex = 4;
+            this.labelDatosPersonalesApellidos.Text = "Apellidos:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(423, 164);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 29);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "*";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(893, 164);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(22, 29);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "*";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // textBoxDatosPersonaNombres
+            // 
+            this.textBoxDatosPersonaNombres.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxDatosPersonaNombres.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxDatosPersonaNombres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxDatosPersonaNombres.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxDatosPersonaNombres.HintText = "";
+            this.textBoxDatosPersonaNombres.isPassword = false;
+            this.textBoxDatosPersonaNombres.LineFocusedColor = System.Drawing.Color.SlateGray;
+            this.textBoxDatosPersonaNombres.LineIdleColor = System.Drawing.Color.SlateGray;
+            this.textBoxDatosPersonaNombres.LineMouseHoverColor = System.Drawing.Color.SlateGray;
+            this.textBoxDatosPersonaNombres.LineThickness = 3;
+            this.textBoxDatosPersonaNombres.Location = new System.Drawing.Point(39, 164);
+            this.textBoxDatosPersonaNombres.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDatosPersonaNombres.Name = "textBoxDatosPersonaNombres";
+            this.textBoxDatosPersonaNombres.Size = new System.Drawing.Size(379, 29);
+            this.textBoxDatosPersonaNombres.TabIndex = 8;
+            this.textBoxDatosPersonaNombres.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // textBoxDatosPersonasApellidos
+            // 
+            this.textBoxDatosPersonasApellidos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxDatosPersonasApellidos.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxDatosPersonasApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxDatosPersonasApellidos.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxDatosPersonasApellidos.HintText = "";
+            this.textBoxDatosPersonasApellidos.isPassword = false;
+            this.textBoxDatosPersonasApellidos.LineFocusedColor = System.Drawing.Color.SlateGray;
+            this.textBoxDatosPersonasApellidos.LineIdleColor = System.Drawing.Color.SlateGray;
+            this.textBoxDatosPersonasApellidos.LineMouseHoverColor = System.Drawing.Color.SlateGray;
+            this.textBoxDatosPersonasApellidos.LineThickness = 3;
+            this.textBoxDatosPersonasApellidos.Location = new System.Drawing.Point(509, 164);
+            this.textBoxDatosPersonasApellidos.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDatosPersonasApellidos.Name = "textBoxDatosPersonasApellidos";
+            this.textBoxDatosPersonasApellidos.Size = new System.Drawing.Size(379, 29);
+            this.textBoxDatosPersonasApellidos.TabIndex = 9;
+            this.textBoxDatosPersonasApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // FormIngresoAsociado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,5 +377,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelDatosPersonalesApellidos;
+        private System.Windows.Forms.Label labelDatosPersonalesNombres;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxDatosPersonasApellidos;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxDatosPersonaNombres;
     }
 }
