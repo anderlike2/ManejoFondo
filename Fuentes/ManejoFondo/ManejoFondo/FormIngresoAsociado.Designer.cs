@@ -55,7 +55,8 @@
             this.labelDatosPersonalesNumeroIdentificacion = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dropDownTipoIdentificacion = new Bunifu.Framework.UI.BunifuDropdown();
+            this.comboBoxDatosPersonalesTipoIdentificacion = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabIngresarAsociado.SuspendLayout();
             this.tabDatosPersona.SuspendLayout();
             this.tabAyudaGubernamental.SuspendLayout();
@@ -80,7 +81,8 @@
             // tabDatosPersona
             // 
             this.tabDatosPersona.BackColor = System.Drawing.Color.White;
-            this.tabDatosPersona.Controls.Add(this.dropDownTipoIdentificacion);
+            this.tabDatosPersona.Controls.Add(this.label6);
+            this.tabDatosPersona.Controls.Add(this.comboBoxDatosPersonalesTipoIdentificacion);
             this.tabDatosPersona.Controls.Add(this.label5);
             this.tabDatosPersona.Controls.Add(this.bunifuMaterialTextbox2);
             this.tabDatosPersona.Controls.Add(this.labelDatosPersonalesNumeroIdentificacion);
@@ -216,7 +218,7 @@
             this.ingresoAsociadoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ingresoAsociadoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ingresoAsociadoCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ingresoAsociadoCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(60)))), ((int)(((byte)(112)))));
+            this.ingresoAsociadoCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(66)))), ((int)(((byte)(45)))));
             this.ingresoAsociadoCancelar.Location = new System.Drawing.Point(456, 373);
             this.ingresoAsociadoCancelar.Name = "ingresoAsociadoCancelar";
             this.ingresoAsociadoCancelar.Size = new System.Drawing.Size(253, 39);
@@ -239,7 +241,7 @@
             this.ingresoAsociadoAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ingresoAsociadoAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ingresoAsociadoAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ingresoAsociadoAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(60)))), ((int)(((byte)(112)))));
+            this.ingresoAsociadoAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.ingresoAsociadoAceptar.Location = new System.Drawing.Point(197, 373);
             this.ingresoAsociadoAceptar.Name = "ingresoAsociadoAceptar";
             this.ingresoAsociadoAceptar.Size = new System.Drawing.Size(253, 39);
@@ -253,9 +255,9 @@
             this.panelIngresoAsociadoRegresar.BackgroundImage = global::ManejoFondo.Properties.Resources.regresar;
             this.panelIngresoAsociadoRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelIngresoAsociadoRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelIngresoAsociadoRegresar.Location = new System.Drawing.Point(906, 529);
+            this.panelIngresoAsociadoRegresar.Location = new System.Drawing.Point(913, 529);
             this.panelIngresoAsociadoRegresar.Name = "panelIngresoAsociadoRegresar";
-            this.panelIngresoAsociadoRegresar.Size = new System.Drawing.Size(42, 43);
+            this.panelIngresoAsociadoRegresar.Size = new System.Drawing.Size(35, 32);
             this.panelIngresoAsociadoRegresar.TabIndex = 9;
             this.panelIngresoAsociadoRegresar.Click += new System.EventHandler(this.RegresarMenuPrincipal);
             // 
@@ -315,9 +317,9 @@
             this.textBoxDatosPersonaNombres.HintForeColor = System.Drawing.Color.Empty;
             this.textBoxDatosPersonaNombres.HintText = "";
             this.textBoxDatosPersonaNombres.isPassword = false;
-            this.textBoxDatosPersonaNombres.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.textBoxDatosPersonaNombres.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.textBoxDatosPersonaNombres.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxDatosPersonaNombres.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxDatosPersonaNombres.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxDatosPersonaNombres.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaNombres.LineThickness = 3;
             this.textBoxDatosPersonaNombres.Location = new System.Drawing.Point(39, 161);
             this.textBoxDatosPersonaNombres.Margin = new System.Windows.Forms.Padding(4);
@@ -334,9 +336,9 @@
             this.textBoxDatosPersonasApellidos.HintForeColor = System.Drawing.Color.Empty;
             this.textBoxDatosPersonasApellidos.HintText = "";
             this.textBoxDatosPersonasApellidos.isPassword = false;
-            this.textBoxDatosPersonasApellidos.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.textBoxDatosPersonasApellidos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.textBoxDatosPersonasApellidos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxDatosPersonasApellidos.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxDatosPersonasApellidos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxDatosPersonasApellidos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonasApellidos.LineThickness = 3;
             this.textBoxDatosPersonasApellidos.Location = new System.Drawing.Point(509, 161);
             this.textBoxDatosPersonasApellidos.Margin = new System.Windows.Forms.Padding(4);
@@ -375,9 +377,9 @@
             this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox2.HintText = "";
             this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.bunifuMaterialTextbox2.LineThickness = 3;
             this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(509, 228);
             this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
@@ -399,21 +401,27 @@
             this.label5.Text = "*";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // dropDownTipoIdentificacion
+            // comboBoxDatosPersonalesTipoIdentificacion
             // 
-            this.dropDownTipoIdentificacion.BackColor = System.Drawing.Color.Transparent;
-            this.dropDownTipoIdentificacion.BorderRadius = 3;
-            this.dropDownTipoIdentificacion.DisabledColor = System.Drawing.Color.Gray;
-            this.dropDownTipoIdentificacion.ForeColor = System.Drawing.Color.White;
-            this.dropDownTipoIdentificacion.Items = new string[0];
-            this.dropDownTipoIdentificacion.Location = new System.Drawing.Point(39, 228);
-            this.dropDownTipoIdentificacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dropDownTipoIdentificacion.Name = "dropDownTipoIdentificacion";
-            this.dropDownTipoIdentificacion.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.dropDownTipoIdentificacion.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.dropDownTipoIdentificacion.selectedIndex = -1;
-            this.dropDownTipoIdentificacion.Size = new System.Drawing.Size(379, 29);
-            this.dropDownTipoIdentificacion.TabIndex = 15;
+            this.comboBoxDatosPersonalesTipoIdentificacion.BackColor = System.Drawing.Color.White;
+            this.comboBoxDatosPersonalesTipoIdentificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.comboBoxDatosPersonalesTipoIdentificacion.Location = new System.Drawing.Point(39, 234);
+            this.comboBoxDatosPersonalesTipoIdentificacion.Name = "comboBoxDatosPersonalesTipoIdentificacion";
+            this.comboBoxDatosPersonalesTipoIdentificacion.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxDatosPersonalesTipoIdentificacion.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(423, 229);
+            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(22, 29);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "*";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // FormIngresoAsociado
             // 
@@ -463,10 +471,11 @@
         private System.Windows.Forms.Label labelDatosPersonalesNombres;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxDatosPersonasApellidos;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxDatosPersonaNombres;
-        private Bunifu.Framework.UI.BunifuDropdown dropDownTipoIdentificacion;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
         private System.Windows.Forms.Label labelDatosPersonalesNumeroIdentificacion;
         private System.Windows.Forms.Label labelDatosPersonalesTipoIdentificacion;
+        private System.Windows.Forms.ComboBox comboBoxDatosPersonalesTipoIdentificacion;
+        private System.Windows.Forms.Label label6;
     }
 }

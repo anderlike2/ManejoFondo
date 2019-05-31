@@ -90,7 +90,7 @@
             this.loginButtonAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButtonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButtonAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(60)))), ((int)(((byte)(112)))));
+            this.loginButtonAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.loginButtonAceptar.Location = new System.Drawing.Point(103, 184);
             this.loginButtonAceptar.Name = "loginButtonAceptar";
             this.loginButtonAceptar.Size = new System.Drawing.Size(253, 39);
@@ -121,9 +121,9 @@
             this.textBoxUsuario.HintForeColor = System.Drawing.Color.Empty;
             this.textBoxUsuario.HintText = "Ingrese su usuario";
             this.textBoxUsuario.isPassword = false;
-            this.textBoxUsuario.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.textBoxUsuario.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.textBoxUsuario.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxUsuario.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxUsuario.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxUsuario.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxUsuario.LineThickness = 3;
             this.textBoxUsuario.Location = new System.Drawing.Point(46, 41);
             this.textBoxUsuario.Margin = new System.Windows.Forms.Padding(4);
@@ -140,9 +140,9 @@
             this.textBoxPassword.HintForeColor = System.Drawing.Color.Empty;
             this.textBoxPassword.HintText = "Ingrese su contraseña";
             this.textBoxPassword.isPassword = true;
-            this.textBoxPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.textBoxPassword.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.textBoxPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxPassword.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxPassword.LineThickness = 3;
             this.textBoxPassword.Location = new System.Drawing.Point(46, 98);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
