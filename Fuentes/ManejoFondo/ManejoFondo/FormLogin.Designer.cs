@@ -33,16 +33,12 @@
             this.loginLabelBienvenido = new System.Windows.Forms.Label();
             this.loginLabelInicioSesion = new System.Windows.Forms.Label();
             this.loginPicture = new System.Windows.Forms.PictureBox();
-            this.loginPanelDerecho = new System.Windows.Forms.Panel();
-            this.loginLabelObligPassword = new System.Windows.Forms.Label();
-            this.loginLabelObligUsername = new System.Windows.Forms.Label();
-            this.loginPanelLineaPassword = new System.Windows.Forms.Panel();
-            this.loginPanelLineUsername = new System.Windows.Forms.Panel();
             this.loginButtonAceptar = new System.Windows.Forms.Button();
-            this.loginTextBoxPassword = new System.Windows.Forms.TextBox();
-            this.loginTextBoxUsername = new System.Windows.Forms.TextBox();
-            this.loginLabelPassword = new System.Windows.Forms.Label();
-            this.loginLabelUsername = new System.Windows.Forms.Label();
+            this.loginPanelDerecho = new System.Windows.Forms.Panel();
+            this.textBoxUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.textBoxPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).BeginInit();
             this.loginPanelDerecho.SuspendLayout();
             this.SuspendLayout();
@@ -88,64 +84,6 @@
             this.loginPicture.TabIndex = 2;
             this.loginPicture.TabStop = false;
             // 
-            // loginPanelDerecho
-            // 
-            this.loginPanelDerecho.BackgroundImage = global::ManejoFondo.Properties.Resources.loginBackground;
-            this.loginPanelDerecho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.loginPanelDerecho.Controls.Add(this.loginLabelObligPassword);
-            this.loginPanelDerecho.Controls.Add(this.loginLabelObligUsername);
-            this.loginPanelDerecho.Controls.Add(this.loginPanelLineaPassword);
-            this.loginPanelDerecho.Controls.Add(this.loginPanelLineUsername);
-            this.loginPanelDerecho.Controls.Add(this.loginButtonAceptar);
-            this.loginPanelDerecho.Controls.Add(this.loginTextBoxPassword);
-            this.loginPanelDerecho.Controls.Add(this.loginTextBoxUsername);
-            this.loginPanelDerecho.Controls.Add(this.loginLabelPassword);
-            this.loginPanelDerecho.Controls.Add(this.loginLabelUsername);
-            this.loginPanelDerecho.Location = new System.Drawing.Point(-1, 203);
-            this.loginPanelDerecho.Name = "loginPanelDerecho";
-            this.loginPanelDerecho.Size = new System.Drawing.Size(470, 260);
-            this.loginPanelDerecho.TabIndex = 1;
-            // 
-            // loginLabelObligPassword
-            // 
-            this.loginLabelObligPassword.AutoSize = true;
-            this.loginLabelObligPassword.BackColor = System.Drawing.Color.Transparent;
-            this.loginLabelObligPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabelObligPassword.ForeColor = System.Drawing.Color.Red;
-            this.loginLabelObligPassword.Location = new System.Drawing.Point(260, 110);
-            this.loginLabelObligPassword.Name = "loginLabelObligPassword";
-            this.loginLabelObligPassword.Size = new System.Drawing.Size(14, 16);
-            this.loginLabelObligPassword.TabIndex = 8;
-            this.loginLabelObligPassword.Text = "*";
-            // 
-            // loginLabelObligUsername
-            // 
-            this.loginLabelObligUsername.AutoSize = true;
-            this.loginLabelObligUsername.BackColor = System.Drawing.Color.Transparent;
-            this.loginLabelObligUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabelObligUsername.ForeColor = System.Drawing.Color.Red;
-            this.loginLabelObligUsername.Location = new System.Drawing.Point(260, 49);
-            this.loginLabelObligUsername.Name = "loginLabelObligUsername";
-            this.loginLabelObligUsername.Size = new System.Drawing.Size(14, 16);
-            this.loginLabelObligUsername.TabIndex = 7;
-            this.loginLabelObligUsername.Text = "*";
-            // 
-            // loginPanelLineaPassword
-            // 
-            this.loginPanelLineaPassword.BackColor = System.Drawing.Color.Transparent;
-            this.loginPanelLineaPassword.Location = new System.Drawing.Point(99, 155);
-            this.loginPanelLineaPassword.Name = "loginPanelLineaPassword";
-            this.loginPanelLineaPassword.Size = new System.Drawing.Size(253, 2);
-            this.loginPanelLineaPassword.TabIndex = 6;
-            // 
-            // loginPanelLineUsername
-            // 
-            this.loginPanelLineUsername.BackColor = System.Drawing.Color.Transparent;
-            this.loginPanelLineUsername.Location = new System.Drawing.Point(99, 90);
-            this.loginPanelLineUsername.Name = "loginPanelLineUsername";
-            this.loginPanelLineUsername.Size = new System.Drawing.Size(253, 2);
-            this.loginPanelLineUsername.TabIndex = 5;
-            // 
             // loginButtonAceptar
             // 
             this.loginButtonAceptar.BackColor = System.Drawing.Color.White;
@@ -161,55 +99,89 @@
             this.loginButtonAceptar.UseVisualStyleBackColor = false;
             this.loginButtonAceptar.Click += new System.EventHandler(this.Login);
             // 
-            // loginTextBoxPassword
+            // loginPanelDerecho
             // 
-            this.loginTextBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(220)))), ((int)(((byte)(235)))));
-            this.loginTextBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.loginTextBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginTextBoxPassword.Location = new System.Drawing.Point(99, 129);
-            this.loginTextBoxPassword.Name = "loginTextBoxPassword";
-            this.loginTextBoxPassword.PasswordChar = '*';
-            this.loginTextBoxPassword.Size = new System.Drawing.Size(253, 19);
-            this.loginTextBoxPassword.TabIndex = 5;
+            this.loginPanelDerecho.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loginPanelDerecho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loginPanelDerecho.Controls.Add(this.label1);
+            this.loginPanelDerecho.Controls.Add(this.label3);
+            this.loginPanelDerecho.Controls.Add(this.textBoxPassword);
+            this.loginPanelDerecho.Controls.Add(this.textBoxUsuario);
+            this.loginPanelDerecho.Controls.Add(this.loginButtonAceptar);
+            this.loginPanelDerecho.Location = new System.Drawing.Point(-1, 203);
+            this.loginPanelDerecho.Name = "loginPanelDerecho";
+            this.loginPanelDerecho.Size = new System.Drawing.Size(470, 260);
+            this.loginPanelDerecho.TabIndex = 1;
             // 
-            // loginTextBoxUsername
+            // textBoxUsuario
             // 
-            this.loginTextBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(220)))), ((int)(((byte)(235)))));
-            this.loginTextBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.loginTextBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginTextBoxUsername.Location = new System.Drawing.Point(99, 67);
-            this.loginTextBoxUsername.Name = "loginTextBoxUsername";
-            this.loginTextBoxUsername.Size = new System.Drawing.Size(253, 19);
-            this.loginTextBoxUsername.TabIndex = 4;
+            this.textBoxUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxUsuario.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxUsuario.HintText = "Ingrese su usuario";
+            this.textBoxUsuario.isPassword = false;
+            this.textBoxUsuario.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxUsuario.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxUsuario.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxUsuario.LineThickness = 3;
+            this.textBoxUsuario.Location = new System.Drawing.Point(46, 41);
+            this.textBoxUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxUsuario.Name = "textBoxUsuario";
+            this.textBoxUsuario.Size = new System.Drawing.Size(379, 33);
+            this.textBoxUsuario.TabIndex = 9;
+            this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // loginLabelPassword
+            // textBoxPassword
             // 
-            this.loginLabelPassword.AutoSize = true;
-            this.loginLabelPassword.BackColor = System.Drawing.Color.Transparent;
-            this.loginLabelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabelPassword.ForeColor = System.Drawing.Color.Black;
-            this.loginLabelPassword.Location = new System.Drawing.Point(269, 106);
-            this.loginLabelPassword.Name = "loginLabelPassword";
-            this.loginLabelPassword.Size = new System.Drawing.Size(92, 20);
-            this.loginLabelPassword.TabIndex = 3;
-            this.loginLabelPassword.Text = "Contraseña";
+            this.textBoxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxPassword.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxPassword.HintText = "Ingrese su contraseña";
+            this.textBoxPassword.isPassword = true;
+            this.textBoxPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxPassword.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxPassword.LineThickness = 3;
+            this.textBoxPassword.Location = new System.Drawing.Point(46, 98);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(379, 33);
+            this.textBoxPassword.TabIndex = 10;
+            this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // loginLabelUsername
+            // label3
             // 
-            this.loginLabelUsername.AutoSize = true;
-            this.loginLabelUsername.BackColor = System.Drawing.Color.Transparent;
-            this.loginLabelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabelUsername.ForeColor = System.Drawing.Color.Black;
-            this.loginLabelUsername.Location = new System.Drawing.Point(269, 44);
-            this.loginLabelUsername.Name = "loginLabelUsername";
-            this.loginLabelUsername.Size = new System.Drawing.Size(64, 20);
-            this.loginLabelUsername.TabIndex = 2;
-            this.loginLabelUsername.Text = "Usuario";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(430, 45);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 29);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "*";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(430, 102);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 29);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "*";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(469, 459);
             this.Controls.Add(this.loginLabelInicioSesion);
             this.Controls.Add(this.loginLabelBienvenido);
@@ -229,20 +201,16 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel loginPanelDerecho;
-        private System.Windows.Forms.Label loginLabelPassword;
-        private System.Windows.Forms.Label loginLabelUsername;
         private System.Windows.Forms.Panel loginPanelLinea;
         private System.Windows.Forms.PictureBox loginPicture;
-        private System.Windows.Forms.Button loginButtonAceptar;
-        private System.Windows.Forms.TextBox loginTextBoxPassword;
-        private System.Windows.Forms.TextBox loginTextBoxUsername;
         private System.Windows.Forms.Label loginLabelBienvenido;
         private System.Windows.Forms.Label loginLabelInicioSesion;
-        private System.Windows.Forms.Panel loginPanelLineaPassword;
-        private System.Windows.Forms.Panel loginPanelLineUsername;
-        private System.Windows.Forms.Label loginLabelObligPassword;
-        private System.Windows.Forms.Label loginLabelObligUsername;
+        private System.Windows.Forms.Button loginButtonAceptar;
+        private System.Windows.Forms.Panel loginPanelDerecho;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxPassword;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxUsuario;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

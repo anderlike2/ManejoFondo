@@ -37,8 +37,8 @@ namespace ManejoFondo
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;            
             //Quitar
-            loginTextBoxUsername.Text = "aab";
-            loginTextBoxPassword.Text = "Admin1980";
+            textBoxUsuario.Text = "aab";
+            textBoxPassword.Text = "Admin1980";
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace ManejoFondo
                 FondoLoginService fondoLoginServie = new FondoLoginService();
                 //Consulta de usuario
                 FondoLoginEntity respuesta =
-                    fondoLoginServie.ConsultarUsuario(loginTextBoxUsername.Text, loginTextBoxPassword.Text);
+                    fondoLoginServie.ConsultarUsuario(textBoxUsuario.Text, textBoxPassword.Text);
                 
                 //Actualizacion inicio de sesion
                 fondoLoginServie.ActualizarFechaInicioSesion(respuesta.N_Id);

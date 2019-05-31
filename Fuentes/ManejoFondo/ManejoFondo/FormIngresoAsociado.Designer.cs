@@ -51,6 +51,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxDatosPersonaNombres = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textBoxDatosPersonasApellidos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.labelDatosPersonalesTipoIdentificacion = new System.Windows.Forms.Label();
+            this.labelDatosPersonalesNumeroIdentificacion = new System.Windows.Forms.Label();
+            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dropDownTipoIdentificacion = new Bunifu.Framework.UI.BunifuDropdown();
             this.tabIngresarAsociado.SuspendLayout();
             this.tabDatosPersona.SuspendLayout();
             this.tabAyudaGubernamental.SuspendLayout();
@@ -75,6 +80,11 @@
             // tabDatosPersona
             // 
             this.tabDatosPersona.BackColor = System.Drawing.Color.White;
+            this.tabDatosPersona.Controls.Add(this.dropDownTipoIdentificacion);
+            this.tabDatosPersona.Controls.Add(this.label5);
+            this.tabDatosPersona.Controls.Add(this.bunifuMaterialTextbox2);
+            this.tabDatosPersona.Controls.Add(this.labelDatosPersonalesNumeroIdentificacion);
+            this.tabDatosPersona.Controls.Add(this.labelDatosPersonalesTipoIdentificacion);
             this.tabDatosPersona.Controls.Add(this.textBoxDatosPersonasApellidos);
             this.tabDatosPersona.Controls.Add(this.textBoxDatosPersonaNombres);
             this.tabDatosPersona.Controls.Add(this.label4);
@@ -267,9 +277,9 @@
             this.labelDatosPersonalesApellidos.ForeColor = System.Drawing.Color.Black;
             this.labelDatosPersonalesApellidos.Location = new System.Drawing.Point(505, 139);
             this.labelDatosPersonalesApellidos.Name = "labelDatosPersonalesApellidos";
-            this.labelDatosPersonalesApellidos.Size = new System.Drawing.Size(84, 21);
+            this.labelDatosPersonalesApellidos.Size = new System.Drawing.Size(80, 21);
             this.labelDatosPersonalesApellidos.TabIndex = 4;
-            this.labelDatosPersonalesApellidos.Text = "Apellidos:";
+            this.labelDatosPersonalesApellidos.Text = "Apellidos";
             // 
             // label3
             // 
@@ -305,11 +315,11 @@
             this.textBoxDatosPersonaNombres.HintForeColor = System.Drawing.Color.Empty;
             this.textBoxDatosPersonaNombres.HintText = "";
             this.textBoxDatosPersonaNombres.isPassword = false;
-            this.textBoxDatosPersonaNombres.LineFocusedColor = System.Drawing.Color.SlateGray;
-            this.textBoxDatosPersonaNombres.LineIdleColor = System.Drawing.Color.SlateGray;
-            this.textBoxDatosPersonaNombres.LineMouseHoverColor = System.Drawing.Color.SlateGray;
+            this.textBoxDatosPersonaNombres.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxDatosPersonaNombres.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxDatosPersonaNombres.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.textBoxDatosPersonaNombres.LineThickness = 3;
-            this.textBoxDatosPersonaNombres.Location = new System.Drawing.Point(39, 164);
+            this.textBoxDatosPersonaNombres.Location = new System.Drawing.Point(39, 161);
             this.textBoxDatosPersonaNombres.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaNombres.Name = "textBoxDatosPersonaNombres";
             this.textBoxDatosPersonaNombres.Size = new System.Drawing.Size(379, 29);
@@ -324,16 +334,86 @@
             this.textBoxDatosPersonasApellidos.HintForeColor = System.Drawing.Color.Empty;
             this.textBoxDatosPersonasApellidos.HintText = "";
             this.textBoxDatosPersonasApellidos.isPassword = false;
-            this.textBoxDatosPersonasApellidos.LineFocusedColor = System.Drawing.Color.SlateGray;
-            this.textBoxDatosPersonasApellidos.LineIdleColor = System.Drawing.Color.SlateGray;
-            this.textBoxDatosPersonasApellidos.LineMouseHoverColor = System.Drawing.Color.SlateGray;
+            this.textBoxDatosPersonasApellidos.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxDatosPersonasApellidos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.textBoxDatosPersonasApellidos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.textBoxDatosPersonasApellidos.LineThickness = 3;
-            this.textBoxDatosPersonasApellidos.Location = new System.Drawing.Point(509, 164);
+            this.textBoxDatosPersonasApellidos.Location = new System.Drawing.Point(509, 161);
             this.textBoxDatosPersonasApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonasApellidos.Name = "textBoxDatosPersonasApellidos";
             this.textBoxDatosPersonasApellidos.Size = new System.Drawing.Size(379, 29);
             this.textBoxDatosPersonasApellidos.TabIndex = 9;
             this.textBoxDatosPersonasApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // labelDatosPersonalesTipoIdentificacion
+            // 
+            this.labelDatosPersonalesTipoIdentificacion.AutoSize = true;
+            this.labelDatosPersonalesTipoIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDatosPersonalesTipoIdentificacion.ForeColor = System.Drawing.Color.Black;
+            this.labelDatosPersonalesTipoIdentificacion.Location = new System.Drawing.Point(35, 203);
+            this.labelDatosPersonalesTipoIdentificacion.Name = "labelDatosPersonalesTipoIdentificacion";
+            this.labelDatosPersonalesTipoIdentificacion.Size = new System.Drawing.Size(154, 21);
+            this.labelDatosPersonalesTipoIdentificacion.TabIndex = 10;
+            this.labelDatosPersonalesTipoIdentificacion.Text = "Tipo Identificación";
+            // 
+            // labelDatosPersonalesNumeroIdentificacion
+            // 
+            this.labelDatosPersonalesNumeroIdentificacion.AutoSize = true;
+            this.labelDatosPersonalesNumeroIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDatosPersonalesNumeroIdentificacion.ForeColor = System.Drawing.Color.Black;
+            this.labelDatosPersonalesNumeroIdentificacion.Location = new System.Drawing.Point(505, 203);
+            this.labelDatosPersonalesNumeroIdentificacion.Name = "labelDatosPersonalesNumeroIdentificacion";
+            this.labelDatosPersonalesNumeroIdentificacion.Size = new System.Drawing.Size(184, 21);
+            this.labelDatosPersonalesNumeroIdentificacion.TabIndex = 11;
+            this.labelDatosPersonalesNumeroIdentificacion.Text = "Número Identificación";
+            // 
+            // bunifuMaterialTextbox2
+            // 
+            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
+            this.bunifuMaterialTextbox2.HintText = "";
+            this.bunifuMaterialTextbox2.isPassword = false;
+            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.bunifuMaterialTextbox2.LineThickness = 3;
+            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(509, 228);
+            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
+            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(379, 29);
+            this.bunifuMaterialTextbox2.TabIndex = 13;
+            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(893, 229);
+            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 29);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "*";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // dropDownTipoIdentificacion
+            // 
+            this.dropDownTipoIdentificacion.BackColor = System.Drawing.Color.Transparent;
+            this.dropDownTipoIdentificacion.BorderRadius = 3;
+            this.dropDownTipoIdentificacion.DisabledColor = System.Drawing.Color.Gray;
+            this.dropDownTipoIdentificacion.ForeColor = System.Drawing.Color.White;
+            this.dropDownTipoIdentificacion.Items = new string[0];
+            this.dropDownTipoIdentificacion.Location = new System.Drawing.Point(39, 228);
+            this.dropDownTipoIdentificacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dropDownTipoIdentificacion.Name = "dropDownTipoIdentificacion";
+            this.dropDownTipoIdentificacion.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.dropDownTipoIdentificacion.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.dropDownTipoIdentificacion.selectedIndex = -1;
+            this.dropDownTipoIdentificacion.Size = new System.Drawing.Size(379, 29);
+            this.dropDownTipoIdentificacion.TabIndex = 15;
             // 
             // FormIngresoAsociado
             // 
@@ -383,5 +463,10 @@
         private System.Windows.Forms.Label labelDatosPersonalesNombres;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxDatosPersonasApellidos;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxDatosPersonaNombres;
+        private Bunifu.Framework.UI.BunifuDropdown dropDownTipoIdentificacion;
+        private System.Windows.Forms.Label label5;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private System.Windows.Forms.Label labelDatosPersonalesNumeroIdentificacion;
+        private System.Windows.Forms.Label labelDatosPersonalesTipoIdentificacion;
     }
 }
