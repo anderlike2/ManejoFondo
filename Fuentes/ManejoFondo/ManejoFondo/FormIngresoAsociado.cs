@@ -112,7 +112,6 @@ namespace ManejoFondo
             try
             {
                 FondoDominiosService fondoDominioService = new FondoDominiosService();
-                List<FondoDominiosEntity> lstdom = fondoDominioService.ConsultarDominiosPorPadre(4);
 
             }
             catch (Exception ex)
