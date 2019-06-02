@@ -26,5 +26,29 @@ namespace ManejoFondo.Services
             FondoDominiosDao dominioDao = new FondoDominiosDao();
             return dominioDao.ConsultarDominios();
         }
+
+        /// <summary>
+        /// Metodo para consultar todos los dominios por Codigo
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="codigoDominio"></param>
+        public List<FondoDominiosEntity> ConsultarDominiosPorCodigo(string codigoDominio)
+        {
+            FondoDominiosDao dominioDao = new FondoDominiosDao();
+            return dominioDao.ConsultarDominiosPorCodigo(codigoDominio);
+        }
+
+        /// <summary>
+        /// Metodo para consultar todos los dominios por Padre
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="codigoPadre"></param>
+        public List<FondoDominiosEntity> ConsultarDominiosPorPadre(int codigoPadre)
+        {
+            FondoDominiosDao dominioDao = new FondoDominiosDao();
+            return dominioDao.ConsultarDominiosPorPadre(codigoPadre);
+        }
     }
 }

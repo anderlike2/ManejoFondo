@@ -25,5 +25,6 @@ namespace ManejoFondo.Entities
         public string V_Nombre_Institucion { get; set; }
         public DateTime F_Fecha_Nacimiento { get; set; }
         public DateTime F_Fecha_Registro { get; set; }
+        public int N_Antiguedad_Asociacion{ get; set; }
     }
 }

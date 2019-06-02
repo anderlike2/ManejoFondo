@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using MaterialSkin.Animations;
 using MaterialSkin.Controls;
 using MaterialSkin;
+using ManejoFondo.Services;
+using ManejoFondo.Loggers;
 
 namespace ManejoFondo
 {
@@ -31,14 +33,21 @@ namespace ManejoFondo
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
+            //Cambiar Tema form
+            General.InicializarTema(this);
+
             //Width del tabControl
             tabIngresarAsociado.ItemSize = new Size(tabIngresarAsociado.Width / tabIngresarAsociado.TabCount, 0);
 
+            //Ajustar height
+            var bounds = Screen.FromControl(this).Bounds;
+            this.Height = bounds.Height - 100;
+
+            //Valores por defecto
             InicializarTooltips();
             usuarioSesion = usuario;
-
-            //Cambiar Tema form
-            General.InicializarTema(this);
+            InicializarCombobox();
+            CargarCombobox();
         }
 
         /// <summary>
@@ -76,6 +85,41 @@ namespace ManejoFondo
             Hide();
             formOpciones.ShowDialog();
             Close();
+        }
+
+        /// <summary>
+        /// Inicializar los valores por defecto de los combobox
+        /// Autor: Anderson Benavides
+        /// 2019-06-02
+        /// </summary>
+        private void InicializarCombobox()
+        {
+            comboBoxDatosPersonaTipoIdentificacion.Text = Constantes.DescripcionSeleccione;
+            comboBoxDatosPersonaPais.Text = Constantes.DescripcionSeleccione;
+            comboBoxDatosPersonaDepartamento.Text = Constantes.DescripcionSeleccione;
+            comboBoxDatosPersonaMunicipio.Text = Constantes.DescripcionSeleccione;
+            comboBoxDatosPersonaNivelEstudio.Text = Constantes.DescripcionSeleccione;
+            comboBoxDatosPersonaEstadoCivil.Text = Constantes.DescripcionSeleccione;
+        }
+
+        /// <summary>
+        /// Cargar los valores de los combobox principales
+        /// Autor: Anderson Benavides
+        /// 2019-06-02
+        /// </summary>
+        private void CargarCombobox()
+        {
+            try
+            {
+                FondoDominiosService fondoDominioService = new FondoDominiosService();
+                comboBoxDatosPersonaTipoIdentificacion.DataSource = fondoDominioService.ConsultarDominiosPorPadre(4);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Registrar_Log(ex.Message, "CargarCombobox - IngresoAsociado", LogErrorEnumeration.Critico);
+                General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
+            }            
         }
 
         /// <summary>

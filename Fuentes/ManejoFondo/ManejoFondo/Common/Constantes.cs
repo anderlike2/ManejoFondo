@@ -20,6 +20,7 @@ namespace ManejoFondo.Common
         public const string DescripcionError = "Error!";
         public const string DescripcionExito = "Muy bien!";
         public const string DescripcionWarning = "Cuidado!";
+        public const string DescripcionSeleccione = "Seleccione...";
         #endregion
 
         #region Mensajes
