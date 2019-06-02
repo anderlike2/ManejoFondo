@@ -112,7 +112,7 @@ namespace ManejoFondo
             try
             {
                 FondoDominiosService fondoDominioService = new FondoDominiosService();
-                comboBoxDatosPersonaTipoIdentificacion.DataSource = fondoDominioService.ConsultarDominiosPorPadre(4);
+                List<FondoDominiosEntity> lstdom = fondoDominioService.ConsultarDominiosPorPadre(4);
 
             }
             catch (Exception ex)

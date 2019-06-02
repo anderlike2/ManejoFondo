@@ -63,8 +63,7 @@ namespace ManejoFondo.Daos
             {
                 List<FondoDominiosEntity> result = cnn.Query<FondoDominiosEntity>(
                     @"SELECT N_ID, V_CODIGO, V_VALOR, V_VALOR_AUXILIAR1, V_VALOR_AUXILIAR2, V_PADRE
-                    FROM FONDODOMINIOS WHERE V_PADRE = @V_PADRE",
-                    new { codigoPadre }).ToList();
+                    FROM FONDODOMINIOS WHERE V_PADRE = @V_PADRE", new { codigoPadre}).ToList();
                 return result;
             }
         }
