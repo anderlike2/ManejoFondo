@@ -44,5 +44,12 @@ namespace ManejoFondo.Common
         public const string MsjCancelar = "Limpiar información.";
         public const string MsjRegresar = "Regresar al menú principal.";
         #endregion
+
+        #region Dominios
+        public const string DominioPais = "PAIS_COL";
+        public const string DominioTiposIdentificacion = "TIPOS_IDENTIFICACION";
+        public const string DominioNivelEstudio = "NIVEL_ESTUDIO";
+        public const string DominioEstadoCivil = "ESTADO_CIVIL";
+        #endregion
     }
 }

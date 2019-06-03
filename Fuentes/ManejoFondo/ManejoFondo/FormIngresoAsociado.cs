@@ -113,12 +113,73 @@ namespace ManejoFondo
             {
                 FondoDominiosService fondoDominioService = new FondoDominiosService();
 
+                comboBoxDatosPersonaTipoIdentificacion.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTiposIdentificacion, false); ;
+                comboBoxDatosPersonaTipoIdentificacion.DisplayMember = "V_VALOR";
+                comboBoxDatosPersonaTipoIdentificacion.ValueMember = "V_CODIGO";
+                comboBoxDatosPersonaPais.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioPais, true); ;
+                comboBoxDatosPersonaPais.DisplayMember = "V_VALOR";
+                comboBoxDatosPersonaPais.ValueMember = "V_CODIGO";          
+                comboBoxDatosPersonaNivelEstudio.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioNivelEstudio, false); ;
+                comboBoxDatosPersonaNivelEstudio.DisplayMember = "V_VALOR";
+                comboBoxDatosPersonaNivelEstudio.ValueMember = "V_CODIGO";
+                comboBoxDatosPersonaEstadoCivil.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioEstadoCivil, false); ;
+                comboBoxDatosPersonaEstadoCivil.DisplayMember = "V_VALOR";
+                comboBoxDatosPersonaEstadoCivil.ValueMember = "V_CODIGO";
+
             }
             catch (Exception ex)
             {
                 Log.Registrar_Log(ex.Message, "CargarCombobox - IngresoAsociado", LogErrorEnumeration.Critico);
                 General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
             }            
+        }
+
+        /// <summary>
+        /// Cargar Municipios
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void CargarDepartamentos(object sender, EventArgs e)
+        {
+            FondoDominiosService fondoDominioService = new FondoDominiosService();
+            try
+            {
+                ComboBox comboBox = (ComboBox)sender;
+                FondoDominiosEntity seleccionado = (FondoDominiosEntity)comboBox.SelectedItem;
+                comboBoxDatosPersonaDepartamento.DataSource = null;
+                comboBoxDatosPersonaDepartamento.DataSource = fondoDominioService.ConsultarDominiosPorPadre(seleccionado.V_Codigo, false); ;
+                comboBoxDatosPersonaDepartamento.DisplayMember = "V_VALOR";
+                comboBoxDatosPersonaDepartamento.ValueMember = "V_CODIGO";
+            }
+            catch (Exception ex)
+            {
+                Log.Registrar_Log(ex.Message, "CargarMunicpios - IngresoAsociado", LogErrorEnumeration.Critico);
+                General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
+            }
+        }
+
+        /// <summary>
+        /// Cargar Municipios
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void CargarMunicipios(object sender, EventArgs e)
+        {
+            FondoDominiosService fondoDominioService = new FondoDominiosService();
+            try
+            {
+                ComboBox comboBox = (ComboBox)sender;
+                FondoDominiosEntity seleccionado = (FondoDominiosEntity)comboBox.SelectedItem;
+                comboBoxDatosPersonaMunicipio.DataSource = null;
+                comboBoxDatosPersonaMunicipio.DataSource = fondoDominioService.ConsultarDominiosPorPadre(seleccionado.V_Codigo, false); ;
+                comboBoxDatosPersonaMunicipio.DisplayMember = "V_VALOR";
+                comboBoxDatosPersonaMunicipio.ValueMember = "V_CODIGO";
+            }
+            catch (Exception ex)
+            {
+                Log.Registrar_Log(ex.Message, "CargarMunicpios - IngresoAsociado", LogErrorEnumeration.Critico);
+                General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
+            }           
         }
 
         /// <summary>
@@ -130,5 +191,8 @@ namespace ManejoFondo
         {
 
         }
+
+
+       
     }
 }

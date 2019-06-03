@@ -34,36 +34,33 @@ namespace ManejoFondo.Daos
         }
 
         /// <summary>
-        /// Metodo para consultar todos los dominios por Codigo
-        /// Autor: Anderson Benavides
-        /// 2019-05-23
-        /// </summary>
-        /// <param name="codigoDominio"></param>
-        public List<FondoDominiosEntity> ConsultarDominiosPorCodigo(string codigoDominio)
-        {
-            using (var cnn = SqlLiteConexion.SimpleDbConnection())
-            {
-                List<FondoDominiosEntity> result = cnn.Query<FondoDominiosEntity>(
-                    @"SELECT N_ID, V_CODIGO, V_VALOR, V_VALOR_AUXILIAR1, V_VALOR_AUXILIAR2, V_PADRE
-                    FROM FONDODOMINIOS WHERE V_CODIGO = @V_CODIGO",
-                    new { codigoDominio }).ToList();
-                return result;
-            }
-        }
-
-        /// <summary>
         /// Metodo para consultar todos los dominios por Padre
         /// Autor: Anderson Benavides
         /// 2019-05-23
         /// </summary>
         /// <param name="codigoPadre"></param>
-        public List<FondoDominiosEntity> ConsultarDominiosPorPadre(int codigoPadre)
+        /// <param name="esPadre"></param>
+        public List<FondoDominiosEntity> ConsultarDominiosPorPadre(String codigoPadre, bool esPadre)
         {
             using (var cnn = SqlLiteConexion.SimpleDbConnection())
             {
-                List<FondoDominiosEntity> result = cnn.Query<FondoDominiosEntity>(
-                    @"SELECT N_ID, V_CODIGO, V_VALOR, V_VALOR_AUXILIAR1, V_VALOR_AUXILIAR2, V_PADRE
-                    FROM FONDODOMINIOS WHERE V_PADRE = @V_PADRE", new { codigoPadre}).ToList();
+                List<FondoDominiosEntity> result = new List<FondoDominiosEntity>();
+                if (esPadre) {
+                    result = cnn.Query<FondoDominiosEntity>(
+                                        @"SELECT N_ID, V_CODIGO, V_VALOR, V_VALOR_AUXILIAR1, V_VALOR_AUXILIAR2, V_PADRE
+                    FROM FONDODOMINIOS WHERE V_CODIGO = @V_CODIGO", new { v_codigo = codigoPadre }).OrderBy(x => x.V_Valor).ToList();
+                }
+                else
+                {
+                    FondoDominiosEntity resultPadre = cnn.Query<FondoDominiosEntity>(
+                   @"SELECT N_ID, V_CODIGO, V_VALOR, V_VALOR_AUXILIAR1, V_VALOR_AUXILIAR2, V_PADRE
+                    FROM FONDODOMINIOS WHERE V_CODIGO = @V_CODIGO", new { v_codigo = codigoPadre }).FirstOrDefault();
+
+                    result = cnn.Query<FondoDominiosEntity>(
+                        @"SELECT N_ID, V_CODIGO, V_VALOR, V_VALOR_AUXILIAR1, V_VALOR_AUXILIAR2, V_PADRE
+                    FROM FONDODOMINIOS WHERE V_PADRE = @V_PADRE", new { v_padre = resultPadre.N_Id }).OrderBy(x => x.V_Valor).ToList();
+                }
+               
                 return result;
             }
         }
