@@ -51,6 +51,7 @@ namespace ManejoFondo
         {
             try
             {
+                loginButtonAceptar.Enabled = false;
                 //Validar Seguridad
                 Seguridad seguridad = new Seguridad();
                 seguridad.CrackActivo();
@@ -71,10 +72,12 @@ namespace ManejoFondo
             }
             catch (BusinessException ex)
             {
+                loginButtonAceptar.Enabled = true;
                 General.MostrarPanelError(Constantes.CodigoWarning, ex.Message);
             }
             catch (Exception ex)
             {
+                loginButtonAceptar.Enabled = true;
                 Log.Registrar_Log(ex.Message, "FormLogin - Login", LogErrorEnumeration.Critico);
                 General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
             }

@@ -46,7 +46,6 @@ namespace ManejoFondo
             //Valores por defecto
             InicializarTooltips();
             usuarioSesion = usuario;
-            InicializarCombobox();
             CargarCombobox();
         }
 
@@ -85,21 +84,6 @@ namespace ManejoFondo
             Hide();
             formOpciones.ShowDialog();
             Close();
-        }
-
-        /// <summary>
-        /// Inicializar los valores por defecto de los combobox
-        /// Autor: Anderson Benavides
-        /// 2019-06-02
-        /// </summary>
-        private void InicializarCombobox()
-        {
-            comboBoxDatosPersonaTipoIdentificacion.Text = Constantes.DescripcionSeleccione;
-            comboBoxDatosPersonaPais.Text = Constantes.DescripcionSeleccione;
-            comboBoxDatosPersonaDepartamento.Text = Constantes.DescripcionSeleccione;
-            comboBoxDatosPersonaMunicipio.Text = Constantes.DescripcionSeleccione;
-            comboBoxDatosPersonaNivelEstudio.Text = Constantes.DescripcionSeleccione;
-            comboBoxDatosPersonaEstadoCivil.Text = Constantes.DescripcionSeleccione;
         }
 
         /// <summary>
@@ -153,6 +137,7 @@ namespace ManejoFondo
                 comboBoxIngresosActividadEconomica.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTipoActividad, false); ;
                 comboBoxIngresosActividadEconomica.DisplayMember = "V_VALOR";
                 comboBoxIngresosActividadEconomica.ValueMember = "V_CODIGO";
+
             }
             catch (Exception ex)
             {
@@ -210,6 +195,17 @@ namespace ManejoFondo
         }
 
         /// <summary>
+        /// Funcion para Agregar persona al nucleo familiar
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void AgregarPersona(object sender, EventArgs e)
+        {
+            FormAgregarNucleoFamiliar formNucleoFamiliar = new FormAgregarNucleoFamiliar();
+            formNucleoFamiliar.ShowDialog();
+        }
+
+        /// <summary>
         /// Aceptar Ingresar Asociado
         /// Autor: Anderson Benavides
         /// 2019-05-23
@@ -218,8 +214,5 @@ namespace ManejoFondo
         {
 
         }
-
-
-       
     }
 }

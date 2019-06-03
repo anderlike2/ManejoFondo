@@ -71,7 +71,6 @@
             this.labelDatosPersonalesApellidos = new System.Windows.Forms.Label();
             this.labelDatosPersonalesNombres = new System.Windows.Forms.Label();
             this.labelTituloDatosPersonales = new System.Windows.Forms.Label();
-            this.panelImagenDatosPersonales = new System.Windows.Forms.Panel();
             this.tabAyudaGubernamental = new System.Windows.Forms.TabPage();
             this.comboBoxAyudaGobiernoTipoSubsidio = new System.Windows.Forms.ComboBox();
             this.labelAyudaGobiernoTipoSubsidio = new System.Windows.Forms.Label();
@@ -85,7 +84,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.labelAyudaGobiernoPuntajeSisben = new System.Windows.Forms.Label();
             this.labelTituloAyudasGobierno = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tabNucleoFamiliar = new System.Windows.Forms.TabPage();
             this.buttonAgregarNucleoFamiliarIntegrantes = new System.Windows.Forms.Button();
             this.dataGridNucleoFamiliarIntegrantes = new System.Windows.Forms.DataGridView();
@@ -126,7 +124,6 @@
             this.comboBoxNucleoFamiliarConyuge = new System.Windows.Forms.ComboBox();
             this.labelNucleoFamiliarConyuge = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tabIngresos = new System.Windows.Forms.TabPage();
             this.textBoxTipoCultivo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textBoxTipoAnimales = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -142,9 +139,12 @@
             this.labelIngresosActividadEconomica = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ingresoAsociadoCancelar = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.ingresoAsociadoAceptar = new System.Windows.Forms.Button();
             this.panelIngresoAsociadoRegresar = new System.Windows.Forms.Panel();
+            this.panelImagenDatosPersonales = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tabIngresarAsociado.SuspendLayout();
             this.tabDatosPersona.SuspendLayout();
             this.tabAyudaGubernamental.SuspendLayout();
@@ -755,16 +755,6 @@
             this.labelTituloDatosPersonales.TabIndex = 1;
             this.labelTituloDatosPersonales.Text = "POR FAVOR INGRESAR SU INFORMACIÓN PERSONAL";
             // 
-            // panelImagenDatosPersonales
-            // 
-            this.panelImagenDatosPersonales.BackgroundImage = global::ManejoFondo.Properties.Resources.datosPersonales;
-            this.panelImagenDatosPersonales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelImagenDatosPersonales.Location = new System.Drawing.Point(1077, 2);
-            this.panelImagenDatosPersonales.Margin = new System.Windows.Forms.Padding(4);
-            this.panelImagenDatosPersonales.Name = "panelImagenDatosPersonales";
-            this.panelImagenDatosPersonales.Size = new System.Drawing.Size(159, 135);
-            this.panelImagenDatosPersonales.TabIndex = 0;
-            // 
             // tabAyudaGubernamental
             // 
             this.tabAyudaGubernamental.BackColor = System.Drawing.Color.White;
@@ -937,16 +927,6 @@
             this.labelTituloAyudasGobierno.TabIndex = 3;
             this.labelTituloAyudasGobierno.Text = "POR FAVOR INGRESAR LAS AYUDAS GUBERNAMENTALES RECIBIDAS";
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::ManejoFondo.Properties.Resources.ayudasGobierno;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(1085, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(149, 140);
-            this.panel1.TabIndex = 2;
-            // 
             // tabNucleoFamiliar
             // 
             this.tabNucleoFamiliar.BackColor = System.Drawing.Color.White;
@@ -980,6 +960,7 @@
             this.buttonAgregarNucleoFamiliarIntegrantes.TabIndex = 55;
             this.buttonAgregarNucleoFamiliarIntegrantes.Text = "Agregar";
             this.buttonAgregarNucleoFamiliarIntegrantes.UseVisualStyleBackColor = false;
+            this.buttonAgregarNucleoFamiliarIntegrantes.Click += new System.EventHandler(this.AgregarPersona);
             // 
             // dataGridNucleoFamiliarIntegrantes
             // 
@@ -1446,16 +1427,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "POR FAVOR INGRESAR LA INFORMACIÓN DE SU NÚCLEO FAMILIAR";
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::ManejoFondo.Properties.Resources.nucleoFamiliar;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(1085, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(149, 140);
-            this.panel2.TabIndex = 4;
-            // 
             // tabIngresos
             // 
             this.tabIngresos.BackColor = System.Drawing.Color.White;
@@ -1677,16 +1648,6 @@
             this.ingresoAsociadoCancelar.Text = "Cancelar";
             this.ingresoAsociadoCancelar.UseVisualStyleBackColor = false;
             // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::ManejoFondo.Properties.Resources.ingresos;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(1084, 2);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(149, 140);
-            this.panel3.TabIndex = 6;
-            // 
             // ingresoAsociadoAceptar
             // 
             this.ingresoAsociadoAceptar.BackColor = System.Drawing.Color.White;
@@ -1714,6 +1675,46 @@
             this.panelIngresoAsociadoRegresar.Size = new System.Drawing.Size(47, 39);
             this.panelIngresoAsociadoRegresar.TabIndex = 9;
             this.panelIngresoAsociadoRegresar.Click += new System.EventHandler(this.RegresarMenuPrincipal);
+            // 
+            // panelImagenDatosPersonales
+            // 
+            this.panelImagenDatosPersonales.BackgroundImage = global::ManejoFondo.Properties.Resources.datosPersonales;
+            this.panelImagenDatosPersonales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelImagenDatosPersonales.Location = new System.Drawing.Point(1077, 2);
+            this.panelImagenDatosPersonales.Margin = new System.Windows.Forms.Padding(4);
+            this.panelImagenDatosPersonales.Name = "panelImagenDatosPersonales";
+            this.panelImagenDatosPersonales.Size = new System.Drawing.Size(159, 135);
+            this.panelImagenDatosPersonales.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::ManejoFondo.Properties.Resources.ayudasGobierno;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(1085, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(149, 140);
+            this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::ManejoFondo.Properties.Resources.nucleoFamiliar;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(1085, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(149, 140);
+            this.panel2.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::ManejoFondo.Properties.Resources.ingresos;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(1084, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(149, 140);
+            this.panel3.TabIndex = 6;
             // 
             // FormIngresoAsociado
             // 
