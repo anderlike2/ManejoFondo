@@ -145,6 +145,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabIngresarAsociado.SuspendLayout();
             this.tabDatosPersona.SuspendLayout();
             this.tabAyudaGubernamental.SuspendLayout();
@@ -315,6 +316,7 @@
             this.textBoxDatosPersonaAntiguedadAsociacion.Size = new System.Drawing.Size(505, 36);
             this.textBoxDatosPersonaAntiguedadAsociacion.TabIndex = 39;
             this.textBoxDatosPersonaAntiguedadAsociacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxDatosPersonaAntiguedadAsociacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
             // 
             // labelDatosPersonaAntiguedadAsociacion
             // 
@@ -324,9 +326,9 @@
             this.labelDatosPersonaAntiguedadAsociacion.Location = new System.Drawing.Point(673, 532);
             this.labelDatosPersonaAntiguedadAsociacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDatosPersonaAntiguedadAsociacion.Name = "labelDatosPersonaAntiguedadAsociacion";
-            this.labelDatosPersonaAntiguedadAsociacion.Size = new System.Drawing.Size(240, 23);
+            this.labelDatosPersonaAntiguedadAsociacion.Size = new System.Drawing.Size(319, 23);
             this.labelDatosPersonaAntiguedadAsociacion.TabIndex = 38;
-            this.labelDatosPersonaAntiguedadAsociacion.Text = "Antiguedad Asociación";
+            this.labelDatosPersonaAntiguedadAsociacion.Text = "Antiguedad Asociación (Meses)";
             // 
             // label11
             // 
@@ -345,7 +347,7 @@
             // 
             this.comboBoxDatosPersonaNivelEstudio.BackColor = System.Drawing.Color.White;
             this.comboBoxDatosPersonaNivelEstudio.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxDatosPersonaNivelEstudio.Location = new System.Drawing.Point(52, 485);
+            this.comboBoxDatosPersonaNivelEstudio.Location = new System.Drawing.Point(53, 485);
             this.comboBoxDatosPersonaNivelEstudio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxDatosPersonaNivelEstudio.Name = "comboBoxDatosPersonaNivelEstudio";
             this.comboBoxDatosPersonaNivelEstudio.Size = new System.Drawing.Size(504, 31);
@@ -563,6 +565,7 @@
             this.textBoxDatosPersonaTelefono.Size = new System.Drawing.Size(505, 36);
             this.textBoxDatosPersonaTelefono.TabIndex = 19;
             this.textBoxDatosPersonaTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxDatosPersonaTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
             // 
             // labelDatosPersonalesTelefono
             // 
@@ -630,6 +633,7 @@
             this.textBoxDatosPersonaNumeroIdentificacion.Size = new System.Drawing.Size(505, 36);
             this.textBoxDatosPersonaNumeroIdentificacion.TabIndex = 13;
             this.textBoxDatosPersonaNumeroIdentificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxDatosPersonaNumeroIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
             // 
             // labelDatosPersonalesNumeroIdentificacion
             // 
@@ -964,6 +968,7 @@
             // 
             // dataGridNucleoFamiliarIntegrantes
             // 
+            this.dataGridNucleoFamiliarIntegrantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridNucleoFamiliarIntegrantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridNucleoFamiliarIntegrantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombres,
@@ -973,7 +978,8 @@
             this.NumeroTelefono,
             this.FechaNacimiento,
             this.TipoActividad,
-            this.OtraActividad});
+            this.OtraActividad,
+            this.Parentesco});
             this.dataGridNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(43, 594);
             this.dataGridNucleoFamiliarIntegrantes.Name = "dataGridNucleoFamiliarIntegrantes";
             this.dataGridNucleoFamiliarIntegrantes.RowTemplate.Height = 24;
@@ -1200,6 +1206,7 @@
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.Size = new System.Drawing.Size(505, 36);
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.TabIndex = 44;
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxNucleoFamiliarConyugeNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
             // 
             // labelNucleoFamiliarConyugeNumeroTelefono
             // 
@@ -1267,6 +1274,7 @@
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Size = new System.Drawing.Size(505, 36);
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.TabIndex = 39;
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
             // 
             // labelNucleoFamiliarConyugeNumeroIdentificacion
             // 
@@ -1444,8 +1452,8 @@
             this.tabIngresos.Controls.Add(this.labelIngresosActividadEconomica);
             this.tabIngresos.Controls.Add(this.label2);
             this.tabIngresos.Controls.Add(this.ingresoAsociadoCancelar);
-            this.tabIngresos.Controls.Add(this.panel3);
             this.tabIngresos.Controls.Add(this.ingresoAsociadoAceptar);
+            this.tabIngresos.Controls.Add(this.panel3);
             this.tabIngresos.Location = new System.Drawing.Point(4, 32);
             this.tabIngresos.Margin = new System.Windows.Forms.Padding(4);
             this.tabIngresos.Name = "tabIngresos";
@@ -1669,10 +1677,10 @@
             this.panelIngresoAsociadoRegresar.BackgroundImage = global::ManejoFondo.Properties.Resources.regresar;
             this.panelIngresoAsociadoRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelIngresoAsociadoRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelIngresoAsociadoRegresar.Location = new System.Drawing.Point(1207, 840);
+            this.panelIngresoAsociadoRegresar.Location = new System.Drawing.Point(1216, 840);
             this.panelIngresoAsociadoRegresar.Margin = new System.Windows.Forms.Padding(4);
             this.panelIngresoAsociadoRegresar.Name = "panelIngresoAsociadoRegresar";
-            this.panelIngresoAsociadoRegresar.Size = new System.Drawing.Size(47, 39);
+            this.panelIngresoAsociadoRegresar.Size = new System.Drawing.Size(38, 34);
             this.panelIngresoAsociadoRegresar.TabIndex = 9;
             this.panelIngresoAsociadoRegresar.Click += new System.EventHandler(this.RegresarMenuPrincipal);
             // 
@@ -1715,6 +1723,11 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(149, 140);
             this.panel3.TabIndex = 6;
+            // 
+            // Parentesco
+            // 
+            this.Parentesco.HeaderText = "Parentesco";
+            this.Parentesco.Name = "Parentesco";
             // 
             // FormIngresoAsociado
             // 
@@ -1863,5 +1876,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividad;
         private System.Windows.Forms.DataGridViewTextBoxColumn OtraActividad;
         private System.Windows.Forms.Button buttonAgregarNucleoFamiliarIntegrantes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
     }
 }

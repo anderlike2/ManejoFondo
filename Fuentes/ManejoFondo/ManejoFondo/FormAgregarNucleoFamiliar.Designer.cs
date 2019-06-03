@@ -57,6 +57,9 @@
             this.labelAgregarPersonaNumeroTelefono = new System.Windows.Forms.Label();
             this.agregarPersonaCancelar = new System.Windows.Forms.Button();
             this.agregarPersonaAceptar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxAgregarPersonaParentesco = new System.Windows.Forms.ComboBox();
+            this.labelAgregarPersonaParentesco = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelAgregarNucleoFamiliar
@@ -241,6 +244,7 @@
             this.textBoxAgregarPersonaNumeroIdentificacion.Size = new System.Drawing.Size(354, 36);
             this.textBoxAgregarPersonaNumeroIdentificacion.TabIndex = 45;
             this.textBoxAgregarPersonaNumeroIdentificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxAgregarPersonaNumeroIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
             // 
             // labelAgregarPersonaNumeroIdentificacion
             // 
@@ -426,6 +430,7 @@
             this.textBoxAgregarPersonaNumeroTelefono.Size = new System.Drawing.Size(346, 36);
             this.textBoxAgregarPersonaNumeroTelefono.TabIndex = 56;
             this.textBoxAgregarPersonaNumeroTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxAgregarPersonaNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
             // 
             // labelAgregarPersonaNumeroTelefono
             // 
@@ -447,7 +452,7 @@
             this.agregarPersonaCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarPersonaCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarPersonaCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(66)))), ((int)(((byte)(45)))));
-            this.agregarPersonaCancelar.Location = new System.Drawing.Point(436, 564);
+            this.agregarPersonaCancelar.Location = new System.Drawing.Point(436, 639);
             this.agregarPersonaCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.agregarPersonaCancelar.Name = "agregarPersonaCancelar";
             this.agregarPersonaCancelar.Size = new System.Drawing.Size(337, 48);
@@ -463,7 +468,7 @@
             this.agregarPersonaAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarPersonaAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarPersonaAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.agregarPersonaAceptar.Location = new System.Drawing.Point(91, 564);
+            this.agregarPersonaAceptar.Location = new System.Drawing.Point(91, 639);
             this.agregarPersonaAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.agregarPersonaAceptar.Name = "agregarPersonaAceptar";
             this.agregarPersonaAceptar.Size = new System.Drawing.Size(337, 48);
@@ -471,12 +476,52 @@
             this.agregarPersonaAceptar.Text = "Aceptar";
             this.agregarPersonaAceptar.UseVisualStyleBackColor = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(411, 567);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 35);
+            this.label2.TabIndex = 71;
+            this.label2.Text = "*";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // comboBoxAgregarPersonaParentesco
+            // 
+            this.comboBoxAgregarPersonaParentesco.BackColor = System.Drawing.Color.White;
+            this.comboBoxAgregarPersonaParentesco.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxAgregarPersonaParentesco.Location = new System.Drawing.Point(54, 573);
+            this.comboBoxAgregarPersonaParentesco.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxAgregarPersonaParentesco.Name = "comboBoxAgregarPersonaParentesco";
+            this.comboBoxAgregarPersonaParentesco.Size = new System.Drawing.Size(345, 24);
+            this.comboBoxAgregarPersonaParentesco.TabIndex = 70;
+            // 
+            // labelAgregarPersonaParentesco
+            // 
+            this.labelAgregarPersonaParentesco.AutoSize = true;
+            this.labelAgregarPersonaParentesco.BackColor = System.Drawing.Color.White;
+            this.labelAgregarPersonaParentesco.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAgregarPersonaParentesco.ForeColor = System.Drawing.Color.Black;
+            this.labelAgregarPersonaParentesco.Location = new System.Drawing.Point(49, 535);
+            this.labelAgregarPersonaParentesco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAgregarPersonaParentesco.Name = "labelAgregarPersonaParentesco";
+            this.labelAgregarPersonaParentesco.Size = new System.Drawing.Size(121, 23);
+            this.labelAgregarPersonaParentesco.TabIndex = 69;
+            this.labelAgregarPersonaParentesco.Text = "Parentesco";
+            // 
             // FormAgregarNucleoFamiliar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(919, 659);
+            this.ClientSize = new System.Drawing.Size(919, 726);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBoxAgregarPersonaParentesco);
+            this.Controls.Add(this.labelAgregarPersonaParentesco);
             this.Controls.Add(this.agregarPersonaCancelar);
             this.Controls.Add(this.agregarPersonaAceptar);
             this.Controls.Add(this.label27);
@@ -545,5 +590,8 @@
         private System.Windows.Forms.Label labelAgregarPersonaNumeroTelefono;
         private System.Windows.Forms.Button agregarPersonaCancelar;
         private System.Windows.Forms.Button agregarPersonaAceptar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxAgregarPersonaParentesco;
+        private System.Windows.Forms.Label labelAgregarPersonaParentesco;
     }
 }

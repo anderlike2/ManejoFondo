@@ -51,6 +51,9 @@ namespace ManejoFondo
                 comboBoxAgregarPersonaTipoActividad.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTipoActividad, false); ;
                 comboBoxAgregarPersonaTipoActividad.DisplayMember = "V_VALOR";
                 comboBoxAgregarPersonaTipoActividad.ValueMember = "V_CODIGO";
+                comboBoxAgregarPersonaParentesco.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioParentesco, false); ;
+                comboBoxAgregarPersonaParentesco.DisplayMember = "V_VALOR";
+                comboBoxAgregarPersonaParentesco.ValueMember = "V_CODIGO";
 
             }
             catch (Exception ex)
@@ -68,6 +71,20 @@ namespace ManejoFondo
         private void CerrarAgregarPersona(object sender, EventArgs e)
         {
             Close();
+        }
+
+        /// <summary>
+        /// Funcion que permite solo el ingreso de numeros
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void SoloNumeros(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

@@ -54,6 +54,7 @@ namespace ManejoFondo.Common
         public const string DominioOpcionesSiyNo = "SINO";
         public const string DominioTipoSubsidio = "TIPO_SUBSIDIO";
         public const string DominioTipoActividad = "TIPO_ACTIVIDAD";
+        public const string DominioParentesco = "PARENTESCO";
         #endregion
     }
 }

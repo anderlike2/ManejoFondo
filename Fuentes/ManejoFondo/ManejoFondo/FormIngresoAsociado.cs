@@ -206,6 +206,20 @@ namespace ManejoFondo
         }
 
         /// <summary>
+        /// Funcion que permite solo el ingreso de numeros
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void SoloNumeros(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        /// <summary>
         /// Aceptar Ingresar Asociado
         /// Autor: Anderson Benavides
         /// 2019-05-23
@@ -214,5 +228,6 @@ namespace ManejoFondo
         {
 
         }
+       
     }
 }
