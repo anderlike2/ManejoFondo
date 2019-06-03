@@ -249,6 +249,7 @@
     <Content Include="Resources\Images\asociado.png" />
     <Content Include="Resources\Images\ayudasGobierno.png" />
     <Content Include="Resources\Images\cambiarClave.png" />
+    <Content Include="Resources\Images\Cargando.gif" />
     <Content Include="Resources\Images\cerrarSesion.png" />
     <Content Include="Resources\Images\consultar.png" />
     <Content Include="Resources\Images\datosPersonales.png" />
