@@ -113,6 +113,7 @@ namespace ManejoFondo
             {
                 FondoDominiosService fondoDominioService = new FondoDominiosService();
 
+                //Para Datos Persona
                 comboBoxDatosPersonaTipoIdentificacion.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTiposIdentificacion, false); ;
                 comboBoxDatosPersonaTipoIdentificacion.DisplayMember = "V_VALOR";
                 comboBoxDatosPersonaTipoIdentificacion.ValueMember = "V_CODIGO";
@@ -126,6 +127,32 @@ namespace ManejoFondo
                 comboBoxDatosPersonaEstadoCivil.DisplayMember = "V_VALOR";
                 comboBoxDatosPersonaEstadoCivil.ValueMember = "V_CODIGO";
 
+                //Para Ayuda Gobierno
+                comboBoxAyudaGobiernoTipoVictima.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTipoVictima, false); ;
+                comboBoxAyudaGobiernoTipoVictima.DisplayMember = "V_VALOR";
+                comboBoxAyudaGobiernoTipoVictima.ValueMember = "V_CODIGO";
+                comboBoxAyudaGobiernoRecibeSubsidio.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioOpcionesSiyNo, false); ;
+                comboBoxAyudaGobiernoRecibeSubsidio.DisplayMember = "V_VALOR";
+                comboBoxAyudaGobiernoRecibeSubsidio.ValueMember = "V_CODIGO";
+                comboBoxAyudaGobiernoTipoSubsidio.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTipoSubsidio, false); ;
+                comboBoxAyudaGobiernoTipoSubsidio.DisplayMember = "V_VALOR";
+                comboBoxAyudaGobiernoTipoSubsidio.ValueMember = "V_CODIGO";
+
+                //Informacion Familiar
+                comboBoxNucleoFamiliarConyuge.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioOpcionesSiyNo, false); ;
+                comboBoxNucleoFamiliarConyuge.DisplayMember = "V_VALOR";
+                comboBoxNucleoFamiliarConyuge.ValueMember = "V_CODIGO";
+                comboBoxNucleoFamiliarConyugeTipoIdentificacion.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTiposIdentificacion, false); ;
+                comboBoxNucleoFamiliarConyugeTipoIdentificacion.DisplayMember = "V_VALOR";
+                comboBoxNucleoFamiliarConyugeTipoIdentificacion.ValueMember = "V_CODIGO";
+                comboBoxNucleoFamiliarConyugeTipoActividad.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTipoActividad, false); ;
+                comboBoxNucleoFamiliarConyugeTipoActividad.DisplayMember = "V_VALOR";
+                comboBoxNucleoFamiliarConyugeTipoActividad.ValueMember = "V_CODIGO";
+
+                //Ingresos
+                comboBoxIngresosActividadEconomica.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTipoActividad, false); ;
+                comboBoxIngresosActividadEconomica.DisplayMember = "V_VALOR";
+                comboBoxIngresosActividadEconomica.ValueMember = "V_CODIGO";
             }
             catch (Exception ex)
             {
@@ -147,7 +174,7 @@ namespace ManejoFondo
                 ComboBox comboBox = (ComboBox)sender;
                 FondoDominiosEntity seleccionado = (FondoDominiosEntity)comboBox.SelectedItem;
                 comboBoxDatosPersonaDepartamento.DataSource = null;
-                comboBoxDatosPersonaDepartamento.DataSource = fondoDominioService.ConsultarDominiosPorPadre(seleccionado.V_Codigo, false); ;
+                comboBoxDatosPersonaDepartamento.DataSource = fondoDominioService.ConsultarDominiosPorPadre(seleccionado.V_Codigo, false);
                 comboBoxDatosPersonaDepartamento.DisplayMember = "V_VALOR";
                 comboBoxDatosPersonaDepartamento.ValueMember = "V_CODIGO";
             }
@@ -171,7 +198,7 @@ namespace ManejoFondo
                 ComboBox comboBox = (ComboBox)sender;
                 FondoDominiosEntity seleccionado = (FondoDominiosEntity)comboBox.SelectedItem;
                 comboBoxDatosPersonaMunicipio.DataSource = null;
-                comboBoxDatosPersonaMunicipio.DataSource = fondoDominioService.ConsultarDominiosPorPadre(seleccionado.V_Codigo, false); ;
+                comboBoxDatosPersonaMunicipio.DataSource = fondoDominioService.ConsultarDominiosPorPadre(seleccionado.V_Codigo, false);
                 comboBoxDatosPersonaMunicipio.DisplayMember = "V_VALOR";
                 comboBoxDatosPersonaMunicipio.ValueMember = "V_CODIGO";
             }

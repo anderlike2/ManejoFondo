@@ -50,6 +50,10 @@ namespace ManejoFondo.Common
         public const string DominioTiposIdentificacion = "TIPOS_IDENTIFICACION";
         public const string DominioNivelEstudio = "NIVEL_ESTUDIO";
         public const string DominioEstadoCivil = "ESTADO_CIVIL";
+        public const string DominioTipoVictima = "VICTIMA";
+        public const string DominioOpcionesSiyNo = "SINO";
+        public const string DominioTipoSubsidio = "TIPO_SUBSIDIO";
+        public const string DominioTipoActividad = "TIPO_ACTIVIDAD";
         #endregion
     }
 }
