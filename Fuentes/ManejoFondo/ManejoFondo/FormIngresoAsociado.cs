@@ -47,6 +47,10 @@ namespace ManejoFondo
             InicializarTooltips();
             usuarioSesion = usuario;
             CargarCombobox();
+
+            //Inicializar fechas
+            datePickerDatosPersonaFechaNacimiento.Value = DateTime.Now;
+            datePickerNucleoFamiliarConyugeFechaNacimiento.Value = DateTime.Now;
         }
 
         /// <summary>
@@ -220,6 +224,94 @@ namespace ManejoFondo
         }
 
         /// <summary>
+        /// Funcion para validar los datos persona
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void ValidarDatosPersona(object sender, EventArgs e)
+        {
+            if (!ValidarInformacionPersona())
+            {
+                tabIngresarAsociado.SelectedIndex = 0;
+                General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
+            }
+        }
+
+        /// <summary>
+        /// Funcion para validar los datos de ayuda gobierno
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void ValidarAyudaGobierno(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Funcion para validar los campos de los datos persona
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private bool ValidarInformacionPersona()
+        {
+            if(General.EsVacioNulo(textBoxDatosPersonaNombres.Text) || General.EsVacioNulo(textBoxDatosPersonasApellidos.Text) ||
+               General.EsVacioNulo(comboBoxDatosPersonaTipoIdentificacion.Text) || General.EsVacioNulo(textBoxDatosPersonaNumeroIdentificacion.Text) ||
+               General.EsVacioNulo(comboBoxDatosPersonaPais.Text) || General.EsVacioNulo(comboBoxDatosPersonaDepartamento.Text) ||
+               General.EsVacioNulo(comboBoxDatosPersonaMunicipio.Text) || General.EsVacioNulo(comboBoxDatosPersonaNivelEstudio.Text) ||
+               General.EsVacioNulo(textBoxDatosPersonaTelefono.Text) || General.EsVacioNulo(comboBoxDatosPersonaEstadoCivil.Text) ||
+               General.EsVacioNulo(datePickerDatosPersonaFechaNacimiento.Text))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Funcion para validar los campos de los datos ayuda gobierno
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private bool ValidarInformacionAyudaGobierno()
+        {
+            if (General.EsVacioNulo(textBoxAyudaGobiernoPuntajeSisben.Text) || General.EsVacioNulo(comboBoxAyudaGobiernoTipoVictima.Text) ||
+               General.EsVacioNulo(comboBoxAyudaGobiernoRecibeSubsidio.Text))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Funcion para validar los campos de los datos nucleo familiar
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private bool ValidarInformacionNucleoFamiliar()
+        {
+            if (General.EsVacioNulo(comboBoxNucleoFamiliarConyuge.Text))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Funcion para validar los campos de los datos de Ingresos
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private bool ValidarInformacionIngresos()
+        {
+            if (General.EsVacioNulo(comboBoxIngresosActividadEconomica.Text) || General.EsVacioNulo(textBoxIngresosIngresosMensuales.Text) ||
+                General.EsVacioNulo(textBoxIngresosTipoAnimales.Text) || General.EsVacioNulo(textBoxIngresosTipoAnimales.Text))
+            {
+                return false;
+            }
+            return true;
+        }
+
+
+        /// <summary>
         /// Aceptar Ingresar Asociado
         /// Autor: Anderson Benavides
         /// 2019-05-23
@@ -228,6 +320,7 @@ namespace ManejoFondo
         {
 
         }
+
        
     }
 }

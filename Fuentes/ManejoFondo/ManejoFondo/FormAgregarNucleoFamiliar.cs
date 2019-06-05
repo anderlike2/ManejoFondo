@@ -31,6 +31,9 @@ namespace ManejoFondo
 
             //Valores por defecto
             CargarCombobox();
+
+            //Precargar fecha
+            datePickerAgregarPersonaFechaNacimiento.Value = DateTime.Now;
         }
 
         /// <summary>
