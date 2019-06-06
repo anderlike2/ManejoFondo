@@ -21,6 +21,9 @@ namespace ManejoFondo.Common
         public const string DescripcionExito = "Muy bien!";
         public const string DescripcionWarning = "Cuidado!";
         public const string DescripcionSeleccione = "Seleccione...";
+        public const string DescripcionSi = "Si";
+        public const string DescripcionNo = "No";
+        public const string DescripcionOtro = "Otro";
         #endregion
 
         #region Mensajes

@@ -50,7 +50,7 @@ namespace ManejoFondo
 
             //Inicializar fechas
             datePickerDatosPersonaFechaNacimiento.Value = DateTime.Now;
-            datePickerNucleoFamiliarConyugeFechaNacimiento.Value = DateTime.Now;
+            datePickerNucleoFamiliarConyugeFechaNacimiento.Value = DateTime.Now;            
         }
 
         /// <summary>
@@ -224,30 +224,6 @@ namespace ManejoFondo
         }
 
         /// <summary>
-        /// Funcion para validar los datos persona
-        /// Autor: Anderson Benavides
-        /// 2019-05-23
-        /// </summary>
-        private void ValidarDatosPersona(object sender, EventArgs e)
-        {
-            if (!ValidarInformacionPersona())
-            {
-                tabIngresarAsociado.SelectedIndex = 0;
-                General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
-            }
-        }
-
-        /// <summary>
-        /// Funcion para validar los datos de ayuda gobierno
-        /// Autor: Anderson Benavides
-        /// 2019-05-23
-        /// </summary>
-        private void ValidarAyudaGobierno(object sender, EventArgs e)
-        {
-
-        }
-
-        /// <summary>
         /// Funcion para validar los campos de los datos persona
         /// Autor: Anderson Benavides
         /// 2019-05-23
@@ -288,11 +264,33 @@ namespace ManejoFondo
         /// </summary>
         private bool ValidarInformacionNucleoFamiliar()
         {
-            if (General.EsVacioNulo(comboBoxNucleoFamiliarConyuge.Text))
+            FondoDominiosEntity itemSeleccionado = (FondoDominiosEntity)comboBoxNucleoFamiliarConyuge.SelectedItem;
+            if (itemSeleccionado.V_Valor.ToUpper().Equals(Constantes.DescripcionSi.ToUpper()))
             {
-                return false;
+                if (General.EsVacioNulo(textBoxNucleoFamiliarConyugeNombres.Text) || General.EsVacioNulo(textBoxNucleoFamiliarConyugeApellidos.Text) ||
+                    General.EsVacioNulo(comboBoxNucleoFamiliarConyugeTipoIdentificacion.Text) || General.EsVacioNulo(textBoxNucleoFamiliarConyugeNumeroIdentificacion.Text) ||
+                    General.EsVacioNulo(textBoxNucleoFamiliarConyugeNumeroTelefono.Text) || General.EsVacioNulo(datePickerNucleoFamiliarConyugeFechaNacimiento.Text) ||
+                    General.EsVacioNulo(comboBoxNucleoFamiliarConyugeTipoActividad.Text))
+                {
+                    return false;
+                }
+                else
+                {
+                    FondoDominiosEntity itemTipoActividad = (FondoDominiosEntity)comboBoxNucleoFamiliarConyugeTipoActividad.SelectedItem;
+                    if (itemTipoActividad.V_Valor.ToUpper().Equals(Constantes.DescripcionOtro.ToUpper()) && General.EsVacioNulo(textBoxNucleoFamiliarConyugeOtraActividad.Text))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
             }
-            return true;
+            else
+            {
+                return true;
+            }
         }
 
         /// <summary>
@@ -310,6 +308,84 @@ namespace ManejoFondo
             return true;
         }
 
+        /// <summary>
+        /// Funcion para validar toda la informacion de los Tabs
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void ValidarInformacion(object sender, EventArgs e)
+        {
+            //Para Ayuda Gobierno
+            switch (tabIngresarAsociado.SelectedIndex)
+            {
+                /*case 0:
+                    break;
+                case 1:
+                    if (!ValidarInformacionPersona())
+                    {
+                        tabIngresarAsociado.SelectedIndex = 0;
+                        General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
+                    }
+                    break;
+                case 2:
+                    if (!ValidarInformacionPersona() || !ValidarInformacionAyudaGobierno())
+                    {
+                        tabIngresarAsociado.SelectedIndex = 1;
+                        General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
+                    }
+                    break;
+                case 3:
+                    if (!ValidarInformacionPersona() || !ValidarInformacionAyudaGobierno() || !ValidarInformacionNucleoFamiliar())
+                    {
+                        tabIngresarAsociado.SelectedIndex = 2;
+                        General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
+                    }
+                    break;*/
+            }
+        }
+
+
+        /// <summary>
+        /// Funcion para ocultar los paneles de nucleo familiar
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void ValidarPaneles(object sender, EventArgs e)
+        {
+            FondoDominiosEntity itemSeleccionado = (FondoDominiosEntity)comboBoxNucleoFamiliarConyuge.SelectedItem;
+            if (itemSeleccionado.V_Valor.ToUpper().Equals(Constantes.DescripcionSi.ToUpper()))
+            {
+                panelNucleoFamiliarConyuge.Visible = true;
+                panelNucleoFamiliarOtrosFamiliares.Location = new Point(7, 446);
+            }
+            else
+            {
+                panelNucleoFamiliarConyuge.Visible = false;
+                panelNucleoFamiliarOtrosFamiliares.Location = new Point(7, 167);
+            }
+        }
+
+        /// <summary>
+        /// Funcion para ocultar o mostrar la informacion "Cual otro" de Actividad
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void ValidarTipoActividadConyuge(object sender, EventArgs e)
+        {
+            FondoDominiosEntity itemSeleccionado = (FondoDominiosEntity)comboBoxNucleoFamiliarConyugeTipoActividad.SelectedItem;
+            if (itemSeleccionado.V_Valor.ToUpper().Equals(Constantes.DescripcionOtro.ToUpper()))
+            {
+                labelNucleoFamiliarConyugeOtraActividad.Visible = true;
+                textBoxNucleoFamiliarConyugeOtraActividad.Visible = true;
+                labelObligatorioCualTipoActividadConyuge.Visible = true;
+            }
+            else
+            {
+                labelNucleoFamiliarConyugeOtraActividad.Visible = false;
+                textBoxNucleoFamiliarConyugeOtraActividad.Visible = false;
+                labelObligatorioCualTipoActividadConyuge.Visible = false;
+            }
+        }
 
         /// <summary>
         /// Aceptar Ingresar Asociado
