@@ -14,6 +14,8 @@ using MaterialSkin.Controls;
 using MaterialSkin;
 using ManejoFondo.Services;
 using ManejoFondo.Loggers;
+using ManejoFondo.Modelos;
+using System.Web.Script.Serialization;
 
 namespace ManejoFondo
 {
@@ -26,6 +28,7 @@ namespace ManejoFondo
     {
         //Variable para guardar el usuario que inicio sesion
         FondoLoginEntity usuarioSesion;
+
         private Dictionary<TabPage, Color> TabColors = new Dictionary<TabPage, Color>();
 
         public FormIngresoAsociado(FondoLoginEntity usuario)
@@ -207,6 +210,14 @@ namespace ManejoFondo
         {
             FormAgregarNucleoFamiliar formNucleoFamiliar = new FormAgregarNucleoFamiliar();
             formNucleoFamiliar.ShowDialog();
+            String resultado = formNucleoFamiliar.jsonUsuario;
+            if (!General.EsVacioNulo(resultado))
+            {
+                UsuarioModel desUsuario = new JavaScriptSerializer().Deserialize<UsuarioModel>(resultado);
+                BindingSource bs = (BindingSource)this.dataGridNucleoFamiliarIntegrantes.DataSource;
+                bs.Add(desUsuario);
+            }
+            
         }
 
         /// <summary>

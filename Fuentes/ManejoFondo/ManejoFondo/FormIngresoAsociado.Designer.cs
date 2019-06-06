@@ -87,6 +87,7 @@
             this.labelTituloAyudasGobierno = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabNucleoFamiliar = new System.Windows.Forms.TabPage();
+            this.panelNucleoFamiliarOtrosFamiliares = new System.Windows.Forms.Panel();
             this.buttonAgregarNucleoFamiliarIntegrantes = new System.Windows.Forms.Button();
             this.dataGridNucleoFamiliarIntegrantes = new System.Windows.Forms.DataGridView();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,15 +147,14 @@
             this.ingresoAsociadoAceptar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelIngresoAsociadoRegresar = new System.Windows.Forms.Panel();
-            this.panelNucleoFamiliarOtrosFamiliares = new System.Windows.Forms.Panel();
             this.tabIngresarAsociado.SuspendLayout();
             this.tabDatosPersona.SuspendLayout();
             this.tabAyudaGubernamental.SuspendLayout();
             this.tabNucleoFamiliar.SuspendLayout();
+            this.panelNucleoFamiliarOtrosFamiliares.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNucleoFamiliarIntegrantes)).BeginInit();
             this.panelNucleoFamiliarConyuge.SuspendLayout();
             this.tabIngresos.SuspendLayout();
-            this.panelNucleoFamiliarOtrosFamiliares.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabIngresarAsociado
@@ -164,11 +164,11 @@
             this.tabIngresarAsociado.Controls.Add(this.tabNucleoFamiliar);
             this.tabIngresarAsociado.Controls.Add(this.tabIngresos);
             this.tabIngresarAsociado.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabIngresarAsociado.Location = new System.Drawing.Point(-1, 74);
+            this.tabIngresarAsociado.Location = new System.Drawing.Point(15, 70);
             this.tabIngresarAsociado.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.tabIngresarAsociado.Name = "tabIngresarAsociado";
             this.tabIngresarAsociado.SelectedIndex = 0;
-            this.tabIngresarAsociado.Size = new System.Drawing.Size(962, 631);
+            this.tabIngresarAsociado.Size = new System.Drawing.Size(974, 542);
             this.tabIngresarAsociado.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabIngresarAsociado.TabIndex = 0;
             this.tabIngresarAsociado.Click += new System.EventHandler(this.ValidarInformacion);
@@ -223,7 +223,7 @@
             this.tabDatosPersona.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.tabDatosPersona.Name = "tabDatosPersona";
             this.tabDatosPersona.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDatosPersona.Size = new System.Drawing.Size(954, 600);
+            this.tabDatosPersona.Size = new System.Drawing.Size(966, 511);
             this.tabDatosPersona.TabIndex = 0;
             this.tabDatosPersona.Text = "Datos Persona";
             // 
@@ -764,7 +764,7 @@
             this.tabAyudaGubernamental.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.tabAyudaGubernamental.Name = "tabAyudaGubernamental";
             this.tabAyudaGubernamental.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAyudaGubernamental.Size = new System.Drawing.Size(954, 528);
+            this.tabAyudaGubernamental.Size = new System.Drawing.Size(966, 533);
             this.tabAyudaGubernamental.TabIndex = 1;
             this.tabAyudaGubernamental.Text = "Ayuda Gobierno";
             // 
@@ -930,9 +930,18 @@
             this.tabNucleoFamiliar.Location = new System.Drawing.Point(4, 27);
             this.tabNucleoFamiliar.Name = "tabNucleoFamiliar";
             this.tabNucleoFamiliar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNucleoFamiliar.Size = new System.Drawing.Size(954, 600);
+            this.tabNucleoFamiliar.Size = new System.Drawing.Size(966, 533);
             this.tabNucleoFamiliar.TabIndex = 2;
             this.tabNucleoFamiliar.Text = "Núcleo Familiar";
+            // 
+            // panelNucleoFamiliarOtrosFamiliares
+            // 
+            this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.buttonAgregarNucleoFamiliarIntegrantes);
+            this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.dataGridNucleoFamiliarIntegrantes);
+            this.panelNucleoFamiliarOtrosFamiliares.Location = new System.Drawing.Point(7, 446);
+            this.panelNucleoFamiliarOtrosFamiliares.Name = "panelNucleoFamiliarOtrosFamiliares";
+            this.panelNucleoFamiliarOtrosFamiliares.Size = new System.Drawing.Size(932, 117);
+            this.panelNucleoFamiliarOtrosFamiliares.TabIndex = 56;
             // 
             // buttonAgregarNucleoFamiliarIntegrantes
             // 
@@ -1439,7 +1448,7 @@
             this.tabIngresos.Location = new System.Drawing.Point(4, 27);
             this.tabIngresos.Name = "tabIngresos";
             this.tabIngresos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIngresos.Size = new System.Drawing.Size(954, 528);
+            this.tabIngresos.Size = new System.Drawing.Size(966, 533);
             this.tabIngresos.TabIndex = 3;
             this.tabIngresos.Text = "Ingresos";
             // 
@@ -1659,27 +1668,18 @@
             this.panelIngresoAsociadoRegresar.BackgroundImage = global::ManejoFondo.Properties.Resources.regresar;
             this.panelIngresoAsociadoRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelIngresoAsociadoRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelIngresoAsociadoRegresar.Location = new System.Drawing.Point(911, 670);
+            this.panelIngresoAsociadoRegresar.Location = new System.Drawing.Point(957, 618);
             this.panelIngresoAsociadoRegresar.Name = "panelIngresoAsociadoRegresar";
             this.panelIngresoAsociadoRegresar.Size = new System.Drawing.Size(28, 28);
             this.panelIngresoAsociadoRegresar.TabIndex = 9;
             this.panelIngresoAsociadoRegresar.Click += new System.EventHandler(this.RegresarMenuPrincipal);
-            // 
-            // panelNucleoFamiliarOtrosFamiliares
-            // 
-            this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.buttonAgregarNucleoFamiliarIntegrantes);
-            this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.dataGridNucleoFamiliarIntegrantes);
-            this.panelNucleoFamiliarOtrosFamiliares.Location = new System.Drawing.Point(7, 446);
-            this.panelNucleoFamiliarOtrosFamiliares.Name = "panelNucleoFamiliarOtrosFamiliares";
-            this.panelNucleoFamiliarOtrosFamiliares.Size = new System.Drawing.Size(932, 117);
-            this.panelNucleoFamiliarOtrosFamiliares.TabIndex = 56;
             // 
             // FormIngresoAsociado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(962, 615);
+            this.ClientSize = new System.Drawing.Size(1022, 615);
             this.Controls.Add(this.panelIngresoAsociadoRegresar);
             this.Controls.Add(this.tabIngresarAsociado);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1693,12 +1693,12 @@
             this.tabAyudaGubernamental.PerformLayout();
             this.tabNucleoFamiliar.ResumeLayout(false);
             this.tabNucleoFamiliar.PerformLayout();
+            this.panelNucleoFamiliarOtrosFamiliares.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNucleoFamiliarIntegrantes)).EndInit();
             this.panelNucleoFamiliarConyuge.ResumeLayout(false);
             this.panelNucleoFamiliarConyuge.PerformLayout();
             this.tabIngresos.ResumeLayout(false);
             this.tabIngresos.PerformLayout();
-            this.panelNucleoFamiliarOtrosFamiliares.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

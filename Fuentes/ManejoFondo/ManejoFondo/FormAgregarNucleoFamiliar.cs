@@ -1,5 +1,7 @@
 ﻿using ManejoFondo.Common;
+using ManejoFondo.Entities;
 using ManejoFondo.Loggers;
+using ManejoFondo.Modelos;
 using ManejoFondo.Services;
 using MaterialSkin.Controls;
 using System;
@@ -10,6 +12,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
 namespace ManejoFondo
@@ -21,6 +24,8 @@ namespace ManejoFondo
     /// </summary>  
     public partial class FormAgregarNucleoFamiliar : MaterialForm
     {
+        public String jsonUsuario { get; set; }
+
         public FormAgregarNucleoFamiliar()
         {
             InitializeComponent();
@@ -73,6 +78,8 @@ namespace ManejoFondo
         /// </summary>
         private void CerrarAgregarPersona(object sender, EventArgs e)
         {
+            LimpiarInformacionModal();
+            jsonUsuario = "";
             Close();
         }
 
@@ -87,6 +94,111 @@ namespace ManejoFondo
             {
                 e.Handled = true;
                 return;
+            }
+        }
+
+        /// <summary>
+        /// Funcion que permite limpiar la informacion de la modal
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void LimpiarInformacionModal()
+        {
+            textAgregarPersonaNombres.Text = "";
+            textBoxAgregarPersonaApellidos.Text = "";
+            comboBoxAgregarPersonaTipoIdentificacion.SelectedIndex = 0;
+            textBoxAgregarPersonaNumeroIdentificacion.Text = "";
+            textBoxAgregarPersonaNumeroTelefono.Text = "";            
+            datePickerAgregarPersonaFechaNacimiento.Value = DateTime.Now;
+            comboBoxAgregarPersonaTipoActividad.SelectedIndex = 0;
+            textBoxAgregarPersonaOtraActividad.Text = "";
+            comboBoxAgregarPersonaParentesco.SelectedIndex = 0;
+        }
+
+        /// <summary>
+        /// Funcion para ocultar o mostrar la informacion "Cual otro" de Actividad
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void ValidarTipoActividadAgregarPersona(object sender, EventArgs e)
+        {
+            FondoDominiosEntity itemSeleccionado = (FondoDominiosEntity)comboBoxAgregarPersonaTipoActividad.SelectedItem;
+            if (itemSeleccionado.V_Valor.ToUpper().Equals(Constantes.DescripcionOtro.ToUpper()))
+            {
+                labelAgregarPersonaOtraActividad.Visible = true;
+                textBoxAgregarPersonaOtraActividad.Visible = true;
+                labelObligatorioCualTipoActividadAgregarPersona.Visible = true;
+
+                labelAgregarPersonaParentesco.Location = new Point(37, 435);
+                comboBoxAgregarPersonaParentesco.Location = new Point(40, 466);
+                labelObligatorioParentescoAgregarPersona.Location = new Point(308, 461);
+            }
+            else
+            {
+                labelAgregarPersonaOtraActividad.Visible = false;
+                textBoxAgregarPersonaOtraActividad.Visible = false;
+                labelObligatorioCualTipoActividadAgregarPersona.Visible = false;
+
+                labelAgregarPersonaParentesco.Location = new Point(341, 368);
+                comboBoxAgregarPersonaParentesco.Location = new Point(346, 393);
+                labelObligatorioParentescoAgregarPersona.Location = new Point(622, 394);
+            }
+        }
+
+        /// <summary>
+        /// Funcion para validar los campos de la persona a almacenar
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private bool ValidarInformacionAgregarPersona()
+        {
+            if (General.EsVacioNulo(textAgregarPersonaNombres.Text) || General.EsVacioNulo(textBoxAgregarPersonaApellidos.Text) ||
+                General.EsVacioNulo(comboBoxAgregarPersonaTipoIdentificacion.Text) || General.EsVacioNulo(textBoxAgregarPersonaNumeroIdentificacion.Text) ||
+                General.EsVacioNulo(textBoxAgregarPersonaNumeroTelefono.Text) || General.EsVacioNulo(datePickerAgregarPersonaFechaNacimiento.Text) ||
+                General.EsVacioNulo(comboBoxAgregarPersonaTipoActividad.Text) || General.EsVacioNulo(comboBoxAgregarPersonaParentesco.Text))
+            {
+                return false;
+            }
+            else
+            {
+                FondoDominiosEntity itemTipoActividad = (FondoDominiosEntity)comboBoxAgregarPersonaTipoActividad.SelectedItem;
+                if (itemTipoActividad.V_Valor.ToUpper().Equals(Constantes.DescripcionOtro.ToUpper()) && General.EsVacioNulo(textBoxAgregarPersonaOtraActividad.Text))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Funcion para validar la informacion a almacenar
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void ValidarInformacionGuardar(object sender, EventArgs e)
+        {
+            if (!ValidarInformacionAgregarPersona())
+            {
+                General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
+            }
+            else
+            {
+                UsuarioModel usuario = new UsuarioModel();
+                //Almacenar provisionalmente la informacion
+                usuario.Nombres = textAgregarPersonaNombres.Text;
+                usuario.Apellidos = textBoxAgregarPersonaApellidos.Text;
+                usuario.TipoIdentificacion = comboBoxAgregarPersonaTipoIdentificacion.Text;
+                usuario.NumeroIdentificacion = textBoxAgregarPersonaNumeroIdentificacion.Text;
+                usuario.Telefono = Convert.ToInt32(textBoxAgregarPersonaNumeroTelefono.Text);
+                usuario.FechaNacimiento = datePickerAgregarPersonaFechaNacimiento.Value;
+                usuario.TipoActividad = comboBoxAgregarPersonaTipoActividad.Text;
+                usuario.OtraActividad = textBoxAgregarPersonaOtraActividad.Text;
+                usuario.Parentesco = comboBoxAgregarPersonaParentesco.Text;
+                jsonUsuario = new JavaScriptSerializer().Serialize(usuario);
+                Close();
             }
         }
     }

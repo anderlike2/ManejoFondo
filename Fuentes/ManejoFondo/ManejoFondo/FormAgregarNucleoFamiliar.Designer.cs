@@ -45,7 +45,7 @@
             this.labelAgregarPersonaTipoIdentificacion = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.comboBoxAgregarPersonaTipoActividad = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
+            this.labelObligatorioCualTipoActividadAgregarPersona = new System.Windows.Forms.Label();
             this.textBoxAgregarPersonaOtraActividad = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.labelAgregarPersonaOtraActividad = new System.Windows.Forms.Label();
             this.labelAgregarPersonaTipoActividad = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.labelAgregarPersonaNumeroTelefono = new System.Windows.Forms.Label();
             this.agregarPersonaCancelar = new System.Windows.Forms.Button();
             this.agregarPersonaAceptar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelObligatorioParentescoAgregarPersona = new System.Windows.Forms.Label();
             this.comboBoxAgregarPersonaParentesco = new System.Windows.Forms.ComboBox();
             this.labelAgregarPersonaParentesco = new System.Windows.Forms.Label();
             this.datePickerAgregarPersonaFechaNacimiento = new System.Windows.Forms.DateTimePicker();
@@ -292,20 +292,21 @@
             this.comboBoxAgregarPersonaTipoActividad.Name = "comboBoxAgregarPersonaTipoActividad";
             this.comboBoxAgregarPersonaTipoActividad.Size = new System.Drawing.Size(260, 21);
             this.comboBoxAgregarPersonaTipoActividad.TabIndex = 65;
+            this.comboBoxAgregarPersonaTipoActividad.SelectedIndexChanged += new System.EventHandler(this.ValidarTipoActividadAgregarPersona);
             // 
-            // label29
+            // labelObligatorioCualTipoActividadAgregarPersona
             // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.White;
-            this.label29.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.Red;
-            this.label29.Location = new System.Drawing.Point(622, 394);
-            this.label29.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(22, 29);
-            this.label29.TabIndex = 64;
-            this.label29.Text = "*";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.labelObligatorioCualTipoActividadAgregarPersona.AutoSize = true;
+            this.labelObligatorioCualTipoActividadAgregarPersona.BackColor = System.Drawing.Color.White;
+            this.labelObligatorioCualTipoActividadAgregarPersona.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelObligatorioCualTipoActividadAgregarPersona.ForeColor = System.Drawing.Color.Red;
+            this.labelObligatorioCualTipoActividadAgregarPersona.Location = new System.Drawing.Point(622, 394);
+            this.labelObligatorioCualTipoActividadAgregarPersona.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.labelObligatorioCualTipoActividadAgregarPersona.Name = "labelObligatorioCualTipoActividadAgregarPersona";
+            this.labelObligatorioCualTipoActividadAgregarPersona.Size = new System.Drawing.Size(22, 29);
+            this.labelObligatorioCualTipoActividadAgregarPersona.TabIndex = 64;
+            this.labelObligatorioCualTipoActividadAgregarPersona.Text = "*";
+            this.labelObligatorioCualTipoActividadAgregarPersona.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // textBoxAgregarPersonaOtraActividad
             // 
@@ -452,20 +453,21 @@
             this.agregarPersonaAceptar.TabIndex = 67;
             this.agregarPersonaAceptar.Text = "Aceptar";
             this.agregarPersonaAceptar.UseVisualStyleBackColor = false;
+            this.agregarPersonaAceptar.Click += new System.EventHandler(this.ValidarInformacionGuardar);
             // 
-            // label2
+            // labelObligatorioParentescoAgregarPersona
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(308, 461);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 29);
-            this.label2.TabIndex = 71;
-            this.label2.Text = "*";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.labelObligatorioParentescoAgregarPersona.AutoSize = true;
+            this.labelObligatorioParentescoAgregarPersona.BackColor = System.Drawing.Color.White;
+            this.labelObligatorioParentescoAgregarPersona.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelObligatorioParentescoAgregarPersona.ForeColor = System.Drawing.Color.Red;
+            this.labelObligatorioParentescoAgregarPersona.Location = new System.Drawing.Point(308, 461);
+            this.labelObligatorioParentescoAgregarPersona.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.labelObligatorioParentescoAgregarPersona.Name = "labelObligatorioParentescoAgregarPersona";
+            this.labelObligatorioParentescoAgregarPersona.Size = new System.Drawing.Size(22, 29);
+            this.labelObligatorioParentescoAgregarPersona.TabIndex = 71;
+            this.labelObligatorioParentescoAgregarPersona.Text = "*";
+            this.labelObligatorioParentescoAgregarPersona.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // comboBoxAgregarPersonaParentesco
             // 
@@ -504,14 +506,14 @@
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(689, 590);
             this.Controls.Add(this.datePickerAgregarPersonaFechaNacimiento);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelObligatorioParentescoAgregarPersona);
             this.Controls.Add(this.comboBoxAgregarPersonaParentesco);
             this.Controls.Add(this.labelAgregarPersonaParentesco);
             this.Controls.Add(this.agregarPersonaCancelar);
             this.Controls.Add(this.agregarPersonaAceptar);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.comboBoxAgregarPersonaTipoActividad);
-            this.Controls.Add(this.label29);
+            this.Controls.Add(this.labelObligatorioCualTipoActividadAgregarPersona);
             this.Controls.Add(this.textBoxAgregarPersonaOtraActividad);
             this.Controls.Add(this.labelAgregarPersonaOtraActividad);
             this.Controls.Add(this.labelAgregarPersonaTipoActividad);
@@ -563,7 +565,7 @@
         private System.Windows.Forms.Label labelAgregarPersonaTipoIdentificacion;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox comboBoxAgregarPersonaTipoActividad;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label labelObligatorioCualTipoActividadAgregarPersona;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxAgregarPersonaOtraActividad;
         private System.Windows.Forms.Label labelAgregarPersonaOtraActividad;
         private System.Windows.Forms.Label labelAgregarPersonaTipoActividad;
@@ -574,7 +576,7 @@
         private System.Windows.Forms.Label labelAgregarPersonaNumeroTelefono;
         private System.Windows.Forms.Button agregarPersonaCancelar;
         private System.Windows.Forms.Button agregarPersonaAceptar;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelObligatorioParentescoAgregarPersona;
         private System.Windows.Forms.ComboBox comboBoxAgregarPersonaParentesco;
         private System.Windows.Forms.Label labelAgregarPersonaParentesco;
         private System.Windows.Forms.DateTimePicker datePickerAgregarPersonaFechaNacimiento;
