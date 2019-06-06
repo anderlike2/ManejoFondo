@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIngresoAsociado));
             this.tabIngresarAsociado = new System.Windows.Forms.TabControl();
             this.tabDatosPersona = new System.Windows.Forms.TabPage();
@@ -90,15 +91,6 @@
             this.panelNucleoFamiliarOtrosFamiliares = new System.Windows.Forms.Panel();
             this.buttonAgregarNucleoFamiliarIntegrantes = new System.Windows.Forms.Button();
             this.dataGridNucleoFamiliarIntegrantes = new System.Windows.Forms.DataGridView();
-            this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumeroIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumeroTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OtraActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelNucleoFamiliarConyuge = new System.Windows.Forms.Panel();
             this.datePickerNucleoFamiliarConyugeFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label27 = new System.Windows.Forms.Label();
@@ -147,6 +139,18 @@
             this.ingresoAsociadoAceptar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelIngresoAsociadoRegresar = new System.Windows.Forms.Panel();
+            this.buttonEditarNucleoFamiliarIntegrantes = new System.Windows.Forms.Button();
+            this.buttonEliminarNucleoFamiliarIntegrantes = new System.Windows.Forms.Button();
+            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoIdentificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroIdentificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otraActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parentescoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabIngresarAsociado.SuspendLayout();
             this.tabDatosPersona.SuspendLayout();
             this.tabAyudaGubernamental.SuspendLayout();
@@ -155,6 +159,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNucleoFamiliarIntegrantes)).BeginInit();
             this.panelNucleoFamiliarConyuge.SuspendLayout();
             this.tabIngresos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabIngresarAsociado
@@ -164,11 +169,11 @@
             this.tabIngresarAsociado.Controls.Add(this.tabNucleoFamiliar);
             this.tabIngresarAsociado.Controls.Add(this.tabIngresos);
             this.tabIngresarAsociado.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabIngresarAsociado.Location = new System.Drawing.Point(15, 70);
+            this.tabIngresarAsociado.Location = new System.Drawing.Point(15, 76);
             this.tabIngresarAsociado.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.tabIngresarAsociado.Name = "tabIngresarAsociado";
             this.tabIngresarAsociado.SelectedIndex = 0;
-            this.tabIngresarAsociado.Size = new System.Drawing.Size(974, 542);
+            this.tabIngresarAsociado.Size = new System.Drawing.Size(995, 602);
             this.tabIngresarAsociado.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabIngresarAsociado.TabIndex = 0;
             this.tabIngresarAsociado.Click += new System.EventHandler(this.ValidarInformacion);
@@ -223,7 +228,7 @@
             this.tabDatosPersona.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.tabDatosPersona.Name = "tabDatosPersona";
             this.tabDatosPersona.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDatosPersona.Size = new System.Drawing.Size(966, 511);
+            this.tabDatosPersona.Size = new System.Drawing.Size(987, 571);
             this.tabDatosPersona.TabIndex = 0;
             this.tabDatosPersona.Text = "Datos Persona";
             // 
@@ -764,7 +769,7 @@
             this.tabAyudaGubernamental.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.tabAyudaGubernamental.Name = "tabAyudaGubernamental";
             this.tabAyudaGubernamental.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAyudaGubernamental.Size = new System.Drawing.Size(966, 533);
+            this.tabAyudaGubernamental.Size = new System.Drawing.Size(987, 571);
             this.tabAyudaGubernamental.TabIndex = 1;
             this.tabAyudaGubernamental.Text = "Ayuda Gobierno";
             // 
@@ -920,6 +925,7 @@
             // tabNucleoFamiliar
             // 
             this.tabNucleoFamiliar.BackColor = System.Drawing.Color.White;
+            this.tabNucleoFamiliar.Controls.Add(this.panelIngresoAsociadoRegresar);
             this.tabNucleoFamiliar.Controls.Add(this.panelNucleoFamiliarOtrosFamiliares);
             this.tabNucleoFamiliar.Controls.Add(this.panelNucleoFamiliarConyuge);
             this.tabNucleoFamiliar.Controls.Add(this.label21);
@@ -930,17 +936,19 @@
             this.tabNucleoFamiliar.Location = new System.Drawing.Point(4, 27);
             this.tabNucleoFamiliar.Name = "tabNucleoFamiliar";
             this.tabNucleoFamiliar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNucleoFamiliar.Size = new System.Drawing.Size(966, 533);
+            this.tabNucleoFamiliar.Size = new System.Drawing.Size(987, 571);
             this.tabNucleoFamiliar.TabIndex = 2;
             this.tabNucleoFamiliar.Text = "Núcleo Familiar";
             // 
             // panelNucleoFamiliarOtrosFamiliares
             // 
+            this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.buttonEliminarNucleoFamiliarIntegrantes);
+            this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.buttonEditarNucleoFamiliarIntegrantes);
             this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.buttonAgregarNucleoFamiliarIntegrantes);
             this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.dataGridNucleoFamiliarIntegrantes);
-            this.panelNucleoFamiliarOtrosFamiliares.Location = new System.Drawing.Point(7, 446);
+            this.panelNucleoFamiliarOtrosFamiliares.Location = new System.Drawing.Point(7, 391);
             this.panelNucleoFamiliarOtrosFamiliares.Name = "panelNucleoFamiliarOtrosFamiliares";
-            this.panelNucleoFamiliarOtrosFamiliares.Size = new System.Drawing.Size(932, 117);
+            this.panelNucleoFamiliarOtrosFamiliares.Size = new System.Drawing.Size(974, 174);
             this.panelNucleoFamiliarOtrosFamiliares.TabIndex = 56;
             // 
             // buttonAgregarNucleoFamiliarIntegrantes
@@ -950,9 +958,9 @@
             this.buttonAgregarNucleoFamiliarIntegrantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregarNucleoFamiliarIntegrantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarNucleoFamiliarIntegrantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.buttonAgregarNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(27, 7);
+            this.buttonAgregarNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(7, 4);
             this.buttonAgregarNucleoFamiliarIntegrantes.Name = "buttonAgregarNucleoFamiliarIntegrantes";
-            this.buttonAgregarNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(112, 29);
+            this.buttonAgregarNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(112, 32);
             this.buttonAgregarNucleoFamiliarIntegrantes.TabIndex = 55;
             this.buttonAgregarNucleoFamiliarIntegrantes.Text = "Agregar";
             this.buttonAgregarNucleoFamiliarIntegrantes.UseVisualStyleBackColor = false;
@@ -960,69 +968,30 @@
             // 
             // dataGridNucleoFamiliarIntegrantes
             // 
+            this.dataGridNucleoFamiliarIntegrantes.AllowUserToAddRows = false;
+            this.dataGridNucleoFamiliarIntegrantes.AllowUserToDeleteRows = false;
+            this.dataGridNucleoFamiliarIntegrantes.AutoGenerateColumns = false;
             this.dataGridNucleoFamiliarIntegrantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridNucleoFamiliarIntegrantes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridNucleoFamiliarIntegrantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridNucleoFamiliarIntegrantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombres,
-            this.Apellidos,
-            this.TipoIdentificacion,
-            this.NumeroIdentificacion,
-            this.NumeroTelefono,
-            this.FechaNacimiento,
-            this.TipoActividad,
-            this.OtraActividad,
-            this.Parentesco});
-            this.dataGridNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(25, 41);
+            this.nombresDataGridViewTextBoxColumn,
+            this.apellidosDataGridViewTextBoxColumn,
+            this.tipoIdentificacionDataGridViewTextBoxColumn,
+            this.numeroIdentificacionDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn,
+            this.fechaNacimientoDataGridViewTextBoxColumn,
+            this.tipoActividadDataGridViewTextBoxColumn,
+            this.otraActividadDataGridViewTextBoxColumn,
+            this.parentescoDataGridViewTextBoxColumn});
+            this.dataGridNucleoFamiliarIntegrantes.DataSource = this.usuarioModelBindingSource;
+            this.dataGridNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(2, 41);
             this.dataGridNucleoFamiliarIntegrantes.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridNucleoFamiliarIntegrantes.Name = "dataGridNucleoFamiliarIntegrantes";
+            this.dataGridNucleoFamiliarIntegrantes.ReadOnly = true;
             this.dataGridNucleoFamiliarIntegrantes.RowTemplate.Height = 24;
-            this.dataGridNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(883, 74);
+            this.dataGridNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(970, 131);
             this.dataGridNucleoFamiliarIntegrantes.TabIndex = 31;
-            // 
-            // Nombres
-            // 
-            this.Nombres.HeaderText = "Nombres";
-            this.Nombres.Name = "Nombres";
-            // 
-            // Apellidos
-            // 
-            this.Apellidos.HeaderText = "Apellidos";
-            this.Apellidos.Name = "Apellidos";
-            // 
-            // TipoIdentificacion
-            // 
-            this.TipoIdentificacion.HeaderText = "Tipo ID";
-            this.TipoIdentificacion.Name = "TipoIdentificacion";
-            // 
-            // NumeroIdentificacion
-            // 
-            this.NumeroIdentificacion.HeaderText = "Número ID";
-            this.NumeroIdentificacion.Name = "NumeroIdentificacion";
-            // 
-            // NumeroTelefono
-            // 
-            this.NumeroTelefono.HeaderText = "No. Teléfono";
-            this.NumeroTelefono.Name = "NumeroTelefono";
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            // 
-            // TipoActividad
-            // 
-            this.TipoActividad.HeaderText = "Tipo Actividad";
-            this.TipoActividad.Name = "TipoActividad";
-            // 
-            // OtraActividad
-            // 
-            this.OtraActividad.HeaderText = "Otra Actividad";
-            this.OtraActividad.Name = "OtraActividad";
-            // 
-            // Parentesco
-            // 
-            this.Parentesco.HeaderText = "Parentesco";
-            this.Parentesco.Name = "Parentesco";
             // 
             // panelNucleoFamiliarConyuge
             // 
@@ -1050,16 +1019,16 @@
             this.panelNucleoFamiliarConyuge.Controls.Add(this.labelNucleoFamiliarConyugeApellidos);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.label22);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.label23);
-            this.panelNucleoFamiliarConyuge.Location = new System.Drawing.Point(7, 167);
+            this.panelNucleoFamiliarConyuge.Location = new System.Drawing.Point(7, 148);
             this.panelNucleoFamiliarConyuge.Margin = new System.Windows.Forms.Padding(2);
             this.panelNucleoFamiliarConyuge.Name = "panelNucleoFamiliarConyuge";
-            this.panelNucleoFamiliarConyuge.Size = new System.Drawing.Size(932, 274);
+            this.panelNucleoFamiliarConyuge.Size = new System.Drawing.Size(975, 225);
             this.panelNucleoFamiliarConyuge.TabIndex = 30;
             // 
             // datePickerNucleoFamiliarConyugeFechaNacimiento
             // 
             this.datePickerNucleoFamiliarConyugeFechaNacimiento.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.datePickerNucleoFamiliarConyugeFechaNacimiento.Location = new System.Drawing.Point(495, 171);
+            this.datePickerNucleoFamiliarConyugeFechaNacimiento.Location = new System.Drawing.Point(495, 137);
             this.datePickerNucleoFamiliarConyugeFechaNacimiento.Name = "datePickerNucleoFamiliarConyugeFechaNacimiento";
             this.datePickerNucleoFamiliarConyugeFechaNacimiento.Size = new System.Drawing.Size(380, 26);
             this.datePickerNucleoFamiliarConyugeFechaNacimiento.TabIndex = 55;
@@ -1069,7 +1038,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(411, 235);
+            this.label27.Location = new System.Drawing.Point(411, 186);
             this.label27.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(22, 29);
@@ -1081,7 +1050,7 @@
             // 
             this.comboBoxNucleoFamiliarConyugeTipoActividad.BackColor = System.Drawing.Color.White;
             this.comboBoxNucleoFamiliarConyugeTipoActividad.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxNucleoFamiliarConyugeTipoActividad.Location = new System.Drawing.Point(27, 240);
+            this.comboBoxNucleoFamiliarConyugeTipoActividad.Location = new System.Drawing.Point(27, 191);
             this.comboBoxNucleoFamiliarConyugeTipoActividad.Name = "comboBoxNucleoFamiliarConyugeTipoActividad";
             this.comboBoxNucleoFamiliarConyugeTipoActividad.Size = new System.Drawing.Size(379, 26);
             this.comboBoxNucleoFamiliarConyugeTipoActividad.TabIndex = 53;
@@ -1092,7 +1061,7 @@
             this.labelObligatorioCualTipoActividadConyuge.AutoSize = true;
             this.labelObligatorioCualTipoActividadConyuge.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelObligatorioCualTipoActividadConyuge.ForeColor = System.Drawing.Color.Red;
-            this.labelObligatorioCualTipoActividadConyuge.Location = new System.Drawing.Point(881, 236);
+            this.labelObligatorioCualTipoActividadConyuge.Location = new System.Drawing.Point(881, 187);
             this.labelObligatorioCualTipoActividadConyuge.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelObligatorioCualTipoActividadConyuge.Name = "labelObligatorioCualTipoActividadConyuge";
             this.labelObligatorioCualTipoActividadConyuge.Size = new System.Drawing.Size(22, 29);
@@ -1112,7 +1081,7 @@
             this.textBoxNucleoFamiliarConyugeOtraActividad.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeOtraActividad.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeOtraActividad.LineThickness = 3;
-            this.textBoxNucleoFamiliarConyugeOtraActividad.Location = new System.Drawing.Point(497, 235);
+            this.textBoxNucleoFamiliarConyugeOtraActividad.Location = new System.Drawing.Point(497, 186);
             this.textBoxNucleoFamiliarConyugeOtraActividad.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeOtraActividad.Name = "textBoxNucleoFamiliarConyugeOtraActividad";
             this.textBoxNucleoFamiliarConyugeOtraActividad.Size = new System.Drawing.Size(379, 29);
@@ -1124,7 +1093,7 @@
             this.labelNucleoFamiliarConyugeOtraActividad.AutoSize = true;
             this.labelNucleoFamiliarConyugeOtraActividad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeOtraActividad.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeOtraActividad.Location = new System.Drawing.Point(493, 210);
+            this.labelNucleoFamiliarConyugeOtraActividad.Location = new System.Drawing.Point(493, 168);
             this.labelNucleoFamiliarConyugeOtraActividad.Name = "labelNucleoFamiliarConyugeOtraActividad";
             this.labelNucleoFamiliarConyugeOtraActividad.Size = new System.Drawing.Size(56, 21);
             this.labelNucleoFamiliarConyugeOtraActividad.TabIndex = 50;
@@ -1135,7 +1104,7 @@
             this.labelNucleoFamiliarConyugeTipoActividad.AutoSize = true;
             this.labelNucleoFamiliarConyugeTipoActividad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeTipoActividad.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeTipoActividad.Location = new System.Drawing.Point(23, 210);
+            this.labelNucleoFamiliarConyugeTipoActividad.Location = new System.Drawing.Point(23, 168);
             this.labelNucleoFamiliarConyugeTipoActividad.Name = "labelNucleoFamiliarConyugeTipoActividad";
             this.labelNucleoFamiliarConyugeTipoActividad.Size = new System.Drawing.Size(125, 21);
             this.labelNucleoFamiliarConyugeTipoActividad.TabIndex = 49;
@@ -1146,7 +1115,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(882, 168);
+            this.label28.Location = new System.Drawing.Point(882, 134);
             this.label28.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(22, 29);
@@ -1159,7 +1128,7 @@
             this.labelNucleoFamiliarConyugeFechaNacimiento.AutoSize = true;
             this.labelNucleoFamiliarConyugeFechaNacimiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeFechaNacimiento.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeFechaNacimiento.Location = new System.Drawing.Point(492, 142);
+            this.labelNucleoFamiliarConyugeFechaNacimiento.Location = new System.Drawing.Point(491, 109);
             this.labelNucleoFamiliarConyugeFechaNacimiento.Name = "labelNucleoFamiliarConyugeFechaNacimiento";
             this.labelNucleoFamiliarConyugeFechaNacimiento.Size = new System.Drawing.Size(154, 21);
             this.labelNucleoFamiliarConyugeFechaNacimiento.TabIndex = 47;
@@ -1170,7 +1139,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Red;
-            this.label26.Location = new System.Drawing.Point(410, 168);
+            this.label26.Location = new System.Drawing.Point(410, 134);
             this.label26.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(22, 29);
@@ -1190,7 +1159,7 @@
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.LineThickness = 3;
-            this.textBoxNucleoFamiliarConyugeNumeroTelefono.Location = new System.Drawing.Point(26, 167);
+            this.textBoxNucleoFamiliarConyugeNumeroTelefono.Location = new System.Drawing.Point(26, 133);
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.Name = "textBoxNucleoFamiliarConyugeNumeroTelefono";
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.Size = new System.Drawing.Size(379, 29);
@@ -1203,7 +1172,7 @@
             this.labelNucleoFamiliarConyugeNumeroTelefono.AutoSize = true;
             this.labelNucleoFamiliarConyugeNumeroTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeNumeroTelefono.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeNumeroTelefono.Location = new System.Drawing.Point(22, 142);
+            this.labelNucleoFamiliarConyugeNumeroTelefono.Location = new System.Drawing.Point(21, 111);
             this.labelNucleoFamiliarConyugeNumeroTelefono.Name = "labelNucleoFamiliarConyugeNumeroTelefono";
             this.labelNucleoFamiliarConyugeNumeroTelefono.Size = new System.Drawing.Size(142, 21);
             this.labelNucleoFamiliarConyugeNumeroTelefono.TabIndex = 43;
@@ -1214,7 +1183,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(410, 99);
+            this.label24.Location = new System.Drawing.Point(410, 76);
             this.label24.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(22, 29);
@@ -1226,7 +1195,7 @@
             // 
             this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.BackColor = System.Drawing.Color.White;
             this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.Location = new System.Drawing.Point(26, 105);
+            this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.Location = new System.Drawing.Point(26, 82);
             this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.Name = "comboBoxNucleoFamiliarConyugeTipoIdentificacion";
             this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.Size = new System.Drawing.Size(379, 26);
             this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.TabIndex = 41;
@@ -1236,7 +1205,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Red;
-            this.label25.Location = new System.Drawing.Point(880, 100);
+            this.label25.Location = new System.Drawing.Point(880, 77);
             this.label25.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(22, 29);
@@ -1256,7 +1225,7 @@
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.LineThickness = 3;
-            this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Location = new System.Drawing.Point(496, 99);
+            this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Location = new System.Drawing.Point(496, 76);
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Name = "textBoxNucleoFamiliarConyugeNumeroIdentificacion";
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Size = new System.Drawing.Size(379, 29);
@@ -1269,7 +1238,7 @@
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.AutoSize = true;
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeNumeroIdentificacion.Location = new System.Drawing.Point(492, 74);
+            this.labelNucleoFamiliarConyugeNumeroIdentificacion.Location = new System.Drawing.Point(492, 58);
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.Name = "labelNucleoFamiliarConyugeNumeroIdentificacion";
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.Size = new System.Drawing.Size(184, 21);
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.TabIndex = 38;
@@ -1280,7 +1249,7 @@
             this.labelNucleoFamiliarConyugeTipoIdentificacion.AutoSize = true;
             this.labelNucleoFamiliarConyugeTipoIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeTipoIdentificacion.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeTipoIdentificacion.Location = new System.Drawing.Point(22, 74);
+            this.labelNucleoFamiliarConyugeTipoIdentificacion.Location = new System.Drawing.Point(22, 58);
             this.labelNucleoFamiliarConyugeTipoIdentificacion.Name = "labelNucleoFamiliarConyugeTipoIdentificacion";
             this.labelNucleoFamiliarConyugeTipoIdentificacion.Size = new System.Drawing.Size(154, 21);
             this.labelNucleoFamiliarConyugeTipoIdentificacion.TabIndex = 37;
@@ -1298,7 +1267,7 @@
             this.textBoxNucleoFamiliarConyugeApellidos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeApellidos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeApellidos.LineThickness = 3;
-            this.textBoxNucleoFamiliarConyugeApellidos.Location = new System.Drawing.Point(496, 33);
+            this.textBoxNucleoFamiliarConyugeApellidos.Location = new System.Drawing.Point(496, 23);
             this.textBoxNucleoFamiliarConyugeApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeApellidos.Name = "textBoxNucleoFamiliarConyugeApellidos";
             this.textBoxNucleoFamiliarConyugeApellidos.Size = new System.Drawing.Size(379, 29);
@@ -1310,7 +1279,7 @@
             this.labelNucleoFamiliarConyugeNombres.AutoSize = true;
             this.labelNucleoFamiliarConyugeNombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeNombres.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeNombres.Location = new System.Drawing.Point(22, 11);
+            this.labelNucleoFamiliarConyugeNombres.Location = new System.Drawing.Point(22, 5);
             this.labelNucleoFamiliarConyugeNombres.Name = "labelNucleoFamiliarConyugeNombres";
             this.labelNucleoFamiliarConyugeNombres.Size = new System.Drawing.Size(79, 21);
             this.labelNucleoFamiliarConyugeNombres.TabIndex = 31;
@@ -1328,7 +1297,7 @@
             this.textBoxNucleoFamiliarConyugeNombres.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNombres.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNombres.LineThickness = 3;
-            this.textBoxNucleoFamiliarConyugeNombres.Location = new System.Drawing.Point(26, 33);
+            this.textBoxNucleoFamiliarConyugeNombres.Location = new System.Drawing.Point(26, 23);
             this.textBoxNucleoFamiliarConyugeNombres.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeNombres.Name = "textBoxNucleoFamiliarConyugeNombres";
             this.textBoxNucleoFamiliarConyugeNombres.Size = new System.Drawing.Size(379, 29);
@@ -1340,7 +1309,7 @@
             this.labelNucleoFamiliarConyugeApellidos.AutoSize = true;
             this.labelNucleoFamiliarConyugeApellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeApellidos.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeApellidos.Location = new System.Drawing.Point(491, 11);
+            this.labelNucleoFamiliarConyugeApellidos.Location = new System.Drawing.Point(491, 5);
             this.labelNucleoFamiliarConyugeApellidos.Name = "labelNucleoFamiliarConyugeApellidos";
             this.labelNucleoFamiliarConyugeApellidos.Size = new System.Drawing.Size(80, 21);
             this.labelNucleoFamiliarConyugeApellidos.TabIndex = 32;
@@ -1351,7 +1320,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(879, 37);
+            this.label22.Location = new System.Drawing.Point(879, 27);
             this.label22.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(22, 29);
@@ -1364,7 +1333,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(410, 37);
+            this.label23.Location = new System.Drawing.Point(410, 27);
             this.label23.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(22, 29);
@@ -1377,7 +1346,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(416, 136);
+            this.label21.Location = new System.Drawing.Point(416, 117);
             this.label21.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(22, 29);
@@ -1389,7 +1358,7 @@
             // 
             this.comboBoxNucleoFamiliarConyuge.BackColor = System.Drawing.Color.White;
             this.comboBoxNucleoFamiliarConyuge.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxNucleoFamiliarConyuge.Location = new System.Drawing.Point(32, 141);
+            this.comboBoxNucleoFamiliarConyuge.Location = new System.Drawing.Point(32, 122);
             this.comboBoxNucleoFamiliarConyuge.Name = "comboBoxNucleoFamiliarConyuge";
             this.comboBoxNucleoFamiliarConyuge.Size = new System.Drawing.Size(379, 26);
             this.comboBoxNucleoFamiliarConyuge.TabIndex = 28;
@@ -1400,7 +1369,7 @@
             this.labelNucleoFamiliarConyuge.AutoSize = true;
             this.labelNucleoFamiliarConyuge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyuge.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyuge.Location = new System.Drawing.Point(28, 110);
+            this.labelNucleoFamiliarConyuge.Location = new System.Drawing.Point(28, 91);
             this.labelNucleoFamiliarConyuge.Name = "labelNucleoFamiliarConyuge";
             this.labelNucleoFamiliarConyuge.Size = new System.Drawing.Size(82, 21);
             this.labelNucleoFamiliarConyuge.TabIndex = 27;
@@ -1448,7 +1417,7 @@
             this.tabIngresos.Location = new System.Drawing.Point(4, 27);
             this.tabIngresos.Name = "tabIngresos";
             this.tabIngresos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIngresos.Size = new System.Drawing.Size(966, 533);
+            this.tabIngresos.Size = new System.Drawing.Size(987, 571);
             this.tabIngresos.TabIndex = 3;
             this.tabIngresos.Text = "Ingresos";
             // 
@@ -1668,19 +1637,113 @@
             this.panelIngresoAsociadoRegresar.BackgroundImage = global::ManejoFondo.Properties.Resources.regresar;
             this.panelIngresoAsociadoRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelIngresoAsociadoRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelIngresoAsociadoRegresar.Location = new System.Drawing.Point(957, 618);
+            this.panelIngresoAsociadoRegresar.Location = new System.Drawing.Point(911, 576);
             this.panelIngresoAsociadoRegresar.Name = "panelIngresoAsociadoRegresar";
             this.panelIngresoAsociadoRegresar.Size = new System.Drawing.Size(28, 28);
             this.panelIngresoAsociadoRegresar.TabIndex = 9;
             this.panelIngresoAsociadoRegresar.Click += new System.EventHandler(this.RegresarMenuPrincipal);
+            // 
+            // buttonEditarNucleoFamiliarIntegrantes
+            // 
+            this.buttonEditarNucleoFamiliarIntegrantes.BackColor = System.Drawing.Color.White;
+            this.buttonEditarNucleoFamiliarIntegrantes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEditarNucleoFamiliarIntegrantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarNucleoFamiliarIntegrantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditarNucleoFamiliarIntegrantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.buttonEditarNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(125, 4);
+            this.buttonEditarNucleoFamiliarIntegrantes.Name = "buttonEditarNucleoFamiliarIntegrantes";
+            this.buttonEditarNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(112, 32);
+            this.buttonEditarNucleoFamiliarIntegrantes.TabIndex = 56;
+            this.buttonEditarNucleoFamiliarIntegrantes.Text = "Editar";
+            this.buttonEditarNucleoFamiliarIntegrantes.UseVisualStyleBackColor = false;
+            // 
+            // buttonEliminarNucleoFamiliarIntegrantes
+            // 
+            this.buttonEliminarNucleoFamiliarIntegrantes.BackColor = System.Drawing.Color.White;
+            this.buttonEliminarNucleoFamiliarIntegrantes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEliminarNucleoFamiliarIntegrantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarNucleoFamiliarIntegrantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarNucleoFamiliarIntegrantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(66)))), ((int)(((byte)(45)))));
+            this.buttonEliminarNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(243, 4);
+            this.buttonEliminarNucleoFamiliarIntegrantes.Name = "buttonEliminarNucleoFamiliarIntegrantes";
+            this.buttonEliminarNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(112, 32);
+            this.buttonEliminarNucleoFamiliarIntegrantes.TabIndex = 57;
+            this.buttonEliminarNucleoFamiliarIntegrantes.Text = "Eliminar";
+            this.buttonEliminarNucleoFamiliarIntegrantes.UseVisualStyleBackColor = false;
+            // 
+            // nombresDataGridViewTextBoxColumn
+            // 
+            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
+            this.nombresDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidosDataGridViewTextBoxColumn
+            // 
+            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
+            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipoIdentificacionDataGridViewTextBoxColumn
+            // 
+            this.tipoIdentificacionDataGridViewTextBoxColumn.DataPropertyName = "TipoIdentificacion";
+            this.tipoIdentificacionDataGridViewTextBoxColumn.HeaderText = "Tipo ID";
+            this.tipoIdentificacionDataGridViewTextBoxColumn.Name = "tipoIdentificacionDataGridViewTextBoxColumn";
+            this.tipoIdentificacionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numeroIdentificacionDataGridViewTextBoxColumn
+            // 
+            this.numeroIdentificacionDataGridViewTextBoxColumn.DataPropertyName = "NumeroIdentificacion";
+            this.numeroIdentificacionDataGridViewTextBoxColumn.HeaderText = "Numero ID";
+            this.numeroIdentificacionDataGridViewTextBoxColumn.Name = "numeroIdentificacionDataGridViewTextBoxColumn";
+            this.numeroIdentificacionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Teléfono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaNacimientoDataGridViewTextBoxColumn
+            // 
+            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaNacimiento";
+            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha Nac.";
+            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
+            this.fechaNacimientoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipoActividadDataGridViewTextBoxColumn
+            // 
+            this.tipoActividadDataGridViewTextBoxColumn.DataPropertyName = "TipoActividad";
+            this.tipoActividadDataGridViewTextBoxColumn.HeaderText = "Actividad";
+            this.tipoActividadDataGridViewTextBoxColumn.Name = "tipoActividadDataGridViewTextBoxColumn";
+            this.tipoActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // otraActividadDataGridViewTextBoxColumn
+            // 
+            this.otraActividadDataGridViewTextBoxColumn.DataPropertyName = "OtraActividad";
+            this.otraActividadDataGridViewTextBoxColumn.HeaderText = "Otra Actividad";
+            this.otraActividadDataGridViewTextBoxColumn.Name = "otraActividadDataGridViewTextBoxColumn";
+            this.otraActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // parentescoDataGridViewTextBoxColumn
+            // 
+            this.parentescoDataGridViewTextBoxColumn.DataPropertyName = "Parentesco";
+            this.parentescoDataGridViewTextBoxColumn.HeaderText = "Parentesco";
+            this.parentescoDataGridViewTextBoxColumn.Name = "parentescoDataGridViewTextBoxColumn";
+            this.parentescoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usuarioModelBindingSource
+            // 
+            this.usuarioModelBindingSource.DataSource = typeof(ManejoFondo.Modelos.UsuarioModel);
             // 
             // FormIngresoAsociado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1022, 615);
-            this.Controls.Add(this.panelIngresoAsociadoRegresar);
+            this.ClientSize = new System.Drawing.Size(1022, 690);
             this.Controls.Add(this.tabIngresarAsociado);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -1699,6 +1762,7 @@
             this.panelNucleoFamiliarConyuge.PerformLayout();
             this.tabIngresos.ResumeLayout(false);
             this.tabIngresos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1810,18 +1874,21 @@
         private System.Windows.Forms.Label labelNucleoFamiliarConyugeOtraActividad;
         private System.Windows.Forms.Label labelNucleoFamiliarConyugeTipoActividad;
         private System.Windows.Forms.DataGridView dataGridNucleoFamiliarIntegrantes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoIdentificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroIdentificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OtraActividad;
         private System.Windows.Forms.Button buttonAgregarNucleoFamiliarIntegrantes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
         private System.Windows.Forms.DateTimePicker datePickerDatosPersonaFechaNacimiento;
         private System.Windows.Forms.DateTimePicker datePickerNucleoFamiliarConyugeFechaNacimiento;
         private System.Windows.Forms.Panel panelNucleoFamiliarOtrosFamiliares;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoIdentificacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroIdentificacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimientoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoActividadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn otraActividadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parentescoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource usuarioModelBindingSource;
+        private System.Windows.Forms.Button buttonEliminarNucleoFamiliarIntegrantes;
+        private System.Windows.Forms.Button buttonEditarNucleoFamiliarIntegrantes;
     }
 }

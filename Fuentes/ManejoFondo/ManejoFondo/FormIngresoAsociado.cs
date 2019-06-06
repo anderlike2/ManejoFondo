@@ -77,6 +77,8 @@ namespace ManejoFondo
             toolTip.SetToolTip(ingresoAsociadoAceptar, Constantes.MsjAceptar);
             toolTip.SetToolTip(ingresoAsociadoCancelar, Constantes.MsjCancelar);
             toolTip.SetToolTip(panelIngresoAsociadoRegresar, Constantes.MsjRegresar);
+
+            dataGridNucleoFamiliarIntegrantes.EnableHeadersVisualStyles = false;
         }
 
         /// <summary>
@@ -367,7 +369,7 @@ namespace ManejoFondo
             if (itemSeleccionado.V_Valor.ToUpper().Equals(Constantes.DescripcionSi.ToUpper()))
             {
                 panelNucleoFamiliarConyuge.Visible = true;
-                panelNucleoFamiliarOtrosFamiliares.Location = new Point(7, 446);
+                panelNucleoFamiliarOtrosFamiliares.Location = new Point(7, 391);
             }
             else
             {
