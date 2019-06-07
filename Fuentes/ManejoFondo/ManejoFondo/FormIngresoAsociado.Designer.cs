@@ -72,7 +72,6 @@
             this.labelDatosPersonalesApellidos = new System.Windows.Forms.Label();
             this.labelDatosPersonalesNombres = new System.Windows.Forms.Label();
             this.labelTituloDatosPersonales = new System.Windows.Forms.Label();
-            this.panelImagenDatosPersonales = new System.Windows.Forms.Panel();
             this.tabAyudaGubernamental = new System.Windows.Forms.TabPage();
             this.comboBoxAyudaGobiernoTipoSubsidio = new System.Windows.Forms.ComboBox();
             this.labelAyudaGobiernoTipoSubsidio = new System.Windows.Forms.Label();
@@ -86,7 +85,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.labelAyudaGobiernoPuntajeSisben = new System.Windows.Forms.Label();
             this.labelTituloAyudasGobierno = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tabNucleoFamiliar = new System.Windows.Forms.TabPage();
             this.panelNucleoFamiliarOtrosFamiliares = new System.Windows.Forms.Panel();
             this.buttonAgregarNucleoFamiliarIntegrantes = new System.Windows.Forms.Button();
@@ -120,7 +118,6 @@
             this.comboBoxNucleoFamiliarConyuge = new System.Windows.Forms.ComboBox();
             this.labelNucleoFamiliarConyuge = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tabIngresos = new System.Windows.Forms.TabPage();
             this.textBoxIngresosTipoCultivo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textBoxIngresosTipoAnimales = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -137,10 +134,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ingresoAsociadoCancelar = new System.Windows.Forms.Button();
             this.ingresoAsociadoAceptar = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panelImagenDatosPersonales = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelIngresoAsociadoRegresar = new System.Windows.Forms.Panel();
-            this.buttonEditarNucleoFamiliarIntegrantes = new System.Windows.Forms.Button();
-            this.buttonEliminarNucleoFamiliarIntegrantes = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.usuarioModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoIdentificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -150,7 +150,6 @@
             this.tipoActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otraActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parentescoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabIngresarAsociado.SuspendLayout();
             this.tabDatosPersona.SuspendLayout();
             this.tabAyudaGubernamental.SuspendLayout();
@@ -740,15 +739,6 @@
             this.labelTituloDatosPersonales.TabIndex = 1;
             this.labelTituloDatosPersonales.Text = "POR FAVOR INGRESAR SU INFORMACIÓN PERSONAL";
             // 
-            // panelImagenDatosPersonales
-            // 
-            this.panelImagenDatosPersonales.BackgroundImage = global::ManejoFondo.Properties.Resources.datosPersonales;
-            this.panelImagenDatosPersonales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelImagenDatosPersonales.Location = new System.Drawing.Point(841, 3);
-            this.panelImagenDatosPersonales.Name = "panelImagenDatosPersonales";
-            this.panelImagenDatosPersonales.Size = new System.Drawing.Size(86, 90);
-            this.panelImagenDatosPersonales.TabIndex = 0;
-            // 
             // tabAyudaGubernamental
             // 
             this.tabAyudaGubernamental.BackColor = System.Drawing.Color.White;
@@ -913,15 +903,6 @@
             this.labelTituloAyudasGobierno.TabIndex = 3;
             this.labelTituloAyudasGobierno.Text = "POR FAVOR INGRESAR LAS AYUDAS GUBERNAMENTALES RECIBIDAS";
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::ManejoFondo.Properties.Resources.ayudasGobierno;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(814, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(112, 114);
-            this.panel1.TabIndex = 2;
-            // 
             // tabNucleoFamiliar
             // 
             this.tabNucleoFamiliar.BackColor = System.Drawing.Color.White;
@@ -942,8 +923,6 @@
             // 
             // panelNucleoFamiliarOtrosFamiliares
             // 
-            this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.buttonEliminarNucleoFamiliarIntegrantes);
-            this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.buttonEditarNucleoFamiliarIntegrantes);
             this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.buttonAgregarNucleoFamiliarIntegrantes);
             this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.dataGridNucleoFamiliarIntegrantes);
             this.panelNucleoFamiliarOtrosFamiliares.Location = new System.Drawing.Point(7, 391);
@@ -969,7 +948,6 @@
             // dataGridNucleoFamiliarIntegrantes
             // 
             this.dataGridNucleoFamiliarIntegrantes.AllowUserToAddRows = false;
-            this.dataGridNucleoFamiliarIntegrantes.AllowUserToDeleteRows = false;
             this.dataGridNucleoFamiliarIntegrantes.AutoGenerateColumns = false;
             this.dataGridNucleoFamiliarIntegrantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridNucleoFamiliarIntegrantes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -1386,15 +1364,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "POR FAVOR INGRESAR LA INFORMACIÓN DE SU NÚCLEO FAMILIAR";
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::ManejoFondo.Properties.Resources.nucleoFamiliar;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(814, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(112, 114);
-            this.panel2.TabIndex = 4;
-            // 
             // tabIngresos
             // 
             this.tabIngresos.BackColor = System.Drawing.Color.White;
@@ -1623,14 +1592,32 @@
             this.ingresoAsociadoAceptar.UseVisualStyleBackColor = false;
             this.ingresoAsociadoAceptar.Click += new System.EventHandler(this.AceptarIngresarAsociado);
             // 
-            // panel3
+            // dataGridViewImageColumn1
             // 
-            this.panel3.BackgroundImage = global::ManejoFondo.Properties.Resources.ingresos;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(813, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(112, 114);
-            this.panel3.TabIndex = 6;
+            this.dataGridViewImageColumn1.HeaderText = "Opciones";
+            this.dataGridViewImageColumn1.Image = global::ManejoFondo.Properties.Resources.eliminar;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Width = 927;
+            // 
+            // panelImagenDatosPersonales
+            // 
+            this.panelImagenDatosPersonales.BackgroundImage = global::ManejoFondo.Properties.Resources.datosPersonales;
+            this.panelImagenDatosPersonales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelImagenDatosPersonales.Location = new System.Drawing.Point(841, 3);
+            this.panelImagenDatosPersonales.Name = "panelImagenDatosPersonales";
+            this.panelImagenDatosPersonales.Size = new System.Drawing.Size(86, 90);
+            this.panelImagenDatosPersonales.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::ManejoFondo.Properties.Resources.ayudasGobierno;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(814, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(112, 114);
+            this.panel1.TabIndex = 2;
             // 
             // panelIngresoAsociadoRegresar
             // 
@@ -1643,33 +1630,27 @@
             this.panelIngresoAsociadoRegresar.TabIndex = 9;
             this.panelIngresoAsociadoRegresar.Click += new System.EventHandler(this.RegresarMenuPrincipal);
             // 
-            // buttonEditarNucleoFamiliarIntegrantes
+            // panel2
             // 
-            this.buttonEditarNucleoFamiliarIntegrantes.BackColor = System.Drawing.Color.White;
-            this.buttonEditarNucleoFamiliarIntegrantes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEditarNucleoFamiliarIntegrantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditarNucleoFamiliarIntegrantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEditarNucleoFamiliarIntegrantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.buttonEditarNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(125, 4);
-            this.buttonEditarNucleoFamiliarIntegrantes.Name = "buttonEditarNucleoFamiliarIntegrantes";
-            this.buttonEditarNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(112, 32);
-            this.buttonEditarNucleoFamiliarIntegrantes.TabIndex = 56;
-            this.buttonEditarNucleoFamiliarIntegrantes.Text = "Editar";
-            this.buttonEditarNucleoFamiliarIntegrantes.UseVisualStyleBackColor = false;
+            this.panel2.BackgroundImage = global::ManejoFondo.Properties.Resources.nucleoFamiliar;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(814, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(112, 114);
+            this.panel2.TabIndex = 4;
             // 
-            // buttonEliminarNucleoFamiliarIntegrantes
+            // panel3
             // 
-            this.buttonEliminarNucleoFamiliarIntegrantes.BackColor = System.Drawing.Color.White;
-            this.buttonEliminarNucleoFamiliarIntegrantes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEliminarNucleoFamiliarIntegrantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarNucleoFamiliarIntegrantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminarNucleoFamiliarIntegrantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(66)))), ((int)(((byte)(45)))));
-            this.buttonEliminarNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(243, 4);
-            this.buttonEliminarNucleoFamiliarIntegrantes.Name = "buttonEliminarNucleoFamiliarIntegrantes";
-            this.buttonEliminarNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(112, 32);
-            this.buttonEliminarNucleoFamiliarIntegrantes.TabIndex = 57;
-            this.buttonEliminarNucleoFamiliarIntegrantes.Text = "Eliminar";
-            this.buttonEliminarNucleoFamiliarIntegrantes.UseVisualStyleBackColor = false;
+            this.panel3.BackgroundImage = global::ManejoFondo.Properties.Resources.ingresos;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(813, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(112, 114);
+            this.panel3.TabIndex = 6;
+            // 
+            // usuarioModelBindingSource
+            // 
+            this.usuarioModelBindingSource.DataSource = typeof(ManejoFondo.Modelos.UsuarioModel);
             // 
             // nombresDataGridViewTextBoxColumn
             // 
@@ -1733,10 +1714,6 @@
             this.parentescoDataGridViewTextBoxColumn.HeaderText = "Parentesco";
             this.parentescoDataGridViewTextBoxColumn.Name = "parentescoDataGridViewTextBoxColumn";
             this.parentescoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usuarioModelBindingSource
-            // 
-            this.usuarioModelBindingSource.DataSource = typeof(ManejoFondo.Modelos.UsuarioModel);
             // 
             // FormIngresoAsociado
             // 
@@ -1878,6 +1855,8 @@
         private System.Windows.Forms.DateTimePicker datePickerDatosPersonaFechaNacimiento;
         private System.Windows.Forms.DateTimePicker datePickerNucleoFamiliarConyugeFechaNacimiento;
         private System.Windows.Forms.Panel panelNucleoFamiliarOtrosFamiliares;
+        private System.Windows.Forms.BindingSource usuarioModelBindingSource;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoIdentificacionDataGridViewTextBoxColumn;
@@ -1887,8 +1866,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn otraActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn parentescoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource usuarioModelBindingSource;
-        private System.Windows.Forms.Button buttonEliminarNucleoFamiliarIntegrantes;
-        private System.Windows.Forms.Button buttonEditarNucleoFamiliarIntegrantes;
     }
 }

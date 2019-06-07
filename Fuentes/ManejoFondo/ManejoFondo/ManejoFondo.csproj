@@ -266,6 +266,7 @@
     <Content Include="Resources\Images\cerrarSesion.png" />
     <Content Include="Resources\Images\consultar.png" />
     <Content Include="Resources\Images\datosPersonales.png" />
+    <Content Include="Resources\Images\eliminar.png" />
     <Content Include="Resources\Images\iconoLogin.jpg" />
     <Content Include="Resources\Images\indicador.png" />
     <Content Include="Resources\Images\ingresos.png" />
