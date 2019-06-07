@@ -24,6 +24,8 @@ namespace ManejoFondo.Common
         public const string DescripcionSi = "Si";
         public const string DescripcionNo = "No";
         public const string DescripcionOtro = "Otro";
+        public const string DescripcionAgricultura = "Agricultura";
+        public const string DescripcionPecuario = "Pecuario";
         #endregion
 
         #region Mensajes

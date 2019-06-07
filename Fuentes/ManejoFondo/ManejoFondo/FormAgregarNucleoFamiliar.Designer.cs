@@ -67,7 +67,7 @@
             this.labelAgregarNucleoFamiliar.AutoSize = true;
             this.labelAgregarNucleoFamiliar.BackColor = System.Drawing.Color.White;
             this.labelAgregarNucleoFamiliar.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.labelAgregarNucleoFamiliar.Location = new System.Drawing.Point(118, 101);
+            this.labelAgregarNucleoFamiliar.Location = new System.Drawing.Point(217, 102);
             this.labelAgregarNucleoFamiliar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAgregarNucleoFamiliar.Name = "labelAgregarNucleoFamiliar";
             this.labelAgregarNucleoFamiliar.Size = new System.Drawing.Size(363, 22);
@@ -79,7 +79,7 @@
             this.panelAgregarNucleoFamiliar.BackColor = System.Drawing.Color.White;
             this.panelAgregarNucleoFamiliar.BackgroundImage = global::ManejoFondo.Properties.Resources.agregarInformacion;
             this.panelAgregarNucleoFamiliar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelAgregarNucleoFamiliar.Location = new System.Drawing.Point(484, 73);
+            this.panelAgregarNucleoFamiliar.Location = new System.Drawing.Point(583, 74);
             this.panelAgregarNucleoFamiliar.Margin = new System.Windows.Forms.Padding(2);
             this.panelAgregarNucleoFamiliar.Name = "panelAgregarNucleoFamiliar";
             this.panelAgregarNucleoFamiliar.Size = new System.Drawing.Size(89, 84);
@@ -89,7 +89,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(84, 131);
+            this.label1.Location = new System.Drawing.Point(183, 132);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(403, 13);
@@ -109,10 +109,10 @@
             this.textBoxAgregarPersonaApellidos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxAgregarPersonaApellidos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxAgregarPersonaApellidos.LineThickness = 3;
-            this.textBoxAgregarPersonaApellidos.Location = new System.Drawing.Point(345, 191);
+            this.textBoxAgregarPersonaApellidos.Location = new System.Drawing.Point(462, 194);
             this.textBoxAgregarPersonaApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAgregarPersonaApellidos.Name = "textBoxAgregarPersonaApellidos";
-            this.textBoxAgregarPersonaApellidos.Size = new System.Drawing.Size(266, 29);
+            this.textBoxAgregarPersonaApellidos.Size = new System.Drawing.Size(331, 32);
             this.textBoxAgregarPersonaApellidos.TabIndex = 42;
             this.textBoxAgregarPersonaApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -144,7 +144,7 @@
             this.textAgregarPersonaNombres.Location = new System.Drawing.Point(33, 191);
             this.textAgregarPersonaNombres.Margin = new System.Windows.Forms.Padding(4);
             this.textAgregarPersonaNombres.Name = "textAgregarPersonaNombres";
-            this.textAgregarPersonaNombres.Size = new System.Drawing.Size(266, 29);
+            this.textAgregarPersonaNombres.Size = new System.Drawing.Size(331, 32);
             this.textAgregarPersonaNombres.TabIndex = 41;
             this.textAgregarPersonaNombres.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -154,7 +154,7 @@
             this.labelAgregarPersonaApellidos.BackColor = System.Drawing.Color.White;
             this.labelAgregarPersonaApellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAgregarPersonaApellidos.ForeColor = System.Drawing.Color.Black;
-            this.labelAgregarPersonaApellidos.Location = new System.Drawing.Point(340, 169);
+            this.labelAgregarPersonaApellidos.Location = new System.Drawing.Point(458, 169);
             this.labelAgregarPersonaApellidos.Name = "labelAgregarPersonaApellidos";
             this.labelAgregarPersonaApellidos.Size = new System.Drawing.Size(80, 21);
             this.labelAgregarPersonaApellidos.TabIndex = 38;
@@ -166,7 +166,7 @@
             this.label22.BackColor = System.Drawing.Color.White;
             this.label22.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(622, 194);
+            this.label22.Location = new System.Drawing.Point(797, 194);
             this.label22.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(22, 29);
@@ -180,7 +180,7 @@
             this.label23.BackColor = System.Drawing.Color.White;
             this.label23.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(308, 194);
+            this.label23.Location = new System.Drawing.Point(375, 194);
             this.label23.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(22, 29);
@@ -194,7 +194,7 @@
             this.label24.BackColor = System.Drawing.Color.White;
             this.label24.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(308, 254);
+            this.label24.Location = new System.Drawing.Point(375, 262);
             this.label24.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(22, 29);
@@ -208,7 +208,7 @@
             this.comboBoxAgregarPersonaTipoIdentificacion.ForeColor = System.Drawing.Color.Black;
             this.comboBoxAgregarPersonaTipoIdentificacion.Location = new System.Drawing.Point(38, 262);
             this.comboBoxAgregarPersonaTipoIdentificacion.Name = "comboBoxAgregarPersonaTipoIdentificacion";
-            this.comboBoxAgregarPersonaTipoIdentificacion.Size = new System.Drawing.Size(262, 21);
+            this.comboBoxAgregarPersonaTipoIdentificacion.Size = new System.Drawing.Size(331, 21);
             this.comboBoxAgregarPersonaTipoIdentificacion.TabIndex = 47;
             // 
             // label25
@@ -217,7 +217,7 @@
             this.label25.BackColor = System.Drawing.Color.White;
             this.label25.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Red;
-            this.label25.Location = new System.Drawing.Point(622, 258);
+            this.label25.Location = new System.Drawing.Point(797, 276);
             this.label25.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(22, 29);
@@ -238,10 +238,10 @@
             this.textBoxAgregarPersonaNumeroIdentificacion.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxAgregarPersonaNumeroIdentificacion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxAgregarPersonaNumeroIdentificacion.LineThickness = 3;
-            this.textBoxAgregarPersonaNumeroIdentificacion.Location = new System.Drawing.Point(345, 257);
+            this.textBoxAgregarPersonaNumeroIdentificacion.Location = new System.Drawing.Point(461, 266);
             this.textBoxAgregarPersonaNumeroIdentificacion.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAgregarPersonaNumeroIdentificacion.Name = "textBoxAgregarPersonaNumeroIdentificacion";
-            this.textBoxAgregarPersonaNumeroIdentificacion.Size = new System.Drawing.Size(266, 29);
+            this.textBoxAgregarPersonaNumeroIdentificacion.Size = new System.Drawing.Size(330, 29);
             this.textBoxAgregarPersonaNumeroIdentificacion.TabIndex = 45;
             this.textBoxAgregarPersonaNumeroIdentificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxAgregarPersonaNumeroIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
@@ -252,7 +252,7 @@
             this.labelAgregarPersonaNumeroIdentificacion.BackColor = System.Drawing.Color.White;
             this.labelAgregarPersonaNumeroIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAgregarPersonaNumeroIdentificacion.ForeColor = System.Drawing.Color.Black;
-            this.labelAgregarPersonaNumeroIdentificacion.Location = new System.Drawing.Point(340, 232);
+            this.labelAgregarPersonaNumeroIdentificacion.Location = new System.Drawing.Point(456, 241);
             this.labelAgregarPersonaNumeroIdentificacion.Name = "labelAgregarPersonaNumeroIdentificacion";
             this.labelAgregarPersonaNumeroIdentificacion.Size = new System.Drawing.Size(184, 21);
             this.labelAgregarPersonaNumeroIdentificacion.TabIndex = 44;
@@ -276,7 +276,7 @@
             this.label27.BackColor = System.Drawing.Color.White;
             this.label27.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(308, 394);
+            this.label27.Location = new System.Drawing.Point(375, 391);
             this.label27.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(22, 29);
@@ -290,7 +290,7 @@
             this.comboBoxAgregarPersonaTipoActividad.ForeColor = System.Drawing.Color.Black;
             this.comboBoxAgregarPersonaTipoActividad.Location = new System.Drawing.Point(40, 399);
             this.comboBoxAgregarPersonaTipoActividad.Name = "comboBoxAgregarPersonaTipoActividad";
-            this.comboBoxAgregarPersonaTipoActividad.Size = new System.Drawing.Size(260, 21);
+            this.comboBoxAgregarPersonaTipoActividad.Size = new System.Drawing.Size(331, 21);
             this.comboBoxAgregarPersonaTipoActividad.TabIndex = 65;
             this.comboBoxAgregarPersonaTipoActividad.SelectedIndexChanged += new System.EventHandler(this.ValidarTipoActividadAgregarPersona);
             // 
@@ -300,7 +300,7 @@
             this.labelObligatorioCualTipoActividadAgregarPersona.BackColor = System.Drawing.Color.White;
             this.labelObligatorioCualTipoActividadAgregarPersona.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelObligatorioCualTipoActividadAgregarPersona.ForeColor = System.Drawing.Color.Red;
-            this.labelObligatorioCualTipoActividadAgregarPersona.Location = new System.Drawing.Point(622, 394);
+            this.labelObligatorioCualTipoActividadAgregarPersona.Location = new System.Drawing.Point(797, 402);
             this.labelObligatorioCualTipoActividadAgregarPersona.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelObligatorioCualTipoActividadAgregarPersona.Name = "labelObligatorioCualTipoActividadAgregarPersona";
             this.labelObligatorioCualTipoActividadAgregarPersona.Size = new System.Drawing.Size(22, 29);
@@ -321,10 +321,10 @@
             this.textBoxAgregarPersonaOtraActividad.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxAgregarPersonaOtraActividad.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxAgregarPersonaOtraActividad.LineThickness = 3;
-            this.textBoxAgregarPersonaOtraActividad.Location = new System.Drawing.Point(346, 393);
+            this.textBoxAgregarPersonaOtraActividad.Location = new System.Drawing.Point(462, 402);
             this.textBoxAgregarPersonaOtraActividad.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAgregarPersonaOtraActividad.Name = "textBoxAgregarPersonaOtraActividad";
-            this.textBoxAgregarPersonaOtraActividad.Size = new System.Drawing.Size(265, 29);
+            this.textBoxAgregarPersonaOtraActividad.Size = new System.Drawing.Size(331, 29);
             this.textBoxAgregarPersonaOtraActividad.TabIndex = 63;
             this.textBoxAgregarPersonaOtraActividad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -334,7 +334,7 @@
             this.labelAgregarPersonaOtraActividad.BackColor = System.Drawing.Color.White;
             this.labelAgregarPersonaOtraActividad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAgregarPersonaOtraActividad.ForeColor = System.Drawing.Color.Black;
-            this.labelAgregarPersonaOtraActividad.Location = new System.Drawing.Point(341, 368);
+            this.labelAgregarPersonaOtraActividad.Location = new System.Drawing.Point(458, 377);
             this.labelAgregarPersonaOtraActividad.Name = "labelAgregarPersonaOtraActividad";
             this.labelAgregarPersonaOtraActividad.Size = new System.Drawing.Size(56, 21);
             this.labelAgregarPersonaOtraActividad.TabIndex = 62;
@@ -358,7 +358,7 @@
             this.label28.BackColor = System.Drawing.Color.White;
             this.label28.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(622, 327);
+            this.label28.Location = new System.Drawing.Point(797, 336);
             this.label28.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(22, 29);
@@ -372,7 +372,7 @@
             this.labelAgregarPersonaFechaNacimiento.BackColor = System.Drawing.Color.White;
             this.labelAgregarPersonaFechaNacimiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAgregarPersonaFechaNacimiento.ForeColor = System.Drawing.Color.Black;
-            this.labelAgregarPersonaFechaNacimiento.Location = new System.Drawing.Point(340, 301);
+            this.labelAgregarPersonaFechaNacimiento.Location = new System.Drawing.Point(456, 310);
             this.labelAgregarPersonaFechaNacimiento.Name = "labelAgregarPersonaFechaNacimiento";
             this.labelAgregarPersonaFechaNacimiento.Size = new System.Drawing.Size(154, 21);
             this.labelAgregarPersonaFechaNacimiento.TabIndex = 59;
@@ -384,7 +384,7 @@
             this.label26.BackColor = System.Drawing.Color.White;
             this.label26.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Red;
-            this.label26.Location = new System.Drawing.Point(308, 325);
+            this.label26.Location = new System.Drawing.Point(375, 329);
             this.label26.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(22, 29);
@@ -408,7 +408,7 @@
             this.textBoxAgregarPersonaNumeroTelefono.Location = new System.Drawing.Point(39, 326);
             this.textBoxAgregarPersonaNumeroTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAgregarPersonaNumeroTelefono.Name = "textBoxAgregarPersonaNumeroTelefono";
-            this.textBoxAgregarPersonaNumeroTelefono.Size = new System.Drawing.Size(260, 29);
+            this.textBoxAgregarPersonaNumeroTelefono.Size = new System.Drawing.Size(331, 32);
             this.textBoxAgregarPersonaNumeroTelefono.TabIndex = 56;
             this.textBoxAgregarPersonaNumeroTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxAgregarPersonaNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
@@ -432,7 +432,7 @@
             this.agregarPersonaCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarPersonaCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarPersonaCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(66)))), ((int)(((byte)(45)))));
-            this.agregarPersonaCancelar.Location = new System.Drawing.Point(327, 519);
+            this.agregarPersonaCancelar.Location = new System.Drawing.Point(438, 514);
             this.agregarPersonaCancelar.Name = "agregarPersonaCancelar";
             this.agregarPersonaCancelar.Size = new System.Drawing.Size(253, 39);
             this.agregarPersonaCancelar.TabIndex = 68;
@@ -447,7 +447,7 @@
             this.agregarPersonaAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarPersonaAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarPersonaAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.agregarPersonaAceptar.Location = new System.Drawing.Point(68, 519);
+            this.agregarPersonaAceptar.Location = new System.Drawing.Point(179, 514);
             this.agregarPersonaAceptar.Name = "agregarPersonaAceptar";
             this.agregarPersonaAceptar.Size = new System.Drawing.Size(253, 39);
             this.agregarPersonaAceptar.TabIndex = 67;
@@ -461,7 +461,7 @@
             this.labelObligatorioParentescoAgregarPersona.BackColor = System.Drawing.Color.White;
             this.labelObligatorioParentescoAgregarPersona.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelObligatorioParentescoAgregarPersona.ForeColor = System.Drawing.Color.Red;
-            this.labelObligatorioParentescoAgregarPersona.Location = new System.Drawing.Point(308, 461);
+            this.labelObligatorioParentescoAgregarPersona.Location = new System.Drawing.Point(375, 466);
             this.labelObligatorioParentescoAgregarPersona.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelObligatorioParentescoAgregarPersona.Name = "labelObligatorioParentescoAgregarPersona";
             this.labelObligatorioParentescoAgregarPersona.Size = new System.Drawing.Size(22, 29);
@@ -475,7 +475,7 @@
             this.comboBoxAgregarPersonaParentesco.ForeColor = System.Drawing.Color.Black;
             this.comboBoxAgregarPersonaParentesco.Location = new System.Drawing.Point(40, 466);
             this.comboBoxAgregarPersonaParentesco.Name = "comboBoxAgregarPersonaParentesco";
-            this.comboBoxAgregarPersonaParentesco.Size = new System.Drawing.Size(260, 21);
+            this.comboBoxAgregarPersonaParentesco.Size = new System.Drawing.Size(331, 21);
             this.comboBoxAgregarPersonaParentesco.TabIndex = 70;
             // 
             // labelAgregarPersonaParentesco
@@ -494,9 +494,9 @@
             // 
             this.datePickerAgregarPersonaFechaNacimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.datePickerAgregarPersonaFechaNacimiento.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.datePickerAgregarPersonaFechaNacimiento.Location = new System.Drawing.Point(344, 333);
+            this.datePickerAgregarPersonaFechaNacimiento.Location = new System.Drawing.Point(460, 342);
             this.datePickerAgregarPersonaFechaNacimiento.Name = "datePickerAgregarPersonaFechaNacimiento";
-            this.datePickerAgregarPersonaFechaNacimiento.Size = new System.Drawing.Size(267, 20);
+            this.datePickerAgregarPersonaFechaNacimiento.Size = new System.Drawing.Size(331, 20);
             this.datePickerAgregarPersonaFechaNacimiento.TabIndex = 72;
             // 
             // FormAgregarNucleoFamiliar
@@ -504,7 +504,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(689, 590);
+            this.ClientSize = new System.Drawing.Size(839, 590);
             this.Controls.Add(this.datePickerAgregarPersonaFechaNacimiento);
             this.Controls.Add(this.labelObligatorioParentescoAgregarPersona);
             this.Controls.Add(this.comboBoxAgregarPersonaParentesco);

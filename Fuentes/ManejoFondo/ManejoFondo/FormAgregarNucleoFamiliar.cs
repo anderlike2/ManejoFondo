@@ -131,7 +131,7 @@ namespace ManejoFondo
 
                 labelAgregarPersonaParentesco.Location = new Point(37, 435);
                 comboBoxAgregarPersonaParentesco.Location = new Point(40, 466);
-                labelObligatorioParentescoAgregarPersona.Location = new Point(308, 461);
+                labelObligatorioParentescoAgregarPersona.Location = new Point(375, 466);
             }
             else
             {
@@ -139,9 +139,9 @@ namespace ManejoFondo
                 textBoxAgregarPersonaOtraActividad.Visible = false;
                 labelObligatorioCualTipoActividadAgregarPersona.Visible = false;
 
-                labelAgregarPersonaParentesco.Location = new Point(341, 368);
-                comboBoxAgregarPersonaParentesco.Location = new Point(346, 393);
-                labelObligatorioParentescoAgregarPersona.Location = new Point(622, 394);
+                labelAgregarPersonaParentesco.Location = new Point(458, 377);
+                comboBoxAgregarPersonaParentesco.Location = new Point(462, 402);
+                labelObligatorioParentescoAgregarPersona.Location = new Point(797, 402);
             }
         }
 

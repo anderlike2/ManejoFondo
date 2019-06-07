@@ -125,8 +125,6 @@
             this.tabIngresos = new System.Windows.Forms.TabPage();
             this.textBoxIngresosTipoCultivo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textBoxIngresosTipoAnimales = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.labelIngresosTipoCultivo = new System.Windows.Forms.Label();
             this.labelIngresosTipoAnimales = new System.Windows.Forms.Label();
             this.textBoxIngresosIngresosMensuales = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -813,6 +811,7 @@
             this.comboBoxAyudaGobiernoRecibeSubsidio.Name = "comboBoxAyudaGobiernoRecibeSubsidio";
             this.comboBoxAyudaGobiernoRecibeSubsidio.Size = new System.Drawing.Size(427, 26);
             this.comboBoxAyudaGobiernoRecibeSubsidio.TabIndex = 22;
+            this.comboBoxAyudaGobiernoRecibeSubsidio.SelectedIndexChanged += new System.EventHandler(this.ValidarTipoSubsidio);
             // 
             // labelAyudaGobiernoRecibeSubsidio
             // 
@@ -1407,8 +1406,6 @@
             this.tabIngresos.BackColor = System.Drawing.Color.White;
             this.tabIngresos.Controls.Add(this.textBoxIngresosTipoCultivo);
             this.tabIngresos.Controls.Add(this.textBoxIngresosTipoAnimales);
-            this.tabIngresos.Controls.Add(this.label19);
-            this.tabIngresos.Controls.Add(this.label20);
             this.tabIngresos.Controls.Add(this.labelIngresosTipoCultivo);
             this.tabIngresos.Controls.Add(this.labelIngresosTipoAnimales);
             this.tabIngresos.Controls.Add(this.textBoxIngresosIngresosMensuales);
@@ -1465,32 +1462,6 @@
             this.textBoxIngresosTipoAnimales.Size = new System.Drawing.Size(427, 29);
             this.textBoxIngresosTipoAnimales.TabIndex = 34;
             this.textBoxIngresosTipoAnimales.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(1108, 171);
-            this.label19.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(22, 29);
-            this.label19.TabIndex = 33;
-            this.label19.Text = "*";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Red;
-            this.label20.Location = new System.Drawing.Point(549, 171);
-            this.label20.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(22, 29);
-            this.label20.TabIndex = 32;
-            this.label20.Text = "*";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // labelIngresosTipoCultivo
             // 
@@ -1578,6 +1549,7 @@
             this.comboBoxIngresosActividadEconomica.Name = "comboBoxIngresosActividadEconomica";
             this.comboBoxIngresosActividadEconomica.Size = new System.Drawing.Size(427, 26);
             this.comboBoxIngresosActividadEconomica.TabIndex = 25;
+            this.comboBoxIngresosActividadEconomica.SelectedIndexChanged += new System.EventHandler(this.ValidarActividadEconomica);
             // 
             // labelIngresosActividadEconomica
             // 
@@ -1815,8 +1787,6 @@
         private System.Windows.Forms.Label labelAyudaGobiernoRecibeSubsidio;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxIngresosTipoCultivo;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxIngresosTipoAnimales;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label labelIngresosTipoCultivo;
         private System.Windows.Forms.Label labelIngresosTipoAnimales;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxIngresosIngresosMensuales;

@@ -267,7 +267,25 @@ namespace ManejoFondo
             {
                 return false;
             }
-            return true;
+            else
+            {
+                FondoDominiosEntity itemSeleccionado = (FondoDominiosEntity)comboBoxAyudaGobiernoRecibeSubsidio.SelectedItem;
+                if (itemSeleccionado.V_Valor.ToUpper().Equals(Constantes.DescripcionSi.ToUpper()))
+                {
+                    if (General.EsVacioNulo(comboBoxAyudaGobiernoRecibeSubsidio.Text))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
 
         /// <summary>
@@ -313,8 +331,7 @@ namespace ManejoFondo
         /// </summary>
         private bool ValidarInformacionIngresos()
         {
-            if (General.EsVacioNulo(comboBoxIngresosActividadEconomica.Text) || General.EsVacioNulo(textBoxIngresosIngresosMensuales.Text) ||
-                General.EsVacioNulo(textBoxIngresosTipoAnimales.Text) || General.EsVacioNulo(textBoxIngresosTipoAnimales.Text))
+            if (General.EsVacioNulo(comboBoxIngresosActividadEconomica.Text) || General.EsVacioNulo(textBoxIngresosIngresosMensuales.Text))
             {
                 return false;
             }
@@ -331,7 +348,7 @@ namespace ManejoFondo
             //Para Ayuda Gobierno
             switch (tabIngresarAsociado.SelectedIndex)
             {
-                /*case 0:
+                case 0:
                     break;
                 case 1:
                     if (!ValidarInformacionPersona())
@@ -353,7 +370,7 @@ namespace ManejoFondo
                         tabIngresarAsociado.SelectedIndex = 2;
                         General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
                     }
-                    break;*/
+                    break;
             }
         }
 
@@ -401,13 +418,70 @@ namespace ManejoFondo
         }
 
         /// <summary>
-        /// Aceptar Ingresar Asociado
+        /// Validar el tipo de subsidio
         /// Autor: Anderson Benavides
         /// 2019-05-23
         /// </summary>
-        private void ReiniciarDatosFormulario(object sender, EventArgs e)
+        private void ValidarTipoSubsidio(object sender, EventArgs e)
         {
-            tabIngresarAsociado.SelectedIndex = 0;
+            FondoDominiosEntity itemSeleccionado = (FondoDominiosEntity)comboBoxAyudaGobiernoRecibeSubsidio.SelectedItem;
+            if (itemSeleccionado.V_Valor.ToUpper().Equals(Constantes.DescripcionSi.ToUpper()))
+            {
+                comboBoxAyudaGobiernoTipoSubsidio.Visible = true;
+                labelAyudaGobiernoTipoSubsidio.Visible = true;
+                comboBoxAyudaGobiernoTipoSubsidio.SelectedIndex = 0;
+            }
+            else
+            {
+                comboBoxAyudaGobiernoTipoSubsidio.Visible = false;
+                labelAyudaGobiernoTipoSubsidio.Visible = false;
+            }
+        }
+
+        /// <summary>
+        /// Cancelar Ingresar Asociado
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void ValidarActividadEconomica(object sender, EventArgs e)
+        {
+            FondoDominiosEntity itemSeleccionado = (FondoDominiosEntity)comboBoxIngresosActividadEconomica.SelectedItem;
+            if (itemSeleccionado.V_Valor.ToUpper().Equals(Constantes.DescripcionAgricultura.ToUpper()))
+            {
+                labelIngresosTipoAnimales.Visible = false;
+                textBoxIngresosTipoAnimales.Visible = false;
+                labelIngresosTipoCultivo.Visible = true;
+                textBoxIngresosTipoCultivo.Visible = true;
+
+                labelIngresosTipoCultivo.Location = new Point(99, 146);
+                textBoxIngresosTipoCultivo.Location = new Point(103, 171);
+            }
+            else if (itemSeleccionado.V_Valor.ToUpper().Equals(Constantes.DescripcionPecuario.ToUpper()))
+            {
+                labelIngresosTipoAnimales.Visible = true;
+                textBoxIngresosTipoAnimales.Visible = true;
+                labelIngresosTipoCultivo.Visible = false;
+                textBoxIngresosTipoCultivo.Visible = false;
+
+                labelIngresosTipoAnimales.Location = new Point(99, 146);
+                textBoxIngresosTipoAnimales.Location = new Point(103, 171);
+            }
+            else
+            {
+                labelIngresosTipoAnimales.Visible = false;
+                textBoxIngresosTipoAnimales.Visible = false;
+                labelIngresosTipoCultivo.Visible = false;
+                textBoxIngresosTipoCultivo.Visible = false;
+            }
+        }
+
+        /// <summary>
+        /// Limpiar datos formulario
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void LimpiarDatosFormulario()
+        {
             //Limpiar datos persona
             textBoxDatosPersonaNombres.Text = "";
             textBoxDatosPersonasApellidos.Text = "";
@@ -447,9 +521,22 @@ namespace ManejoFondo
             textBoxIngresosIngresosMensuales.Text = "";
             textBoxIngresosTipoAnimales.Text = "";
             textBoxIngresosTipoCultivo.Text = "";
+        }
+
+        /// <summary>
+        /// Reiniciar Datos Ingresar Asociado
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void ReiniciarDatosFormulario(object sender, EventArgs e)
+        {
+            tabIngresarAsociado.SelectedIndex = 0;
+            LimpiarDatosFormulario();
 
             General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjeReinicioFormulario);
         }
+
+      
 
         /// <summary>
         /// Cancelar Ingresar Asociado
@@ -458,8 +545,18 @@ namespace ManejoFondo
         /// </summary>
         private void AceptarIngresarAsociado(object sender, EventArgs e)
         {
-            tabIngresarAsociado.SelectedIndex = 0;
-            General.MostrarPanelError(Constantes.CodigoExito, Constantes.MsjExitoGuardar);
+            if (!ValidarInformacionIngresos())
+            {
+                tabIngresarAsociado.SelectedIndex = 3;
+                General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
+            }
+            else
+            {
+                LimpiarDatosFormulario();
+                tabIngresarAsociado.SelectedIndex = 0;
+                General.MostrarPanelError(Constantes.CodigoExito, Constantes.MsjExitoGuardar);
+            }
+           
         }
     }
 }
