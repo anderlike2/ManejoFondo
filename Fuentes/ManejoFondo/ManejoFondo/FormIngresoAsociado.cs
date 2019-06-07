@@ -369,7 +369,7 @@ namespace ManejoFondo
             if (itemSeleccionado.V_Valor.ToUpper().Equals(Constantes.DescripcionSi.ToUpper()))
             {
                 panelNucleoFamiliarConyuge.Visible = true;
-                panelNucleoFamiliarOtrosFamiliares.Location = new Point(7, 391);
+                panelNucleoFamiliarOtrosFamiliares.Location = new Point(7, 415);
             }
             else
             {
@@ -405,11 +405,61 @@ namespace ManejoFondo
         /// Autor: Anderson Benavides
         /// 2019-05-23
         /// </summary>
-        private void AceptarIngresarAsociado(object sender, EventArgs e)
+        private void ReiniciarDatosFormulario(object sender, EventArgs e)
         {
+            tabIngresarAsociado.SelectedIndex = 0;
+            //Limpiar datos persona
+            textBoxDatosPersonaNombres.Text = "";
+            textBoxDatosPersonasApellidos.Text = "";
+            comboBoxDatosPersonaTipoIdentificacion.SelectedIndex = 0;
+            textBoxDatosPersonaNumeroIdentificacion.Text = "";
+            comboBoxDatosPersonaPais.SelectedIndex = 0;
+            comboBoxDatosPersonaDepartamento.SelectedIndex = 0;
+            comboBoxDatosPersonaMunicipio.SelectedIndex = 0;
+            textBoxDatosPersonaVereda.Text = "";
+            comboBoxDatosPersonaNivelEstudio.SelectedIndex = 0;
+            textBoxDatosPersonaNombreInstitucion.Text = "";
+            textBoxDatosPersonaTelefono.Text = "";
+            textBoxDatosPersonaAntiguedadAsociacion.Text = "";
+            comboBoxDatosPersonaEstadoCivil.SelectedIndex = 0;
+            datePickerDatosPersonaFechaNacimiento.Value = DateTime.Now;
 
+            //Limpiar datos ayuda gobierno
+            textBoxAyudaGobiernoPuntajeSisben.Text = "";
+            comboBoxAyudaGobiernoTipoVictima.SelectedIndex = 0;
+            comboBoxAyudaGobiernoRecibeSubsidio.SelectedIndex = 0;
+            comboBoxAyudaGobiernoTipoSubsidio.SelectedIndex = 0;
+
+            //Limpiar datos nucleo familiar
+            comboBoxNucleoFamiliarConyuge.SelectedIndex = 0;
+            textBoxNucleoFamiliarConyugeNombres.Text = "";
+            textBoxNucleoFamiliarConyugeApellidos.Text = "";
+            comboBoxNucleoFamiliarConyugeTipoIdentificacion.SelectedIndex = 0;
+            textBoxNucleoFamiliarConyugeNumeroIdentificacion.Text = "";
+            textBoxNucleoFamiliarConyugeNumeroTelefono.Text = "";
+            datePickerNucleoFamiliarConyugeFechaNacimiento.Value = DateTime.Now;
+            comboBoxNucleoFamiliarConyugeTipoActividad.SelectedIndex = 0;
+            textBoxNucleoFamiliarConyugeOtraActividad.Text = "";
+            dataGridNucleoFamiliarIntegrantes.DataSource = null;
+
+            //Limpiar datos Ingresos
+            comboBoxIngresosActividadEconomica.SelectedIndex = 0;
+            textBoxIngresosIngresosMensuales.Text = "";
+            textBoxIngresosTipoAnimales.Text = "";
+            textBoxIngresosTipoCultivo.Text = "";
+
+            General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjeReinicioFormulario);
         }
 
-       
+        /// <summary>
+        /// Cancelar Ingresar Asociado
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void AceptarIngresarAsociado(object sender, EventArgs e)
+        {
+            tabIngresarAsociado.SelectedIndex = 0;
+            General.MostrarPanelError(Constantes.CodigoExito, Constantes.MsjExitoGuardar);
+        }
     }
 }

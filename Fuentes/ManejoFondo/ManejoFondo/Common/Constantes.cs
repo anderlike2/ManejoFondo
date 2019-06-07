@@ -31,6 +31,8 @@ namespace ManejoFondo.Common
         public const string MsjCamposObligatorios = "Los campos marcados con * son obligatorios, por favor verifique su información.";
         public const string MsjErrorInesperado = "Ha ocurrido un error inesperado, por favor contactar al Administrador del sistema.";
         public const string MsjErrorSeguridad = "Su sistema ha caducado, por favor consulte con el Administrador del Sistema.";
+        public const string MsjeReinicioFormulario = "Se ha eliminado la información ingresada. Por favor diligencie nuevamente toda la información requerida.";
+        public const string MsjExitoGuardar = "La información se ha almacenado con éxito.";
         #endregion
 
         #region MensajesTooltips

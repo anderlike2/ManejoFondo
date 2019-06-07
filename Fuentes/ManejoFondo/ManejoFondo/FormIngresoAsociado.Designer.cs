@@ -72,6 +72,7 @@
             this.labelDatosPersonalesApellidos = new System.Windows.Forms.Label();
             this.labelDatosPersonalesNombres = new System.Windows.Forms.Label();
             this.labelTituloDatosPersonales = new System.Windows.Forms.Label();
+            this.panelImagenDatosPersonales = new System.Windows.Forms.Panel();
             this.tabAyudaGubernamental = new System.Windows.Forms.TabPage();
             this.comboBoxAyudaGobiernoTipoSubsidio = new System.Windows.Forms.ComboBox();
             this.labelAyudaGobiernoTipoSubsidio = new System.Windows.Forms.Label();
@@ -85,7 +86,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.labelAyudaGobiernoPuntajeSisben = new System.Windows.Forms.Label();
             this.labelTituloAyudasGobierno = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabNucleoFamiliar = new System.Windows.Forms.TabPage();
+            this.panelIngresoAsociadoRegresar = new System.Windows.Forms.Panel();
             this.panelNucleoFamiliarOtrosFamiliares = new System.Windows.Forms.Panel();
             this.buttonAgregarNucleoFamiliarIntegrantes = new System.Windows.Forms.Button();
             this.dataGridNucleoFamiliarIntegrantes = new System.Windows.Forms.DataGridView();
@@ -118,6 +121,7 @@
             this.comboBoxNucleoFamiliarConyuge = new System.Windows.Forms.ComboBox();
             this.labelNucleoFamiliarConyuge = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabIngresos = new System.Windows.Forms.TabPage();
             this.textBoxIngresosTipoCultivo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textBoxIngresosTipoAnimales = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -134,13 +138,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ingresoAsociadoCancelar = new System.Windows.Forms.Button();
             this.ingresoAsociadoAceptar = new System.Windows.Forms.Button();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panelImagenDatosPersonales = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelIngresoAsociadoRegresar = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.usuarioModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoIdentificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -150,6 +149,7 @@
             this.tipoActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otraActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parentescoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabIngresarAsociado.SuspendLayout();
             this.tabDatosPersona.SuspendLayout();
             this.tabAyudaGubernamental.SuspendLayout();
@@ -172,7 +172,7 @@
             this.tabIngresarAsociado.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.tabIngresarAsociado.Name = "tabIngresarAsociado";
             this.tabIngresarAsociado.SelectedIndex = 0;
-            this.tabIngresarAsociado.Size = new System.Drawing.Size(995, 602);
+            this.tabIngresarAsociado.Size = new System.Drawing.Size(1341, 606);
             this.tabIngresarAsociado.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabIngresarAsociado.TabIndex = 0;
             this.tabIngresarAsociado.Click += new System.EventHandler(this.ValidarInformacion);
@@ -227,16 +227,16 @@
             this.tabDatosPersona.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.tabDatosPersona.Name = "tabDatosPersona";
             this.tabDatosPersona.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDatosPersona.Size = new System.Drawing.Size(987, 571);
+            this.tabDatosPersona.Size = new System.Drawing.Size(1333, 575);
             this.tabDatosPersona.TabIndex = 0;
             this.tabDatosPersona.Text = "Datos Persona";
             // 
             // datePickerDatosPersonaFechaNacimiento
             // 
             this.datePickerDatosPersonaFechaNacimiento.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.datePickerDatosPersonaFechaNacimiento.Location = new System.Drawing.Point(508, 485);
+            this.datePickerDatosPersonaFechaNacimiento.Location = new System.Drawing.Point(663, 489);
             this.datePickerDatosPersonaFechaNacimiento.Name = "datePickerDatosPersonaFechaNacimiento";
-            this.datePickerDatosPersonaFechaNacimiento.Size = new System.Drawing.Size(379, 26);
+            this.datePickerDatosPersonaFechaNacimiento.Size = new System.Drawing.Size(427, 26);
             this.datePickerDatosPersonaFechaNacimiento.TabIndex = 46;
             // 
             // label13
@@ -244,7 +244,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(893, 482);
+            this.label13.Location = new System.Drawing.Point(1110, 486);
             this.label13.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(22, 29);
@@ -257,7 +257,7 @@
             this.labelDatosPersonaFechaNacimiento.AutoSize = true;
             this.labelDatosPersonaFechaNacimiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonaFechaNacimiento.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonaFechaNacimiento.Location = new System.Drawing.Point(506, 459);
+            this.labelDatosPersonaFechaNacimiento.Location = new System.Drawing.Point(661, 463);
             this.labelDatosPersonaFechaNacimiento.Name = "labelDatosPersonaFechaNacimiento";
             this.labelDatosPersonaFechaNacimiento.Size = new System.Drawing.Size(154, 21);
             this.labelDatosPersonaFechaNacimiento.TabIndex = 44;
@@ -268,7 +268,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(424, 485);
+            this.label12.Location = new System.Drawing.Point(550, 489);
             this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(22, 29);
@@ -280,9 +280,9 @@
             // 
             this.comboBoxDatosPersonaEstadoCivil.BackColor = System.Drawing.Color.White;
             this.comboBoxDatosPersonaEstadoCivil.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxDatosPersonaEstadoCivil.Location = new System.Drawing.Point(39, 483);
+            this.comboBoxDatosPersonaEstadoCivil.Location = new System.Drawing.Point(103, 487);
             this.comboBoxDatosPersonaEstadoCivil.Name = "comboBoxDatosPersonaEstadoCivil";
-            this.comboBoxDatosPersonaEstadoCivil.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxDatosPersonaEstadoCivil.Size = new System.Drawing.Size(427, 26);
             this.comboBoxDatosPersonaEstadoCivil.TabIndex = 41;
             // 
             // labelDatosPersonaEstadoCivil
@@ -290,7 +290,7 @@
             this.labelDatosPersonaEstadoCivil.AutoSize = true;
             this.labelDatosPersonaEstadoCivil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonaEstadoCivil.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonaEstadoCivil.Location = new System.Drawing.Point(37, 459);
+            this.labelDatosPersonaEstadoCivil.Location = new System.Drawing.Point(101, 463);
             this.labelDatosPersonaEstadoCivil.Name = "labelDatosPersonaEstadoCivil";
             this.labelDatosPersonaEstadoCivil.Size = new System.Drawing.Size(100, 21);
             this.labelDatosPersonaEstadoCivil.TabIndex = 40;
@@ -308,10 +308,10 @@
             this.textBoxDatosPersonaAntiguedadAsociacion.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaAntiguedadAsociacion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaAntiguedadAsociacion.LineThickness = 3;
-            this.textBoxDatosPersonaAntiguedadAsociacion.Location = new System.Drawing.Point(509, 418);
+            this.textBoxDatosPersonaAntiguedadAsociacion.Location = new System.Drawing.Point(664, 422);
             this.textBoxDatosPersonaAntiguedadAsociacion.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaAntiguedadAsociacion.Name = "textBoxDatosPersonaAntiguedadAsociacion";
-            this.textBoxDatosPersonaAntiguedadAsociacion.Size = new System.Drawing.Size(379, 29);
+            this.textBoxDatosPersonaAntiguedadAsociacion.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaAntiguedadAsociacion.TabIndex = 39;
             this.textBoxDatosPersonaAntiguedadAsociacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxDatosPersonaAntiguedadAsociacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
@@ -321,7 +321,7 @@
             this.labelDatosPersonaAntiguedadAsociacion.AutoSize = true;
             this.labelDatosPersonaAntiguedadAsociacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonaAntiguedadAsociacion.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonaAntiguedadAsociacion.Location = new System.Drawing.Point(505, 395);
+            this.labelDatosPersonaAntiguedadAsociacion.Location = new System.Drawing.Point(660, 399);
             this.labelDatosPersonaAntiguedadAsociacion.Name = "labelDatosPersonaAntiguedadAsociacion";
             this.labelDatosPersonaAntiguedadAsociacion.Size = new System.Drawing.Size(260, 21);
             this.labelDatosPersonaAntiguedadAsociacion.TabIndex = 38;
@@ -332,7 +332,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(422, 356);
+            this.label11.Location = new System.Drawing.Point(548, 360);
             this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(22, 29);
@@ -344,9 +344,9 @@
             // 
             this.comboBoxDatosPersonaNivelEstudio.BackColor = System.Drawing.Color.White;
             this.comboBoxDatosPersonaNivelEstudio.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxDatosPersonaNivelEstudio.Location = new System.Drawing.Point(40, 359);
+            this.comboBoxDatosPersonaNivelEstudio.Location = new System.Drawing.Point(104, 363);
             this.comboBoxDatosPersonaNivelEstudio.Name = "comboBoxDatosPersonaNivelEstudio";
-            this.comboBoxDatosPersonaNivelEstudio.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxDatosPersonaNivelEstudio.Size = new System.Drawing.Size(427, 26);
             this.comboBoxDatosPersonaNivelEstudio.TabIndex = 36;
             // 
             // textBoxDatosPersonaNombreInstitucion
@@ -361,10 +361,10 @@
             this.textBoxDatosPersonaNombreInstitucion.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaNombreInstitucion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaNombreInstitucion.LineThickness = 3;
-            this.textBoxDatosPersonaNombreInstitucion.Location = new System.Drawing.Point(509, 353);
+            this.textBoxDatosPersonaNombreInstitucion.Location = new System.Drawing.Point(664, 357);
             this.textBoxDatosPersonaNombreInstitucion.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaNombreInstitucion.Name = "textBoxDatosPersonaNombreInstitucion";
-            this.textBoxDatosPersonaNombreInstitucion.Size = new System.Drawing.Size(379, 29);
+            this.textBoxDatosPersonaNombreInstitucion.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaNombreInstitucion.TabIndex = 34;
             this.textBoxDatosPersonaNombreInstitucion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -373,7 +373,7 @@
             this.labelDatosPersonaNombreInstitucion.AutoSize = true;
             this.labelDatosPersonaNombreInstitucion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonaNombreInstitucion.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonaNombreInstitucion.Location = new System.Drawing.Point(505, 330);
+            this.labelDatosPersonaNombreInstitucion.Location = new System.Drawing.Point(660, 334);
             this.labelDatosPersonaNombreInstitucion.Name = "labelDatosPersonaNombreInstitucion";
             this.labelDatosPersonaNombreInstitucion.Size = new System.Drawing.Size(158, 21);
             this.labelDatosPersonaNombreInstitucion.TabIndex = 33;
@@ -384,7 +384,7 @@
             this.labelDatosPersonaNivelEstudio.AutoSize = true;
             this.labelDatosPersonaNivelEstudio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonaNivelEstudio.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonaNivelEstudio.Location = new System.Drawing.Point(35, 330);
+            this.labelDatosPersonaNivelEstudio.Location = new System.Drawing.Point(99, 334);
             this.labelDatosPersonaNivelEstudio.Name = "labelDatosPersonaNivelEstudio";
             this.labelDatosPersonaNivelEstudio.Size = new System.Drawing.Size(108, 21);
             this.labelDatosPersonaNivelEstudio.TabIndex = 32;
@@ -402,10 +402,10 @@
             this.textBoxDatosPersonaVereda.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaVereda.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaVereda.LineThickness = 3;
-            this.textBoxDatosPersonaVereda.Location = new System.Drawing.Point(509, 288);
+            this.textBoxDatosPersonaVereda.Location = new System.Drawing.Point(664, 292);
             this.textBoxDatosPersonaVereda.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaVereda.Name = "textBoxDatosPersonaVereda";
-            this.textBoxDatosPersonaVereda.Size = new System.Drawing.Size(379, 29);
+            this.textBoxDatosPersonaVereda.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaVereda.TabIndex = 31;
             this.textBoxDatosPersonaVereda.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -414,7 +414,7 @@
             this.labelDatosPersonaVereda.AutoSize = true;
             this.labelDatosPersonaVereda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonaVereda.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonaVereda.Location = new System.Drawing.Point(505, 265);
+            this.labelDatosPersonaVereda.Location = new System.Drawing.Point(659, 269);
             this.labelDatosPersonaVereda.Name = "labelDatosPersonaVereda";
             this.labelDatosPersonaVereda.Size = new System.Drawing.Size(68, 21);
             this.labelDatosPersonaVereda.TabIndex = 30;
@@ -425,7 +425,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(423, 291);
+            this.label10.Location = new System.Drawing.Point(549, 295);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(22, 29);
@@ -437,9 +437,9 @@
             // 
             this.comboBoxDatosPersonaMunicipio.BackColor = System.Drawing.Color.White;
             this.comboBoxDatosPersonaMunicipio.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxDatosPersonaMunicipio.Location = new System.Drawing.Point(40, 294);
+            this.comboBoxDatosPersonaMunicipio.Location = new System.Drawing.Point(104, 298);
             this.comboBoxDatosPersonaMunicipio.Name = "comboBoxDatosPersonaMunicipio";
-            this.comboBoxDatosPersonaMunicipio.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxDatosPersonaMunicipio.Size = new System.Drawing.Size(427, 26);
             this.comboBoxDatosPersonaMunicipio.TabIndex = 28;
             // 
             // labelDatosPersonaMunicipio
@@ -447,7 +447,7 @@
             this.labelDatosPersonaMunicipio.AutoSize = true;
             this.labelDatosPersonaMunicipio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonaMunicipio.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonaMunicipio.Location = new System.Drawing.Point(37, 265);
+            this.labelDatosPersonaMunicipio.Location = new System.Drawing.Point(101, 269);
             this.labelDatosPersonaMunicipio.Name = "labelDatosPersonaMunicipio";
             this.labelDatosPersonaMunicipio.Size = new System.Drawing.Size(85, 21);
             this.labelDatosPersonaMunicipio.TabIndex = 27;
@@ -458,7 +458,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(892, 224);
+            this.label9.Location = new System.Drawing.Point(1109, 228);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(22, 29);
@@ -470,9 +470,9 @@
             // 
             this.comboBoxDatosPersonaDepartamento.BackColor = System.Drawing.Color.White;
             this.comboBoxDatosPersonaDepartamento.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxDatosPersonaDepartamento.Location = new System.Drawing.Point(508, 227);
+            this.comboBoxDatosPersonaDepartamento.Location = new System.Drawing.Point(663, 231);
             this.comboBoxDatosPersonaDepartamento.Name = "comboBoxDatosPersonaDepartamento";
-            this.comboBoxDatosPersonaDepartamento.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxDatosPersonaDepartamento.Size = new System.Drawing.Size(427, 26);
             this.comboBoxDatosPersonaDepartamento.TabIndex = 25;
             this.comboBoxDatosPersonaDepartamento.SelectedIndexChanged += new System.EventHandler(this.CargarMunicipios);
             // 
@@ -481,7 +481,7 @@
             this.labelDatosPersonaDepartamento.AutoSize = true;
             this.labelDatosPersonaDepartamento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonaDepartamento.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonaDepartamento.Location = new System.Drawing.Point(505, 198);
+            this.labelDatosPersonaDepartamento.Location = new System.Drawing.Point(660, 202);
             this.labelDatosPersonaDepartamento.Name = "labelDatosPersonaDepartamento";
             this.labelDatosPersonaDepartamento.Size = new System.Drawing.Size(129, 21);
             this.labelDatosPersonaDepartamento.TabIndex = 24;
@@ -492,7 +492,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(423, 224);
+            this.label8.Location = new System.Drawing.Point(549, 228);
             this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(22, 29);
@@ -504,9 +504,9 @@
             // 
             this.comboBoxDatosPersonaPais.BackColor = System.Drawing.Color.White;
             this.comboBoxDatosPersonaPais.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxDatosPersonaPais.Location = new System.Drawing.Point(40, 227);
+            this.comboBoxDatosPersonaPais.Location = new System.Drawing.Point(104, 231);
             this.comboBoxDatosPersonaPais.Name = "comboBoxDatosPersonaPais";
-            this.comboBoxDatosPersonaPais.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxDatosPersonaPais.Size = new System.Drawing.Size(427, 26);
             this.comboBoxDatosPersonaPais.TabIndex = 22;
             this.comboBoxDatosPersonaPais.SelectedIndexChanged += new System.EventHandler(this.CargarDepartamentos);
             // 
@@ -515,7 +515,7 @@
             this.labelDatosPersonaPais.AutoSize = true;
             this.labelDatosPersonaPais.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonaPais.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonaPais.Location = new System.Drawing.Point(36, 198);
+            this.labelDatosPersonaPais.Location = new System.Drawing.Point(100, 202);
             this.labelDatosPersonaPais.Name = "labelDatosPersonaPais";
             this.labelDatosPersonaPais.Size = new System.Drawing.Size(39, 21);
             this.labelDatosPersonaPais.TabIndex = 21;
@@ -526,7 +526,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(423, 421);
+            this.label7.Location = new System.Drawing.Point(549, 425);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(22, 29);
@@ -546,10 +546,10 @@
             this.textBoxDatosPersonaTelefono.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaTelefono.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaTelefono.LineThickness = 3;
-            this.textBoxDatosPersonaTelefono.Location = new System.Drawing.Point(40, 418);
+            this.textBoxDatosPersonaTelefono.Location = new System.Drawing.Point(104, 422);
             this.textBoxDatosPersonaTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaTelefono.Name = "textBoxDatosPersonaTelefono";
-            this.textBoxDatosPersonaTelefono.Size = new System.Drawing.Size(379, 29);
+            this.textBoxDatosPersonaTelefono.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaTelefono.TabIndex = 19;
             this.textBoxDatosPersonaTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxDatosPersonaTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
@@ -559,7 +559,7 @@
             this.labelDatosPersonalesTelefono.AutoSize = true;
             this.labelDatosPersonalesTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonalesTelefono.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonalesTelefono.Location = new System.Drawing.Point(35, 395);
+            this.labelDatosPersonalesTelefono.Location = new System.Drawing.Point(99, 399);
             this.labelDatosPersonalesTelefono.Name = "labelDatosPersonalesTelefono";
             this.labelDatosPersonalesTelefono.Size = new System.Drawing.Size(76, 21);
             this.labelDatosPersonalesTelefono.TabIndex = 18;
@@ -570,7 +570,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(423, 160);
+            this.label6.Location = new System.Drawing.Point(549, 164);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(22, 29);
@@ -582,9 +582,9 @@
             // 
             this.comboBoxDatosPersonaTipoIdentificacion.BackColor = System.Drawing.Color.White;
             this.comboBoxDatosPersonaTipoIdentificacion.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxDatosPersonaTipoIdentificacion.Location = new System.Drawing.Point(39, 164);
+            this.comboBoxDatosPersonaTipoIdentificacion.Location = new System.Drawing.Point(103, 168);
             this.comboBoxDatosPersonaTipoIdentificacion.Name = "comboBoxDatosPersonaTipoIdentificacion";
-            this.comboBoxDatosPersonaTipoIdentificacion.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxDatosPersonaTipoIdentificacion.Size = new System.Drawing.Size(427, 26);
             this.comboBoxDatosPersonaTipoIdentificacion.TabIndex = 16;
             // 
             // label5
@@ -592,7 +592,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(893, 161);
+            this.label5.Location = new System.Drawing.Point(1110, 165);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(22, 29);
@@ -612,10 +612,10 @@
             this.textBoxDatosPersonaNumeroIdentificacion.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaNumeroIdentificacion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaNumeroIdentificacion.LineThickness = 3;
-            this.textBoxDatosPersonaNumeroIdentificacion.Location = new System.Drawing.Point(509, 158);
+            this.textBoxDatosPersonaNumeroIdentificacion.Location = new System.Drawing.Point(664, 162);
             this.textBoxDatosPersonaNumeroIdentificacion.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaNumeroIdentificacion.Name = "textBoxDatosPersonaNumeroIdentificacion";
-            this.textBoxDatosPersonaNumeroIdentificacion.Size = new System.Drawing.Size(379, 29);
+            this.textBoxDatosPersonaNumeroIdentificacion.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaNumeroIdentificacion.TabIndex = 13;
             this.textBoxDatosPersonaNumeroIdentificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxDatosPersonaNumeroIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
@@ -625,7 +625,7 @@
             this.labelDatosPersonalesNumeroIdentificacion.AutoSize = true;
             this.labelDatosPersonalesNumeroIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonalesNumeroIdentificacion.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonalesNumeroIdentificacion.Location = new System.Drawing.Point(505, 135);
+            this.labelDatosPersonalesNumeroIdentificacion.Location = new System.Drawing.Point(660, 139);
             this.labelDatosPersonalesNumeroIdentificacion.Name = "labelDatosPersonalesNumeroIdentificacion";
             this.labelDatosPersonalesNumeroIdentificacion.Size = new System.Drawing.Size(184, 21);
             this.labelDatosPersonalesNumeroIdentificacion.TabIndex = 11;
@@ -636,7 +636,7 @@
             this.labelDatosPersonalesTipoIdentificacion.AutoSize = true;
             this.labelDatosPersonalesTipoIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonalesTipoIdentificacion.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonalesTipoIdentificacion.Location = new System.Drawing.Point(35, 135);
+            this.labelDatosPersonalesTipoIdentificacion.Location = new System.Drawing.Point(99, 139);
             this.labelDatosPersonalesTipoIdentificacion.Name = "labelDatosPersonalesTipoIdentificacion";
             this.labelDatosPersonalesTipoIdentificacion.Size = new System.Drawing.Size(154, 21);
             this.labelDatosPersonalesTipoIdentificacion.TabIndex = 10;
@@ -654,10 +654,10 @@
             this.textBoxDatosPersonasApellidos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonasApellidos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonasApellidos.LineThickness = 3;
-            this.textBoxDatosPersonasApellidos.Location = new System.Drawing.Point(509, 94);
+            this.textBoxDatosPersonasApellidos.Location = new System.Drawing.Point(664, 98);
             this.textBoxDatosPersonasApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonasApellidos.Name = "textBoxDatosPersonasApellidos";
-            this.textBoxDatosPersonasApellidos.Size = new System.Drawing.Size(379, 29);
+            this.textBoxDatosPersonasApellidos.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonasApellidos.TabIndex = 9;
             this.textBoxDatosPersonasApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -673,10 +673,10 @@
             this.textBoxDatosPersonaNombres.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaNombres.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaNombres.LineThickness = 3;
-            this.textBoxDatosPersonaNombres.Location = new System.Drawing.Point(39, 94);
+            this.textBoxDatosPersonaNombres.Location = new System.Drawing.Point(103, 98);
             this.textBoxDatosPersonaNombres.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaNombres.Name = "textBoxDatosPersonaNombres";
-            this.textBoxDatosPersonaNombres.Size = new System.Drawing.Size(379, 29);
+            this.textBoxDatosPersonaNombres.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaNombres.TabIndex = 8;
             this.textBoxDatosPersonaNombres.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -685,7 +685,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(892, 99);
+            this.label4.Location = new System.Drawing.Point(1109, 103);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(22, 29);
@@ -698,7 +698,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(423, 99);
+            this.label3.Location = new System.Drawing.Point(549, 103);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(22, 29);
@@ -711,7 +711,7 @@
             this.labelDatosPersonalesApellidos.AutoSize = true;
             this.labelDatosPersonalesApellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonalesApellidos.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonalesApellidos.Location = new System.Drawing.Point(505, 74);
+            this.labelDatosPersonalesApellidos.Location = new System.Drawing.Point(660, 78);
             this.labelDatosPersonalesApellidos.Name = "labelDatosPersonalesApellidos";
             this.labelDatosPersonalesApellidos.Size = new System.Drawing.Size(80, 21);
             this.labelDatosPersonalesApellidos.TabIndex = 4;
@@ -722,7 +722,7 @@
             this.labelDatosPersonalesNombres.AutoSize = true;
             this.labelDatosPersonalesNombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatosPersonalesNombres.ForeColor = System.Drawing.Color.Black;
-            this.labelDatosPersonalesNombres.Location = new System.Drawing.Point(35, 74);
+            this.labelDatosPersonalesNombres.Location = new System.Drawing.Point(99, 78);
             this.labelDatosPersonalesNombres.Name = "labelDatosPersonalesNombres";
             this.labelDatosPersonalesNombres.Size = new System.Drawing.Size(79, 21);
             this.labelDatosPersonalesNombres.TabIndex = 3;
@@ -733,11 +733,20 @@
             this.labelTituloDatosPersonales.AutoSize = true;
             this.labelTituloDatosPersonales.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTituloDatosPersonales.ForeColor = System.Drawing.Color.Black;
-            this.labelTituloDatosPersonales.Location = new System.Drawing.Point(187, 23);
+            this.labelTituloDatosPersonales.Location = new System.Drawing.Point(340, 23);
             this.labelTituloDatosPersonales.Name = "labelTituloDatosPersonales";
             this.labelTituloDatosPersonales.Size = new System.Drawing.Size(510, 22);
             this.labelTituloDatosPersonales.TabIndex = 1;
             this.labelTituloDatosPersonales.Text = "POR FAVOR INGRESAR SU INFORMACIÓN PERSONAL";
+            // 
+            // panelImagenDatosPersonales
+            // 
+            this.panelImagenDatosPersonales.BackgroundImage = global::ManejoFondo.Properties.Resources.datosPersonales;
+            this.panelImagenDatosPersonales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelImagenDatosPersonales.Location = new System.Drawing.Point(1162, 3);
+            this.panelImagenDatosPersonales.Name = "panelImagenDatosPersonales";
+            this.panelImagenDatosPersonales.Size = new System.Drawing.Size(108, 106);
+            this.panelImagenDatosPersonales.TabIndex = 0;
             // 
             // tabAyudaGubernamental
             // 
@@ -759,7 +768,7 @@
             this.tabAyudaGubernamental.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.tabAyudaGubernamental.Name = "tabAyudaGubernamental";
             this.tabAyudaGubernamental.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAyudaGubernamental.Size = new System.Drawing.Size(987, 571);
+            this.tabAyudaGubernamental.Size = new System.Drawing.Size(1333, 575);
             this.tabAyudaGubernamental.TabIndex = 1;
             this.tabAyudaGubernamental.Text = "Ayuda Gobierno";
             // 
@@ -767,9 +776,9 @@
             // 
             this.comboBoxAyudaGobiernoTipoSubsidio.BackColor = System.Drawing.Color.White;
             this.comboBoxAyudaGobiernoTipoSubsidio.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxAyudaGobiernoTipoSubsidio.Location = new System.Drawing.Point(502, 201);
+            this.comboBoxAyudaGobiernoTipoSubsidio.Location = new System.Drawing.Point(664, 183);
             this.comboBoxAyudaGobiernoTipoSubsidio.Name = "comboBoxAyudaGobiernoTipoSubsidio";
-            this.comboBoxAyudaGobiernoTipoSubsidio.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxAyudaGobiernoTipoSubsidio.Size = new System.Drawing.Size(427, 26);
             this.comboBoxAyudaGobiernoTipoSubsidio.TabIndex = 25;
             // 
             // labelAyudaGobiernoTipoSubsidio
@@ -777,7 +786,7 @@
             this.labelAyudaGobiernoTipoSubsidio.AutoSize = true;
             this.labelAyudaGobiernoTipoSubsidio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAyudaGobiernoTipoSubsidio.ForeColor = System.Drawing.Color.Black;
-            this.labelAyudaGobiernoTipoSubsidio.Location = new System.Drawing.Point(499, 170);
+            this.labelAyudaGobiernoTipoSubsidio.Location = new System.Drawing.Point(660, 159);
             this.labelAyudaGobiernoTipoSubsidio.Name = "labelAyudaGobiernoTipoSubsidio";
             this.labelAyudaGobiernoTipoSubsidio.Size = new System.Drawing.Size(108, 21);
             this.labelAyudaGobiernoTipoSubsidio.TabIndex = 24;
@@ -788,7 +797,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(415, 196);
+            this.label16.Location = new System.Drawing.Point(549, 183);
             this.label16.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(22, 29);
@@ -800,9 +809,9 @@
             // 
             this.comboBoxAyudaGobiernoRecibeSubsidio.BackColor = System.Drawing.Color.White;
             this.comboBoxAyudaGobiernoRecibeSubsidio.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxAyudaGobiernoRecibeSubsidio.Location = new System.Drawing.Point(31, 201);
+            this.comboBoxAyudaGobiernoRecibeSubsidio.Location = new System.Drawing.Point(103, 188);
             this.comboBoxAyudaGobiernoRecibeSubsidio.Name = "comboBoxAyudaGobiernoRecibeSubsidio";
-            this.comboBoxAyudaGobiernoRecibeSubsidio.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxAyudaGobiernoRecibeSubsidio.Size = new System.Drawing.Size(427, 26);
             this.comboBoxAyudaGobiernoRecibeSubsidio.TabIndex = 22;
             // 
             // labelAyudaGobiernoRecibeSubsidio
@@ -810,7 +819,7 @@
             this.labelAyudaGobiernoRecibeSubsidio.AutoSize = true;
             this.labelAyudaGobiernoRecibeSubsidio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAyudaGobiernoRecibeSubsidio.ForeColor = System.Drawing.Color.Black;
-            this.labelAyudaGobiernoRecibeSubsidio.Location = new System.Drawing.Point(27, 170);
+            this.labelAyudaGobiernoRecibeSubsidio.Location = new System.Drawing.Point(99, 159);
             this.labelAyudaGobiernoRecibeSubsidio.Name = "labelAyudaGobiernoRecibeSubsidio";
             this.labelAyudaGobiernoRecibeSubsidio.Size = new System.Drawing.Size(130, 21);
             this.labelAyudaGobiernoRecibeSubsidio.TabIndex = 21;
@@ -821,7 +830,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(886, 133);
+            this.label15.Location = new System.Drawing.Point(1095, 98);
             this.label15.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(22, 29);
@@ -833,9 +842,9 @@
             // 
             this.comboBoxAyudaGobiernoTipoVictima.BackColor = System.Drawing.Color.White;
             this.comboBoxAyudaGobiernoTipoVictima.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxAyudaGobiernoTipoVictima.Location = new System.Drawing.Point(502, 138);
+            this.comboBoxAyudaGobiernoTipoVictima.Location = new System.Drawing.Point(664, 98);
             this.comboBoxAyudaGobiernoTipoVictima.Name = "comboBoxAyudaGobiernoTipoVictima";
-            this.comboBoxAyudaGobiernoTipoVictima.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxAyudaGobiernoTipoVictima.Size = new System.Drawing.Size(427, 26);
             this.comboBoxAyudaGobiernoTipoVictima.TabIndex = 19;
             // 
             // labelAyudaGobiernoTipoVictima
@@ -843,7 +852,7 @@
             this.labelAyudaGobiernoTipoVictima.AutoSize = true;
             this.labelAyudaGobiernoTipoVictima.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAyudaGobiernoTipoVictima.ForeColor = System.Drawing.Color.Black;
-            this.labelAyudaGobiernoTipoVictima.Location = new System.Drawing.Point(498, 107);
+            this.labelAyudaGobiernoTipoVictima.Location = new System.Drawing.Point(660, 78);
             this.labelAyudaGobiernoTipoVictima.Name = "labelAyudaGobiernoTipoVictima";
             this.labelAyudaGobiernoTipoVictima.Size = new System.Drawing.Size(106, 21);
             this.labelAyudaGobiernoTipoVictima.TabIndex = 18;
@@ -861,10 +870,10 @@
             this.textBoxAyudaGobiernoPuntajeSisben.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxAyudaGobiernoPuntajeSisben.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxAyudaGobiernoPuntajeSisben.LineThickness = 3;
-            this.textBoxAyudaGobiernoPuntajeSisben.Location = new System.Drawing.Point(31, 129);
+            this.textBoxAyudaGobiernoPuntajeSisben.Location = new System.Drawing.Point(103, 98);
             this.textBoxAyudaGobiernoPuntajeSisben.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAyudaGobiernoPuntajeSisben.Name = "textBoxAyudaGobiernoPuntajeSisben";
-            this.textBoxAyudaGobiernoPuntajeSisben.Size = new System.Drawing.Size(379, 29);
+            this.textBoxAyudaGobiernoPuntajeSisben.Size = new System.Drawing.Size(427, 29);
             this.textBoxAyudaGobiernoPuntajeSisben.TabIndex = 11;
             this.textBoxAyudaGobiernoPuntajeSisben.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -873,7 +882,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(415, 132);
+            this.label14.Location = new System.Drawing.Point(549, 103);
             this.label14.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(22, 29);
@@ -886,7 +895,7 @@
             this.labelAyudaGobiernoPuntajeSisben.AutoSize = true;
             this.labelAyudaGobiernoPuntajeSisben.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAyudaGobiernoPuntajeSisben.ForeColor = System.Drawing.Color.Black;
-            this.labelAyudaGobiernoPuntajeSisben.Location = new System.Drawing.Point(27, 107);
+            this.labelAyudaGobiernoPuntajeSisben.Location = new System.Drawing.Point(99, 78);
             this.labelAyudaGobiernoPuntajeSisben.Name = "labelAyudaGobiernoPuntajeSisben";
             this.labelAyudaGobiernoPuntajeSisben.Size = new System.Drawing.Size(122, 21);
             this.labelAyudaGobiernoPuntajeSisben.TabIndex = 9;
@@ -897,11 +906,20 @@
             this.labelTituloAyudasGobierno.AutoSize = true;
             this.labelTituloAyudasGobierno.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTituloAyudasGobierno.ForeColor = System.Drawing.Color.Black;
-            this.labelTituloAyudasGobierno.Location = new System.Drawing.Point(89, 47);
+            this.labelTituloAyudasGobierno.Location = new System.Drawing.Point(340, 23);
             this.labelTituloAyudasGobierno.Name = "labelTituloAyudasGobierno";
             this.labelTituloAyudasGobierno.Size = new System.Drawing.Size(663, 22);
             this.labelTituloAyudasGobierno.TabIndex = 3;
             this.labelTituloAyudasGobierno.Text = "POR FAVOR INGRESAR LAS AYUDAS GUBERNAMENTALES RECIBIDAS";
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::ManejoFondo.Properties.Resources.ayudasGobierno;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(1149, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(125, 125);
+            this.panel1.TabIndex = 2;
             // 
             // tabNucleoFamiliar
             // 
@@ -917,17 +935,28 @@
             this.tabNucleoFamiliar.Location = new System.Drawing.Point(4, 27);
             this.tabNucleoFamiliar.Name = "tabNucleoFamiliar";
             this.tabNucleoFamiliar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNucleoFamiliar.Size = new System.Drawing.Size(987, 571);
+            this.tabNucleoFamiliar.Size = new System.Drawing.Size(1333, 575);
             this.tabNucleoFamiliar.TabIndex = 2;
             this.tabNucleoFamiliar.Text = "Núcleo Familiar";
+            // 
+            // panelIngresoAsociadoRegresar
+            // 
+            this.panelIngresoAsociadoRegresar.BackgroundImage = global::ManejoFondo.Properties.Resources.regresar;
+            this.panelIngresoAsociadoRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelIngresoAsociadoRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelIngresoAsociadoRegresar.Location = new System.Drawing.Point(911, 576);
+            this.panelIngresoAsociadoRegresar.Name = "panelIngresoAsociadoRegresar";
+            this.panelIngresoAsociadoRegresar.Size = new System.Drawing.Size(28, 28);
+            this.panelIngresoAsociadoRegresar.TabIndex = 9;
+            this.panelIngresoAsociadoRegresar.Click += new System.EventHandler(this.RegresarMenuPrincipal);
             // 
             // panelNucleoFamiliarOtrosFamiliares
             // 
             this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.buttonAgregarNucleoFamiliarIntegrantes);
             this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.dataGridNucleoFamiliarIntegrantes);
-            this.panelNucleoFamiliarOtrosFamiliares.Location = new System.Drawing.Point(7, 391);
+            this.panelNucleoFamiliarOtrosFamiliares.Location = new System.Drawing.Point(7, 415);
             this.panelNucleoFamiliarOtrosFamiliares.Name = "panelNucleoFamiliarOtrosFamiliares";
-            this.panelNucleoFamiliarOtrosFamiliares.Size = new System.Drawing.Size(974, 174);
+            this.panelNucleoFamiliarOtrosFamiliares.Size = new System.Drawing.Size(1320, 150);
             this.panelNucleoFamiliarOtrosFamiliares.TabIndex = 56;
             // 
             // buttonAgregarNucleoFamiliarIntegrantes
@@ -937,7 +966,7 @@
             this.buttonAgregarNucleoFamiliarIntegrantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregarNucleoFamiliarIntegrantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarNucleoFamiliarIntegrantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.buttonAgregarNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(7, 4);
+            this.buttonAgregarNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(7, 14);
             this.buttonAgregarNucleoFamiliarIntegrantes.Name = "buttonAgregarNucleoFamiliarIntegrantes";
             this.buttonAgregarNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(112, 32);
             this.buttonAgregarNucleoFamiliarIntegrantes.TabIndex = 55;
@@ -963,12 +992,12 @@
             this.otraActividadDataGridViewTextBoxColumn,
             this.parentescoDataGridViewTextBoxColumn});
             this.dataGridNucleoFamiliarIntegrantes.DataSource = this.usuarioModelBindingSource;
-            this.dataGridNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(2, 41);
+            this.dataGridNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(2, 52);
             this.dataGridNucleoFamiliarIntegrantes.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridNucleoFamiliarIntegrantes.Name = "dataGridNucleoFamiliarIntegrantes";
             this.dataGridNucleoFamiliarIntegrantes.ReadOnly = true;
             this.dataGridNucleoFamiliarIntegrantes.RowTemplate.Height = 24;
-            this.dataGridNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(970, 131);
+            this.dataGridNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(1316, 98);
             this.dataGridNucleoFamiliarIntegrantes.TabIndex = 31;
             // 
             // panelNucleoFamiliarConyuge
@@ -981,6 +1010,7 @@
             this.panelNucleoFamiliarConyuge.Controls.Add(this.labelNucleoFamiliarConyugeOtraActividad);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.labelNucleoFamiliarConyugeTipoActividad);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.label28);
+            this.panelNucleoFamiliarConyuge.Controls.Add(this.textBoxNucleoFamiliarConyugeApellidos);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.labelNucleoFamiliarConyugeFechaNacimiento);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.label26);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.textBoxNucleoFamiliarConyugeNumeroTelefono);
@@ -991,7 +1021,6 @@
             this.panelNucleoFamiliarConyuge.Controls.Add(this.textBoxNucleoFamiliarConyugeNumeroIdentificacion);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.labelNucleoFamiliarConyugeNumeroIdentificacion);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.labelNucleoFamiliarConyugeTipoIdentificacion);
-            this.panelNucleoFamiliarConyuge.Controls.Add(this.textBoxNucleoFamiliarConyugeApellidos);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.labelNucleoFamiliarConyugeNombres);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.textBoxNucleoFamiliarConyugeNombres);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.labelNucleoFamiliarConyugeApellidos);
@@ -1000,15 +1029,15 @@
             this.panelNucleoFamiliarConyuge.Location = new System.Drawing.Point(7, 148);
             this.panelNucleoFamiliarConyuge.Margin = new System.Windows.Forms.Padding(2);
             this.panelNucleoFamiliarConyuge.Name = "panelNucleoFamiliarConyuge";
-            this.panelNucleoFamiliarConyuge.Size = new System.Drawing.Size(975, 225);
+            this.panelNucleoFamiliarConyuge.Size = new System.Drawing.Size(1321, 262);
             this.panelNucleoFamiliarConyuge.TabIndex = 30;
             // 
             // datePickerNucleoFamiliarConyugeFechaNacimiento
             // 
             this.datePickerNucleoFamiliarConyugeFechaNacimiento.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.datePickerNucleoFamiliarConyugeFechaNacimiento.Location = new System.Drawing.Point(495, 137);
+            this.datePickerNucleoFamiliarConyugeFechaNacimiento.Location = new System.Drawing.Point(657, 151);
             this.datePickerNucleoFamiliarConyugeFechaNacimiento.Name = "datePickerNucleoFamiliarConyugeFechaNacimiento";
-            this.datePickerNucleoFamiliarConyugeFechaNacimiento.Size = new System.Drawing.Size(380, 26);
+            this.datePickerNucleoFamiliarConyugeFechaNacimiento.Size = new System.Drawing.Size(427, 26);
             this.datePickerNucleoFamiliarConyugeFechaNacimiento.TabIndex = 55;
             // 
             // label27
@@ -1016,7 +1045,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(411, 186);
+            this.label27.Location = new System.Drawing.Point(542, 206);
             this.label27.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(22, 29);
@@ -1028,9 +1057,9 @@
             // 
             this.comboBoxNucleoFamiliarConyugeTipoActividad.BackColor = System.Drawing.Color.White;
             this.comboBoxNucleoFamiliarConyugeTipoActividad.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxNucleoFamiliarConyugeTipoActividad.Location = new System.Drawing.Point(27, 191);
+            this.comboBoxNucleoFamiliarConyugeTipoActividad.Location = new System.Drawing.Point(96, 208);
             this.comboBoxNucleoFamiliarConyugeTipoActividad.Name = "comboBoxNucleoFamiliarConyugeTipoActividad";
-            this.comboBoxNucleoFamiliarConyugeTipoActividad.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxNucleoFamiliarConyugeTipoActividad.Size = new System.Drawing.Size(427, 26);
             this.comboBoxNucleoFamiliarConyugeTipoActividad.TabIndex = 53;
             this.comboBoxNucleoFamiliarConyugeTipoActividad.SelectedIndexChanged += new System.EventHandler(this.ValidarTipoActividadConyuge);
             // 
@@ -1039,7 +1068,7 @@
             this.labelObligatorioCualTipoActividadConyuge.AutoSize = true;
             this.labelObligatorioCualTipoActividadConyuge.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelObligatorioCualTipoActividadConyuge.ForeColor = System.Drawing.Color.Red;
-            this.labelObligatorioCualTipoActividadConyuge.Location = new System.Drawing.Point(881, 187);
+            this.labelObligatorioCualTipoActividadConyuge.Location = new System.Drawing.Point(1108, 206);
             this.labelObligatorioCualTipoActividadConyuge.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelObligatorioCualTipoActividadConyuge.Name = "labelObligatorioCualTipoActividadConyuge";
             this.labelObligatorioCualTipoActividadConyuge.Size = new System.Drawing.Size(22, 29);
@@ -1059,10 +1088,10 @@
             this.textBoxNucleoFamiliarConyugeOtraActividad.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeOtraActividad.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeOtraActividad.LineThickness = 3;
-            this.textBoxNucleoFamiliarConyugeOtraActividad.Location = new System.Drawing.Point(497, 186);
+            this.textBoxNucleoFamiliarConyugeOtraActividad.Location = new System.Drawing.Point(657, 203);
             this.textBoxNucleoFamiliarConyugeOtraActividad.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeOtraActividad.Name = "textBoxNucleoFamiliarConyugeOtraActividad";
-            this.textBoxNucleoFamiliarConyugeOtraActividad.Size = new System.Drawing.Size(379, 29);
+            this.textBoxNucleoFamiliarConyugeOtraActividad.Size = new System.Drawing.Size(427, 29);
             this.textBoxNucleoFamiliarConyugeOtraActividad.TabIndex = 51;
             this.textBoxNucleoFamiliarConyugeOtraActividad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -1071,7 +1100,7 @@
             this.labelNucleoFamiliarConyugeOtraActividad.AutoSize = true;
             this.labelNucleoFamiliarConyugeOtraActividad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeOtraActividad.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeOtraActividad.Location = new System.Drawing.Point(493, 168);
+            this.labelNucleoFamiliarConyugeOtraActividad.Location = new System.Drawing.Point(653, 183);
             this.labelNucleoFamiliarConyugeOtraActividad.Name = "labelNucleoFamiliarConyugeOtraActividad";
             this.labelNucleoFamiliarConyugeOtraActividad.Size = new System.Drawing.Size(56, 21);
             this.labelNucleoFamiliarConyugeOtraActividad.TabIndex = 50;
@@ -1082,7 +1111,7 @@
             this.labelNucleoFamiliarConyugeTipoActividad.AutoSize = true;
             this.labelNucleoFamiliarConyugeTipoActividad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeTipoActividad.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeTipoActividad.Location = new System.Drawing.Point(23, 168);
+            this.labelNucleoFamiliarConyugeTipoActividad.Location = new System.Drawing.Point(92, 183);
             this.labelNucleoFamiliarConyugeTipoActividad.Name = "labelNucleoFamiliarConyugeTipoActividad";
             this.labelNucleoFamiliarConyugeTipoActividad.Size = new System.Drawing.Size(125, 21);
             this.labelNucleoFamiliarConyugeTipoActividad.TabIndex = 49;
@@ -1093,7 +1122,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(882, 134);
+            this.label28.Location = new System.Drawing.Point(1108, 151);
             this.label28.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(22, 29);
@@ -1106,7 +1135,7 @@
             this.labelNucleoFamiliarConyugeFechaNacimiento.AutoSize = true;
             this.labelNucleoFamiliarConyugeFechaNacimiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeFechaNacimiento.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeFechaNacimiento.Location = new System.Drawing.Point(491, 109);
+            this.labelNucleoFamiliarConyugeFechaNacimiento.Location = new System.Drawing.Point(653, 127);
             this.labelNucleoFamiliarConyugeFechaNacimiento.Name = "labelNucleoFamiliarConyugeFechaNacimiento";
             this.labelNucleoFamiliarConyugeFechaNacimiento.Size = new System.Drawing.Size(154, 21);
             this.labelNucleoFamiliarConyugeFechaNacimiento.TabIndex = 47;
@@ -1117,7 +1146,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Red;
-            this.label26.Location = new System.Drawing.Point(410, 134);
+            this.label26.Location = new System.Drawing.Point(542, 152);
             this.label26.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(22, 29);
@@ -1137,10 +1166,10 @@
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.LineThickness = 3;
-            this.textBoxNucleoFamiliarConyugeNumeroTelefono.Location = new System.Drawing.Point(26, 133);
+            this.textBoxNucleoFamiliarConyugeNumeroTelefono.Location = new System.Drawing.Point(96, 151);
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.Name = "textBoxNucleoFamiliarConyugeNumeroTelefono";
-            this.textBoxNucleoFamiliarConyugeNumeroTelefono.Size = new System.Drawing.Size(379, 29);
+            this.textBoxNucleoFamiliarConyugeNumeroTelefono.Size = new System.Drawing.Size(427, 29);
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.TabIndex = 44;
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
@@ -1150,7 +1179,7 @@
             this.labelNucleoFamiliarConyugeNumeroTelefono.AutoSize = true;
             this.labelNucleoFamiliarConyugeNumeroTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeNumeroTelefono.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeNumeroTelefono.Location = new System.Drawing.Point(21, 111);
+            this.labelNucleoFamiliarConyugeNumeroTelefono.Location = new System.Drawing.Point(92, 127);
             this.labelNucleoFamiliarConyugeNumeroTelefono.Name = "labelNucleoFamiliarConyugeNumeroTelefono";
             this.labelNucleoFamiliarConyugeNumeroTelefono.Size = new System.Drawing.Size(142, 21);
             this.labelNucleoFamiliarConyugeNumeroTelefono.TabIndex = 43;
@@ -1161,7 +1190,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(410, 76);
+            this.label24.Location = new System.Drawing.Point(542, 91);
             this.label24.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(22, 29);
@@ -1173,9 +1202,9 @@
             // 
             this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.BackColor = System.Drawing.Color.White;
             this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.Location = new System.Drawing.Point(26, 82);
+            this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.Location = new System.Drawing.Point(93, 92);
             this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.Name = "comboBoxNucleoFamiliarConyugeTipoIdentificacion";
-            this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.Size = new System.Drawing.Size(430, 26);
             this.comboBoxNucleoFamiliarConyugeTipoIdentificacion.TabIndex = 41;
             // 
             // label25
@@ -1183,7 +1212,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Red;
-            this.label25.Location = new System.Drawing.Point(880, 77);
+            this.label25.Location = new System.Drawing.Point(1108, 89);
             this.label25.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(22, 29);
@@ -1203,10 +1232,10 @@
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.LineThickness = 3;
-            this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Location = new System.Drawing.Point(496, 76);
+            this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Location = new System.Drawing.Point(657, 86);
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Name = "textBoxNucleoFamiliarConyugeNumeroIdentificacion";
-            this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Size = new System.Drawing.Size(379, 29);
+            this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Size = new System.Drawing.Size(427, 29);
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.TabIndex = 39;
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
@@ -1216,7 +1245,7 @@
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.AutoSize = true;
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeNumeroIdentificacion.Location = new System.Drawing.Point(492, 58);
+            this.labelNucleoFamiliarConyugeNumeroIdentificacion.Location = new System.Drawing.Point(653, 61);
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.Name = "labelNucleoFamiliarConyugeNumeroIdentificacion";
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.Size = new System.Drawing.Size(184, 21);
             this.labelNucleoFamiliarConyugeNumeroIdentificacion.TabIndex = 38;
@@ -1227,7 +1256,7 @@
             this.labelNucleoFamiliarConyugeTipoIdentificacion.AutoSize = true;
             this.labelNucleoFamiliarConyugeTipoIdentificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeTipoIdentificacion.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeTipoIdentificacion.Location = new System.Drawing.Point(22, 58);
+            this.labelNucleoFamiliarConyugeTipoIdentificacion.Location = new System.Drawing.Point(92, 57);
             this.labelNucleoFamiliarConyugeTipoIdentificacion.Name = "labelNucleoFamiliarConyugeTipoIdentificacion";
             this.labelNucleoFamiliarConyugeTipoIdentificacion.Size = new System.Drawing.Size(154, 21);
             this.labelNucleoFamiliarConyugeTipoIdentificacion.TabIndex = 37;
@@ -1245,10 +1274,10 @@
             this.textBoxNucleoFamiliarConyugeApellidos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeApellidos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeApellidos.LineThickness = 3;
-            this.textBoxNucleoFamiliarConyugeApellidos.Location = new System.Drawing.Point(496, 23);
+            this.textBoxNucleoFamiliarConyugeApellidos.Location = new System.Drawing.Point(657, 26);
             this.textBoxNucleoFamiliarConyugeApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeApellidos.Name = "textBoxNucleoFamiliarConyugeApellidos";
-            this.textBoxNucleoFamiliarConyugeApellidos.Size = new System.Drawing.Size(379, 29);
+            this.textBoxNucleoFamiliarConyugeApellidos.Size = new System.Drawing.Size(427, 29);
             this.textBoxNucleoFamiliarConyugeApellidos.TabIndex = 36;
             this.textBoxNucleoFamiliarConyugeApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -1257,7 +1286,7 @@
             this.labelNucleoFamiliarConyugeNombres.AutoSize = true;
             this.labelNucleoFamiliarConyugeNombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeNombres.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeNombres.Location = new System.Drawing.Point(22, 5);
+            this.labelNucleoFamiliarConyugeNombres.Location = new System.Drawing.Point(92, 5);
             this.labelNucleoFamiliarConyugeNombres.Name = "labelNucleoFamiliarConyugeNombres";
             this.labelNucleoFamiliarConyugeNombres.Size = new System.Drawing.Size(79, 21);
             this.labelNucleoFamiliarConyugeNombres.TabIndex = 31;
@@ -1275,10 +1304,10 @@
             this.textBoxNucleoFamiliarConyugeNombres.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNombres.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNombres.LineThickness = 3;
-            this.textBoxNucleoFamiliarConyugeNombres.Location = new System.Drawing.Point(26, 23);
+            this.textBoxNucleoFamiliarConyugeNombres.Location = new System.Drawing.Point(96, 20);
             this.textBoxNucleoFamiliarConyugeNombres.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeNombres.Name = "textBoxNucleoFamiliarConyugeNombres";
-            this.textBoxNucleoFamiliarConyugeNombres.Size = new System.Drawing.Size(379, 29);
+            this.textBoxNucleoFamiliarConyugeNombres.Size = new System.Drawing.Size(427, 29);
             this.textBoxNucleoFamiliarConyugeNombres.TabIndex = 35;
             this.textBoxNucleoFamiliarConyugeNombres.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -1287,7 +1316,7 @@
             this.labelNucleoFamiliarConyugeApellidos.AutoSize = true;
             this.labelNucleoFamiliarConyugeApellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyugeApellidos.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyugeApellidos.Location = new System.Drawing.Point(491, 5);
+            this.labelNucleoFamiliarConyugeApellidos.Location = new System.Drawing.Point(653, 5);
             this.labelNucleoFamiliarConyugeApellidos.Name = "labelNucleoFamiliarConyugeApellidos";
             this.labelNucleoFamiliarConyugeApellidos.Size = new System.Drawing.Size(80, 21);
             this.labelNucleoFamiliarConyugeApellidos.TabIndex = 32;
@@ -1298,7 +1327,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(879, 27);
+            this.label22.Location = new System.Drawing.Point(1108, 26);
             this.label22.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(22, 29);
@@ -1311,7 +1340,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(410, 27);
+            this.label23.Location = new System.Drawing.Point(542, 26);
             this.label23.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(22, 29);
@@ -1324,7 +1353,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(416, 117);
+            this.label21.Location = new System.Drawing.Point(549, 103);
             this.label21.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(22, 29);
@@ -1336,9 +1365,9 @@
             // 
             this.comboBoxNucleoFamiliarConyuge.BackColor = System.Drawing.Color.White;
             this.comboBoxNucleoFamiliarConyuge.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxNucleoFamiliarConyuge.Location = new System.Drawing.Point(32, 122);
+            this.comboBoxNucleoFamiliarConyuge.Location = new System.Drawing.Point(103, 98);
             this.comboBoxNucleoFamiliarConyuge.Name = "comboBoxNucleoFamiliarConyuge";
-            this.comboBoxNucleoFamiliarConyuge.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxNucleoFamiliarConyuge.Size = new System.Drawing.Size(427, 26);
             this.comboBoxNucleoFamiliarConyuge.TabIndex = 28;
             this.comboBoxNucleoFamiliarConyuge.SelectedIndexChanged += new System.EventHandler(this.ValidarPaneles);
             // 
@@ -1347,7 +1376,7 @@
             this.labelNucleoFamiliarConyuge.AutoSize = true;
             this.labelNucleoFamiliarConyuge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNucleoFamiliarConyuge.ForeColor = System.Drawing.Color.Black;
-            this.labelNucleoFamiliarConyuge.Location = new System.Drawing.Point(28, 91);
+            this.labelNucleoFamiliarConyuge.Location = new System.Drawing.Point(99, 78);
             this.labelNucleoFamiliarConyuge.Name = "labelNucleoFamiliarConyuge";
             this.labelNucleoFamiliarConyuge.Size = new System.Drawing.Size(82, 21);
             this.labelNucleoFamiliarConyuge.TabIndex = 27;
@@ -1358,11 +1387,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(97, 49);
+            this.label1.Location = new System.Drawing.Point(340, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(638, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "POR FAVOR INGRESAR LA INFORMACIÓN DE SU NÚCLEO FAMILIAR";
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::ManejoFondo.Properties.Resources.nucleoFamiliar;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(1162, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(112, 114);
+            this.panel2.TabIndex = 4;
             // 
             // tabIngresos
             // 
@@ -1386,7 +1424,7 @@
             this.tabIngresos.Location = new System.Drawing.Point(4, 27);
             this.tabIngresos.Name = "tabIngresos";
             this.tabIngresos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIngresos.Size = new System.Drawing.Size(987, 571);
+            this.tabIngresos.Size = new System.Drawing.Size(1333, 575);
             this.tabIngresos.TabIndex = 3;
             this.tabIngresos.Text = "Ingresos";
             // 
@@ -1402,10 +1440,10 @@
             this.textBoxIngresosTipoCultivo.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxIngresosTipoCultivo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxIngresosTipoCultivo.LineThickness = 3;
-            this.textBoxIngresosTipoCultivo.Location = new System.Drawing.Point(500, 197);
+            this.textBoxIngresosTipoCultivo.Location = new System.Drawing.Point(664, 171);
             this.textBoxIngresosTipoCultivo.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIngresosTipoCultivo.Name = "textBoxIngresosTipoCultivo";
-            this.textBoxIngresosTipoCultivo.Size = new System.Drawing.Size(379, 29);
+            this.textBoxIngresosTipoCultivo.Size = new System.Drawing.Size(427, 29);
             this.textBoxIngresosTipoCultivo.TabIndex = 35;
             this.textBoxIngresosTipoCultivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -1421,10 +1459,10 @@
             this.textBoxIngresosTipoAnimales.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxIngresosTipoAnimales.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxIngresosTipoAnimales.LineThickness = 3;
-            this.textBoxIngresosTipoAnimales.Location = new System.Drawing.Point(30, 197);
+            this.textBoxIngresosTipoAnimales.Location = new System.Drawing.Point(103, 171);
             this.textBoxIngresosTipoAnimales.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIngresosTipoAnimales.Name = "textBoxIngresosTipoAnimales";
-            this.textBoxIngresosTipoAnimales.Size = new System.Drawing.Size(379, 29);
+            this.textBoxIngresosTipoAnimales.Size = new System.Drawing.Size(427, 29);
             this.textBoxIngresosTipoAnimales.TabIndex = 34;
             this.textBoxIngresosTipoAnimales.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -1433,7 +1471,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(884, 200);
+            this.label19.Location = new System.Drawing.Point(1108, 171);
             this.label19.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(22, 29);
@@ -1446,7 +1484,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Red;
-            this.label20.Location = new System.Drawing.Point(414, 200);
+            this.label20.Location = new System.Drawing.Point(549, 171);
             this.label20.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(22, 29);
@@ -1459,7 +1497,7 @@
             this.labelIngresosTipoCultivo.AutoSize = true;
             this.labelIngresosTipoCultivo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIngresosTipoCultivo.ForeColor = System.Drawing.Color.Black;
-            this.labelIngresosTipoCultivo.Location = new System.Drawing.Point(496, 175);
+            this.labelIngresosTipoCultivo.Location = new System.Drawing.Point(660, 146);
             this.labelIngresosTipoCultivo.Name = "labelIngresosTipoCultivo";
             this.labelIngresosTipoCultivo.Size = new System.Drawing.Size(102, 21);
             this.labelIngresosTipoCultivo.TabIndex = 31;
@@ -1470,7 +1508,7 @@
             this.labelIngresosTipoAnimales.AutoSize = true;
             this.labelIngresosTipoAnimales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIngresosTipoAnimales.ForeColor = System.Drawing.Color.Black;
-            this.labelIngresosTipoAnimales.Location = new System.Drawing.Point(26, 175);
+            this.labelIngresosTipoAnimales.Location = new System.Drawing.Point(99, 146);
             this.labelIngresosTipoAnimales.Name = "labelIngresosTipoAnimales";
             this.labelIngresosTipoAnimales.Size = new System.Drawing.Size(117, 21);
             this.labelIngresosTipoAnimales.TabIndex = 30;
@@ -1488,10 +1526,10 @@
             this.textBoxIngresosIngresosMensuales.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxIngresosIngresosMensuales.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxIngresosIngresosMensuales.LineThickness = 3;
-            this.textBoxIngresosIngresosMensuales.Location = new System.Drawing.Point(501, 125);
+            this.textBoxIngresosIngresosMensuales.Location = new System.Drawing.Point(664, 102);
             this.textBoxIngresosIngresosMensuales.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIngresosIngresosMensuales.Name = "textBoxIngresosIngresosMensuales";
-            this.textBoxIngresosIngresosMensuales.Size = new System.Drawing.Size(379, 29);
+            this.textBoxIngresosIngresosMensuales.Size = new System.Drawing.Size(427, 26);
             this.textBoxIngresosIngresosMensuales.TabIndex = 29;
             this.textBoxIngresosIngresosMensuales.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -1500,7 +1538,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(885, 128);
+            this.label18.Location = new System.Drawing.Point(1108, 107);
             this.label18.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(22, 29);
@@ -1513,7 +1551,7 @@
             this.labelIngresosIngresosMensuales.AutoSize = true;
             this.labelIngresosIngresosMensuales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIngresosIngresosMensuales.ForeColor = System.Drawing.Color.Black;
-            this.labelIngresosIngresosMensuales.Location = new System.Drawing.Point(497, 103);
+            this.labelIngresosIngresosMensuales.Location = new System.Drawing.Point(660, 78);
             this.labelIngresosIngresosMensuales.Name = "labelIngresosIngresosMensuales";
             this.labelIngresosIngresosMensuales.Size = new System.Drawing.Size(158, 21);
             this.labelIngresosIngresosMensuales.TabIndex = 27;
@@ -1524,7 +1562,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(414, 129);
+            this.label17.Location = new System.Drawing.Point(549, 107);
             this.label17.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(22, 29);
@@ -1536,9 +1574,9 @@
             // 
             this.comboBoxIngresosActividadEconomica.BackColor = System.Drawing.Color.White;
             this.comboBoxIngresosActividadEconomica.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxIngresosActividadEconomica.Location = new System.Drawing.Point(30, 134);
+            this.comboBoxIngresosActividadEconomica.Location = new System.Drawing.Point(103, 102);
             this.comboBoxIngresosActividadEconomica.Name = "comboBoxIngresosActividadEconomica";
-            this.comboBoxIngresosActividadEconomica.Size = new System.Drawing.Size(379, 26);
+            this.comboBoxIngresosActividadEconomica.Size = new System.Drawing.Size(427, 26);
             this.comboBoxIngresosActividadEconomica.TabIndex = 25;
             // 
             // labelIngresosActividadEconomica
@@ -1546,7 +1584,7 @@
             this.labelIngresosActividadEconomica.AutoSize = true;
             this.labelIngresosActividadEconomica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIngresosActividadEconomica.ForeColor = System.Drawing.Color.Black;
-            this.labelIngresosActividadEconomica.Location = new System.Drawing.Point(26, 103);
+            this.labelIngresosActividadEconomica.Location = new System.Drawing.Point(99, 78);
             this.labelIngresosActividadEconomica.Name = "labelIngresosActividadEconomica";
             this.labelIngresosActividadEconomica.Size = new System.Drawing.Size(170, 21);
             this.labelIngresosActividadEconomica.TabIndex = 24;
@@ -1557,7 +1595,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(129, 50);
+            this.label2.Location = new System.Drawing.Point(340, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(580, 22);
             this.label2.TabIndex = 7;
@@ -1570,12 +1608,13 @@
             this.ingresoAsociadoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ingresoAsociadoCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ingresoAsociadoCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(66)))), ((int)(((byte)(45)))));
-            this.ingresoAsociadoCancelar.Location = new System.Drawing.Point(482, 462);
+            this.ingresoAsociadoCancelar.Location = new System.Drawing.Point(624, 390);
             this.ingresoAsociadoCancelar.Name = "ingresoAsociadoCancelar";
             this.ingresoAsociadoCancelar.Size = new System.Drawing.Size(253, 39);
             this.ingresoAsociadoCancelar.TabIndex = 8;
             this.ingresoAsociadoCancelar.Text = "Cancelar";
             this.ingresoAsociadoCancelar.UseVisualStyleBackColor = false;
+            this.ingresoAsociadoCancelar.Click += new System.EventHandler(this.ReiniciarDatosFormulario);
             // 
             // ingresoAsociadoAceptar
             // 
@@ -1584,13 +1623,22 @@
             this.ingresoAsociadoAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ingresoAsociadoAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ingresoAsociadoAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.ingresoAsociadoAceptar.Location = new System.Drawing.Point(223, 462);
+            this.ingresoAsociadoAceptar.Location = new System.Drawing.Point(365, 390);
             this.ingresoAsociadoAceptar.Name = "ingresoAsociadoAceptar";
             this.ingresoAsociadoAceptar.Size = new System.Drawing.Size(253, 39);
             this.ingresoAsociadoAceptar.TabIndex = 7;
             this.ingresoAsociadoAceptar.Text = "Aceptar";
             this.ingresoAsociadoAceptar.UseVisualStyleBackColor = false;
             this.ingresoAsociadoAceptar.Click += new System.EventHandler(this.AceptarIngresarAsociado);
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::ManejoFondo.Properties.Resources.ingresos;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(1162, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(112, 114);
+            this.panel3.TabIndex = 6;
             // 
             // dataGridViewImageColumn1
             // 
@@ -1600,57 +1648,6 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Width = 927;
-            // 
-            // panelImagenDatosPersonales
-            // 
-            this.panelImagenDatosPersonales.BackgroundImage = global::ManejoFondo.Properties.Resources.datosPersonales;
-            this.panelImagenDatosPersonales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelImagenDatosPersonales.Location = new System.Drawing.Point(841, 3);
-            this.panelImagenDatosPersonales.Name = "panelImagenDatosPersonales";
-            this.panelImagenDatosPersonales.Size = new System.Drawing.Size(86, 90);
-            this.panelImagenDatosPersonales.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::ManejoFondo.Properties.Resources.ayudasGobierno;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(814, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(112, 114);
-            this.panel1.TabIndex = 2;
-            // 
-            // panelIngresoAsociadoRegresar
-            // 
-            this.panelIngresoAsociadoRegresar.BackgroundImage = global::ManejoFondo.Properties.Resources.regresar;
-            this.panelIngresoAsociadoRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelIngresoAsociadoRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelIngresoAsociadoRegresar.Location = new System.Drawing.Point(911, 576);
-            this.panelIngresoAsociadoRegresar.Name = "panelIngresoAsociadoRegresar";
-            this.panelIngresoAsociadoRegresar.Size = new System.Drawing.Size(28, 28);
-            this.panelIngresoAsociadoRegresar.TabIndex = 9;
-            this.panelIngresoAsociadoRegresar.Click += new System.EventHandler(this.RegresarMenuPrincipal);
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::ManejoFondo.Properties.Resources.nucleoFamiliar;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(814, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(112, 114);
-            this.panel2.TabIndex = 4;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::ManejoFondo.Properties.Resources.ingresos;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(813, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(112, 114);
-            this.panel3.TabIndex = 6;
-            // 
-            // usuarioModelBindingSource
-            // 
-            this.usuarioModelBindingSource.DataSource = typeof(ManejoFondo.Modelos.UsuarioModel);
             // 
             // nombresDataGridViewTextBoxColumn
             // 
@@ -1715,17 +1712,22 @@
             this.parentescoDataGridViewTextBoxColumn.Name = "parentescoDataGridViewTextBoxColumn";
             this.parentescoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // usuarioModelBindingSource
+            // 
+            this.usuarioModelBindingSource.DataSource = typeof(ManejoFondo.Modelos.UsuarioModel);
+            // 
             // FormIngresoAsociado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1022, 690);
+            this.ClientSize = new System.Drawing.Size(1368, 727);
             this.Controls.Add(this.tabIngresarAsociado);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormIngresoAsociado";
             this.Text = "Ingresar Asociado";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabIngresarAsociado.ResumeLayout(false);
             this.tabDatosPersona.ResumeLayout(false);
             this.tabDatosPersona.PerformLayout();
