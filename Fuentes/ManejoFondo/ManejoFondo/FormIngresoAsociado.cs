@@ -45,6 +45,8 @@ namespace ManejoFondo
             //Ajustar height
             var bounds = Screen.FromControl(this).Bounds;
             this.Height = bounds.Height - 100;
+            tabIngresarAsociado.Left = (this.ClientSize.Width - tabIngresarAsociado.Width) / 2;
+            tabIngresarAsociado.Top = (this.ClientSize.Height - tabIngresarAsociado.Height) / 2;
 
             //Valores por defecto
             InicializarTooltips();
@@ -283,7 +285,7 @@ namespace ManejoFondo
                 }
                 else
                 {
-                    return false;
+                    return true;
                 }
             }
         }
@@ -552,6 +554,105 @@ namespace ManejoFondo
             }
             else
             {
+                ingresoAsociadoAceptar.Enabled = false;
+
+                //Se setea la informacion del usuario
+                FondoDominiosEntity datosPersonaTipoIdentificacion = (FondoDominiosEntity)comboBoxDatosPersonaTipoIdentificacion.SelectedItem;
+                FondoDominiosEntity datosPersonaNivelEstudio = (FondoDominiosEntity)comboBoxDatosPersonaNivelEstudio.SelectedItem;
+                FondoDominiosEntity datosPersonaEstadoCivil = (FondoDominiosEntity)comboBoxDatosPersonaEstadoCivil.SelectedItem;
+                FondoUsuarioEntity usuario = new FondoUsuarioEntity
+                {
+                    V_Tipo_Identificacion = datosPersonaTipoIdentificacion.V_Codigo,
+                    V_Numero_Identificacion = Convert.ToInt64(textBoxDatosPersonaNumeroIdentificacion.Text),
+                    V_Nombres = textBoxDatosPersonaNombres.Text,
+                    V_Apellidos = textBoxDatosPersonasApellidos.Text,
+                    N_Telefono = Convert.ToInt32(textBoxDatosPersonaTelefono.Text),
+                    V_Nivel_Estudio = datosPersonaNivelEstudio.V_Codigo,
+                    V_Puntaje_Sisben = textBoxAyudaGobiernoPuntajeSisben.Text,
+                    V_Estado_Civil = datosPersonaEstadoCivil.V_Codigo,
+                    V_Nombre_Institucion = textBoxDatosPersonaNombreInstitucion.Text,
+                    F_Fecha_Nacimiento = datePickerDatosPersonaFechaNacimiento.Value,
+                    F_Fecha_Registro = DateTime.Now,
+                    N_Antiguedad_Asociacion = Convert.ToInt32(textBoxDatosPersonaAntiguedadAsociacion.Text)
+                };
+
+                FondoDominiosEntity datosPersonaPais = (FondoDominiosEntity)comboBoxDatosPersonaPais.SelectedItem;
+                FondoDominiosEntity datosPersonaDepartamento = (FondoDominiosEntity)comboBoxDatosPersonaDepartamento.SelectedItem;
+                FondoDominiosEntity datosPersonaMunicipio = (FondoDominiosEntity)comboBoxDatosPersonaMunicipio.SelectedItem;
+                FondoProcUsuarioEntity procedencia = new FondoProcUsuarioEntity
+                {
+                    N_Id_Usuario = Convert.ToInt64(textBoxDatosPersonaNumeroIdentificacion.Text),
+                    V_Pais = datosPersonaPais.V_Codigo,
+                    V_Departamento = datosPersonaDepartamento.V_Codigo,
+                    V_Municipio = datosPersonaMunicipio.V_Codigo,
+                    V_Vereda = textBoxDatosPersonaVereda.Text
+                };
+
+                //Se setea la informacion de las ayudas del gobierno
+                FondoDominiosEntity ayudaGobTipoVictima = (FondoDominiosEntity)comboBoxAyudaGobiernoTipoVictima.SelectedItem;
+                FondoDominiosEntity ayudaGobRecibeSubsidio = (FondoDominiosEntity)comboBoxAyudaGobiernoRecibeSubsidio.SelectedItem;
+                FondoDominiosEntity ayudaGobTipoSubsidio = (FondoDominiosEntity)comboBoxAyudaGobiernoTipoSubsidio.SelectedItem;
+                FondoAyudaGobEntity ayudaGob = new FondoAyudaGobEntity
+                {
+                    N_Id_Usuario = Convert.ToInt64(textBoxDatosPersonaNumeroIdentificacion.Text),
+                    V_Tipo_Victima = ayudaGobTipoVictima.V_Codigo,
+                    V_Recibe_Subsidio = ayudaGobRecibeSubsidio.V_Codigo,
+                    V_Tipo_Subsidio = ayudaGobRecibeSubsidio.V_Valor.ToUpper().Equals(Constantes.DescripcionSi.ToUpper()) ? ayudaGobTipoSubsidio.V_Codigo : ""
+                };
+                //Se setea la informacion familiar
+                List<FondoFamiliaEntity> fondoFamilia = new List<FondoFamiliaEntity>();
+                //Datos del grid
+                foreach (DataGridViewRow dr in dataGridNucleoFamiliarIntegrantes.Rows)
+                {
+                    FondoFamiliaEntity item = new FondoFamiliaEntity();
+                    foreach (DataGridViewCell dc in dr.Cells)
+                    {
+                        item.N_Id_Usuario = Convert.ToInt64(textBoxDatosPersonaNumeroIdentificacion.Text);
+                        item.V_Nombres = dr.Cells[0] != null ? dr.Cells[0].Value.ToString() : "";
+                        item.V_Apellidos = dr.Cells[1] != null ? dr.Cells[1].Value.ToString() : "";
+                        item.V_Tipo_Identificacion = dr.Cells[2] != null ? dr.Cells[2].Value.ToString() : ""; //
+                        item.V_Numero_Identificacion = dr.Cells[3] != null ? Convert.ToInt64(dr.Cells[3].Value.ToString()) : 0;
+                        item.F_Fecha_Nacimiento = dr.Cells[5] != null ? DateTime.Parse(dr.Cells[5].Value.ToString()) : DateTime.Now;
+                        item.V_Tipo_Parentezco = dr.Cells[8] != null ? dr.Cells[8].Value.ToString() : "";
+                        item.N_Telefono = dr.Cells[4] != null ? Convert.ToInt32(dr.Cells[4].Value.ToString()) : 0;
+                        item.V_Tipo_Actividad = dr.Cells[6] != null ? dr.Cells[6].Value.ToString() : "";
+                        item.V_Cual_Otra = "";
+                    }
+
+                    fondoFamilia.Add(item);
+                }
+
+                FondoDominiosEntity nucleoFamiliarConyuge = (FondoDominiosEntity)comboBoxNucleoFamiliarConyuge.SelectedItem;
+                FondoDominiosEntity nucleoFamiliarTipoIdentificacion = (FondoDominiosEntity)comboBoxNucleoFamiliarConyugeTipoIdentificacion.SelectedItem;
+                FondoDominiosEntity nucleoFamiliarTipoActividad = (FondoDominiosEntity)comboBoxNucleoFamiliarConyugeTipoActividad.SelectedItem;
+                if (nucleoFamiliarConyuge.V_Valor.ToUpper().Equals(Constantes.DescripcionSi.ToUpper()))
+                {
+                    FondoFamiliaEntity conyuge = new FondoFamiliaEntity
+                    {
+                        N_Id_Usuario = Convert.ToInt64(textBoxDatosPersonaNumeroIdentificacion.Text),
+                        V_Nombres = textBoxNucleoFamiliarConyugeNombres.Text,
+                        V_Apellidos = textBoxNucleoFamiliarConyugeApellidos.Text,
+                        V_Tipo_Identificacion = nucleoFamiliarTipoIdentificacion.V_Codigo,
+                        V_Numero_Identificacion = Convert.ToInt64(textBoxNucleoFamiliarConyugeNumeroIdentificacion.Text),
+                        F_Fecha_Nacimiento = datePickerNucleoFamiliarConyugeFechaNacimiento.Value,
+                        V_Tipo_Parentezco = Constantes.DominioConyuge,
+                        N_Telefono = Convert.ToInt32(textBoxNucleoFamiliarConyugeNumeroTelefono.Text),
+                        V_Tipo_Actividad = nucleoFamiliarTipoActividad.V_Codigo,
+                        V_Cual_Otra = nucleoFamiliarTipoActividad.V_Valor.ToUpper().Equals(Constantes.DescripcionOtro.ToUpper()) ? labelNucleoFamiliarConyugeOtraActividad.Text : ""
+                    };
+                }
+
+                //Se setea la informacion de los ingresos
+                FondoDominiosEntity ingresosTipoActividad = (FondoDominiosEntity)comboBoxIngresosActividadEconomica.SelectedItem;
+                FondoIngresosEntity ingresos = new FondoIngresosEntity
+                {
+                    N_Id_Usuario = Convert.ToInt64(textBoxDatosPersonaNumeroIdentificacion.Text),
+                    N_Ingresos_Mensuales = float.Parse(textBoxIngresosIngresosMensuales.Text),
+                    V_Tipo_Actividad = ingresosTipoActividad.V_Codigo,
+                    V_Tipo_Animales = ingresosTipoActividad.V_Valor.ToUpper().Equals(Constantes.DescripcionPecuario.ToUpper()) ? textBoxIngresosTipoAnimales.Text : "",
+                    V_Tipo_Cultivo = ingresosTipoActividad.V_Valor.ToUpper().Equals(Constantes.DescripcionAgricultura.ToUpper()) ? textBoxIngresosTipoCultivo.Text : ""
+            };
+
                 LimpiarDatosFormulario();
                 tabIngresarAsociado.SelectedIndex = 0;
                 General.MostrarPanelError(Constantes.CodigoExito, Constantes.MsjExitoGuardar);

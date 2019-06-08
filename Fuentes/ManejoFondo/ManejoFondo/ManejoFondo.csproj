@@ -148,6 +148,10 @@
     <Compile Include="Common\BusinessException.cs" />
     <Compile Include="Common\Constantes.cs" />
     <Compile Include="Common\General.cs" />
+    <Compile Include="Daos\FondoAyudaGobDao.cs" />
+    <Compile Include="Daos\FondoFamiliaUsuarioDao.cs" />
+    <Compile Include="Daos\FondoProcUsuarioDao.cs" />
+    <Compile Include="Daos\FondoUsuarioDao.cs" />
     <Compile Include="FormAgregarNucleoFamiliar.cs">
       <SubType>Form</SubType>
     </Compile>

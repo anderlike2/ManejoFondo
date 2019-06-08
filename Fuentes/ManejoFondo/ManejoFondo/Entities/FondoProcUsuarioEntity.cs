@@ -14,7 +14,7 @@ namespace ManejoFondo.Entities
     public class FondoProcUsuarioEntity : ErrorEntity
     {
         public int N_Id { get; set; }
-        public int N_Id_Usuario { get; set; }
+        public long N_Id_Usuario { get; set; }
         public string V_Pais { get; set; }
         public string V_Departamento { get; set; }
         public string V_Municipio { get; set; }

@@ -14,7 +14,7 @@ namespace ManejoFondo.Entities
     public class FondoAhorroMensualEntity : ErrorEntity
     {
         public int N_Id { get; set; }
-        public int N_Id_Usuario { get; set; }
+        public long N_Id_Usuario { get; set; }
         public double N_Valor_Cuota { get; set; }
         public DateTime F_Fecha_Registro { get; set; }
     }

@@ -15,7 +15,7 @@ namespace ManejoFondo.Entities
     {
         public int N_Id { get; set; }
         public string V_Tipo_Identificacion { get; set; }
-        public string V_Numero_Identificacion { get; set; }
+        public long V_Numero_Identificacion { get; set; }
         public string V_Nombres { get; set; }
         public string V_Apellidos { get; set; }
         public int N_Telefono { get; set; }

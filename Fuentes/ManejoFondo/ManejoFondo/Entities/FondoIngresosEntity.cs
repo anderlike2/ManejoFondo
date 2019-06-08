@@ -14,7 +14,7 @@ namespace ManejoFondo.Entities
     public class FondoIngresosEntity : ErrorEntity
     {
         public int N_Id { get; set; }
-        public int N_Id_Usuario { get; set; }
+        public long N_Id_Usuario { get; set; }
         public float N_Ingresos_Mensuales { get; set; }
         public string V_Tipo_Actividad { get; set; }
         public string V_Tipo_Animales { get; set; }

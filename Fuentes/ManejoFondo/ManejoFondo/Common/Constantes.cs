@@ -53,7 +53,7 @@ namespace ManejoFondo.Common
         #endregion
 
         #region Dominios
-        public const string DominioPais = "PAIS_COL";
+        public const string DominioPais = "CO_57";
         public const string DominioTiposIdentificacion = "TIPOS_IDENTIFICACION";
         public const string DominioNivelEstudio = "NIVEL_ESTUDIO";
         public const string DominioEstadoCivil = "ESTADO_CIVIL";
@@ -62,6 +62,7 @@ namespace ManejoFondo.Common
         public const string DominioTipoSubsidio = "TIPO_SUBSIDIO";
         public const string DominioTipoActividad = "TIPO_ACTIVIDAD";
         public const string DominioParentesco = "PARENTESCO";
+        public const string DominioConyuge = "PARENT_CONYUGE";
         #endregion
     }
 }

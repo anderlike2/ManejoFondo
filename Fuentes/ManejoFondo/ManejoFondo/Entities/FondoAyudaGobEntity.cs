@@ -14,7 +14,7 @@ namespace ManejoFondo.Entities
     public class FondoAyudaGobEntity : ErrorEntity
     {
         public int N_Id { get; set; }
-        public int N_Id_Usuario { get; set; }
+        public long N_Id_Usuario { get; set; }
         public string V_Tipo_Victima { get; set; }
         public string V_Recibe_Subsidio { get; set; }
         public string V_Tipo_Subsidio { get; set; }
