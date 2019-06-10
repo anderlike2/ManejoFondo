@@ -16,6 +16,7 @@ namespace ManejoFondo.Daos
     /// </summary>
     public class FondoAyudaGobUsuarioDao
     {
+
         // <summary>
         /// Metodo para insertar la ayuda del gobierno para un usuario
         /// Autor: Anderson Benavides
