@@ -56,9 +56,9 @@
             this.opcionesPanelCerrarSesion.BackgroundImage = global::ManejoFondo.Properties.Resources.cerrarSesion;
             this.opcionesPanelCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.opcionesPanelCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.opcionesPanelCerrarSesion.Location = new System.Drawing.Point(419, 512);
+            this.opcionesPanelCerrarSesion.Location = new System.Drawing.Point(425, 512);
             this.opcionesPanelCerrarSesion.Name = "opcionesPanelCerrarSesion";
-            this.opcionesPanelCerrarSesion.Size = new System.Drawing.Size(72, 64);
+            this.opcionesPanelCerrarSesion.Size = new System.Drawing.Size(64, 64);
             this.opcionesPanelCerrarSesion.TabIndex = 1;
             this.opcionesPanelCerrarSesion.Click += new System.EventHandler(this.CerrarSesion);
             // 

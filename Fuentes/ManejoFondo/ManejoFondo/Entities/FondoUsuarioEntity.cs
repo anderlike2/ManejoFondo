@@ -18,13 +18,13 @@ namespace ManejoFondo.Entities
         public long V_Numero_Identificacion { get; set; }
         public string V_Nombres { get; set; }
         public string V_Apellidos { get; set; }
-        public int N_Telefono { get; set; }
+        public long N_Telefono { get; set; }
         public string V_Nivel_Estudio { get; set; }
         public string V_Puntaje_Sisben { get; set; }
         public string V_Estado_Civil { get; set; }
         public string V_Nombre_Institucion { get; set; }
         public DateTime F_Fecha_Nacimiento { get; set; }
         public DateTime F_Fecha_Registro { get; set; }
-        public int N_Antiguedad_Asociacion{ get; set; }
+        public long N_Antiguedad_Asociacion{ get; set; }
     }
 }

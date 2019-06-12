@@ -101,6 +101,7 @@
             this.labelNucleoFamiliarConyugeOtraActividad = new System.Windows.Forms.Label();
             this.labelNucleoFamiliarConyugeTipoActividad = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.textBoxNucleoFamiliarConyugeApellidos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.labelNucleoFamiliarConyugeFechaNacimiento = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.textBoxNucleoFamiliarConyugeNumeroTelefono = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -111,7 +112,6 @@
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.labelNucleoFamiliarConyugeNumeroIdentificacion = new System.Windows.Forms.Label();
             this.labelNucleoFamiliarConyugeTipoIdentificacion = new System.Windows.Forms.Label();
-            this.textBoxNucleoFamiliarConyugeApellidos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.labelNucleoFamiliarConyugeNombres = new System.Windows.Forms.Label();
             this.textBoxNucleoFamiliarConyugeNombres = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.labelNucleoFamiliarConyugeApellidos = new System.Windows.Forms.Label();
@@ -138,16 +138,24 @@
             this.ingresoAsociadoAceptar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoIdentificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroIdentificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otraActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parentescoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.usuarioModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioModelBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumeroIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OtraActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodTipoIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodTipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodParentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabIngresarAsociado.SuspendLayout();
             this.tabDatosPersona.SuspendLayout();
             this.tabAyudaGubernamental.SuspendLayout();
@@ -157,6 +165,8 @@
             this.panelNucleoFamiliarConyuge.SuspendLayout();
             this.tabIngresos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioModelBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioModelBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabIngresarAsociado
@@ -165,6 +175,7 @@
             this.tabIngresarAsociado.Controls.Add(this.tabAyudaGubernamental);
             this.tabIngresarAsociado.Controls.Add(this.tabNucleoFamiliar);
             this.tabIngresarAsociado.Controls.Add(this.tabIngresos);
+            this.tabIngresarAsociado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabIngresarAsociado.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabIngresarAsociado.Location = new System.Drawing.Point(15, 76);
             this.tabIngresarAsociado.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
@@ -179,6 +190,7 @@
             // 
             this.tabDatosPersona.AutoScroll = true;
             this.tabDatosPersona.BackColor = System.Drawing.Color.White;
+            this.tabDatosPersona.Controls.Add(this.panel4);
             this.tabDatosPersona.Controls.Add(this.datePickerDatosPersonaFechaNacimiento);
             this.tabDatosPersona.Controls.Add(this.label13);
             this.tabDatosPersona.Controls.Add(this.labelDatosPersonaFechaNacimiento);
@@ -749,6 +761,7 @@
             // tabAyudaGubernamental
             // 
             this.tabAyudaGubernamental.BackColor = System.Drawing.Color.White;
+            this.tabAyudaGubernamental.Controls.Add(this.panel5);
             this.tabAyudaGubernamental.Controls.Add(this.comboBoxAyudaGobiernoTipoSubsidio);
             this.tabAyudaGubernamental.Controls.Add(this.labelAyudaGobiernoTipoSubsidio);
             this.tabAyudaGubernamental.Controls.Add(this.label16);
@@ -923,6 +936,7 @@
             // tabNucleoFamiliar
             // 
             this.tabNucleoFamiliar.BackColor = System.Drawing.Color.White;
+            this.tabNucleoFamiliar.Controls.Add(this.panel6);
             this.tabNucleoFamiliar.Controls.Add(this.panelIngresoAsociadoRegresar);
             this.tabNucleoFamiliar.Controls.Add(this.panelNucleoFamiliarOtrosFamiliares);
             this.tabNucleoFamiliar.Controls.Add(this.panelNucleoFamiliarConyuge);
@@ -981,16 +995,18 @@
             this.dataGridNucleoFamiliarIntegrantes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridNucleoFamiliarIntegrantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridNucleoFamiliarIntegrantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombresDataGridViewTextBoxColumn,
-            this.apellidosDataGridViewTextBoxColumn,
-            this.tipoIdentificacionDataGridViewTextBoxColumn,
-            this.numeroIdentificacionDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn,
-            this.fechaNacimientoDataGridViewTextBoxColumn,
-            this.tipoActividadDataGridViewTextBoxColumn,
-            this.otraActividadDataGridViewTextBoxColumn,
-            this.parentescoDataGridViewTextBoxColumn});
-            this.dataGridNucleoFamiliarIntegrantes.DataSource = this.usuarioModelBindingSource;
+            this.Nombres,
+            this.Apellidos,
+            this.TipoIdentificacion,
+            this.NumeroIdentificacion,
+            this.Telefono,
+            this.FechaNacimiento,
+            this.TipoActividad,
+            this.OtraActividad,
+            this.CodTipoIdentificacion,
+            this.CodTipoActividad,
+            this.CodParentesco});
+            this.dataGridNucleoFamiliarIntegrantes.DataSource = this.usuarioModelBindingSource2;
             this.dataGridNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(2, 52);
             this.dataGridNucleoFamiliarIntegrantes.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridNucleoFamiliarIntegrantes.Name = "dataGridNucleoFamiliarIntegrantes";
@@ -1129,6 +1145,25 @@
             this.label28.Text = "*";
             this.label28.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
+            // textBoxNucleoFamiliarConyugeApellidos
+            // 
+            this.textBoxNucleoFamiliarConyugeApellidos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxNucleoFamiliarConyugeApellidos.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxNucleoFamiliarConyugeApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxNucleoFamiliarConyugeApellidos.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxNucleoFamiliarConyugeApellidos.HintText = "";
+            this.textBoxNucleoFamiliarConyugeApellidos.isPassword = false;
+            this.textBoxNucleoFamiliarConyugeApellidos.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxNucleoFamiliarConyugeApellidos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxNucleoFamiliarConyugeApellidos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxNucleoFamiliarConyugeApellidos.LineThickness = 3;
+            this.textBoxNucleoFamiliarConyugeApellidos.Location = new System.Drawing.Point(657, 26);
+            this.textBoxNucleoFamiliarConyugeApellidos.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNucleoFamiliarConyugeApellidos.Name = "textBoxNucleoFamiliarConyugeApellidos";
+            this.textBoxNucleoFamiliarConyugeApellidos.Size = new System.Drawing.Size(427, 29);
+            this.textBoxNucleoFamiliarConyugeApellidos.TabIndex = 36;
+            this.textBoxNucleoFamiliarConyugeApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // labelNucleoFamiliarConyugeFechaNacimiento
             // 
             this.labelNucleoFamiliarConyugeFechaNacimiento.AutoSize = true;
@@ -1261,25 +1296,6 @@
             this.labelNucleoFamiliarConyugeTipoIdentificacion.TabIndex = 37;
             this.labelNucleoFamiliarConyugeTipoIdentificacion.Text = "Tipo Identificación";
             // 
-            // textBoxNucleoFamiliarConyugeApellidos
-            // 
-            this.textBoxNucleoFamiliarConyugeApellidos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxNucleoFamiliarConyugeApellidos.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textBoxNucleoFamiliarConyugeApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxNucleoFamiliarConyugeApellidos.HintForeColor = System.Drawing.Color.Empty;
-            this.textBoxNucleoFamiliarConyugeApellidos.HintText = "";
-            this.textBoxNucleoFamiliarConyugeApellidos.isPassword = false;
-            this.textBoxNucleoFamiliarConyugeApellidos.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxNucleoFamiliarConyugeApellidos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxNucleoFamiliarConyugeApellidos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxNucleoFamiliarConyugeApellidos.LineThickness = 3;
-            this.textBoxNucleoFamiliarConyugeApellidos.Location = new System.Drawing.Point(657, 26);
-            this.textBoxNucleoFamiliarConyugeApellidos.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxNucleoFamiliarConyugeApellidos.Name = "textBoxNucleoFamiliarConyugeApellidos";
-            this.textBoxNucleoFamiliarConyugeApellidos.Size = new System.Drawing.Size(427, 29);
-            this.textBoxNucleoFamiliarConyugeApellidos.TabIndex = 36;
-            this.textBoxNucleoFamiliarConyugeApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // labelNucleoFamiliarConyugeNombres
             // 
             this.labelNucleoFamiliarConyugeNombres.AutoSize = true;
@@ -1404,6 +1420,7 @@
             // tabIngresos
             // 
             this.tabIngresos.BackColor = System.Drawing.Color.White;
+            this.tabIngresos.Controls.Add(this.panel7);
             this.tabIngresos.Controls.Add(this.textBoxIngresosTipoCultivo);
             this.tabIngresos.Controls.Add(this.textBoxIngresosTipoAnimales);
             this.tabIngresos.Controls.Add(this.labelIngresosTipoCultivo);
@@ -1621,72 +1638,141 @@
             this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Width = 927;
             // 
-            // nombresDataGridViewTextBoxColumn
+            // panel4
             // 
-            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
-            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
-            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
-            this.nombresDataGridViewTextBoxColumn.ReadOnly = true;
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackgroundImage = global::ManejoFondo.Properties.Resources.regresar;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Location = new System.Drawing.Point(21, 14);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(31, 31);
+            this.panel4.TabIndex = 1;
+            this.panel4.Click += new System.EventHandler(this.RegresarMenuPrincipal);
             // 
-            // apellidosDataGridViewTextBoxColumn
+            // panel5
             // 
-            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
-            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackgroundImage = global::ManejoFondo.Properties.Resources.regresar;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(21, 14);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(31, 31);
+            this.panel5.TabIndex = 26;
+            this.panel5.Click += new System.EventHandler(this.RegresarMenuPrincipal);
             // 
-            // tipoIdentificacionDataGridViewTextBoxColumn
+            // panel6
             // 
-            this.tipoIdentificacionDataGridViewTextBoxColumn.DataPropertyName = "TipoIdentificacion";
-            this.tipoIdentificacionDataGridViewTextBoxColumn.HeaderText = "Tipo ID";
-            this.tipoIdentificacionDataGridViewTextBoxColumn.Name = "tipoIdentificacionDataGridViewTextBoxColumn";
-            this.tipoIdentificacionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BackgroundImage = global::ManejoFondo.Properties.Resources.regresar;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Location = new System.Drawing.Point(21, 14);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(31, 31);
+            this.panel6.TabIndex = 57;
+            this.panel6.Click += new System.EventHandler(this.RegresarMenuPrincipal);
             // 
-            // numeroIdentificacionDataGridViewTextBoxColumn
+            // panel7
             // 
-            this.numeroIdentificacionDataGridViewTextBoxColumn.DataPropertyName = "NumeroIdentificacion";
-            this.numeroIdentificacionDataGridViewTextBoxColumn.HeaderText = "Numero ID";
-            this.numeroIdentificacionDataGridViewTextBoxColumn.Name = "numeroIdentificacionDataGridViewTextBoxColumn";
-            this.numeroIdentificacionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Teléfono";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaNacimientoDataGridViewTextBoxColumn
-            // 
-            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaNacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha Nac.";
-            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
-            this.fechaNacimientoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipoActividadDataGridViewTextBoxColumn
-            // 
-            this.tipoActividadDataGridViewTextBoxColumn.DataPropertyName = "TipoActividad";
-            this.tipoActividadDataGridViewTextBoxColumn.HeaderText = "Actividad";
-            this.tipoActividadDataGridViewTextBoxColumn.Name = "tipoActividadDataGridViewTextBoxColumn";
-            this.tipoActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // otraActividadDataGridViewTextBoxColumn
-            // 
-            this.otraActividadDataGridViewTextBoxColumn.DataPropertyName = "OtraActividad";
-            this.otraActividadDataGridViewTextBoxColumn.HeaderText = "Otra Actividad";
-            this.otraActividadDataGridViewTextBoxColumn.Name = "otraActividadDataGridViewTextBoxColumn";
-            this.otraActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // parentescoDataGridViewTextBoxColumn
-            // 
-            this.parentescoDataGridViewTextBoxColumn.DataPropertyName = "Parentesco";
-            this.parentescoDataGridViewTextBoxColumn.HeaderText = "Parentesco";
-            this.parentescoDataGridViewTextBoxColumn.Name = "parentescoDataGridViewTextBoxColumn";
-            this.parentescoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BackgroundImage = global::ManejoFondo.Properties.Resources.regresar;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel7.Location = new System.Drawing.Point(21, 14);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(31, 31);
+            this.panel7.TabIndex = 36;
+            this.panel7.Click += new System.EventHandler(this.RegresarMenuPrincipal);
             // 
             // usuarioModelBindingSource
             // 
             this.usuarioModelBindingSource.DataSource = typeof(ManejoFondo.Modelos.UsuarioModel);
+            // 
+            // usuarioModelBindingSource2
+            // 
+            this.usuarioModelBindingSource2.DataSource = typeof(ManejoFondo.Modelos.UsuarioModel);
+            // 
+            // usuarioModelBindingSource1
+            // 
+            this.usuarioModelBindingSource1.DataSource = typeof(ManejoFondo.Modelos.UsuarioModel);
+            // 
+            // Nombres
+            // 
+            this.Nombres.DataPropertyName = "Nombres";
+            this.Nombres.HeaderText = "Nombres";
+            this.Nombres.Name = "Nombres";
+            this.Nombres.ReadOnly = true;
+            // 
+            // Apellidos
+            // 
+            this.Apellidos.DataPropertyName = "Apellidos";
+            this.Apellidos.HeaderText = "Apellidos";
+            this.Apellidos.Name = "Apellidos";
+            this.Apellidos.ReadOnly = true;
+            // 
+            // TipoIdentificacion
+            // 
+            this.TipoIdentificacion.DataPropertyName = "TipoIdentificacion";
+            this.TipoIdentificacion.HeaderText = "Tipo ID";
+            this.TipoIdentificacion.Name = "TipoIdentificacion";
+            this.TipoIdentificacion.ReadOnly = true;
+            // 
+            // NumeroIdentificacion
+            // 
+            this.NumeroIdentificacion.DataPropertyName = "NumeroIdentificacion";
+            this.NumeroIdentificacion.HeaderText = "Numero ID";
+            this.NumeroIdentificacion.Name = "NumeroIdentificacion";
+            this.NumeroIdentificacion.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "No. Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // FechaNacimiento
+            // 
+            this.FechaNacimiento.DataPropertyName = "FechaNacimiento";
+            this.FechaNacimiento.HeaderText = "Fecha Nac.";
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.ReadOnly = true;
+            // 
+            // TipoActividad
+            // 
+            this.TipoActividad.DataPropertyName = "TipoActividad";
+            this.TipoActividad.HeaderText = "Tipo Actividad";
+            this.TipoActividad.Name = "TipoActividad";
+            this.TipoActividad.ReadOnly = true;
+            // 
+            // OtraActividad
+            // 
+            this.OtraActividad.DataPropertyName = "OtraActividad";
+            this.OtraActividad.HeaderText = "Cual";
+            this.OtraActividad.Name = "OtraActividad";
+            this.OtraActividad.ReadOnly = true;
+            // 
+            // CodTipoIdentificacion
+            // 
+            this.CodTipoIdentificacion.DataPropertyName = "CodTipoIdentificacion";
+            this.CodTipoIdentificacion.HeaderText = "CodTipoIdentificacion";
+            this.CodTipoIdentificacion.Name = "CodTipoIdentificacion";
+            this.CodTipoIdentificacion.ReadOnly = true;
+            this.CodTipoIdentificacion.Visible = false;
+            // 
+            // CodTipoActividad
+            // 
+            this.CodTipoActividad.DataPropertyName = "CodTipoActividad";
+            this.CodTipoActividad.HeaderText = "CodTipoActividad";
+            this.CodTipoActividad.Name = "CodTipoActividad";
+            this.CodTipoActividad.ReadOnly = true;
+            this.CodTipoActividad.Visible = false;
+            // 
+            // CodParentesco
+            // 
+            this.CodParentesco.DataPropertyName = "CodParentesco";
+            this.CodParentesco.HeaderText = "CodParentesco";
+            this.CodParentesco.Name = "CodParentesco";
+            this.CodParentesco.ReadOnly = true;
+            this.CodParentesco.Visible = false;
             // 
             // FormIngresoAsociado
             // 
@@ -1714,6 +1800,8 @@
             this.tabIngresos.ResumeLayout(false);
             this.tabIngresos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioModelBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioModelBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1829,14 +1917,22 @@
         private System.Windows.Forms.Panel panelNucleoFamiliarOtrosFamiliares;
         private System.Windows.Forms.BindingSource usuarioModelBindingSource;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoIdentificacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroIdentificacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimientoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoActividadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn otraActividadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn parentescoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.BindingSource usuarioModelBindingSource2;
+        private System.Windows.Forms.BindingSource usuarioModelBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoIdentificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroIdentificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OtraActividad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodTipoIdentificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodTipoActividad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodParentesco;
     }
 }

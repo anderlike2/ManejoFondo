@@ -53,7 +53,7 @@ namespace ManejoFondo.Common
         #endregion
 
         #region Dominios
-        public const string DominioPais = "CO_57";
+        public const string DominioPais = "CO57";
         public const string DominioTiposIdentificacion = "TIPOS_IDENTIFICACION";
         public const string DominioNivelEstudio = "NIVEL_ESTUDIO";
         public const string DominioEstadoCivil = "ESTADO_CIVIL";

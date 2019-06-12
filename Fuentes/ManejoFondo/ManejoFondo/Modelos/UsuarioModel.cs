@@ -22,5 +22,9 @@ namespace ManejoFondo.Modelos
         public string TipoActividad { get; set; }
         public string OtraActividad { get; set; }
         public string Parentesco { get; set; }
+
+        public string CodTipoIdentificacion { get; set; }
+        public string CodTipoActividad { get; set; }
+        public string CodParentesco { get; set; }
     }
 }

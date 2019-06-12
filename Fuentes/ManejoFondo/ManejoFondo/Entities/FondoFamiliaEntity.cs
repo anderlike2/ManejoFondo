@@ -21,7 +21,7 @@ namespace ManejoFondo.Entities
         public long V_Numero_Identificacion { get; set; }
         public DateTime F_Fecha_Nacimiento { get; set; }
         public string V_Tipo_Parentezco { get; set; }
-        public int N_Telefono { get; set; }
+        public long N_Telefono { get; set; }
         public string V_Tipo_Actividad { get; set; }
         public string V_Cual_Otra { get; set; }
     }

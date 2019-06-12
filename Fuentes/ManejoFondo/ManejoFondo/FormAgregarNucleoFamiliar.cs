@@ -186,17 +186,25 @@ namespace ManejoFondo
             }
             else
             {
+                FondoDominiosEntity agregarTipoIdentificacion = (FondoDominiosEntity)comboBoxAgregarPersonaTipoIdentificacion.SelectedItem;
+                FondoDominiosEntity agregarTipoActividad = (FondoDominiosEntity)comboBoxAgregarPersonaTipoActividad.SelectedItem;
+                FondoDominiosEntity agregarParentesco = (FondoDominiosEntity)comboBoxAgregarPersonaParentesco.SelectedItem;
+
                 UsuarioModel usuario = new UsuarioModel();
                 //Almacenar provisionalmente la informacion
                 usuario.Nombres = textAgregarPersonaNombres.Text;
                 usuario.Apellidos = textBoxAgregarPersonaApellidos.Text;
-                usuario.TipoIdentificacion = comboBoxAgregarPersonaTipoIdentificacion.Text;
+                usuario.TipoIdentificacion = agregarTipoIdentificacion.V_Valor;
                 usuario.NumeroIdentificacion = textBoxAgregarPersonaNumeroIdentificacion.Text;
                 usuario.Telefono = Convert.ToInt32(textBoxAgregarPersonaNumeroTelefono.Text);
                 usuario.FechaNacimiento = datePickerAgregarPersonaFechaNacimiento.Value;
-                usuario.TipoActividad = comboBoxAgregarPersonaTipoActividad.Text;
+                usuario.TipoActividad = agregarTipoActividad.V_Valor;
                 usuario.OtraActividad = textBoxAgregarPersonaOtraActividad.Text;
-                usuario.Parentesco = comboBoxAgregarPersonaParentesco.Text;
+                usuario.Parentesco = agregarParentesco.V_Valor;
+                //Almacenar los codigos de los combos
+                usuario.CodTipoIdentificacion = agregarTipoIdentificacion.V_Codigo;
+                usuario.CodTipoActividad = agregarTipoActividad.V_Codigo;
+                usuario.CodParentesco = agregarParentesco.V_Codigo;
                 jsonUsuario = new JavaScriptSerializer().Serialize(usuario);
                 Close();
             }
