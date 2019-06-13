@@ -65,7 +65,7 @@ namespace ManejoFondo
                 fondoLoginServie.ActualizarFechaInicioSesion(respuesta.N_Id);
 
                 //Se inicia el formulario de opciones
-                FormOpciones formOpciones = new FormOpciones(respuesta);
+                FormMenu formOpciones = new FormMenu(respuesta);
                 Hide();
                 formOpciones.ShowDialog();
                 Close();

@@ -153,11 +153,17 @@
     <Compile Include="Daos\FondoIngresosUsuarioDao.cs" />
     <Compile Include="Daos\FondoProcUsuarioDao.cs" />
     <Compile Include="Daos\FondoUsuarioDao.cs" />
-    <Compile Include="FormAgregarNucleoFamiliar.cs">
+    <Compile Include="FormModalAgregarNucleoFamiliar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAgregarNucleoFamiliar.Designer.cs">
-      <DependentUpon>FormAgregarNucleoFamiliar.cs</DependentUpon>
+    <Compile Include="FormModalAgregarNucleoFamiliar.Designer.cs">
+      <DependentUpon>FormModalAgregarNucleoFamiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOptAhorroCuotaMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOptAhorroCuotaMensual.Designer.cs">
+      <DependentUpon>FormOptAhorroCuotaMensual.cs</DependentUpon>
     </Compile>
     <Compile Include="Loggers\Log.cs" />
     <Compile Include="Common\Seguridad.cs" />
@@ -174,23 +180,23 @@
     <Compile Include="Entities\FondoParametrosEntity.cs" />
     <Compile Include="Entities\FondoProcUsuarioEntity.cs" />
     <Compile Include="Entities\FondoUsuarioEntity.cs" />
-    <Compile Include="FormIngresoAsociado.cs">
+    <Compile Include="FormOptIngresoAsociado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormIngresoAsociado.Designer.cs">
-      <DependentUpon>FormIngresoAsociado.cs</DependentUpon>
+    <Compile Include="FormOptIngresoAsociado.Designer.cs">
+      <DependentUpon>FormOptIngresoAsociado.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOpciones.cs">
+    <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOpciones.Designer.cs">
-      <DependentUpon>FormOpciones.cs</DependentUpon>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormErrorDialog.cs">
+    <Compile Include="FormModalError.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormErrorDialog.Designer.cs">
-      <DependentUpon>FormErrorDialog.cs</DependentUpon>
+    <Compile Include="FormModalError.Designer.cs">
+      <DependentUpon>FormModalError.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -212,17 +218,20 @@
     <Compile Include="Services\FondoLoginService.cs" />
     <Compile Include="Services\FondoProcUsuarioService.cs" />
     <Compile Include="Services\FondoUsuarioService.cs" />
-    <EmbeddedResource Include="FormAgregarNucleoFamiliar.resx">
-      <DependentUpon>FormAgregarNucleoFamiliar.cs</DependentUpon>
+    <EmbeddedResource Include="FormModalAgregarNucleoFamiliar.resx">
+      <DependentUpon>FormModalAgregarNucleoFamiliar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormIngresoAsociado.resx">
-      <DependentUpon>FormIngresoAsociado.cs</DependentUpon>
+    <EmbeddedResource Include="FormOptAhorroCuotaMensual.resx">
+      <DependentUpon>FormOptAhorroCuotaMensual.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOpciones.resx">
-      <DependentUpon>FormOpciones.cs</DependentUpon>
+    <EmbeddedResource Include="FormOptIngresoAsociado.resx">
+      <DependentUpon>FormOptIngresoAsociado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormErrorDialog.resx">
-      <DependentUpon>FormErrorDialog.cs</DependentUpon>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModalError.resx">
+      <DependentUpon>FormModalError.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -269,6 +278,7 @@
     <Content Include="Resources\Icons\opciones.ico" />
     <Content Include="Resources\Images\agregarInformacion.png" />
     <Content Include="Resources\Images\ahorro.png" />
+    <Content Include="Resources\Images\ahorroCuotaMes.png" />
     <Content Include="Resources\Images\asociado.png" />
     <Content Include="Resources\Images\ayudasGobierno.png" />
     <Content Include="Resources\Images\cambiarClave.png" />

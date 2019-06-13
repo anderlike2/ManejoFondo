@@ -80,7 +80,7 @@ namespace ManejoFondo.Common
         /// <param name="descripcion"></param>
         public static void MostrarPanelError(int codigo, String descripcion)
         {
-            FormErrorDialog formError = new FormErrorDialog(codigo, descripcion);
+            FormModalError formError = new FormModalError(codigo, descripcion);
             formError.ShowDialog();
         }
 
