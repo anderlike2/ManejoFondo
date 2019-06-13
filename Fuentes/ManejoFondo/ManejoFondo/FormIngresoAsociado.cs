@@ -28,6 +28,11 @@ namespace ManejoFondo
     {
         //Variable para guardar el usuario que inicio sesion
         FondoLoginEntity usuarioSesion;
+        FondoUsuarioService fondoUsuarioService = new FondoUsuarioService();
+        FondoProcUsuarioService fondoProcUsuarioService = new FondoProcUsuarioService();
+        FondoAyudaGobUsuarioService fondoAyudaGobUsuarioService = new FondoAyudaGobUsuarioService();
+        FondoFamiliaUsuarioService fondoFamiliaUsuarioService = new FondoFamiliaUsuarioService();
+        FondoIngresosUsuarioService fondoIngresosUsuarioService = new FondoIngresosUsuarioService();
 
         private Dictionary<TabPage, Color> TabColors = new Dictionary<TabPage, Color>();
 
@@ -347,33 +352,63 @@ namespace ManejoFondo
         /// </summary>
         private void ValidarInformacion(object sender, EventArgs e)
         {
-            //Para Ayuda Gobierno
-            switch (tabIngresarAsociado.SelectedIndex)
+            try
             {
-                case 0:
-                    break;
-                case 1:
-                    if (!ValidarInformacionPersona())
-                    {
-                        tabIngresarAsociado.SelectedIndex = 0;
-                        General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
-                    }
-                    break;
-                case 2:
-                    if (!ValidarInformacionPersona() || !ValidarInformacionAyudaGobierno())
-                    {
-                        tabIngresarAsociado.SelectedIndex = 1;
-                        General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
-                    }
-                    break;
-                case 3:
-                    if (!ValidarInformacionPersona() || !ValidarInformacionAyudaGobierno() || !ValidarInformacionNucleoFamiliar())
-                    {
-                        tabIngresarAsociado.SelectedIndex = 2;
-                        General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
-                    }
-                    break;
+                //Para Ayuda Gobierno
+                switch (tabIngresarAsociado.SelectedIndex)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        if (!ValidarInformacionPersona())
+                        {
+                            tabIngresarAsociado.SelectedIndex = 0;
+                            General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
+                        }
+                        else
+                        {
+                            //Se valida la existencia del usuario
+                            FondoDominiosEntity datosPersonaTipoIdentificacion = (FondoDominiosEntity)comboBoxDatosPersonaTipoIdentificacion.SelectedItem;
+                            FondoUsuarioEntity usuarioValidar = new FondoUsuarioEntity();
+                            usuarioValidar.V_Tipo_Identificacion = datosPersonaTipoIdentificacion.V_Codigo;
+                            usuarioValidar.V_Numero_Identificacion = Convert.ToInt64(textBoxDatosPersonaNumeroIdentificacion.Text);
+                            FondoUsuarioEntity resultado = fondoUsuarioService.ValidarUsuario(usuarioValidar);
+                            if(resultado != null)
+                            {
+                                tabIngresarAsociado.SelectedIndex = 0;
+                                General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjUsuarioExiste);
+                            }
+                        }
+                        break;
+                    case 2:
+                        if (!ValidarInformacionPersona() || !ValidarInformacionAyudaGobierno())
+                        {
+                            tabIngresarAsociado.SelectedIndex = 1;
+                            General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
+                        }
+                        break;
+                    case 3:
+                        if (!ValidarInformacionPersona() || !ValidarInformacionAyudaGobierno() || !ValidarInformacionNucleoFamiliar())
+                        {
+                            tabIngresarAsociado.SelectedIndex = 2;
+                            General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
+                        }
+                        break;
+                }
             }
+            catch (BusinessException ex)
+            {
+                ingresoAsociadoAceptar.Enabled = true;
+                ingresoAsociadoCancelar.Enabled = true;
+                General.MostrarPanelError(Constantes.CodigoWarning, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                ingresoAsociadoAceptar.Enabled = true;
+                ingresoAsociadoCancelar.Enabled = true;
+                Log.Registrar_Log(ex.Message, "FormIngresoAsociado - ValidarInformacion", LogErrorEnumeration.Critico);
+                General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
+            }           
         }
 
 
@@ -649,12 +684,6 @@ namespace ManejoFondo
                     ingresos.V_Tipo_Cultivo = ingresosTipoActividad.V_Valor.ToUpper().Equals(Constantes.DescripcionAgricultura.ToUpper()) ? textBoxIngresosTipoCultivo.Text : "";
 
                     //Se procede a almacenar la informacion en BD
-                    FondoUsuarioService fondoUsuarioService = new FondoUsuarioService();
-                    FondoProcUsuarioService fondoProcUsuarioService = new FondoProcUsuarioService();
-                    FondoAyudaGobUsuarioService fondoAyudaGobUsuarioService = new FondoAyudaGobUsuarioService();
-                    FondoFamiliaUsuarioService fondoFamiliaUsuarioService = new FondoFamiliaUsuarioService();
-                    FondoIngresosUsuarioService fondoIngresosUsuarioService = new FondoIngresosUsuarioService();
-
                     fondoUsuarioService.InsertarUsuario(usuario);
                     fondoProcUsuarioService.InsertarProcedenciaUsuario(procedencia);
                     fondoAyudaGobUsuarioService.InsertarAyudaGobUsuario(ayudaGob);
@@ -685,8 +714,7 @@ namespace ManejoFondo
                 ingresoAsociadoCancelar.Enabled = true;
                 Log.Registrar_Log(ex.Message, "FormIngresoAsociado - AceptarIngresarAsociado", LogErrorEnumeration.Critico);
                 General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
-            }
-            
+            }          
            
         }
     }

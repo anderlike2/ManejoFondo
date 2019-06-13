@@ -35,6 +35,7 @@ namespace ManejoFondo.Common
         public const string MsjErrorSeguridad = "Su sistema ha caducado, por favor consulte con el Administrador del Sistema.";
         public const string MsjeReinicioFormulario = "Se ha eliminado la información ingresada. Por favor diligencie nuevamente toda la información requerida.";
         public const string MsjExitoGuardar = "La información se ha almacenado con éxito.";
+        public const string MsjUsuarioExiste = "El usuario que usted desea ingresar ya se encuentra registrado en el sistema.";
         #endregion
 
         #region MensajesTooltips

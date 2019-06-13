@@ -26,5 +26,17 @@ namespace ManejoFondo.Services
             FondoUsuarioDao fondoUsuarioDao = new FondoUsuarioDao();
             return fondoUsuarioDao.InsertarUsuario(usuario);
         }
+
+        // <summary>
+        /// Metodo para validar la existencia de un usuario
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="usuario"></param>
+        public FondoUsuarioEntity ValidarUsuario(FondoUsuarioEntity usuario)
+        {
+            FondoUsuarioDao fondoUsuarioDao = new FondoUsuarioDao();
+            return fondoUsuarioDao.ValidarUsuario(usuario);
+        }
     }
 }
