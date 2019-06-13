@@ -20,7 +20,7 @@ namespace ManejoFondo.Entities
         public string V_Tipo_Identificacion { get; set; }
         public long V_Numero_Identificacion { get; set; }
         public DateTime F_Fecha_Nacimiento { get; set; }
-        public string V_Tipo_Parentezco { get; set; }
+        public string V_Tipo_Parentesco { get; set; }
         public long N_Telefono { get; set; }
         public string V_Tipo_Actividad { get; set; }
         public string V_Cual_Otra { get; set; }

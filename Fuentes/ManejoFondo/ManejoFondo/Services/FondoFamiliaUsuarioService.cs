@@ -13,7 +13,7 @@ namespace ManejoFondo.Services
     /// Autor: Anderson Benavides
     /// 2019-05-22
     /// </summary>
-    public class FondoFamiliarUsuarioService
+    public class FondoFamiliaUsuarioService
     {
         // <summary>
         /// Metodo para insertar un usuario

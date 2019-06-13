@@ -611,7 +611,7 @@ namespace ManejoFondo
                         item.V_Tipo_Identificacion = dr.Cells[8] != null ? dr.Cells[8].Value.ToString() : ""; 
                         item.V_Numero_Identificacion = dr.Cells[3] != null ? Convert.ToInt64(dr.Cells[3].Value.ToString()) : 0;
                         item.F_Fecha_Nacimiento = dr.Cells[5] != null ? DateTime.Parse(dr.Cells[5].Value.ToString()) : DateTime.Now;
-                        item.V_Tipo_Parentezco = dr.Cells[10] != null ? dr.Cells[10].Value.ToString() : "";
+                        item.V_Tipo_Parentesco = dr.Cells[10] != null ? dr.Cells[10].Value.ToString() : "";
                         item.N_Telefono = dr.Cells[4] != null ? Convert.ToInt64(dr.Cells[4].Value.ToString()) : 0;
                         item.V_Tipo_Actividad = dr.Cells[9] != null ? dr.Cells[9].Value.ToString() : "";
                         item.V_Cual_Otra = 
@@ -632,7 +632,7 @@ namespace ManejoFondo
                         conyuge.V_Tipo_Identificacion = nucleoFamiliarTipoIdentificacion.V_Codigo;
                         conyuge.V_Numero_Identificacion = Convert.ToInt64(textBoxNucleoFamiliarConyugeNumeroIdentificacion.Text);
                         conyuge.F_Fecha_Nacimiento = datePickerNucleoFamiliarConyugeFechaNacimiento.Value;
-                        conyuge.V_Tipo_Parentezco = Constantes.DominioConyuge;
+                        conyuge.V_Tipo_Parentesco = Constantes.DominioConyuge;
                         conyuge.N_Telefono = Convert.ToInt64(textBoxNucleoFamiliarConyugeNumeroTelefono.Text);
                         conyuge.V_Tipo_Actividad = nucleoFamiliarTipoActividad.V_Codigo;
                         conyuge.V_Cual_Otra = nucleoFamiliarTipoActividad.V_Valor.ToUpper().Equals(Constantes.DescripcionOtro.ToUpper()) ? textBoxNucleoFamiliarConyugeOtraActividad.Text : "";
@@ -648,6 +648,23 @@ namespace ManejoFondo
                     ingresos.V_Tipo_Animales = ingresosTipoActividad.V_Valor.ToUpper().Equals(Constantes.DescripcionPecuario.ToUpper()) ? textBoxIngresosTipoAnimales.Text : "";
                     ingresos.V_Tipo_Cultivo = ingresosTipoActividad.V_Valor.ToUpper().Equals(Constantes.DescripcionAgricultura.ToUpper()) ? textBoxIngresosTipoCultivo.Text : "";
 
+                    //Se procede a almacenar la informacion en BD
+                    FondoUsuarioService fondoUsuarioService = new FondoUsuarioService();
+                    FondoProcUsuarioService fondoProcUsuarioService = new FondoProcUsuarioService();
+                    FondoAyudaGobUsuarioService fondoAyudaGobUsuarioService = new FondoAyudaGobUsuarioService();
+                    FondoFamiliaUsuarioService fondoFamiliaUsuarioService = new FondoFamiliaUsuarioService();
+                    FondoIngresosUsuarioService fondoIngresosUsuarioService = new FondoIngresosUsuarioService();
+
+                    fondoUsuarioService.InsertarUsuario(usuario);
+                    fondoProcUsuarioService.InsertarProcedenciaUsuario(procedencia);
+                    fondoAyudaGobUsuarioService.InsertarAyudaGobUsuario(ayudaGob);
+                    foreach (FondoFamiliaEntity intFamilia in fondoFamilia)
+                    {
+                        fondoFamiliaUsuarioService.InsertarFamiliaUsuario(intFamilia);
+                    }                    
+                    fondoIngresosUsuarioService.InsertarIngresosUsuario(ingresos);
+
+                    //Se limpia el formulario
                     LimpiarDatosFormulario();
                     tabIngresarAsociado.SelectedIndex = 0;
                     General.MostrarPanelError(Constantes.CodigoExito, Constantes.MsjExitoGuardar);
@@ -666,7 +683,7 @@ namespace ManejoFondo
             {
                 ingresoAsociadoAceptar.Enabled = true;
                 ingresoAsociadoCancelar.Enabled = true;
-                Log.Registrar_Log(ex.Message, "FormLogin - Login", LogErrorEnumeration.Critico);
+                Log.Registrar_Log(ex.Message, "FormIngresoAsociado - AceptarIngresarAsociado", LogErrorEnumeration.Critico);
                 General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
             }
             

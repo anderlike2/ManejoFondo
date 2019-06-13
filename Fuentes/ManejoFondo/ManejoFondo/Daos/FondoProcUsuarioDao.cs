@@ -27,8 +27,8 @@ namespace ManejoFondo.Daos
             using (var cnn = SqlLiteConexion.SimpleDbConnection())
             {
                 int result = cnn.Execute(
-                    @"INSERT INTO FONDOPROCUSUARIO (N_ID, N_ID_USUARIO, V_PAIS, V_DEPARTAMENTO, V_MUNICIPIO, V_VEREDA)
-                      VALUES(@N_ID, @N_ID_USUARIO, @V_PAIS, @V_DEPARTAMENTO, @V_MUNICIPIO, @V_VEREDA)",
+                    @"INSERT INTO FONDOPROCUSUARIO (N_ID_USUARIO, V_PAIS, V_DEPARTAMENTO, V_MUNICIPIO, V_VEREDA)
+                      VALUES(@N_ID_USUARIO, @V_PAIS, @V_DEPARTAMENTO, @V_MUNICIPIO, @V_VEREDA)",
                     procUsuario);
                 return result > 0;
             }
