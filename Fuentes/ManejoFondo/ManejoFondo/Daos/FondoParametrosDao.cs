@@ -27,7 +27,7 @@ namespace ManejoFondo.Daos
             using (var cnn = SqlLiteConexion.SimpleDbConnection())
             {
                 FondoParametrosEntity result = cnn.Query<FondoParametrosEntity>(
-                    @"SELECT N_ID, V_NOMBRE, V_VALOR
+                    @"SELECT N_ID, V_NOMBRE, V_VALOR, V_DESCRIPCION
                     FROM FONDOPARAMETROS WHERE V_NOMBRE = @V_NOMBRE", new { v_nombre = nombreParametro }).FirstOrDefault();
                 return result;
             }

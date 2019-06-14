@@ -37,6 +37,10 @@ namespace ManejoFondo.Common
         public const string MsjExitoGuardar = "La información se ha almacenado con éxito.";
         public const string MsjUsuarioExiste = "El usuario que usted desea ingresar ya se encuentra registrado en el sistema.";
         public const string MsjUsuarioNoExiste = "El usuario que usted ha ingresado no se encuentra registrado en el sistema.";
+        public const string MsjAhorroExistenteMes = "El usuario ya tiene un ahorro para el mes seleccionado.";
+        public const string MsjExitoAhorroMes = "El ahorro mensual se ha almacenado correctamente.";
+        public const string MsjValidarMinimoCuota = "La cuota mensual ingresada debe ser mayor a: $ <minimoCuota>.";
+        public const string MsjValidarMaximoCuota = "La cuota mensual ingresada debe ser menor a: $ <maximoCuota>.";
         #endregion
 
         #region MensajesTooltips

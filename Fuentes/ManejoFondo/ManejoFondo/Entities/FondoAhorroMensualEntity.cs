@@ -17,5 +17,7 @@ namespace ManejoFondo.Entities
         public long N_Id_Usuario { get; set; }
         public double N_Valor_Cuota { get; set; }
         public DateTime F_Fecha_Registro { get; set; }
+        public int N_Mes_Ahorro { get; set; }
+        public int N_Anio_Ahorro { get; set; }
     }
 }

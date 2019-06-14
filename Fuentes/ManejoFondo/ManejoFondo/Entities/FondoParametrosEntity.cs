@@ -16,5 +16,6 @@ namespace ManejoFondo.Entities
         public int N_Id { get; set; }
         public string V_Nombre { get; set; }
         public string V_Valor { get; set; }
+        public string V_Descripcion { get; set; }
     }
 }

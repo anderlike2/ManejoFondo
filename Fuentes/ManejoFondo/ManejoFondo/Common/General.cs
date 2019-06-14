@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using ManejoFondo.Modelos;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -110,6 +111,66 @@ namespace ManejoFondo.Common
             skinManejador.AddFormToManage(formulario);
             skinManejador.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManejador.ColorScheme = new ColorScheme(Primary.Blue400, Primary.Blue500, Primary.Blue600, Accent.Amber700, TextShade.WHITE);
+        }
+
+        /// <summary>
+        /// Metodo para obtener los meses del año
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        public static List<ValoresModel> ObtenerMeses()
+        {
+            List<ValoresModel> listaMeses = new List<ValoresModel>();
+            ValoresModel enero = new ValoresModel();
+            enero.Codigo = "01";
+            enero.Valor = "Enero";
+            ValoresModel febrero = new ValoresModel();
+            febrero.Codigo = "02";
+            febrero.Valor = "Febrero";
+            ValoresModel marzo = new ValoresModel();
+            marzo.Codigo = "03";
+            marzo.Valor = "Marzo";
+            ValoresModel abril = new ValoresModel();
+            abril.Codigo = "04";
+            abril.Valor = "Abril";
+            ValoresModel mayo = new ValoresModel();
+            mayo.Codigo = "05";
+            mayo.Valor = "Mayo";
+            ValoresModel junio = new ValoresModel();
+            junio.Codigo = "06";
+            junio.Valor = "Junio";
+            ValoresModel julio = new ValoresModel();
+            julio.Codigo = "07";
+            julio.Valor = "Julio";
+            ValoresModel agosto = new ValoresModel();
+            agosto.Codigo = "08";
+            agosto.Valor = "Agosto";
+            ValoresModel septiembre = new ValoresModel();
+            septiembre.Codigo = "09";
+            septiembre.Valor = "Septiembre";
+            ValoresModel octubre = new ValoresModel();
+            octubre.Codigo = "10";
+            octubre.Valor = "Octubre";
+            ValoresModel noviembre = new ValoresModel();
+            noviembre.Codigo = "11";
+            noviembre.Valor = "Noviembre";
+            ValoresModel diciembre = new ValoresModel();
+            diciembre.Codigo = "12";
+            diciembre.Valor = "Diciembre";
+
+            listaMeses.Add(enero);
+            listaMeses.Add(febrero);
+            listaMeses.Add(marzo);
+            listaMeses.Add(abril);
+            listaMeses.Add(mayo);
+            listaMeses.Add(junio);
+            listaMeses.Add(julio);
+            listaMeses.Add(agosto);
+            listaMeses.Add(septiembre);
+            listaMeses.Add(octubre);
+            listaMeses.Add(noviembre);
+            listaMeses.Add(diciembre);
+            return listaMeses;
         }
     }
 }

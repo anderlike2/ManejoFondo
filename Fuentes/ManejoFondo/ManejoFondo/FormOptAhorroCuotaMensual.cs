@@ -1,6 +1,7 @@
 ﻿using ManejoFondo.Common;
 using ManejoFondo.Entities;
 using ManejoFondo.Loggers;
+using ManejoFondo.Modelos;
 using ManejoFondo.Services;
 using MaterialSkin.Controls;
 using System;
@@ -27,6 +28,7 @@ namespace ManejoFondo
         FondoLoginEntity usuarioSesion;
         FondoUsuarioService fondoUsuarioService = new FondoUsuarioService();
         FondoParametrosService fondoParametrosService = new FondoParametrosService();
+        FondoAhorroMensualService fondoAhorroMensualService = new FondoAhorroMensualService();
 
         public FormOptAhorroCuotaMensual(FondoLoginEntity usuario)
         {
@@ -35,6 +37,7 @@ namespace ManejoFondo
 
             //Cambiar Tema form
             General.InicializarTema(this);
+            
 
             //Valores por defecto
             usuarioSesion = usuario;
@@ -75,10 +78,13 @@ namespace ManejoFondo
                 FondoDominiosService fondoDominioService = new FondoDominiosService();
 
                 //Para Datos Persona
-                comboBoxCuotaMensualTipoIdentificacion.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTiposIdentificacion, false); ;
+                comboBoxCuotaMensualTipoIdentificacion.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTiposIdentificacion, false);
                 comboBoxCuotaMensualTipoIdentificacion.DisplayMember = "V_VALOR";
                 comboBoxCuotaMensualTipoIdentificacion.ValueMember = "V_CODIGO";
-
+                //Para los meses del año
+                comboBoxCuotaMensualMes.DataSource = General.ObtenerMeses();
+                comboBoxCuotaMensualMes.DisplayMember = "Valor";
+                comboBoxCuotaMensualMes.ValueMember = "Codigo";
             }
             catch (Exception ex)
             {
@@ -149,7 +155,7 @@ namespace ManejoFondo
                     textBoxCuotaMensualFechaIngreso.Text = fechaRegistro;
                     textBoxCuotaMensualValorProximaCuota.Text = ""; //TODO preguntar de donde calcularla
                     textBoxCuotaMensualValorMinimaCuota.Text = fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroAhorroCuotaMinima).V_Valor;
-                    textBoxCuotaMensualValorMaximaCuota.Text = fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroAhorroCuotaMaxima).V_Valor; ;
+                    textBoxCuotaMensualValorMaximaCuota.Text = fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroAhorroCuotaMaxima).V_Valor;
 
                     HabilitarBotonesConsulta();
                     HabilitarBotonesGuardar();
@@ -176,6 +182,16 @@ namespace ManejoFondo
         /// 2019-05-23
         /// </summary>
         private void LimpiarInformacionUsuario(object sender, EventArgs e)
+        {
+            LimpiarInformacionFormulario();
+        }
+
+        /// <summary>
+        /// Funcion que llama a las funciones de limpiar toda la informacion del formulario
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void LimpiarInformacionFormulario()
         {
             InhabilitarBotonesConsulta();
             InhabilitarBotonesGuardar();
@@ -214,6 +230,7 @@ namespace ManejoFondo
         {
             textBoxCuotaMensualAhorroMensual.Enabled = true;
             buttonCuotaMensualGuardarCuota.Enabled = true;
+            comboBoxCuotaMensualMes.Enabled = true;
         }
 
         /// <summary>
@@ -225,6 +242,7 @@ namespace ManejoFondo
         {
             textBoxCuotaMensualAhorroMensual.Enabled = false;
             buttonCuotaMensualGuardarCuota.Enabled = false;
+            comboBoxCuotaMensualMes.Enabled = false;
         }
 
         /// <summary>
@@ -242,6 +260,53 @@ namespace ManejoFondo
             textBoxCuotaMensualValorMaximaCuota.Text = "";
             comboBoxCuotaMensualTipoIdentificacion.SelectedIndex = 0;
             textBoxCuotaMensualNumeroIdentificacion.Text = "";
+            textBoxCuotaMensualAhorroMensual.Text = "";
+            comboBoxCuotaMensualMes.SelectedIndex = 0;
+        }
+
+        /// <summary>
+        /// Funcion que permite guardar la cuota mensual de un usuario
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void GuardarCuotaMes(object sender, EventArgs e)
+        {
+            try
+            {
+                InhabilitarBotonesGuardar();
+                if (General.EsVacioNulo(comboBoxCuotaMensualMes.Text) || General.EsVacioNulo(textBoxCuotaMensualAhorroMensual.Text))
+                {
+                    General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
+                    HabilitarBotonesGuardar();
+                    return;
+                }
+                else
+                {
+                    FondoAhorroMensualEntity ahorroUsuario = new FondoAhorroMensualEntity();
+                    ValoresModel ahorroMesSeleccionado = (ValoresModel)comboBoxCuotaMensualMes.SelectedItem;
+
+                    ahorroUsuario.N_Id_Usuario = Convert.ToInt64(textBoxCuotaMensualNumeroIdentificacion.Text);
+                    ahorroUsuario.N_Valor_Cuota = Convert.ToDouble(textBoxCuotaMensualAhorroMensual.Text);
+                    ahorroUsuario.F_Fecha_Registro = DateTime.Now;
+                    ahorroUsuario.N_Mes_Ahorro = Convert.ToInt32(ahorroMesSeleccionado.Codigo);
+                    ahorroUsuario.N_Anio_Ahorro = DateTime.Now.Year;
+                    fondoAhorroMensualService.InsertarAhorroUsuario(ahorroUsuario);
+                    General.MostrarPanelError(Constantes.CodigoExito, Constantes.MsjExitoAhorroMes);
+                    LimpiarInformacionFormulario();
+                }
+            }
+            catch (BusinessException ex)
+            {
+                HabilitarBotonesGuardar();
+                General.MostrarPanelError(Constantes.CodigoWarning, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                HabilitarBotonesGuardar();
+                Log.Registrar_Log(ex.Message, "FormOptAhorroCuotaMensual - GuardarCuotaMes", LogErrorEnumeration.Critico);
+                General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
+            }
+            
         }
     }
 }

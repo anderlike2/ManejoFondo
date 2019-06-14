@@ -148,6 +148,7 @@
     <Compile Include="Common\BusinessException.cs" />
     <Compile Include="Common\Constantes.cs" />
     <Compile Include="Common\General.cs" />
+    <Compile Include="Daos\FondoAhorroMensualDao.cs" />
     <Compile Include="Daos\FondoAyudaGobUsuarioDao.cs" />
     <Compile Include="Daos\FondoFamiliaUsuarioDao.cs" />
     <Compile Include="Daos\FondoIngresosUsuarioDao.cs" />
@@ -208,10 +209,12 @@
     <Compile Include="Inicio.cs" />
     <Compile Include="Loggers\LogErrorEnumeration.cs" />
     <Compile Include="Modelos\UsuarioModel.cs" />
+    <Compile Include="Modelos\ValoresModel.cs" />
     <Compile Include="PanelDifuminado.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FondoAhorroMensualService.cs" />
     <Compile Include="Services\FondoAyudaGobUsuarioService.cs" />
     <Compile Include="Services\FondoDominiosService.cs" />
     <Compile Include="Services\FondoFamiliaUsuarioService.cs" />
