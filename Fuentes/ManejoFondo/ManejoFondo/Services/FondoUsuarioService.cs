@@ -33,10 +33,10 @@ namespace ManejoFondo.Services
         /// 2019-05-23
         /// </summary>
         /// <param name="usuario"></param>
-        public FondoUsuarioEntity ValidarUsuario(FondoUsuarioEntity usuario)
+        public FondoUsuarioEntity ConsultarUsuarioPorIdentificacion(FondoUsuarioEntity usuario)
         {
             FondoUsuarioDao fondoUsuarioDao = new FondoUsuarioDao();
-            return fondoUsuarioDao.ValidarUsuario(usuario);
+            return fondoUsuarioDao.ConsultarUsuarioPorIdentificacion(usuario);
         }
     }
 }

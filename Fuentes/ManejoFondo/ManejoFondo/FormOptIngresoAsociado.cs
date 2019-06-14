@@ -370,7 +370,7 @@ namespace ManejoFondo
                             FondoUsuarioEntity usuarioValidar = new FondoUsuarioEntity();
                             usuarioValidar.V_Tipo_Identificacion = datosPersonaTipoIdentificacion.V_Codigo;
                             usuarioValidar.V_Numero_Identificacion = Convert.ToInt64(textBoxDatosPersonaNumeroIdentificacion.Text);
-                            FondoUsuarioEntity resultado = fondoUsuarioService.ValidarUsuario(usuarioValidar);
+                            FondoUsuarioEntity resultado = fondoUsuarioService.ConsultarUsuarioPorIdentificacion(usuarioValidar);
                             if(resultado != null)
                             {
                                 tabIngresarAsociado.SelectedIndex = 0;

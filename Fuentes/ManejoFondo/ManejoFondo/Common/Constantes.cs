@@ -36,6 +36,7 @@ namespace ManejoFondo.Common
         public const string MsjeReinicioFormulario = "Se ha eliminado la información ingresada. Por favor diligencie nuevamente toda la información requerida.";
         public const string MsjExitoGuardar = "La información se ha almacenado con éxito.";
         public const string MsjUsuarioExiste = "El usuario que usted desea ingresar ya se encuentra registrado en el sistema.";
+        public const string MsjUsuarioNoExiste = "El usuario que usted ha ingresado no se encuentra registrado en el sistema.";
         #endregion
 
         #region MensajesTooltips
@@ -64,6 +65,11 @@ namespace ManejoFondo.Common
         public const string DominioTipoActividad = "TIPO_ACTIVIDAD";
         public const string DominioParentesco = "PARENTESCO";
         public const string DominioConyuge = "PARENT_CONYUGE";
+        #endregion
+
+        #region
+        public const string ParametroAhorroCuotaMinima = "AHORRO_CUOTA_MINIMA";
+        public const string ParametroAhorroCuotaMaxima = "AHORRO_CUOTA_MAXIMA";
         #endregion
     }
 }

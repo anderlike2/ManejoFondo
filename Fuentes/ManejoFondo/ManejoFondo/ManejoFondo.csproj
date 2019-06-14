@@ -151,6 +151,7 @@
     <Compile Include="Daos\FondoAyudaGobUsuarioDao.cs" />
     <Compile Include="Daos\FondoFamiliaUsuarioDao.cs" />
     <Compile Include="Daos\FondoIngresosUsuarioDao.cs" />
+    <Compile Include="Daos\FondoParametrosDao.cs" />
     <Compile Include="Daos\FondoProcUsuarioDao.cs" />
     <Compile Include="Daos\FondoUsuarioDao.cs" />
     <Compile Include="FormModalAgregarNucleoFamiliar.cs">
@@ -216,6 +217,7 @@
     <Compile Include="Services\FondoFamiliaUsuarioService.cs" />
     <Compile Include="Services\FondoIngresosUsuarioService.cs" />
     <Compile Include="Services\FondoLoginService.cs" />
+    <Compile Include="Services\FondoParametrosService.cs" />
     <Compile Include="Services\FondoProcUsuarioService.cs" />
     <Compile Include="Services\FondoUsuarioService.cs" />
     <EmbeddedResource Include="FormModalAgregarNucleoFamiliar.resx">

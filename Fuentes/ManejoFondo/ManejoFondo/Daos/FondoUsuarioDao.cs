@@ -42,7 +42,7 @@ namespace ManejoFondo.Daos
         /// 2019-05-23
         /// </summary>
         /// <param name="usuario"></param>
-        public FondoUsuarioEntity ValidarUsuario(FondoUsuarioEntity usuario)
+        public FondoUsuarioEntity ConsultarUsuarioPorIdentificacion(FondoUsuarioEntity usuario)
         {
             using (var cnn = SqlLiteConexion.SimpleDbConnection())
             {
