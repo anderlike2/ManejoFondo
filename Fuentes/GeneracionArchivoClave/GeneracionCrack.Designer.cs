@@ -36,6 +36,8 @@
             this.timeHasta = new System.Windows.Forms.DateTimePicker();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.chkTiempo = new System.Windows.Forms.CheckBox();
+            this.chkSerial = new System.Windows.Forms.CheckBox();
+            this.textBoxSerial = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelPalabraClave
@@ -92,7 +94,7 @@
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(336, 277);
+            this.btnGenerar.Location = new System.Drawing.Point(335, 323);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(119, 23);
             this.btnGenerar.TabIndex = 8;
@@ -111,11 +113,33 @@
             this.chkTiempo.UseVisualStyleBackColor = true;
             this.chkTiempo.CheckedChanged += new System.EventHandler(this.validarFechas);
             // 
+            // chkSerial
+            // 
+            this.chkSerial.AutoSize = true;
+            this.chkSerial.Location = new System.Drawing.Point(72, 256);
+            this.chkSerial.Name = "chkSerial";
+            this.chkSerial.Size = new System.Drawing.Size(104, 17);
+            this.chkSerial.TabIndex = 10;
+            this.chkSerial.Text = "Ingresar el Serial";
+            this.chkSerial.UseVisualStyleBackColor = true;
+            this.chkSerial.CheckedChanged += new System.EventHandler(this.ValidarSerial);
+            // 
+            // textBoxSerial
+            // 
+            this.textBoxSerial.Enabled = false;
+            this.textBoxSerial.Location = new System.Drawing.Point(194, 256);
+            this.textBoxSerial.Name = "textBoxSerial";
+            this.textBoxSerial.PasswordChar = '*';
+            this.textBoxSerial.Size = new System.Drawing.Size(515, 20);
+            this.textBoxSerial.TabIndex = 11;
+            // 
             // GeneracionCrack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 432);
+            this.Controls.Add(this.textBoxSerial);
+            this.Controls.Add(this.chkSerial);
             this.Controls.Add(this.chkTiempo);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.timeHasta);
@@ -141,6 +165,8 @@
         private System.Windows.Forms.DateTimePicker timeHasta;
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.CheckBox chkTiempo;
+        private System.Windows.Forms.CheckBox chkSerial;
+        private System.Windows.Forms.TextBox textBoxSerial;
     }
 }
 

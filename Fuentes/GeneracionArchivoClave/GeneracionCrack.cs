@@ -28,7 +28,7 @@ namespace GeneracionArchivoClave
             MessageBoxButtons buttons = MessageBoxButtons.OK;
 
             if (textBoxPalabraClave.Text.Length != 10) {
-                message = "La palabra clave NO contiene 10 caracteres";
+                message = "Contraseña incorrecta";
                 caption = "Validar!";
                 MessageBox.Show(message, caption, buttons);
                 return;
@@ -36,7 +36,16 @@ namespace GeneracionArchivoClave
 
             if (textBoxPalabraClave.Text != "Admin1980.")
             {
-                message = "La palabra clave es incorrecta";
+                message = "Contraseña incorrecta";
+                caption = "Validar!";
+                MessageBox.Show(message, caption, buttons);
+                return;
+            }
+
+            bool ingresarSerial = chkSerial.Checked;
+            if (ingresarSerial && (textBoxSerial.Text == null || textBoxSerial.Text == ""))
+            {
+                message = "Por favor ingresar el Serial de la máquina";
                 caption = "Validar!";
                 MessageBox.Show(message, caption, buttons);
                 return;
@@ -58,7 +67,6 @@ namespace GeneracionArchivoClave
                     GenerarArchivo();
                 }
             }
-
            
         }
 
@@ -97,24 +105,45 @@ namespace GeneracionArchivoClave
                 }
 
                 //Se obtiene el serial
-                String serialProcesadorArchivo = ObtenerSerialBios();
+                bool ingresarSerial = chkSerial.Checked;
+                String serialProcesadorArchivo = "";
+                if (ingresarSerial)
+                {
+                    serialProcesadorArchivo = textBoxSerial.Text;
+                }
+                else
+                {
+                    serialProcesadorArchivo = ObtenerSerialBios();
+                }
 
                 resultado = GenerarCadena(fechaInicioArchivo, palabraClaveArchivo, fechaFinArchivo, serialProcesadorArchivo);
 
                 //Ruta del archivo
                 String pathFile = ConfigurationManager.AppSettings["filePathCrack"];
+                String fileName = ConfigurationManager.AppSettings["fileName"];
+                String rutaCompleta = pathFile + "//" + fileName;
+
                 // This text is added only once to the file.
-                if (!File.Exists(pathFile))
+                if (!Directory.Exists(pathFile))
                 {
-                    message = "No se encuentra la ruta del archivo.";
+                    message = "No se encuentra la carpeta del archivo.";
                     caption = "Error!";
                     MessageBox.Show(message, caption, buttons);
                     return;
                 }
+                else
+                {
+                    //Crear el archivo fisicamente en la ruta
 
-                System.IO.File.WriteAllText(@pathFile, string.Empty);
-                File.AppendAllText(pathFile, General.EncriptarCadena(resultado));                
-                //File.AppendAllText(@pathFile, resultado);
+                    if (File.Exists(rutaCompleta))
+                    {
+                        File.Delete(rutaCompleta);
+                    }
+                }
+                
+
+                System.IO.File.WriteAllText(@rutaCompleta, string.Empty);
+                File.AppendAllText(rutaCompleta, General.EncriptarCadena(resultado));  
 
                 message = "El archivo de configuración se ha generado con exito";
                 caption = "Exito!";
@@ -175,6 +204,18 @@ namespace GeneracionArchivoClave
                fechaFinArchivo[5].ToString() + fechaFinArchivo[6].ToString() + fechaFinArchivo[7].ToString();
 
             return iniCadena + finCadena + serialProcesadorArchivo;
+        }
+
+        private void ValidarSerial(object sender, EventArgs e)
+        {
+            if (chkSerial.Checked)
+            {
+                textBoxSerial.Enabled = true;
+            }
+            else
+            {
+                textBoxSerial.Enabled = false;
+            }
         }
     }
 }
