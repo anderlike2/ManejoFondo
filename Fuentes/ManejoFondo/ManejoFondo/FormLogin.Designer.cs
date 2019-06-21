@@ -35,11 +35,11 @@
             this.loginPicture = new System.Windows.Forms.PictureBox();
             this.loginButtonAceptar = new System.Windows.Forms.Button();
             this.loginPanelDerecho = new System.Windows.Forms.Panel();
+            this.labelVerPassword = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textBoxUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.labelVerPassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).BeginInit();
             this.loginPanelDerecho.SuspendLayout();
             this.SuspendLayout();
@@ -115,6 +115,19 @@
             this.loginPanelDerecho.Size = new System.Drawing.Size(470, 260);
             this.loginPanelDerecho.TabIndex = 1;
             // 
+            // labelVerPassword
+            // 
+            this.labelVerPassword.AutoSize = true;
+            this.labelVerPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelVerPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.labelVerPassword.Location = new System.Drawing.Point(394, 118);
+            this.labelVerPassword.Name = "labelVerPassword";
+            this.labelVerPassword.Size = new System.Drawing.Size(23, 13);
+            this.labelVerPassword.TabIndex = 31;
+            this.labelVerPassword.Text = "Ver";
+            this.labelVerPassword.MouseLeave += new System.EventHandler(this.OcultarPassword);
+            this.labelVerPassword.MouseHover += new System.EventHandler(this.MostrarPassword);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -179,17 +192,6 @@
             this.textBoxUsuario.Size = new System.Drawing.Size(344, 33);
             this.textBoxUsuario.TabIndex = 9;
             this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // labelVerPassword
-            // 
-            this.labelVerPassword.AutoSize = true;
-            this.labelVerPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.labelVerPassword.Location = new System.Drawing.Point(394, 118);
-            this.labelVerPassword.Name = "labelVerPassword";
-            this.labelVerPassword.Size = new System.Drawing.Size(23, 13);
-            this.labelVerPassword.TabIndex = 31;
-            this.labelVerPassword.Text = "Ver";
-            this.labelVerPassword.Click += new System.EventHandler(this.ManejarPassword);
             // 
             // FormLogin
             // 

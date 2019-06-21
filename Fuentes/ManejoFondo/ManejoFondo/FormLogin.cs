@@ -94,35 +94,30 @@ namespace ManejoFondo
         /// <param></param>
         private void MascaraPassword(object sender, EventArgs e)
         {
-            if (labelVerPassword.Text.Equals("Ocultar"))
-            {
-                textBoxPassword.isPassword = false;
-            }
-            else
-            {
-                textBoxPassword.isPassword = true;
-            }
-           
+            textBoxPassword.isPassword = true;
+
         }
 
         /// <summary>
-        /// Metodo para manejar el campo password
+        /// Metodo para ver el campo password
         /// Autor: Anderson Benavides
         /// 2019-05-23
         /// </summary>
         /// <param></param>
-        private void ManejarPassword(object sender, EventArgs e)
+        private void MostrarPassword(object sender, EventArgs e)
         {
-            if(textBoxPassword.isPassword)
-            {
-                textBoxPassword.isPassword = false;
-                labelVerPassword.Text = "Ocultar";
-            }
-            else
-            {
-                textBoxPassword.isPassword = true;
-                labelVerPassword.Text = "Ver";
-            }
+            textBoxPassword.isPassword = false;
+        }
+
+        /// <summary>
+        /// Metodo para ocultar el campo password
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
+        private void OcultarPassword(object sender, EventArgs e)
+        {
+            textBoxPassword.isPassword = true;
         }
     }
 }

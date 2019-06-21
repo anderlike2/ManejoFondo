@@ -329,7 +329,8 @@
             this.labelVerPassword.Size = new System.Drawing.Size(23, 13);
             this.labelVerPassword.TabIndex = 28;
             this.labelVerPassword.Text = "Ver";
-            this.labelVerPassword.Click += new System.EventHandler(this.ManejarPasswordActual);
+            this.labelVerPassword.MouseLeave += new System.EventHandler(this.OcultarPasswordActual);
+            this.labelVerPassword.MouseHover += new System.EventHandler(this.VerPasswordActual);
             // 
             // labelVerPasswordNuevoRepite
             // 
@@ -340,7 +341,8 @@
             this.labelVerPasswordNuevoRepite.Size = new System.Drawing.Size(23, 13);
             this.labelVerPasswordNuevoRepite.TabIndex = 29;
             this.labelVerPasswordNuevoRepite.Text = "Ver";
-            this.labelVerPasswordNuevoRepite.Click += new System.EventHandler(this.ManejarPasswordNuevoRepite);
+            this.labelVerPasswordNuevoRepite.MouseLeave += new System.EventHandler(this.OcultarPasswordNuevoRepite);
+            this.labelVerPasswordNuevoRepite.MouseHover += new System.EventHandler(this.VerPasswordNuevoRepite);
             // 
             // labelVerPasswordNuevo
             // 
@@ -351,7 +353,8 @@
             this.labelVerPasswordNuevo.Size = new System.Drawing.Size(23, 13);
             this.labelVerPasswordNuevo.TabIndex = 30;
             this.labelVerPasswordNuevo.Text = "Ver";
-            this.labelVerPasswordNuevo.Click += new System.EventHandler(this.ManejarPasswordNuevo);
+            this.labelVerPasswordNuevo.MouseLeave += new System.EventHandler(this.OcultarPasswordNuevo);
+            this.labelVerPasswordNuevo.MouseHover += new System.EventHandler(this.VerPasswordNuevo);
             // 
             // FormOptCambiarClave
             // 

@@ -137,14 +137,7 @@ namespace ManejoFondo
         /// <param></param>
         private void MascaraPasswordActual(object sender, EventArgs e)
         {
-            if (labelVerPassword.Text.Equals("Ocultar"))
-            {
-                textBoxCambiarClavePassword.isPassword = false;
-            }
-            else
-            {
-                textBoxCambiarClavePassword.isPassword = true;
-            }
+            textBoxCambiarClavePassword.isPassword = true;
         }
 
         /// <summary>
@@ -155,14 +148,7 @@ namespace ManejoFondo
         /// <param></param>
         private void MascaraPasswordNuevo(object sender, EventArgs e)
         {
-            if (labelVerPasswordNuevo.Text.Equals("Ocultar"))
-            {
-                textBoxCambiarClavePasswordNuevo.isPassword = false;
-            }
-            else
-            {
-                textBoxCambiarClavePasswordNuevo.isPassword = true;
-            }
+            textBoxCambiarClavePasswordNuevo.isPassword = true;
         }        
 
         /// <summary>
@@ -173,74 +159,73 @@ namespace ManejoFondo
         /// <param></param>
         private void MascaraPasswordNuevoRepite(object sender, EventArgs e)
         {
-            if (labelVerPasswordNuevoRepite.Text.Equals("Ocultar"))
-            {
-                textBoxCambiarClavePasswordNuevoRepite.isPassword = false;
-            }
-            else
-            {
-                textBoxCambiarClavePasswordNuevoRepite.isPassword = true;
-            }
+            textBoxCambiarClavePasswordNuevoRepite.isPassword = true;
         }
 
         /// <summary>
-        /// Metodo para manejar el campo password actual
+        /// Metodo para ver el password actual
         /// Autor: Anderson Benavides
         /// 2019-05-23
         /// </summary>
         /// <param></param>
-        private void ManejarPasswordActual(object sender, EventArgs e)
+        private void VerPasswordActual(object sender, EventArgs e)
         {
-            if (textBoxCambiarClavePassword.isPassword)
-            {
-                textBoxCambiarClavePassword.isPassword = false;
-                labelVerPassword.Text = "Ocultar";
-            }
-            else
-            {
-                textBoxCambiarClavePassword.isPassword = true;
-                labelVerPassword.Text = "Ver";
-            }
+            textBoxCambiarClavePassword.isPassword = false;
         }
 
         /// <summary>
-        /// Metodo para manejar el campo password nuevo
+        /// Metodo para ocultar el password actual
         /// Autor: Anderson Benavides
         /// 2019-05-23
         /// </summary>
         /// <param></param>
-        private void ManejarPasswordNuevo(object sender, EventArgs e)
+        private void OcultarPasswordActual(object sender, EventArgs e)
         {
-            if (textBoxCambiarClavePasswordNuevo.isPassword)
-            {
-                textBoxCambiarClavePasswordNuevo.isPassword = false;
-                labelVerPasswordNuevo.Text = "Ocultar";
-            }
-            else
-            {
-                textBoxCambiarClavePasswordNuevo.isPassword = true;
-                labelVerPasswordNuevo.Text = "Ver";
-            }
+            textBoxCambiarClavePassword.isPassword = true;
         }
 
         /// <summary>
-        /// Metodo para manejar el campo password nuevo repite
+        /// Metodo para ver el password actual
         /// Autor: Anderson Benavides
         /// 2019-05-23
         /// </summary>
         /// <param></param>
-        private void ManejarPasswordNuevoRepite(object sender, EventArgs e)
+        private void VerPasswordNuevo(object sender, EventArgs e)
         {
-            if (textBoxCambiarClavePasswordNuevoRepite.isPassword)
-            {
-                textBoxCambiarClavePasswordNuevoRepite.isPassword = false;
-                labelCambiarClavePasswordNuevoRepite.Text = "Ocultar";
-            }
-            else
-            {
-                textBoxCambiarClavePasswordNuevoRepite.isPassword = true;
-                labelCambiarClavePasswordNuevoRepite.Text = "Ver";
-            }
+            textBoxCambiarClavePasswordNuevo.isPassword = false;
+        }
+
+        /// <summary>
+        /// Metodo para ocultar el password actual
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
+        private void OcultarPasswordNuevo(object sender, EventArgs e)
+        {
+            textBoxCambiarClavePasswordNuevo.isPassword = true;
+        }
+
+        /// <summary>
+        /// Metodo para ver el password nuevo repite
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
+        private void VerPasswordNuevoRepite(object sender, EventArgs e)
+        {
+            textBoxCambiarClavePasswordNuevoRepite.isPassword = false;
+        }
+
+        /// <summary>
+        /// Metodo para ocultar el password nuevo repite
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
+        private void OcultarPasswordNuevoRepite(object sender, EventArgs e)
+        {
+            textBoxCambiarClavePasswordNuevoRepite.isPassword = true;
         }
     }
 }
