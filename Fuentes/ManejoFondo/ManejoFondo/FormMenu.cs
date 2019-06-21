@@ -112,5 +112,20 @@ namespace ManejoFondo
             formAhorroCuotaMensual.ShowDialog();
             Close();
         }
+
+
+        /// <summary>
+        /// Abrir Formulario Cambiar Clave
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void AbrirFormularioCambiarClave(object sender, EventArgs e)
+        {
+            //Se inicia el formulario de Cambiar Clave
+            FormOptCambiarClave formCambiarClave= new FormOptCambiarClave(usuarioSesion);
+            Hide();
+            formCambiarClave.ShowDialog();
+            Close();
+        }
     }
 }

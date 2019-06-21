@@ -59,5 +59,40 @@ namespace ManejoFondo.Services
             };
             return fondoLoginDao.ActualizarFechaInicioSesion(usuarioFiltro);
         }
+
+        /// <summary>
+        /// Metodo para actualizar la informacion de inicio de sesion
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="passwordNuevo"></param>
+        /// <param name="passwordNuevoRepite"></param>
+        public bool ActualizarInformacionUsuario(int id, String username, String password, String passwordNuevo, String passwordNuevoRepite)
+        {
+            FondoLoginDao fondoLoginDao = new FondoLoginDao();
+
+            if (!passwordNuevo.Equals(passwordNuevoRepite))
+            {
+                throw new BusinessException(Constantes.MsjPasswordNoCoincide);
+            }
+            //Se consulta el usuario
+            FondoLoginEntity usuarioFiltro = new FondoLoginEntity
+            {
+                V_Username = username,
+                V_Password = General.EncriptarCadena(password)
+            };
+            FondoLoginEntity respuesta = fondoLoginDao.ConsultarUsuario(usuarioFiltro);
+            if (respuesta == null)
+            {
+                throw new BusinessException(Constantes.MsjLoginInvalido);
+            }
+            //Se actualiza con la nueva contraseña
+            usuarioFiltro.N_Id = respuesta.N_Id;
+            usuarioFiltro.V_Password = General.EncriptarCadena(passwordNuevo);
+            return fondoLoginDao.ActualizarInformacionUsuario(usuarioFiltro);
+        }
     }
 }

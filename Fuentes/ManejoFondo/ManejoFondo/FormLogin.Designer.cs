@@ -35,10 +35,11 @@
             this.loginPicture = new System.Windows.Forms.PictureBox();
             this.loginButtonAceptar = new System.Windows.Forms.Button();
             this.loginPanelDerecho = new System.Windows.Forms.Panel();
-            this.textBoxUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.textBoxPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.textBoxUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.labelVerPassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).BeginInit();
             this.loginPanelDerecho.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +104,7 @@
             // 
             this.loginPanelDerecho.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.loginPanelDerecho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loginPanelDerecho.Controls.Add(this.labelVerPassword);
             this.loginPanelDerecho.Controls.Add(this.label1);
             this.loginPanelDerecho.Controls.Add(this.label3);
             this.loginPanelDerecho.Controls.Add(this.textBoxPassword);
@@ -113,24 +115,31 @@
             this.loginPanelDerecho.Size = new System.Drawing.Size(470, 260);
             this.loginPanelDerecho.TabIndex = 1;
             // 
-            // textBoxUsuario
+            // label1
             // 
-            this.textBoxUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxUsuario.HintForeColor = System.Drawing.Color.Empty;
-            this.textBoxUsuario.HintText = "Ingrese su usuario";
-            this.textBoxUsuario.isPassword = false;
-            this.textBoxUsuario.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxUsuario.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxUsuario.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxUsuario.LineThickness = 3;
-            this.textBoxUsuario.Location = new System.Drawing.Point(46, 41);
-            this.textBoxUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.Size = new System.Drawing.Size(379, 33);
-            this.textBoxUsuario.TabIndex = 9;
-            this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(437, 102);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 29);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "*";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(437, 45);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 29);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "*";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // textBoxPassword
             // 
@@ -147,35 +156,40 @@
             this.textBoxPassword.Location = new System.Drawing.Point(46, 98);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(379, 33);
+            this.textBoxPassword.Size = new System.Drawing.Size(344, 33);
             this.textBoxPassword.TabIndex = 10;
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxPassword.OnValueChanged += new System.EventHandler(this.MascaraPassword);
             // 
-            // label3
+            // textBoxUsuario
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(430, 45);
-            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 29);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "*";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.textBoxUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxUsuario.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxUsuario.HintText = "Ingrese su usuario";
+            this.textBoxUsuario.isPassword = false;
+            this.textBoxUsuario.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxUsuario.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxUsuario.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxUsuario.LineThickness = 3;
+            this.textBoxUsuario.Location = new System.Drawing.Point(46, 41);
+            this.textBoxUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxUsuario.Name = "textBoxUsuario";
+            this.textBoxUsuario.Size = new System.Drawing.Size(344, 33);
+            this.textBoxUsuario.TabIndex = 9;
+            this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // label1
+            // labelVerPassword
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(430, 102);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 29);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "*";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.labelVerPassword.AutoSize = true;
+            this.labelVerPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.labelVerPassword.Location = new System.Drawing.Point(394, 118);
+            this.labelVerPassword.Name = "labelVerPassword";
+            this.labelVerPassword.Size = new System.Drawing.Size(23, 13);
+            this.labelVerPassword.TabIndex = 31;
+            this.labelVerPassword.Text = "Ver";
+            this.labelVerPassword.Click += new System.EventHandler(this.ManejarPassword);
             // 
             // FormLogin
             // 
@@ -211,6 +225,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelVerPassword;
     }
 }
 

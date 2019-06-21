@@ -116,6 +116,7 @@
             this.opcionesPanelCambiarClave.Name = "opcionesPanelCambiarClave";
             this.opcionesPanelCambiarClave.Size = new System.Drawing.Size(221, 137);
             this.opcionesPanelCambiarClave.TabIndex = 12;
+            this.opcionesPanelCambiarClave.Click += new System.EventHandler(this.AbrirFormularioCambiarClave);
             // 
             // opcionesPanelSolicitudCredito
             // 
@@ -247,7 +248,7 @@
             this.loginPicture.TabIndex = 3;
             this.loginPicture.TabStop = false;
             // 
-            // FormOpciones
+            // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -257,7 +258,7 @@
             this.Controls.Add(this.panelDifuminadoOpciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "FormOpciones";
+            this.Name = "FormMenu";
             this.Text = "Opciones";
             this.panelDifuminadoOpciones.ResumeLayout(false);
             this.panelDifuminadoOpciones.PerformLayout();

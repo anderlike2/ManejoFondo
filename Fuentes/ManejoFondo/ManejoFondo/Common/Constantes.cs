@@ -41,6 +41,8 @@ namespace ManejoFondo.Common
         public const string MsjExitoAhorroMes = "El ahorro mensual se ha almacenado correctamente.";
         public const string MsjValidarMinimoCuota = "La cuota mensual ingresada debe ser mayor a: $ <minimoCuota>.";
         public const string MsjValidarMaximoCuota = "La cuota mensual ingresada debe ser menor a: $ <maximoCuota>.";
+        public const string MsjPasswordNoCoincide = "La nueva contraseña no coincide.";
+        public const string MsjExitoActualizarClave = "El usuario y la contraseña se han actualizado con éxito.";
         #endregion
 
         #region MensajesTooltips

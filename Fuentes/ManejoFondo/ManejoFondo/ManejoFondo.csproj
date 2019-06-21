@@ -167,6 +167,12 @@
     <Compile Include="FormOptAhorroCuotaMensual.Designer.cs">
       <DependentUpon>FormOptAhorroCuotaMensual.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOptCambiarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOptCambiarClave.Designer.cs">
+      <DependentUpon>FormOptCambiarClave.cs</DependentUpon>
+    </Compile>
     <Compile Include="Loggers\Log.cs" />
     <Compile Include="Common\Seguridad.cs" />
     <Compile Include="Common\SqlLiteConexion.cs" />
@@ -229,6 +235,9 @@
     <EmbeddedResource Include="FormOptAhorroCuotaMensual.resx">
       <DependentUpon>FormOptAhorroCuotaMensual.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOptCambiarClave.resx">
+      <DependentUpon>FormOptCambiarClave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormOptIngresoAsociado.resx">
       <DependentUpon>FormOptIngresoAsociado.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +296,7 @@
     <Content Include="Resources\Images\asociado.png" />
     <Content Include="Resources\Images\ayudasGobierno.png" />
     <Content Include="Resources\Images\cambiarClave.png" />
+    <Content Include="Resources\Images\cambiarClaveUsuario.png" />
     <Content Include="Resources\Images\Cargando.gif" />
     <Content Include="Resources\Images\cerrarSesion.png" />
     <Content Include="Resources\Images\consultar.png" />

@@ -51,5 +51,23 @@ namespace ManejoFondo.Daos
                 return result > 0;
             }
         }
+
+        /// <summary>
+        /// Metodo para actualizar la informacion del usuario de sesion
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="usuario"></param>
+        public bool ActualizarInformacionUsuario(FondoLoginEntity usuario)
+        {
+            using (var cnn = SqlLiteConexion.SimpleDbConnection())
+            {
+                int result = cnn.Execute(
+                    @"UPDATE FONDOLOGIN SET V_USERNAME = @V_USERNAME, V_PASSWORD = @V_PASSWORD
+                    WHERE N_ID = @N_ID",
+                    new { usuario.V_Username, usuario.V_Password, usuario.N_Id });
+                return result > 0;
+            }
+        }
     }
 }

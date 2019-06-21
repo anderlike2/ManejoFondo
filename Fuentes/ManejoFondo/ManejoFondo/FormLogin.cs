@@ -35,10 +35,7 @@ namespace ManejoFondo
         public FormLogin()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;            
-            //Quitar
-            textBoxUsuario.Text = "aab";
-            textBoxPassword.Text = "Admin1980";
+            StartPosition = FormStartPosition.CenterScreen;    
         }
 
         /// <summary>
@@ -72,14 +69,59 @@ namespace ManejoFondo
             }
             catch (BusinessException ex)
             {
+                textBoxPassword.Text = "";
+                textBoxUsuario.Text = "";
+                labelVerPassword.Text = "Ver";
                 loginButtonAceptar.Enabled = true;
                 General.MostrarPanelError(Constantes.CodigoWarning, ex.Message);
             }
             catch (Exception ex)
             {
+                textBoxPassword.Text = "";
+                textBoxUsuario.Text = "";
+                labelVerPassword.Text = "Ver";
                 loginButtonAceptar.Enabled = true;
                 Log.Registrar_Log(ex.Message, "FormLogin - Login", LogErrorEnumeration.Critico);
                 General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
+            }
+        }
+
+        /// <summary>
+        /// Metodo para iniciar la mascara del password
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
+        private void MascaraPassword(object sender, EventArgs e)
+        {
+            if (labelVerPassword.Text.Equals("Ocultar"))
+            {
+                textBoxPassword.isPassword = false;
+            }
+            else
+            {
+                textBoxPassword.isPassword = true;
+            }
+           
+        }
+
+        /// <summary>
+        /// Metodo para manejar el campo password
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
+        private void ManejarPassword(object sender, EventArgs e)
+        {
+            if(textBoxPassword.isPassword)
+            {
+                textBoxPassword.isPassword = false;
+                labelVerPassword.Text = "Ocultar";
+            }
+            else
+            {
+                textBoxPassword.isPassword = true;
+                labelVerPassword.Text = "Ver";
             }
         }
     }
