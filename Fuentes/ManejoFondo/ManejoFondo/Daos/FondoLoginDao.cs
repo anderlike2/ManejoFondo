@@ -35,6 +35,24 @@ namespace ManejoFondo.Daos
         }
 
         /// <summary>
+        /// Metodo para consultar un usuario mediante el id usuario
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="usuario"></param>
+        public FondoLoginEntity ConsultarUsuarioPorId(FondoLoginEntity usuario)
+        {
+            using (var cnn = SqlLiteConexion.SimpleDbConnection())
+            {
+                FondoLoginEntity result = cnn.Query<FondoLoginEntity>(
+                    @"SELECT N_ID, V_USERNAME, V_PASSWORD, F_ULTIMO_INICIO_SESION
+                    FROM FONDOLOGIN WHERE N_ID = @N_ID",
+                    new { usuario.N_Id}).FirstOrDefault();
+                return result;
+            }
+        }
+
+        /// <summary>
         /// Metodo para actualizar la fecha de inicio de sesion
         /// Autor: Anderson Benavides
         /// 2019-05-23

@@ -31,6 +31,12 @@ namespace ManejoFondo
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
+            //Centrar panel
+            panelCambiarContrasenia.Location = new Point(
+            this.ClientSize.Width / 2 - panelCambiarContrasenia.Size.Width / 2,
+            this.ClientSize.Height / 2 - panelCambiarContrasenia.Size.Height / 2);
+            panelCambiarContrasenia.Anchor = AnchorStyles.None;
+
             //Cambiar Tema form
             General.InicializarTema(this);
 

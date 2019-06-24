@@ -81,16 +81,16 @@ namespace ManejoFondo.Services
             //Se consulta el usuario
             FondoLoginEntity usuarioFiltro = new FondoLoginEntity
             {
+                N_Id = id,
                 V_Username = username,
                 V_Password = General.EncriptarCadena(password)
             };
-            FondoLoginEntity respuesta = fondoLoginDao.ConsultarUsuario(usuarioFiltro);
+            FondoLoginEntity respuesta = fondoLoginDao.ConsultarUsuarioPorId(usuarioFiltro);
             if (respuesta == null)
             {
                 throw new BusinessException(Constantes.MsjLoginInvalido);
             }
             //Se actualiza con la nueva contraseña
-            usuarioFiltro.N_Id = respuesta.N_Id;
             usuarioFiltro.V_Password = General.EncriptarCadena(passwordNuevo);
             return fondoLoginDao.ActualizarInformacionUsuario(usuarioFiltro);
         }

@@ -35,7 +35,10 @@ namespace ManejoFondo
         public FormLogin()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;    
+            StartPosition = FormStartPosition.CenterScreen;
+            //Quitar
+            textBoxUsuario.Text = "aab";
+            textBoxPassword.Text = "Admin1980";
         }
 
         /// <summary>
@@ -66,6 +69,7 @@ namespace ManejoFondo
                 Hide();
                 formOpciones.ShowDialog();
                 Close();
+                
             }
             catch (BusinessException ex)
             {

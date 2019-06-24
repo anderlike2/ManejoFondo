@@ -35,9 +35,14 @@ namespace ManejoFondo
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
+            //Centrar panel
+            panelIngresoCuotaMensual.Location = new Point(
+            this.ClientSize.Width / 2 - panelIngresoCuotaMensual.Size.Width / 2,
+            this.ClientSize.Height / 2 - panelIngresoCuotaMensual.Size.Height / 2);
+            panelIngresoCuotaMensual.Anchor = AnchorStyles.None;
+
             //Cambiar Tema form
-            General.InicializarTema(this);
-            
+            General.InicializarTema(this);            
 
             //Valores por defecto
             usuarioSesion = usuario;
