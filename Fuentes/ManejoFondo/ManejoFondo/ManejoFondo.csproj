@@ -318,6 +318,7 @@
     <Content Include="Resources\Images\OpcionReporte.PNG" />
     <Content Include="Resources\Images\OpcionSolicitud.PNG" />
     <Content Include="Resources\Images\parametrizacion.png" />
+    <Content Include="Resources\Images\parametrizacionSistema.png" />
     <Content Include="Resources\Images\regresar.png" />
     <Content Include="Resources\Images\reporte.png" />
     <Content Include="Resources\Images\solicitud.png" />

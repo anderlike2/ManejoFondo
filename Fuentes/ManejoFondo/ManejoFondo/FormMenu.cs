@@ -127,5 +127,19 @@ namespace ManejoFondo
             formCambiarClave.ShowDialog();
             Close();
         }
+
+        /// <summary>
+        /// Abrir Formulario Parametrizacion del Sistema
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void AbrirFormularioParametrizacion(object sender, EventArgs e)
+        {
+            //Se inicia el formulario de Cambiar Clave
+            /*FormOptParametrizacion formOptParametrizacion = new FormOptParametrizacion(usuarioSesion);
+            Hide();
+            formOptParametrizacion.ShowDialog();
+            Close();*/
+        }
     }
 }

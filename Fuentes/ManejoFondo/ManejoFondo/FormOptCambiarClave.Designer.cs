@@ -46,9 +46,9 @@
             this.textBoxCambiarClaveUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.labelCambiarClaveUsuario = new System.Windows.Forms.Label();
-            this.panelImagenCambioContrasenia = new System.Windows.Forms.Panel();
             this.labelTituloCambiarContrasenia = new System.Windows.Forms.Label();
             this.panelRegresarMenu = new System.Windows.Forms.Panel();
+            this.panelImagenCambioContrasenia = new System.Windows.Forms.Panel();
             this.panelCambiarContrasenia.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +75,7 @@
             this.panelCambiarContrasenia.Controls.Add(this.panelImagenCambioContrasenia);
             this.panelCambiarContrasenia.Controls.Add(this.labelTituloCambiarContrasenia);
             this.panelCambiarContrasenia.Location = new System.Drawing.Point(20, 103);
-            this.panelCambiarContrasenia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelCambiarContrasenia.Margin = new System.Windows.Forms.Padding(4);
             this.panelCambiarContrasenia.Name = "panelCambiarContrasenia";
             this.panelCambiarContrasenia.Size = new System.Drawing.Size(1792, 796);
             this.panelCambiarContrasenia.TabIndex = 0;
@@ -135,7 +135,7 @@
             this.textBoxCambiarClavePasswordNuevoRepite.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxCambiarClavePasswordNuevoRepite.LineThickness = 3;
             this.textBoxCambiarClavePasswordNuevoRepite.Location = new System.Drawing.Point(885, 357);
-            this.textBoxCambiarClavePasswordNuevoRepite.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxCambiarClavePasswordNuevoRepite.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxCambiarClavePasswordNuevoRepite.Name = "textBoxCambiarClavePasswordNuevoRepite";
             this.textBoxCambiarClavePasswordNuevoRepite.Size = new System.Drawing.Size(567, 41);
             this.textBoxCambiarClavePasswordNuevoRepite.TabIndex = 27;
@@ -155,7 +155,7 @@
             this.textBoxCambiarClavePasswordNuevo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxCambiarClavePasswordNuevo.LineThickness = 3;
             this.textBoxCambiarClavePasswordNuevo.Location = new System.Drawing.Point(183, 362);
-            this.textBoxCambiarClavePasswordNuevo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxCambiarClavePasswordNuevo.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxCambiarClavePasswordNuevo.Name = "textBoxCambiarClavePasswordNuevo";
             this.textBoxCambiarClavePasswordNuevo.Size = new System.Drawing.Size(568, 36);
             this.textBoxCambiarClavePasswordNuevo.TabIndex = 26;
@@ -175,7 +175,7 @@
             this.textBoxCambiarClavePassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxCambiarClavePassword.LineThickness = 3;
             this.textBoxCambiarClavePassword.Location = new System.Drawing.Point(885, 222);
-            this.textBoxCambiarClavePassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxCambiarClavePassword.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxCambiarClavePassword.Name = "textBoxCambiarClavePassword";
             this.textBoxCambiarClavePassword.Size = new System.Drawing.Size(567, 34);
             this.textBoxCambiarClavePassword.TabIndex = 25;
@@ -190,7 +190,7 @@
             this.buttonCambiarClaveLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCambiarClaveLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(66)))), ((int)(((byte)(45)))));
             this.buttonCambiarClaveLimpiar.Location = new System.Drawing.Point(831, 471);
-            this.buttonCambiarClaveLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCambiarClaveLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCambiarClaveLimpiar.Name = "buttonCambiarClaveLimpiar";
             this.buttonCambiarClaveLimpiar.Size = new System.Drawing.Size(228, 48);
             this.buttonCambiarClaveLimpiar.TabIndex = 24;
@@ -206,7 +206,7 @@
             this.buttonCambiarClaveCambiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCambiarClaveCambiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.buttonCambiarClaveCambiar.Location = new System.Drawing.Point(580, 471);
-            this.buttonCambiarClaveCambiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCambiarClaveCambiar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCambiarClaveCambiar.Name = "buttonCambiarClaveCambiar";
             this.buttonCambiarClaveCambiar.Size = new System.Drawing.Size(228, 48);
             this.buttonCambiarClaveCambiar.TabIndex = 23;
@@ -302,7 +302,7 @@
             this.textBoxCambiarClaveUsuario.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxCambiarClaveUsuario.LineThickness = 3;
             this.textBoxCambiarClaveUsuario.Location = new System.Drawing.Point(183, 222);
-            this.textBoxCambiarClaveUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxCambiarClaveUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxCambiarClaveUsuario.Name = "textBoxCambiarClaveUsuario";
             this.textBoxCambiarClaveUsuario.Size = new System.Drawing.Size(568, 34);
             this.textBoxCambiarClaveUsuario.TabIndex = 13;
@@ -333,17 +333,6 @@
             this.labelCambiarClaveUsuario.TabIndex = 11;
             this.labelCambiarClaveUsuario.Text = "Usuario";
             // 
-            // panelImagenCambioContrasenia
-            // 
-            this.panelImagenCambioContrasenia.BackColor = System.Drawing.Color.White;
-            this.panelImagenCambioContrasenia.BackgroundImage = global::ManejoFondo.Properties.Resources.cambiarClaveUsuario;
-            this.panelImagenCambioContrasenia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelImagenCambioContrasenia.Location = new System.Drawing.Point(1565, 15);
-            this.panelImagenCambioContrasenia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelImagenCambioContrasenia.Name = "panelImagenCambioContrasenia";
-            this.panelImagenCambioContrasenia.Size = new System.Drawing.Size(207, 130);
-            this.panelImagenCambioContrasenia.TabIndex = 5;
-            // 
             // labelTituloCambiarContrasenia
             // 
             this.labelTituloCambiarContrasenia.AutoSize = true;
@@ -365,11 +354,22 @@
             this.panelRegresarMenu.Font = new System.Drawing.Font("Arial", 12F);
             this.panelRegresarMenu.ForeColor = System.Drawing.Color.Transparent;
             this.panelRegresarMenu.Location = new System.Drawing.Point(55, 150);
-            this.panelRegresarMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelRegresarMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelRegresarMenu.Name = "panelRegresarMenu";
             this.panelRegresarMenu.Size = new System.Drawing.Size(41, 38);
             this.panelRegresarMenu.TabIndex = 3;
             this.panelRegresarMenu.Click += new System.EventHandler(this.RegresarMenuPrincipal);
+            // 
+            // panelImagenCambioContrasenia
+            // 
+            this.panelImagenCambioContrasenia.BackColor = System.Drawing.Color.White;
+            this.panelImagenCambioContrasenia.BackgroundImage = global::ManejoFondo.Properties.Resources.cambiarClaveUsuario;
+            this.panelImagenCambioContrasenia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelImagenCambioContrasenia.Location = new System.Drawing.Point(1565, 15);
+            this.panelImagenCambioContrasenia.Margin = new System.Windows.Forms.Padding(4);
+            this.panelImagenCambioContrasenia.Name = "panelImagenCambioContrasenia";
+            this.panelImagenCambioContrasenia.Size = new System.Drawing.Size(207, 130);
+            this.panelImagenCambioContrasenia.TabIndex = 5;
             // 
             // FormOptCambiarClave
             // 
@@ -379,7 +379,7 @@
             this.ClientSize = new System.Drawing.Size(1824, 788);
             this.Controls.Add(this.panelRegresarMenu);
             this.Controls.Add(this.panelCambiarContrasenia);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FormOptCambiarClave";
             this.Text = "Cambiar Contraseña";
