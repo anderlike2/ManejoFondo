@@ -136,10 +136,10 @@ namespace ManejoFondo
         private void AbrirFormularioParametrizacion(object sender, EventArgs e)
         {
             //Se inicia el formulario de Cambiar Clave
-            /*FormOptParametrizacion formOptParametrizacion = new FormOptParametrizacion(usuarioSesion);
+            FormOptParametrizacion formOptParametrizacion = new FormOptParametrizacion(usuarioSesion);
             Hide();
             formOptParametrizacion.ShowDialog();
-            Close();*/
+            Close();
         }
     }
 }

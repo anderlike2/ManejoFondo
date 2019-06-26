@@ -38,7 +38,7 @@ namespace ManejoFondo
             //Centrar panel
             panelIngresoCuotaMensual.Location = new Point(
             this.ClientSize.Width / 2 - panelIngresoCuotaMensual.Size.Width / 2,
-            this.ClientSize.Height / 2 - panelIngresoCuotaMensual.Size.Height / 2);
+            this.ClientSize.Height / 2 - panelIngresoCuotaMensual.Size.Height / 3);
             panelIngresoCuotaMensual.Anchor = AnchorStyles.None;
 
             //Cambiar Tema form

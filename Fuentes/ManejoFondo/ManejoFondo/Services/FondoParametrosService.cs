@@ -16,6 +16,17 @@ namespace ManejoFondo.Services
     public class FondoParametrosService
     {
         /// <summary>
+        /// Metodo para consultar todos los parametros del sistema
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        public List<FondoParametrosEntity> ConsultarParametrosSistema()
+        {
+            FondoParametrosDao fondoParametrosDao = new FondoParametrosDao();
+            return fondoParametrosDao.ConsultarParametrosSistema();
+        }
+
+        /// <summary>
         /// Metodo para consultar todos los parametros por nombre
         /// Autor: Anderson Benavides
         /// 2019-05-23

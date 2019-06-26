@@ -58,7 +58,10 @@ namespace ManejoFondo
 
             //Inicializar fechas
             datePickerDatosPersonaFechaNacimiento.Value = DateTime.Now;
-            datePickerNucleoFamiliarConyugeFechaNacimiento.Value = DateTime.Now;            
+            datePickerNucleoFamiliarConyugeFechaNacimiento.Value = DateTime.Now;
+
+            dataGridNucleoFamiliarIntegrantes.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10F, FontStyle.Bold);
+            dataGridNucleoFamiliarIntegrantes.DefaultCellStyle.Font = new Font("Arial", 10F);
         }
 
         /// <summary>

@@ -34,7 +34,7 @@ namespace ManejoFondo
             //Centrar panel
             panelCambiarContrasenia.Location = new Point(
             this.ClientSize.Width / 2 - panelCambiarContrasenia.Size.Width / 2,
-            this.ClientSize.Height / 2 - panelCambiarContrasenia.Size.Height / 2);
+            this.ClientSize.Height / 2 - panelCambiarContrasenia.Size.Height / 3);
             panelCambiarContrasenia.Anchor = AnchorStyles.None;
 
             //Cambiar Tema form

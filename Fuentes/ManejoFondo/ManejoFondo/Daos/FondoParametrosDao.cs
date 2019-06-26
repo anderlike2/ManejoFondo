@@ -17,6 +17,22 @@ namespace ManejoFondo.Daos
     public class FondoParametrosDao
     {
         /// <summary>
+        /// Metodo para consultar todos los parametros del sistema
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        public List<FondoParametrosEntity> ConsultarParametrosSistema()
+        {
+            using (var cnn = SqlLiteConexion.SimpleDbConnection())
+            {
+                List<FondoParametrosEntity> result = cnn.Query<FondoParametrosEntity>(
+                    @"SELECT N_ID, V_NOMBRE, V_VALOR, V_DESCRIPCION
+                    FROM FONDOPARAMETROS").ToList();
+                return result;
+            }
+        }
+
+        /// <summary>
         /// Metodo para consultar todos los parametros por nombre
         /// Autor: Anderson Benavides
         /// 2019-05-23
