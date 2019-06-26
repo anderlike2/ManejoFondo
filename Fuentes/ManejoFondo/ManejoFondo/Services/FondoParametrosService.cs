@@ -37,5 +37,17 @@ namespace ManejoFondo.Services
             FondoParametrosDao fondoParametrosDao = new FondoParametrosDao();
             return fondoParametrosDao.ConsultarParametroPorNombre(nombreParametro);
         }
+
+        /// <summary>
+        /// Metodo para actualizar la informacion de un parametro
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="parametro"></param>
+        public bool ActualizarInformacionParametro(FondoParametrosEntity parametro)
+        {
+            FondoParametrosDao fondoParametrosDao = new FondoParametrosDao();
+            return fondoParametrosDao.ActualizarInformacionParametro(parametro);
+        }
     }
 }

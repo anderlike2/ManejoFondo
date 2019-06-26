@@ -161,6 +161,12 @@
     <Compile Include="FormModalAgregarNucleoFamiliar.Designer.cs">
       <DependentUpon>FormModalAgregarNucleoFamiliar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModalEditarParametro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModalEditarParametro.Designer.cs">
+      <DependentUpon>FormModalEditarParametro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOptAhorroCuotaMensual.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     <EmbeddedResource Include="FormModalAgregarNucleoFamiliar.resx">
       <DependentUpon>FormModalAgregarNucleoFamiliar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormModalEditarParametro.resx">
+      <DependentUpon>FormModalEditarParametro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormOptAhorroCuotaMensual.resx">
       <DependentUpon>FormOptAhorroCuotaMensual.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +320,7 @@
     <Content Include="Resources\Images\cerrarSesion.png" />
     <Content Include="Resources\Images\consultar.png" />
     <Content Include="Resources\Images\datosPersonales.png" />
+    <Content Include="Resources\Images\editarInformacion.png" />
     <Content Include="Resources\Images\eliminar.png" />
     <Content Include="Resources\Images\iconoLogin.jpg" />
     <Content Include="Resources\Images\indicador.png" />

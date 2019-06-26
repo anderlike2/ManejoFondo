@@ -11,6 +11,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
 namespace ManejoFondo
@@ -72,6 +73,12 @@ namespace ManejoFondo
         {
             try
             {
+                /*foreach (DataGridViewRow item in this.dataGridParametrizacion.Rows)
+                {
+                    dataGridParametrizacion.Rows.Remove(item);
+                }*/
+                dataGridParametrizacion.Rows.Clear();
+
                 List<FondoParametrosEntity> lstParametros = fondoParametrosService.ConsultarParametrosSistema();
                 foreach(FondoParametrosEntity parametro in lstParametros)
                 {
@@ -86,6 +93,41 @@ namespace ManejoFondo
             catch (Exception ex)
             {
                 Log.Registrar_Log(ex.Message, "FormOptParametrizacion - ConsultarParametrosSistema", LogErrorEnumeration.Critico);
+                General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
+            }
+        }
+
+        /// <summary>
+        /// Funcion para abrir la modal de editar Parametros
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void AbrirModalEditarParametro(object sender, EventArgs e)
+        {
+            try
+            {
+                FondoParametrosEntity parametroSeleccionado = (FondoParametrosEntity)dataGridParametrizacion.CurrentRow.DataBoundItem;
+                FormModalEditarParametro formModalEditarParametro = new FormModalEditarParametro(parametroSeleccionado);
+                formModalEditarParametro.ShowDialog();
+                String resultado = formModalEditarParametro.jsonParametro;
+                if (!General.EsVacioNulo(resultado))
+                {
+                    FondoParametrosEntity parametroModificado = new JavaScriptSerializer().Deserialize<FondoParametrosEntity>(resultado);
+                    fondoParametrosService.ActualizarInformacionParametro(parametroModificado);
+
+                    General.MostrarPanelError(Constantes.CodigoExito, Constantes.MsjExitoGuardar);
+
+                    //Se refresca la consulta
+                    ConsultarParametrosSistema();
+                }               
+            }
+            catch (BusinessException ex)
+            {
+                General.MostrarPanelError(Constantes.CodigoWarning, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Log.Registrar_Log(ex.Message, "FormOptParametrizacion - AbrirModalEditarParametro", LogErrorEnumeration.Critico);
                 General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
             }
         }

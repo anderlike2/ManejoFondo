@@ -499,11 +499,11 @@
             this.datePickerAgregarPersonaFechaNacimiento.Size = new System.Drawing.Size(331, 20);
             this.datePickerAgregarPersonaFechaNacimiento.TabIndex = 72;
             // 
-            // FormAgregarNucleoFamiliar
+            // FormModalAgregarNucleoFamiliar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Maroon;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(839, 590);
             this.Controls.Add(this.datePickerAgregarPersonaFechaNacimiento);
             this.Controls.Add(this.labelObligatorioParentescoAgregarPersona);
@@ -539,7 +539,7 @@
             this.Controls.Add(this.labelAgregarNucleoFamiliar);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "FormAgregarNucleoFamiliar";
+            this.Name = "FormModalAgregarNucleoFamiliar";
             this.Text = "Agregar Persona";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -48,5 +48,23 @@ namespace ManejoFondo.Daos
                 return result;
             }
         }
+
+        /// <summary>
+        /// Metodo para actualizar la informacion de un parametro
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="parametro"></param>
+        public bool ActualizarInformacionParametro(FondoParametrosEntity parametro)
+        {
+            using (var cnn = SqlLiteConexion.SimpleDbConnection())
+            {
+                int result = cnn.Execute(
+                    @"UPDATE FONDOPARAMETROS SET V_VALOR = @V_VALOR, V_DESCRIPCION = @V_DESCRIPCION
+                    WHERE N_ID = @N_ID",
+                    new { parametro.V_Valor, parametro.V_Descripcion, parametro.N_Id });
+                return result > 0;
+            }
+        }
     }
 }
