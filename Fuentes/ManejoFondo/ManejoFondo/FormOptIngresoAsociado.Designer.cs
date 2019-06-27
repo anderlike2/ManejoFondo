@@ -142,6 +142,7 @@
             this.ingresoAsociadoAceptar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.buttonEliminarNucleoFamiliarIntegrantes = new System.Windows.Forms.Button();
             this.usuarioModelBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -236,7 +237,7 @@
             this.tabDatosPersona.Location = new System.Drawing.Point(4, 27);
             this.tabDatosPersona.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.tabDatosPersona.Name = "tabDatosPersona";
-            this.tabDatosPersona.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabDatosPersona.Padding = new System.Windows.Forms.Padding(3);
             this.tabDatosPersona.Size = new System.Drawing.Size(1333, 575);
             this.tabDatosPersona.TabIndex = 0;
             this.tabDatosPersona.Text = "Datos Persona";
@@ -330,7 +331,7 @@
             this.textBoxDatosPersonaAntiguedadAsociacion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaAntiguedadAsociacion.LineThickness = 3;
             this.textBoxDatosPersonaAntiguedadAsociacion.Location = new System.Drawing.Point(664, 422);
-            this.textBoxDatosPersonaAntiguedadAsociacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDatosPersonaAntiguedadAsociacion.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaAntiguedadAsociacion.Name = "textBoxDatosPersonaAntiguedadAsociacion";
             this.textBoxDatosPersonaAntiguedadAsociacion.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaAntiguedadAsociacion.TabIndex = 39;
@@ -383,7 +384,7 @@
             this.textBoxDatosPersonaNombreInstitucion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaNombreInstitucion.LineThickness = 3;
             this.textBoxDatosPersonaNombreInstitucion.Location = new System.Drawing.Point(664, 357);
-            this.textBoxDatosPersonaNombreInstitucion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDatosPersonaNombreInstitucion.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaNombreInstitucion.Name = "textBoxDatosPersonaNombreInstitucion";
             this.textBoxDatosPersonaNombreInstitucion.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaNombreInstitucion.TabIndex = 34;
@@ -424,7 +425,7 @@
             this.textBoxDatosPersonaVereda.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaVereda.LineThickness = 3;
             this.textBoxDatosPersonaVereda.Location = new System.Drawing.Point(664, 292);
-            this.textBoxDatosPersonaVereda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDatosPersonaVereda.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaVereda.Name = "textBoxDatosPersonaVereda";
             this.textBoxDatosPersonaVereda.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaVereda.TabIndex = 31;
@@ -568,7 +569,7 @@
             this.textBoxDatosPersonaTelefono.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaTelefono.LineThickness = 3;
             this.textBoxDatosPersonaTelefono.Location = new System.Drawing.Point(104, 422);
-            this.textBoxDatosPersonaTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDatosPersonaTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaTelefono.Name = "textBoxDatosPersonaTelefono";
             this.textBoxDatosPersonaTelefono.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaTelefono.TabIndex = 19;
@@ -634,7 +635,7 @@
             this.textBoxDatosPersonaNumeroIdentificacion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaNumeroIdentificacion.LineThickness = 3;
             this.textBoxDatosPersonaNumeroIdentificacion.Location = new System.Drawing.Point(664, 162);
-            this.textBoxDatosPersonaNumeroIdentificacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDatosPersonaNumeroIdentificacion.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaNumeroIdentificacion.Name = "textBoxDatosPersonaNumeroIdentificacion";
             this.textBoxDatosPersonaNumeroIdentificacion.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaNumeroIdentificacion.TabIndex = 13;
@@ -676,7 +677,7 @@
             this.textBoxDatosPersonasApellidos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonasApellidos.LineThickness = 3;
             this.textBoxDatosPersonasApellidos.Location = new System.Drawing.Point(664, 98);
-            this.textBoxDatosPersonasApellidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDatosPersonasApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonasApellidos.Name = "textBoxDatosPersonasApellidos";
             this.textBoxDatosPersonasApellidos.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonasApellidos.TabIndex = 9;
@@ -695,7 +696,7 @@
             this.textBoxDatosPersonaNombres.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxDatosPersonaNombres.LineThickness = 3;
             this.textBoxDatosPersonaNombres.Location = new System.Drawing.Point(103, 98);
-            this.textBoxDatosPersonaNombres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDatosPersonaNombres.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDatosPersonaNombres.Name = "textBoxDatosPersonaNombres";
             this.textBoxDatosPersonaNombres.Size = new System.Drawing.Size(427, 29);
             this.textBoxDatosPersonaNombres.TabIndex = 8;
@@ -789,7 +790,7 @@
             this.tabAyudaGubernamental.Location = new System.Drawing.Point(4, 27);
             this.tabAyudaGubernamental.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.tabAyudaGubernamental.Name = "tabAyudaGubernamental";
-            this.tabAyudaGubernamental.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabAyudaGubernamental.Padding = new System.Windows.Forms.Padding(3);
             this.tabAyudaGubernamental.Size = new System.Drawing.Size(1333, 575);
             this.tabAyudaGubernamental.TabIndex = 1;
             this.tabAyudaGubernamental.Text = "Ayuda Gobierno";
@@ -905,7 +906,7 @@
             this.textBoxAyudaGobiernoPuntajeSisben.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxAyudaGobiernoPuntajeSisben.LineThickness = 3;
             this.textBoxAyudaGobiernoPuntajeSisben.Location = new System.Drawing.Point(103, 98);
-            this.textBoxAyudaGobiernoPuntajeSisben.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxAyudaGobiernoPuntajeSisben.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAyudaGobiernoPuntajeSisben.Name = "textBoxAyudaGobiernoPuntajeSisben";
             this.textBoxAyudaGobiernoPuntajeSisben.Size = new System.Drawing.Size(427, 29);
             this.textBoxAyudaGobiernoPuntajeSisben.TabIndex = 11;
@@ -969,7 +970,7 @@
             this.tabNucleoFamiliar.Controls.Add(this.panel2);
             this.tabNucleoFamiliar.Location = new System.Drawing.Point(4, 27);
             this.tabNucleoFamiliar.Name = "tabNucleoFamiliar";
-            this.tabNucleoFamiliar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabNucleoFamiliar.Padding = new System.Windows.Forms.Padding(3);
             this.tabNucleoFamiliar.Size = new System.Drawing.Size(1333, 575);
             this.tabNucleoFamiliar.TabIndex = 2;
             this.tabNucleoFamiliar.Text = "Núcleo Familiar";
@@ -998,6 +999,7 @@
             // 
             // panelNucleoFamiliarOtrosFamiliares
             // 
+            this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.buttonEliminarNucleoFamiliarIntegrantes);
             this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.buttonAgregarNucleoFamiliarIntegrantes);
             this.panelNucleoFamiliarOtrosFamiliares.Controls.Add(this.dataGridNucleoFamiliarIntegrantes);
             this.panelNucleoFamiliarOtrosFamiliares.Location = new System.Drawing.Point(7, 415);
@@ -1023,6 +1025,7 @@
             // dataGridNucleoFamiliarIntegrantes
             // 
             this.dataGridNucleoFamiliarIntegrantes.AllowUserToAddRows = false;
+            this.dataGridNucleoFamiliarIntegrantes.AllowUserToDeleteRows = false;
             this.dataGridNucleoFamiliarIntegrantes.AutoGenerateColumns = false;
             this.dataGridNucleoFamiliarIntegrantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridNucleoFamiliarIntegrantes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -1041,7 +1044,7 @@
             this.CodParentesco});
             this.dataGridNucleoFamiliarIntegrantes.DataSource = this.usuarioModelBindingSource2;
             this.dataGridNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(2, 52);
-            this.dataGridNucleoFamiliarIntegrantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridNucleoFamiliarIntegrantes.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridNucleoFamiliarIntegrantes.Name = "dataGridNucleoFamiliarIntegrantes";
             this.dataGridNucleoFamiliarIntegrantes.ReadOnly = true;
             this.dataGridNucleoFamiliarIntegrantes.RowTemplate.Height = 24;
@@ -1075,7 +1078,7 @@
             this.panelNucleoFamiliarConyuge.Controls.Add(this.label22);
             this.panelNucleoFamiliarConyuge.Controls.Add(this.label23);
             this.panelNucleoFamiliarConyuge.Location = new System.Drawing.Point(7, 148);
-            this.panelNucleoFamiliarConyuge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelNucleoFamiliarConyuge.Margin = new System.Windows.Forms.Padding(2);
             this.panelNucleoFamiliarConyuge.Name = "panelNucleoFamiliarConyuge";
             this.panelNucleoFamiliarConyuge.Size = new System.Drawing.Size(1321, 262);
             this.panelNucleoFamiliarConyuge.TabIndex = 30;
@@ -1137,7 +1140,7 @@
             this.textBoxNucleoFamiliarConyugeOtraActividad.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeOtraActividad.LineThickness = 3;
             this.textBoxNucleoFamiliarConyugeOtraActividad.Location = new System.Drawing.Point(657, 203);
-            this.textBoxNucleoFamiliarConyugeOtraActividad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNucleoFamiliarConyugeOtraActividad.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeOtraActividad.Name = "textBoxNucleoFamiliarConyugeOtraActividad";
             this.textBoxNucleoFamiliarConyugeOtraActividad.Size = new System.Drawing.Size(427, 29);
             this.textBoxNucleoFamiliarConyugeOtraActividad.TabIndex = 51;
@@ -1191,7 +1194,7 @@
             this.textBoxNucleoFamiliarConyugeApellidos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeApellidos.LineThickness = 3;
             this.textBoxNucleoFamiliarConyugeApellidos.Location = new System.Drawing.Point(657, 26);
-            this.textBoxNucleoFamiliarConyugeApellidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNucleoFamiliarConyugeApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeApellidos.Name = "textBoxNucleoFamiliarConyugeApellidos";
             this.textBoxNucleoFamiliarConyugeApellidos.Size = new System.Drawing.Size(427, 29);
             this.textBoxNucleoFamiliarConyugeApellidos.TabIndex = 36;
@@ -1234,7 +1237,7 @@
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.LineThickness = 3;
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.Location = new System.Drawing.Point(96, 151);
-            this.textBoxNucleoFamiliarConyugeNumeroTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNucleoFamiliarConyugeNumeroTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.Name = "textBoxNucleoFamiliarConyugeNumeroTelefono";
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.Size = new System.Drawing.Size(427, 29);
             this.textBoxNucleoFamiliarConyugeNumeroTelefono.TabIndex = 44;
@@ -1300,7 +1303,7 @@
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.LineThickness = 3;
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Location = new System.Drawing.Point(657, 86);
-            this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Name = "textBoxNucleoFamiliarConyugeNumeroIdentificacion";
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.Size = new System.Drawing.Size(427, 29);
             this.textBoxNucleoFamiliarConyugeNumeroIdentificacion.TabIndex = 39;
@@ -1353,7 +1356,7 @@
             this.textBoxNucleoFamiliarConyugeNombres.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxNucleoFamiliarConyugeNombres.LineThickness = 3;
             this.textBoxNucleoFamiliarConyugeNombres.Location = new System.Drawing.Point(96, 20);
-            this.textBoxNucleoFamiliarConyugeNombres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNucleoFamiliarConyugeNombres.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNucleoFamiliarConyugeNombres.Name = "textBoxNucleoFamiliarConyugeNombres";
             this.textBoxNucleoFamiliarConyugeNombres.Size = new System.Drawing.Size(427, 29);
             this.textBoxNucleoFamiliarConyugeNombres.TabIndex = 35;
@@ -1470,7 +1473,7 @@
             this.tabIngresos.Controls.Add(this.panel3);
             this.tabIngresos.Location = new System.Drawing.Point(4, 27);
             this.tabIngresos.Name = "tabIngresos";
-            this.tabIngresos.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabIngresos.Padding = new System.Windows.Forms.Padding(3);
             this.tabIngresos.Size = new System.Drawing.Size(1333, 575);
             this.tabIngresos.TabIndex = 3;
             this.tabIngresos.Text = "Ingresos";
@@ -1499,7 +1502,7 @@
             this.textBoxIngresosTipoCultivo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxIngresosTipoCultivo.LineThickness = 3;
             this.textBoxIngresosTipoCultivo.Location = new System.Drawing.Point(664, 171);
-            this.textBoxIngresosTipoCultivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIngresosTipoCultivo.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIngresosTipoCultivo.Name = "textBoxIngresosTipoCultivo";
             this.textBoxIngresosTipoCultivo.Size = new System.Drawing.Size(427, 29);
             this.textBoxIngresosTipoCultivo.TabIndex = 35;
@@ -1518,7 +1521,7 @@
             this.textBoxIngresosTipoAnimales.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxIngresosTipoAnimales.LineThickness = 3;
             this.textBoxIngresosTipoAnimales.Location = new System.Drawing.Point(103, 171);
-            this.textBoxIngresosTipoAnimales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIngresosTipoAnimales.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIngresosTipoAnimales.Name = "textBoxIngresosTipoAnimales";
             this.textBoxIngresosTipoAnimales.Size = new System.Drawing.Size(427, 29);
             this.textBoxIngresosTipoAnimales.TabIndex = 34;
@@ -1559,7 +1562,7 @@
             this.textBoxIngresosIngresosMensuales.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxIngresosIngresosMensuales.LineThickness = 3;
             this.textBoxIngresosIngresosMensuales.Location = new System.Drawing.Point(664, 102);
-            this.textBoxIngresosIngresosMensuales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIngresosIngresosMensuales.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIngresosIngresosMensuales.Name = "textBoxIngresosIngresosMensuales";
             this.textBoxIngresosIngresosMensuales.Size = new System.Drawing.Size(427, 26);
             this.textBoxIngresosIngresosMensuales.TabIndex = 29;
@@ -1681,6 +1684,21 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Width = 927;
+            // 
+            // buttonEliminarNucleoFamiliarIntegrantes
+            // 
+            this.buttonEliminarNucleoFamiliarIntegrantes.BackColor = System.Drawing.Color.White;
+            this.buttonEliminarNucleoFamiliarIntegrantes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEliminarNucleoFamiliarIntegrantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarNucleoFamiliarIntegrantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarNucleoFamiliarIntegrantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(66)))), ((int)(((byte)(45)))));
+            this.buttonEliminarNucleoFamiliarIntegrantes.Location = new System.Drawing.Point(137, 14);
+            this.buttonEliminarNucleoFamiliarIntegrantes.Name = "buttonEliminarNucleoFamiliarIntegrantes";
+            this.buttonEliminarNucleoFamiliarIntegrantes.Size = new System.Drawing.Size(115, 32);
+            this.buttonEliminarNucleoFamiliarIntegrantes.TabIndex = 56;
+            this.buttonEliminarNucleoFamiliarIntegrantes.Text = "Eliminar";
+            this.buttonEliminarNucleoFamiliarIntegrantes.UseVisualStyleBackColor = false;
+            this.buttonEliminarNucleoFamiliarIntegrantes.Click += new System.EventHandler(this.EliminarPersona);
             // 
             // usuarioModelBindingSource2
             // 
@@ -1923,6 +1941,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.BindingSource usuarioModelBindingSource2;
         private System.Windows.Forms.BindingSource usuarioModelBindingSource1;
+        private System.Windows.Forms.Button buttonEliminarNucleoFamiliarIntegrantes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoIdentificacion;

@@ -34,6 +34,9 @@ namespace ManejoFondo
         FondoFamiliaUsuarioService fondoFamiliaUsuarioService = new FondoFamiliaUsuarioService();
         FondoIngresosUsuarioService fondoIngresosUsuarioService = new FondoIngresosUsuarioService();
 
+        //Para almacenar el datasource da la familia del usuario
+        List<UsuarioModel> lstFamiliaUsuario = new List<UsuarioModel>();
+
         public FormOptIngresoAsociado(FondoLoginEntity usuario)
         {
             InitializeComponent();
@@ -223,11 +226,25 @@ namespace ManejoFondo
             String resultado = formNucleoFamiliar.jsonUsuario;
             if (!General.EsVacioNulo(resultado))
             {
-                UsuarioModel desUsuario = new JavaScriptSerializer().Deserialize<UsuarioModel>(resultado);
-                BindingSource bs = (BindingSource)this.dataGridNucleoFamiliarIntegrantes.DataSource;
-                bs.Add(desUsuario);
+                lstFamiliaUsuario.Add(new JavaScriptSerializer().Deserialize<UsuarioModel>(resultado));
             }
-            
+            dataGridNucleoFamiliarIntegrantes.DataSource = null;
+            dataGridNucleoFamiliarIntegrantes.DataSource = lstFamiliaUsuario;
+            dataGridNucleoFamiliarIntegrantes.Refresh();
+        }
+
+        /// <summary>
+        /// Funcion para Eliminar una persona al nucleo familiar
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void EliminarPersona(object sender, EventArgs e)
+        {
+            UsuarioModel personaSeleccionada = (UsuarioModel)dataGridNucleoFamiliarIntegrantes.CurrentRow.DataBoundItem;
+            lstFamiliaUsuario.Remove(personaSeleccionada);
+            dataGridNucleoFamiliarIntegrantes.DataSource = null;
+            dataGridNucleoFamiliarIntegrantes.DataSource = lstFamiliaUsuario;
+            dataGridNucleoFamiliarIntegrantes.Refresh();
         }
 
         /// <summary>
@@ -553,6 +570,9 @@ namespace ManejoFondo
             comboBoxNucleoFamiliarConyugeTipoActividad.SelectedIndex = 0;
             textBoxNucleoFamiliarConyugeOtraActividad.Text = "";
             dataGridNucleoFamiliarIntegrantes.DataSource = null;
+            lstFamiliaUsuario = new List<UsuarioModel>();
+            dataGridNucleoFamiliarIntegrantes.DataSource = lstFamiliaUsuario;
+            dataGridNucleoFamiliarIntegrantes.Refresh();
 
             //Limpiar datos Ingresos
             comboBoxIngresosActividadEconomica.SelectedIndex = 0;
@@ -614,7 +634,7 @@ namespace ManejoFondo
                     usuario.V_Nombre_Institucion = textBoxDatosPersonaNombreInstitucion.Text;
                     usuario.F_Fecha_Nacimiento = datePickerDatosPersonaFechaNacimiento.Value;
                     usuario.F_Fecha_Registro = DateTime.Now;
-                    usuario.N_Antiguedad_Asociacion = Convert.ToInt64(textBoxDatosPersonaAntiguedadAsociacion.Text);
+                    usuario.N_Antiguedad_Asociacion = General.EsVacioNulo(textBoxDatosPersonaAntiguedadAsociacion.Text) ? 0 : Convert.ToInt64(textBoxDatosPersonaAntiguedadAsociacion.Text);
 
                     FondoDominiosEntity datosPersonaPais = (FondoDominiosEntity)comboBoxDatosPersonaPais.SelectedItem;
                     FondoDominiosEntity datosPersonaDepartamento = (FondoDominiosEntity)comboBoxDatosPersonaDepartamento.SelectedItem;
@@ -717,6 +737,6 @@ namespace ManejoFondo
                 General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
             }          
            
-        }
+        }        
     }
 }

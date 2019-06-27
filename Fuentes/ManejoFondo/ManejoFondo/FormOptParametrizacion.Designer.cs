@@ -30,19 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelParametrizacion = new System.Windows.Forms.Panel();
+            this.labelTextoSeleccionarEditar = new System.Windows.Forms.Label();
             this.buttonEditarParametro = new System.Windows.Forms.Button();
             this.dataGridParametrizacion = new System.Windows.Forms.DataGridView();
-            this.labelTituloParametrizacionSistema = new System.Windows.Forms.Label();
-            this.labelTextoSeleccionarEditar = new System.Windows.Forms.Label();
             this.panelImagenParametrizacion = new System.Windows.Forms.Panel();
+            this.labelTituloParametrizacionSistema = new System.Windows.Forms.Label();
             this.panelRegresarMenu = new System.Windows.Forms.Panel();
+            this.fondoParametrosEntityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vNombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vValorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vDescripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoErrorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionErrorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fondoParametrosEntityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelParametrizacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridParametrizacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoParametrosEntityBindingSource)).BeginInit();
@@ -61,6 +59,17 @@
             this.panelParametrizacion.Name = "panelParametrizacion";
             this.panelParametrizacion.Size = new System.Drawing.Size(1344, 647);
             this.panelParametrizacion.TabIndex = 0;
+            // 
+            // labelTextoSeleccionarEditar
+            // 
+            this.labelTextoSeleccionarEditar.AutoSize = true;
+            this.labelTextoSeleccionarEditar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTextoSeleccionarEditar.Location = new System.Drawing.Point(62, 127);
+            this.labelTextoSeleccionarEditar.Name = "labelTextoSeleccionarEditar";
+            this.labelTextoSeleccionarEditar.Size = new System.Drawing.Size(464, 20);
+            this.labelTextoSeleccionarEditar.TabIndex = 10;
+            this.labelTextoSeleccionarEditar.Text = "Por favor seleccione la fila del parámetro a editar y a continuación presione \"Ed" +
+    "itar\"";
             // 
             // buttonEditarParametro
             // 
@@ -89,9 +98,7 @@
             this.nIdDataGridViewTextBoxColumn,
             this.vNombreDataGridViewTextBoxColumn,
             this.vValorDataGridViewTextBoxColumn,
-            this.vDescripcionDataGridViewTextBoxColumn,
-            this.codigoErrorDataGridViewTextBoxColumn,
-            this.descripcionErrorDataGridViewTextBoxColumn});
+            this.vDescripcionDataGridViewTextBoxColumn});
             this.dataGridParametrizacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridParametrizacion.DataSource = this.fondoParametrosEntityBindingSource;
             this.dataGridParametrizacion.Location = new System.Drawing.Point(65, 154);
@@ -100,6 +107,16 @@
             this.dataGridParametrizacion.ReadOnly = true;
             this.dataGridParametrizacion.Size = new System.Drawing.Size(1205, 252);
             this.dataGridParametrizacion.TabIndex = 7;
+            // 
+            // panelImagenParametrizacion
+            // 
+            this.panelImagenParametrizacion.BackColor = System.Drawing.Color.White;
+            this.panelImagenParametrizacion.BackgroundImage = global::ManejoFondo.Properties.Resources.parametrizacionSistema;
+            this.panelImagenParametrizacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelImagenParametrizacion.Location = new System.Drawing.Point(1215, 12);
+            this.panelImagenParametrizacion.Name = "panelImagenParametrizacion";
+            this.panelImagenParametrizacion.Size = new System.Drawing.Size(85, 85);
+            this.panelImagenParametrizacion.TabIndex = 6;
             // 
             // labelTituloParametrizacionSistema
             // 
@@ -111,27 +128,6 @@
             this.labelTituloParametrizacionSistema.Size = new System.Drawing.Size(578, 22);
             this.labelTituloParametrizacionSistema.TabIndex = 5;
             this.labelTituloParametrizacionSistema.Text = "POR FAVOR INGRESAR LA PARAMETRIZACIÓN DEL SISTEMA";
-            // 
-            // labelTextoSeleccionarEditar
-            // 
-            this.labelTextoSeleccionarEditar.AutoSize = true;
-            this.labelTextoSeleccionarEditar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoSeleccionarEditar.Location = new System.Drawing.Point(62, 127);
-            this.labelTextoSeleccionarEditar.Name = "labelTextoSeleccionarEditar";
-            this.labelTextoSeleccionarEditar.Size = new System.Drawing.Size(464, 20);
-            this.labelTextoSeleccionarEditar.TabIndex = 10;
-            this.labelTextoSeleccionarEditar.Text = "Por favor seleccione la fila del parámetro a editar y a continuación presione \"Ed" +
-    "itar\"";
-            // 
-            // panelImagenParametrizacion
-            // 
-            this.panelImagenParametrizacion.BackColor = System.Drawing.Color.White;
-            this.panelImagenParametrizacion.BackgroundImage = global::ManejoFondo.Properties.Resources.parametrizacionSistema;
-            this.panelImagenParametrizacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelImagenParametrizacion.Location = new System.Drawing.Point(1215, 12);
-            this.panelImagenParametrizacion.Name = "panelImagenParametrizacion";
-            this.panelImagenParametrizacion.Size = new System.Drawing.Size(85, 85);
-            this.panelImagenParametrizacion.TabIndex = 6;
             // 
             // panelRegresarMenu
             // 
@@ -146,6 +142,10 @@
             this.panelRegresarMenu.Size = new System.Drawing.Size(31, 31);
             this.panelRegresarMenu.TabIndex = 4;
             this.panelRegresarMenu.Click += new System.EventHandler(this.RegresarMenuPrincipal);
+            // 
+            // fondoParametrosEntityBindingSource
+            // 
+            this.fondoParametrosEntityBindingSource.DataSource = typeof(ManejoFondo.Entities.FondoParametrosEntity);
             // 
             // nIdDataGridViewTextBoxColumn
             // 
@@ -175,26 +175,6 @@
             this.vDescripcionDataGridViewTextBoxColumn.Name = "vDescripcionDataGridViewTextBoxColumn";
             this.vDescripcionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // codigoErrorDataGridViewTextBoxColumn
-            // 
-            this.codigoErrorDataGridViewTextBoxColumn.DataPropertyName = "CodigoError";
-            this.codigoErrorDataGridViewTextBoxColumn.HeaderText = "CodigoError";
-            this.codigoErrorDataGridViewTextBoxColumn.Name = "codigoErrorDataGridViewTextBoxColumn";
-            this.codigoErrorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codigoErrorDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // descripcionErrorDataGridViewTextBoxColumn
-            // 
-            this.descripcionErrorDataGridViewTextBoxColumn.DataPropertyName = "DescripcionError";
-            this.descripcionErrorDataGridViewTextBoxColumn.HeaderText = "DescripcionError";
-            this.descripcionErrorDataGridViewTextBoxColumn.Name = "descripcionErrorDataGridViewTextBoxColumn";
-            this.descripcionErrorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descripcionErrorDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fondoParametrosEntityBindingSource
-            // 
-            this.fondoParametrosEntityBindingSource.DataSource = typeof(ManejoFondo.Entities.FondoParametrosEntity);
-            // 
             // FormOptParametrizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,13 +202,11 @@
         private System.Windows.Forms.Panel panelImagenParametrizacion;
         private System.Windows.Forms.BindingSource fondoParametrosEntityBindingSource;
         private System.Windows.Forms.DataGridView dataGridParametrizacion;
+        private System.Windows.Forms.Button buttonEditarParametro;
+        private System.Windows.Forms.Label labelTextoSeleccionarEditar;
         private System.Windows.Forms.DataGridViewTextBoxColumn nIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vNombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vValorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vDescripcionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoErrorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionErrorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button buttonEditarParametro;
-        private System.Windows.Forms.Label labelTextoSeleccionarEditar;
     }
 }

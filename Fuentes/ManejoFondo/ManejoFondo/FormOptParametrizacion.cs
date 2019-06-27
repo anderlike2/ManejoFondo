@@ -73,18 +73,8 @@ namespace ManejoFondo
         {
             try
             {
-                /*foreach (DataGridViewRow item in this.dataGridParametrizacion.Rows)
-                {
-                    dataGridParametrizacion.Rows.Remove(item);
-                }*/
-                dataGridParametrizacion.Rows.Clear();
-
                 List<FondoParametrosEntity> lstParametros = fondoParametrosService.ConsultarParametrosSistema();
-                foreach(FondoParametrosEntity parametro in lstParametros)
-                {
-                    BindingSource bs = (BindingSource)this.dataGridParametrizacion.DataSource;
-                    bs.Add(parametro);
-                }
+                dataGridParametrizacion.DataSource = lstParametros;
             }
             catch (BusinessException ex)
             {
