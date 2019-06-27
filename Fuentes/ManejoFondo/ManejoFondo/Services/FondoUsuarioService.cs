@@ -1,5 +1,6 @@
 ﻿using ManejoFondo.Daos;
 using ManejoFondo.Entities;
+using ManejoFondo.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,43 @@ namespace ManejoFondo.Services
         {
             FondoUsuarioDao fondoUsuarioDao = new FondoUsuarioDao();
             return fondoUsuarioDao.ConsultarUsuarioPorIdentificacion(usuario);
+        }
+
+        // <summary>
+        /// Metodo para consultar los usuarios del sistema
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="usuario"></param>
+        public List<FondoUsuarioEntity> ConsultarUsuarios(FondoUsuarioEntity usuario)
+        {
+            FondoUsuarioDao fondoUsuarioDao = new FondoUsuarioDao();
+            return fondoUsuarioDao.ConsultarUsuarios(usuario);
+        }
+
+        // <summary>
+        /// Metodo para consultar los usuarios del sistema mediante los filtros de pantalla
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="usuario"></param>
+        public List<UsuarioConsultaModel> ConsultarUsuariosSistema(FondoUsuarioEntity usuario)
+        {
+            List<UsuarioConsultaModel> resultado = new List<UsuarioConsultaModel>();
+            List<FondoUsuarioEntity> lstUsuarios = ConsultarUsuarios(usuario);
+            //Se transforma la informacion de Entidad a Modelo
+            foreach(FondoUsuarioEntity usu in lstUsuarios)
+            {
+                UsuarioConsultaModel usuarioModelo = new UsuarioConsultaModel();
+                usuarioModelo.NumeroIdentificacion = usu.V_Numero_Identificacion;
+                usuarioModelo.TipoIdentificacion = usu.V_Tipo_Identificacion;
+                usuarioModelo.Nombres = usu.V_Nombres;
+                usuarioModelo.Apellidos = usu.V_Apellidos;
+                usuarioModelo.Telefono = usu.N_Telefono;
+                usuarioModelo.FechaRegistro = usu.F_Fecha_Registro;
+                resultado.Add(usuarioModelo);
+            }
+            return resultado;
         }
     }
 }

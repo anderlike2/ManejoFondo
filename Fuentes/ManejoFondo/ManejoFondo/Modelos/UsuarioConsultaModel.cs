@@ -15,10 +15,10 @@ namespace ManejoFondo.Modelos
     {
         public string TipoIdentificacion { get; set; }
         public string CodTipoIdentificacion { get; set; }
-        public string NumeroIdentificacion { get; set; }
+        public long NumeroIdentificacion { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
-        public int Telefono { get; set; }
+        public long Telefono { get; set; }
         public DateTime FechaRegistro { get; set; }
     }
 }

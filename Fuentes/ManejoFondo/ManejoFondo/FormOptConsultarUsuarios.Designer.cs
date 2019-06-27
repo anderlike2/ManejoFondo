@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelConsultaUsuarios = new System.Windows.Forms.Panel();
             this.labelTituloConsultaUsuarios = new System.Windows.Forms.Label();
             this.panelImagenParametrizacion = new System.Windows.Forms.Panel();
@@ -47,13 +48,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelConsultaUsuariosFechaRegistroHasta = new System.Windows.Forms.Label();
             this.dataGridConsultaUsuarios = new System.Windows.Forms.DataGridView();
+            this.tipoIdentificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codTipoIdentificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroIdentificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaRegistroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioConsultaModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonConsultarUsuariosLimpiar = new System.Windows.Forms.Button();
+            this.buttonConsultarUsuariosConsultar = new System.Windows.Forms.Button();
             this.panelConsultaUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConsultaUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioConsultaModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelConsultaUsuarios
             // 
             this.panelConsultaUsuarios.BackColor = System.Drawing.Color.White;
+            this.panelConsultaUsuarios.Controls.Add(this.buttonConsultarUsuariosLimpiar);
+            this.panelConsultaUsuarios.Controls.Add(this.buttonConsultarUsuariosConsultar);
             this.panelConsultaUsuarios.Controls.Add(this.dataGridConsultaUsuarios);
             this.panelConsultaUsuarios.Controls.Add(this.datePickerConsultaUsuariosFechaRegistroHasta);
             this.panelConsultaUsuarios.Controls.Add(this.label1);
@@ -290,14 +304,108 @@
             // 
             this.dataGridConsultaUsuarios.AllowUserToAddRows = false;
             this.dataGridConsultaUsuarios.AllowUserToDeleteRows = false;
+            this.dataGridConsultaUsuarios.AutoGenerateColumns = false;
             this.dataGridConsultaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridConsultaUsuarios.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridConsultaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridConsultaUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tipoIdentificacionDataGridViewTextBoxColumn,
+            this.codTipoIdentificacionDataGridViewTextBoxColumn,
+            this.numeroIdentificacionDataGridViewTextBoxColumn,
+            this.nombresDataGridViewTextBoxColumn,
+            this.apellidosDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn,
+            this.fechaRegistroDataGridViewTextBoxColumn});
             this.dataGridConsultaUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridConsultaUsuarios.Location = new System.Drawing.Point(26, 296);
+            this.dataGridConsultaUsuarios.DataSource = this.usuarioConsultaModelBindingSource;
+            this.dataGridConsultaUsuarios.Location = new System.Drawing.Point(26, 360);
             this.dataGridConsultaUsuarios.Name = "dataGridConsultaUsuarios";
+            this.dataGridConsultaUsuarios.ReadOnly = true;
             this.dataGridConsultaUsuarios.Size = new System.Drawing.Size(1284, 232);
             this.dataGridConsultaUsuarios.TabIndex = 53;
+            // 
+            // tipoIdentificacionDataGridViewTextBoxColumn
+            // 
+            this.tipoIdentificacionDataGridViewTextBoxColumn.DataPropertyName = "TipoIdentificacion";
+            this.tipoIdentificacionDataGridViewTextBoxColumn.HeaderText = "Tipo ID";
+            this.tipoIdentificacionDataGridViewTextBoxColumn.Name = "tipoIdentificacionDataGridViewTextBoxColumn";
+            this.tipoIdentificacionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codTipoIdentificacionDataGridViewTextBoxColumn
+            // 
+            this.codTipoIdentificacionDataGridViewTextBoxColumn.DataPropertyName = "CodTipoIdentificacion";
+            this.codTipoIdentificacionDataGridViewTextBoxColumn.HeaderText = "CodTipoIdentificacion";
+            this.codTipoIdentificacionDataGridViewTextBoxColumn.Name = "codTipoIdentificacionDataGridViewTextBoxColumn";
+            this.codTipoIdentificacionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codTipoIdentificacionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // numeroIdentificacionDataGridViewTextBoxColumn
+            // 
+            this.numeroIdentificacionDataGridViewTextBoxColumn.DataPropertyName = "NumeroIdentificacion";
+            this.numeroIdentificacionDataGridViewTextBoxColumn.HeaderText = "Número ID";
+            this.numeroIdentificacionDataGridViewTextBoxColumn.Name = "numeroIdentificacionDataGridViewTextBoxColumn";
+            this.numeroIdentificacionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombresDataGridViewTextBoxColumn
+            // 
+            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
+            this.nombresDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidosDataGridViewTextBoxColumn
+            // 
+            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
+            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Teléfono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaRegistroDataGridViewTextBoxColumn
+            // 
+            this.fechaRegistroDataGridViewTextBoxColumn.DataPropertyName = "FechaRegistro";
+            this.fechaRegistroDataGridViewTextBoxColumn.HeaderText = "Registro";
+            this.fechaRegistroDataGridViewTextBoxColumn.Name = "fechaRegistroDataGridViewTextBoxColumn";
+            this.fechaRegistroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usuarioConsultaModelBindingSource
+            // 
+            this.usuarioConsultaModelBindingSource.DataSource = typeof(ManejoFondo.Modelos.UsuarioConsultaModel);
+            // 
+            // buttonConsultarUsuariosLimpiar
+            // 
+            this.buttonConsultarUsuariosLimpiar.BackColor = System.Drawing.Color.White;
+            this.buttonConsultarUsuariosLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConsultarUsuariosLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConsultarUsuariosLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConsultarUsuariosLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(66)))), ((int)(((byte)(45)))));
+            this.buttonConsultarUsuariosLimpiar.Location = new System.Drawing.Point(675, 304);
+            this.buttonConsultarUsuariosLimpiar.Name = "buttonConsultarUsuariosLimpiar";
+            this.buttonConsultarUsuariosLimpiar.Size = new System.Drawing.Size(253, 39);
+            this.buttonConsultarUsuariosLimpiar.TabIndex = 72;
+            this.buttonConsultarUsuariosLimpiar.Text = "Limpiar";
+            this.buttonConsultarUsuariosLimpiar.UseVisualStyleBackColor = false;
+            // 
+            // buttonConsultarUsuariosConsultar
+            // 
+            this.buttonConsultarUsuariosConsultar.BackColor = System.Drawing.Color.White;
+            this.buttonConsultarUsuariosConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConsultarUsuariosConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConsultarUsuariosConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConsultarUsuariosConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.buttonConsultarUsuariosConsultar.Location = new System.Drawing.Point(416, 304);
+            this.buttonConsultarUsuariosConsultar.Name = "buttonConsultarUsuariosConsultar";
+            this.buttonConsultarUsuariosConsultar.Size = new System.Drawing.Size(253, 39);
+            this.buttonConsultarUsuariosConsultar.TabIndex = 71;
+            this.buttonConsultarUsuariosConsultar.Text = "Consultar";
+            this.buttonConsultarUsuariosConsultar.UseVisualStyleBackColor = false;
+            this.buttonConsultarUsuariosConsultar.Click += new System.EventHandler(this.ConsultarUsuarios);
             // 
             // FormOptConsultarUsuarios
             // 
@@ -313,6 +421,7 @@
             this.panelConsultaUsuarios.ResumeLayout(false);
             this.panelConsultaUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConsultaUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioConsultaModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -338,5 +447,15 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label labelConsultaUsuariosFechaRegistroDesde;
         private System.Windows.Forms.DataGridView dataGridConsultaUsuarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoIdentificacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codTipoIdentificacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroIdentificacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource usuarioConsultaModelBindingSource;
+        private System.Windows.Forms.Button buttonConsultarUsuariosLimpiar;
+        private System.Windows.Forms.Button buttonConsultarUsuariosConsultar;
     }
 }
