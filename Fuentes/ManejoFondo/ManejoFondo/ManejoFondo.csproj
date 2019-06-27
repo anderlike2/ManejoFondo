@@ -179,6 +179,12 @@
     <Compile Include="FormOptCambiarClave.Designer.cs">
       <DependentUpon>FormOptCambiarClave.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOptConsultarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOptConsultarUsuarios.Designer.cs">
+      <DependentUpon>FormOptConsultarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOptParametrizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,7 @@
     </Compile>
     <Compile Include="Inicio.cs" />
     <Compile Include="Loggers\LogErrorEnumeration.cs" />
+    <Compile Include="Modelos\UsuarioConsultaModel.cs" />
     <Compile Include="Modelos\UsuarioModel.cs" />
     <Compile Include="Modelos\ValoresModel.cs" />
     <Compile Include="PanelDifuminado.cs">
@@ -252,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormOptCambiarClave.resx">
       <DependentUpon>FormOptCambiarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOptConsultarUsuarios.resx">
+      <DependentUpon>FormOptConsultarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOptIngresoAsociado.resx">
       <DependentUpon>FormOptIngresoAsociado.cs</DependentUpon>
@@ -319,6 +329,7 @@
     <Content Include="Resources\Images\Cargando.gif" />
     <Content Include="Resources\Images\cerrarSesion.png" />
     <Content Include="Resources\Images\consultar.png" />
+    <Content Include="Resources\Images\consultaUsuarios.png" />
     <Content Include="Resources\Images\datosPersonales.png" />
     <Content Include="Resources\Images\editarInformacion.png" />
     <Content Include="Resources\Images\eliminar.png" />

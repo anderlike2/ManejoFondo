@@ -135,10 +135,24 @@ namespace ManejoFondo
         /// </summary>
         private void AbrirFormularioParametrizacion(object sender, EventArgs e)
         {
-            //Se inicia el formulario de Cambiar Clave
+            //Se inicia el formulario de Parametrizacion
             FormOptParametrizacion formOptParametrizacion = new FormOptParametrizacion(usuarioSesion);
             Hide();
             formOptParametrizacion.ShowDialog();
+            Close();
+        }
+
+        /// <summary>
+        /// Abrir Formulario Parametrizacion de Consulta de Usuarios
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void AbrirFormularioConsultarUsuarios(object sender, EventArgs e)
+        {
+            //Se inicia el formulario de Consulta de Usuarios
+            FormOptConsultarUsuarios formOptConsultarUsuarios = new FormOptConsultarUsuarios(usuarioSesion);
+            Hide();
+            formOptConsultarUsuarios.ShowDialog();
             Close();
         }
     }
