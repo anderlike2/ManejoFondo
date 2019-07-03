@@ -36,7 +36,7 @@ namespace ManejoFondo
             usuarioSesion = usuario;
 
             //Datos del usuario
-            opcionLabelUsername.Text = usuario.V_Username;
+            opcionLabelUsername.Text = usuario.V_Nombre_Usuario;
 
             //Tooltips
             InicializarTooltips();

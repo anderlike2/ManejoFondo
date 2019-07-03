@@ -15,6 +15,7 @@ using System.Drawing.Drawing2D;
 using System.Management;
 using ManejoFondo.Loggers;
 using Microsoft.Practices.EnterpriseLibrary.Logging;
+using System.Web.Script.Serialization;
 
 namespace ManejoFondo
 {
@@ -122,6 +123,45 @@ namespace ManejoFondo
         private void OcultarPassword(object sender, EventArgs e)
         {
             textBoxPassword.isPassword = true;
+        }
+
+        /// <summary>
+        /// Metodo para crear el usuario de inicio de sesion
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
+        private void CrearUsuario(object sender, EventArgs e)
+        {
+            FondoLoginService fondoLoginServie = new FondoLoginService();
+
+            try
+            {
+                loginButtonAceptar.Enabled = false;
+                FormModalCrearUsuario formModalCrearUsuario = new FormModalCrearUsuario();
+                formModalCrearUsuario.ShowDialog();
+                String resultado = formModalCrearUsuario.jsonUsuario;
+                bool enviarCorreo = formModalCrearUsuario.enviarCorreo;
+                if (!General.EsVacioNulo(resultado))
+                {
+                    FondoLoginEntity usuarioCrear = new JavaScriptSerializer().Deserialize<FondoLoginEntity>(resultado);
+                    fondoLoginServie.RegistrarUsuarioLogin(usuarioCrear, enviarCorreo);
+
+                    General.MostrarPanelError(Constantes.CodigoExito, Constantes.MsjExitoGuardar);
+                }
+                loginButtonAceptar.Enabled = true;
+            }
+            catch (BusinessException ex)
+            {
+                loginButtonAceptar.Enabled = true;
+                General.MostrarPanelError(Constantes.CodigoWarning, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                loginButtonAceptar.Enabled = true;
+                Log.Registrar_Log(ex.Message, "FormLogin - CrearUsuario", LogErrorEnumeration.Critico);
+                General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
+            }
         }
     }
 }

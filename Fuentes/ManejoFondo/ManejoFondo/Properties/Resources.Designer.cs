@@ -73,6 +73,16 @@ namespace ManejoFondo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregarUsuario {
+            get {
+                object obj = ResourceManager.GetObject("agregarUsuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ahorroCuotaMes {
             get {
                 object obj = ResourceManager.GetObject("ahorroCuotaMes", resourceCulture);

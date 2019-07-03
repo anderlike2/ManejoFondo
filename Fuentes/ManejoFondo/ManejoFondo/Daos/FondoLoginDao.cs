@@ -27,9 +27,9 @@ namespace ManejoFondo.Daos
             using (var cnn = SqlLiteConexion.SimpleDbConnection())
             {
                 FondoLoginEntity result = cnn.Query<FondoLoginEntity>(
-                    @"SELECT N_ID, V_USERNAME, V_PASSWORD, F_ULTIMO_INICIO_SESION
-                    FROM FONDOLOGIN WHERE V_USERNAME = @V_USERNAME AND V_PASSWORD = @V_PASSWORD", 
-                    new { usuario.V_Username, usuario.V_Password}).FirstOrDefault();
+                    @"SELECT N_ID, V_USUARIO, V_PASSWORD, F_ULTIMO_INICIO_SESION, V_CORREO, V_NOMBRE_USUARIO
+                    FROM FONDOLOGIN WHERE V_USUARIO = @V_USUARIO AND V_PASSWORD = @V_PASSWORD", 
+                    new { usuario.V_Usuario, usuario.V_Password}).FirstOrDefault();
                 return result;
             }
         }
@@ -45,7 +45,7 @@ namespace ManejoFondo.Daos
             using (var cnn = SqlLiteConexion.SimpleDbConnection())
             {
                 FondoLoginEntity result = cnn.Query<FondoLoginEntity>(
-                    @"SELECT N_ID, V_USERNAME, V_PASSWORD, F_ULTIMO_INICIO_SESION
+                    @"SELECT N_ID, V_USUARIO, V_PASSWORD, F_ULTIMO_INICIO_SESION, V_CORREO, V_NOMBRE_USUARIO
                     FROM FONDOLOGIN WHERE N_ID = @N_ID",
                     new { usuario.N_Id}).FirstOrDefault();
                 return result;
@@ -81,10 +81,44 @@ namespace ManejoFondo.Daos
             using (var cnn = SqlLiteConexion.SimpleDbConnection())
             {
                 int result = cnn.Execute(
-                    @"UPDATE FONDOLOGIN SET V_USERNAME = @V_USERNAME, V_PASSWORD = @V_PASSWORD
+                    @"UPDATE FONDOLOGIN SET V_USUARIO = @V_USUARIO, V_PASSWORD = @V_PASSWORD
                     WHERE N_ID = @N_ID",
-                    new { usuario.V_Username, usuario.V_Password, usuario.N_Id });
+                    new { usuario.V_Usuario, usuario.V_Password, usuario.N_Id });
                 return result > 0;
+            }
+        }
+
+        // <summary>
+        /// Metodo para insertar el usuario para el login
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="usuario"></param>
+        public bool InsertarUsuarioLogin(FondoLoginEntity usuario)
+        {
+            using (var cnn = SqlLiteConexion.SimpleDbConnection())
+            {
+                int result = cnn.Execute(
+                    @"INSERT INTO FONDOLOGIN (V_USUARIO, V_PASSWORD, V_CORREO, V_NOMBRE_USUARIO)
+                      VALUES(@V_USUARIO, @V_PASSWORD, @V_CORREO, @V_NOMBRE_USUARIO)",
+                    new { usuario.V_Usuario, usuario.V_Password, usuario.V_Correo, usuario.V_Nombre_Usuario });
+                return result > 0;
+            }
+        }
+
+        /// <summary>
+        /// Metodo para consultar todos los usuarios
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        public List<FondoLoginEntity> ConsultarTodosUsuarios()
+        {
+            using (var cnn = SqlLiteConexion.SimpleDbConnection())
+            {
+                List<FondoLoginEntity> result = cnn.Query<FondoLoginEntity>(
+                    @"SELECT N_ID, V_USUARIO, V_PASSWORD, F_ULTIMO_INICIO_SESION, V_CORREO, V_NOMBRE_USUARIO
+                    FROM FONDOLOGIN").ToList();
+                return result;
             }
         }
     }

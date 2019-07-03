@@ -42,7 +42,7 @@ namespace ManejoFondo
 
             //Valores por defecto
             usuarioSesion = usuario;
-            textBoxCambiarClaveUsuario.Text = usuarioSesion.V_Username;
+            textBoxCambiarClaveUsuario.Text = usuarioSesion.V_Usuario;
             buttonCambiarClaveLimpiar.Focus();
         }
 

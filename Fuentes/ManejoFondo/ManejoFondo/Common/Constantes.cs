@@ -43,6 +43,11 @@ namespace ManejoFondo.Common
         public const string MsjValidarMaximoCuota = "La cuota mensual ingresada debe ser menor a: $ <maximoCuota>.";
         public const string MsjPasswordNoCoincide = "La nueva contraseña no coincide.";
         public const string MsjExitoActualizarClave = "El usuario y la contraseña se han actualizado con éxito.";
+        public const string MsjPasswordCrearUsuarioNoCoincide = "Las contraseñas del usuario no coinciden.";
+        public const string MsjCorreoCrearUsuarioNoCoincide = "Los correos del usuario no coinciden.";
+        public const string MsjCorreoCrearUsuarioInvalido = "El correo ingresado es inválido.";
+        public const string MsjNoInternetErrorEnviarCorreo = "Usted no se encuentra conectado a internet, no ha sido posible enviar el correo con las credenciales del usuario.";
+        public const string MsjCrearUsuarioYaTieneAdministrador = "Usted ya tiene un usuario registrado en el Sistema, si ha olvidado su contraseña por favor seleccione la opción 'Olvidó su contraseña?' y contacte con el Administrador del sistema.";
         #endregion
 
         #region MensajesTooltips
@@ -73,9 +78,10 @@ namespace ManejoFondo.Common
         public const string DominioConyuge = "PARENT_CONYUGE";
         #endregion
 
-        #region
+        #region Parametros
         public const string ParametroAhorroCuotaMinima = "AHORRO_CUOTA_MINIMA";
         public const string ParametroAhorroCuotaMaxima = "AHORRO_CUOTA_MAXIMA";
+        public const string ParametroPlantillaCorreoCreacionUsuario = "PLANTILLA_CORREO_CREACION_USUARIO";
         #endregion
     }
 }

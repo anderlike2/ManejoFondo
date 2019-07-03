@@ -147,6 +147,7 @@
   <ItemGroup>
     <Compile Include="Common\BusinessException.cs" />
     <Compile Include="Common\Constantes.cs" />
+    <Compile Include="Common\Email.cs" />
     <Compile Include="Common\General.cs" />
     <Compile Include="Daos\FondoAhorroMensualDao.cs" />
     <Compile Include="Daos\FondoAyudaGobUsuarioDao.cs" />
@@ -160,6 +161,12 @@
     </Compile>
     <Compile Include="FormModalAgregarNucleoFamiliar.Designer.cs">
       <DependentUpon>FormModalAgregarNucleoFamiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModalCrearUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModalCrearUsuario.Designer.cs">
+      <DependentUpon>FormModalCrearUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="FormModalEditarParametro.cs">
       <SubType>Form</SubType>
@@ -232,6 +239,7 @@
     </Compile>
     <Compile Include="Inicio.cs" />
     <Compile Include="Loggers\LogErrorEnumeration.cs" />
+    <Compile Include="Modelos\EmailDto.cs" />
     <Compile Include="Modelos\UsuarioConsultaModel.cs" />
     <Compile Include="Modelos\UsuarioModel.cs" />
     <Compile Include="Modelos\ValoresModel.cs" />
@@ -239,6 +247,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\FondoAhorroMensualService.cs" />
     <Compile Include="Services\FondoAyudaGobUsuarioService.cs" />
     <Compile Include="Services\FondoDominiosService.cs" />
@@ -250,6 +259,9 @@
     <Compile Include="Services\FondoUsuarioService.cs" />
     <EmbeddedResource Include="FormModalAgregarNucleoFamiliar.resx">
       <DependentUpon>FormModalAgregarNucleoFamiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModalCrearUsuario.resx">
+      <DependentUpon>FormModalCrearUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModalEditarParametro.resx">
       <DependentUpon>FormModalEditarParametro.cs</DependentUpon>
@@ -321,6 +333,7 @@
     <Content Include="Resources\Icons\login.ico" />
     <Content Include="Resources\Icons\opciones.ico" />
     <Content Include="Resources\Images\agregarInformacion.png" />
+    <Content Include="Resources\Images\agregarUsuario.png" />
     <Content Include="Resources\Images\ahorro.png" />
     <Content Include="Resources\Images\ahorroCuotaMes.png" />
     <Content Include="Resources\Images\asociado.png" />

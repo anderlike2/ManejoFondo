@@ -172,5 +172,23 @@ namespace ManejoFondo.Common
             listaMeses.Add(diciembre);
             return listaMeses;
         }
+
+        /// <summary>
+        /// Metodo para verificar si tiene conexion a internet
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        public static bool TestConexionInternet()
+        {
+            try
+            {
+                System.Net.IPHostEntry host = System.Net.Dns.GetHostEntry("www.google.com");
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
