@@ -32,6 +32,12 @@ namespace ManejoFondo
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
+            //Centrar panel
+            panelConsultaUsuarios.Location = new Point(
+            this.ClientSize.Width / 2 - panelConsultaUsuarios.Size.Width / 2,
+            this.ClientSize.Height / 2 - panelConsultaUsuarios.Size.Height / 3);
+            panelConsultaUsuarios.Anchor = AnchorStyles.None;
+
             //Cambiar Tema form
             General.InicializarTema(this);
 
@@ -40,7 +46,12 @@ namespace ManejoFondo
             CargarCombobox();
 
             //Se consulta todos los usuarios
-            BuscarUsuarios(new FondoUsuarioEntity());
+            FondoUsuarioEntity filtro = new FondoUsuarioEntity();
+            FondoDominiosEntity consultarUsuarioTipoIdentificacion = (FondoDominiosEntity)comboBoxConsultaUsuariosTipoIdentificacion.SelectedItem;
+            filtro.V_Tipo_Identificacion = consultarUsuarioTipoIdentificacion.V_Codigo;
+            filtro.F_Fecha_Registro_Inicio = datePickerConsultaUsuariosFechaRegistroDesde.Value;
+            filtro.F_Fecha_Registro_Fin = datePickerConsultaUsuariosFechaRegistroHasta.Value;
+            BuscarUsuarios(filtro);
         }
 
         /// <summary>
@@ -69,10 +80,9 @@ namespace ManejoFondo
                 FondoDominiosService fondoDominioService = new FondoDominiosService();
 
                 //Para Datos Persona
-                comboBoxConsultaUsuariosTipoIdentificacion.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTiposIdentificacion, false); ;
+                comboBoxConsultaUsuariosTipoIdentificacion.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTiposIdentificacion, false);
                 comboBoxConsultaUsuariosTipoIdentificacion.DisplayMember = "V_VALOR";
                 comboBoxConsultaUsuariosTipoIdentificacion.ValueMember = "V_CODIGO";
-
             }
             catch (BusinessException ex)
             {
@@ -124,6 +134,8 @@ namespace ManejoFondo
             filtros.V_Numero_Identificacion = General.EsVacioNulo(textBoxConsultaUsuariosNumeroIdentificacion.Text) ? 0 : Convert.ToInt64(textBoxConsultaUsuariosNumeroIdentificacion.Text);
             filtros.V_Nombres = textBoxConsultaUsuariosNombres.Text;
             filtros.V_Apellidos = textBoxConsultaUsuariosApellidos.Text;
+            filtros.F_Fecha_Registro_Inicio = datePickerConsultaUsuariosFechaRegistroDesde.Value;
+            filtros.F_Fecha_Registro_Fin = datePickerConsultaUsuariosFechaRegistroHasta.Value;
             BuscarUsuarios(filtros);
         }
     }

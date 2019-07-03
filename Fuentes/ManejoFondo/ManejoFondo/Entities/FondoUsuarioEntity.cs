@@ -26,5 +26,7 @@ namespace ManejoFondo.Entities
         public DateTime F_Fecha_Nacimiento { get; set; }
         public DateTime F_Fecha_Registro { get; set; }
         public long N_Antiguedad_Asociacion{ get; set; }
+        public DateTime F_Fecha_Registro_Inicio { get; set; }
+        public DateTime F_Fecha_Registro_Fin { get; set; }
     }
 }

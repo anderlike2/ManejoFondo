@@ -77,13 +77,16 @@ namespace ManejoFondo.Daos
                     WHERE V_TIPO_IDENTIFICACION = IFNULL(@V_TIPO_IDENTIFICACION, V_TIPO_IDENTIFICACION) 
                     AND V_NUMERO_IDENTIFICACION = IFNULL(@V_NUMERO_IDENTIFICACION, V_NUMERO_IDENTIFICACION)
                     AND UPPER(V_NOMBRES) LIKE UPPER(IFNULL(@V_NOMBRES, V_NOMBRES))
-                    AND UPPER(V_APELLIDOS) LIKE UPPER(IFNULL(@V_APELLIDOS, V_APELLIDOS))",
+                    AND UPPER(V_APELLIDOS) LIKE UPPER(IFNULL(@V_APELLIDOS, V_APELLIDOS))
+                    AND F_FECHA_REGISTRO BETWEEN @F_FECHA_REGISTRO_INICIO AND @F_FECHA_REGISTRO_FIN",
                      new
                      {
                          V_Tipo_Identificacion = filtroTipoIdentificacion,
                          V_Numero_Identificacion = filtroNumeroIdentificacion,
                          V_Nombres = filtroNombres,
-                         V_Apellidos = filtroApellidos
+                         V_Apellidos = filtroApellidos,
+                         F_Fecha_Registro_Inicio = usuario.F_Fecha_Registro_Inicio,
+                         F_Fecha_Registro_Fin = usuario.F_Fecha_Registro_Fin
                      }).ToList();
                 return result;
             }

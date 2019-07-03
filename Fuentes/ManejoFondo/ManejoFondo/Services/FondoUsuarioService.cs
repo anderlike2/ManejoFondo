@@ -61,13 +61,19 @@ namespace ManejoFondo.Services
         public List<UsuarioConsultaModel> ConsultarUsuariosSistema(FondoUsuarioEntity usuario)
         {
             List<UsuarioConsultaModel> resultado = new List<UsuarioConsultaModel>();
+            FondoDominiosService fondoDominiosService = new FondoDominiosService();
+
             List<FondoUsuarioEntity> lstUsuarios = ConsultarUsuarios(usuario);
             //Se transforma la informacion de Entidad a Modelo
             foreach(FondoUsuarioEntity usu in lstUsuarios)
             {
+                List<FondoDominiosEntity> lstTipoIdentificacion = fondoDominiosService.ConsultarDominiosPorPadre(usu.V_Tipo_Identificacion, true);
+                String valorTipoIdentificacion = lstTipoIdentificacion.Count > 0 ? lstTipoIdentificacion.FirstOrDefault().V_Valor : "";
+
                 UsuarioConsultaModel usuarioModelo = new UsuarioConsultaModel();
                 usuarioModelo.NumeroIdentificacion = usu.V_Numero_Identificacion;
-                usuarioModelo.TipoIdentificacion = usu.V_Tipo_Identificacion;
+                usuarioModelo.TipoIdentificacion = valorTipoIdentificacion;
+                usuarioModelo.CodTipoIdentificacion = usu.V_Tipo_Identificacion;
                 usuarioModelo.Nombres = usu.V_Nombres;
                 usuarioModelo.Apellidos = usu.V_Apellidos;
                 usuarioModelo.Telefono = usu.N_Telefono;
