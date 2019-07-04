@@ -30,18 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelParametrizacion = new System.Windows.Forms.Panel();
+            this.panelFooterTexto = new System.Windows.Forms.Panel();
+            this.labelFooterTexto = new System.Windows.Forms.Label();
             this.labelTextoSeleccionarEditar = new System.Windows.Forms.Label();
             this.buttonEditarParametro = new System.Windows.Forms.Button();
             this.dataGridParametrizacion = new System.Windows.Forms.DataGridView();
-            this.labelTituloParametrizacionSistema = new System.Windows.Forms.Label();
             this.panelImagenConsultaUsuarios = new System.Windows.Forms.Panel();
+            this.labelTituloParametrizacionSistema = new System.Windows.Forms.Label();
             this.panelRegresarMenu = new System.Windows.Forms.Panel();
+            this.fondoParametrosEntityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vNombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vValorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vDescripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fondoParametrosEntityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelParametrizacion.SuspendLayout();
+            this.panelFooterTexto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridParametrizacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoParametrosEntityBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -49,16 +52,36 @@
             // panelParametrizacion
             // 
             this.panelParametrizacion.BackColor = System.Drawing.Color.White;
+            this.panelParametrizacion.Controls.Add(this.panelFooterTexto);
             this.panelParametrizacion.Controls.Add(this.labelTextoSeleccionarEditar);
             this.panelParametrizacion.Controls.Add(this.buttonEditarParametro);
             this.panelParametrizacion.Controls.Add(this.dataGridParametrizacion);
             this.panelParametrizacion.Controls.Add(this.panelImagenConsultaUsuarios);
             this.panelParametrizacion.Controls.Add(this.labelTituloParametrizacionSistema);
             this.panelParametrizacion.Controls.Add(this.panelRegresarMenu);
-            this.panelParametrizacion.Location = new System.Drawing.Point(15, 84);
+            this.panelParametrizacion.Location = new System.Drawing.Point(15, 192);
             this.panelParametrizacion.Name = "panelParametrizacion";
             this.panelParametrizacion.Size = new System.Drawing.Size(1344, 647);
             this.panelParametrizacion.TabIndex = 0;
+            // 
+            // panelFooterTexto
+            // 
+            this.panelFooterTexto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.panelFooterTexto.Controls.Add(this.labelFooterTexto);
+            this.panelFooterTexto.Location = new System.Drawing.Point(3, 615);
+            this.panelFooterTexto.Name = "panelFooterTexto";
+            this.panelFooterTexto.Size = new System.Drawing.Size(1338, 30);
+            this.panelFooterTexto.TabIndex = 74;
+            // 
+            // labelFooterTexto
+            // 
+            this.labelFooterTexto.AutoSize = true;
+            this.labelFooterTexto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFooterTexto.Location = new System.Drawing.Point(6, 10);
+            this.labelFooterTexto.Name = "labelFooterTexto";
+            this.labelFooterTexto.Size = new System.Drawing.Size(103, 16);
+            this.labelFooterTexto.TabIndex = 4;
+            this.labelFooterTexto.Text = "© 2019 AVISON";
             // 
             // labelTextoSeleccionarEditar
             // 
@@ -108,6 +131,16 @@
             this.dataGridParametrizacion.Size = new System.Drawing.Size(1205, 252);
             this.dataGridParametrizacion.TabIndex = 7;
             // 
+            // panelImagenConsultaUsuarios
+            // 
+            this.panelImagenConsultaUsuarios.BackColor = System.Drawing.Color.White;
+            this.panelImagenConsultaUsuarios.BackgroundImage = global::ManejoFondo.Properties.Resources.parametrizacionSistema;
+            this.panelImagenConsultaUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelImagenConsultaUsuarios.Location = new System.Drawing.Point(1215, 12);
+            this.panelImagenConsultaUsuarios.Name = "panelImagenConsultaUsuarios";
+            this.panelImagenConsultaUsuarios.Size = new System.Drawing.Size(85, 85);
+            this.panelImagenConsultaUsuarios.TabIndex = 6;
+            // 
             // labelTituloParametrizacionSistema
             // 
             this.labelTituloParametrizacionSistema.AutoSize = true;
@@ -118,16 +151,6 @@
             this.labelTituloParametrizacionSistema.Size = new System.Drawing.Size(578, 22);
             this.labelTituloParametrizacionSistema.TabIndex = 5;
             this.labelTituloParametrizacionSistema.Text = "POR FAVOR INGRESAR LA PARAMETRIZACIÓN DEL SISTEMA";
-            // 
-            // panelImagenConsultaUsuarios
-            // 
-            this.panelImagenConsultaUsuarios.BackColor = System.Drawing.Color.White;
-            this.panelImagenConsultaUsuarios.BackgroundImage = global::ManejoFondo.Properties.Resources.parametrizacionSistema;
-            this.panelImagenConsultaUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelImagenConsultaUsuarios.Location = new System.Drawing.Point(1215, 12);
-            this.panelImagenConsultaUsuarios.Name = "panelImagenConsultaUsuarios";
-            this.panelImagenConsultaUsuarios.Size = new System.Drawing.Size(85, 85);
-            this.panelImagenConsultaUsuarios.TabIndex = 6;
             // 
             // panelRegresarMenu
             // 
@@ -143,12 +166,17 @@
             this.panelRegresarMenu.TabIndex = 4;
             this.panelRegresarMenu.Click += new System.EventHandler(this.RegresarMenuPrincipal);
             // 
+            // fondoParametrosEntityBindingSource
+            // 
+            this.fondoParametrosEntityBindingSource.DataSource = typeof(ManejoFondo.Entities.FondoParametrosEntity);
+            // 
             // nIdDataGridViewTextBoxColumn
             // 
             this.nIdDataGridViewTextBoxColumn.DataPropertyName = "N_Id";
             this.nIdDataGridViewTextBoxColumn.HeaderText = "ID";
             this.nIdDataGridViewTextBoxColumn.Name = "nIdDataGridViewTextBoxColumn";
             this.nIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nIdDataGridViewTextBoxColumn.Visible = false;
             // 
             // vNombreDataGridViewTextBoxColumn
             // 
@@ -171,10 +199,6 @@
             this.vDescripcionDataGridViewTextBoxColumn.Name = "vDescripcionDataGridViewTextBoxColumn";
             this.vDescripcionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // fondoParametrosEntityBindingSource
-            // 
-            this.fondoParametrosEntityBindingSource.DataSource = typeof(ManejoFondo.Entities.FondoParametrosEntity);
-            // 
             // FormOptParametrizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +212,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelParametrizacion.ResumeLayout(false);
             this.panelParametrizacion.PerformLayout();
+            this.panelFooterTexto.ResumeLayout(false);
+            this.panelFooterTexto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridParametrizacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoParametrosEntityBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -204,6 +230,8 @@
         private System.Windows.Forms.DataGridView dataGridParametrizacion;
         private System.Windows.Forms.Button buttonEditarParametro;
         private System.Windows.Forms.Label labelTextoSeleccionarEditar;
+        private System.Windows.Forms.Panel panelFooterTexto;
+        private System.Windows.Forms.Label labelFooterTexto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vNombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vValorDataGridViewTextBoxColumn;

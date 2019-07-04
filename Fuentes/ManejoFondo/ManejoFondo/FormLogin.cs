@@ -38,8 +38,8 @@ namespace ManejoFondo
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             //Quitar
-            //textBoxUsuario.Text = "Anderson";
-            //textBoxPassword.Text = "Admin1980";
+            textBoxUsuario.Text = "aabenavidesg";
+            textBoxPassword.Text = "Admin1980";
         }
 
         /// <summary>

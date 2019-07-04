@@ -83,6 +83,7 @@ namespace ManejoFondo
             toolTip.SetToolTip(opcionesPanelIndicadores, Constantes.MsjTooltipIndicadores);
             toolTip.SetToolTip(opcionesPanelCambiarClave, Constantes.MsjTooltipCambiarClave);
             toolTip.SetToolTip(opcionesPanelParametrizacion, Constantes.MsjTooltipParametrizacion);
+            toolTip.SetToolTip(opcionesPanelCerrarSesion, Constantes.MsjTooltipCerrarSesion);
         }
 
         /// <summary>
