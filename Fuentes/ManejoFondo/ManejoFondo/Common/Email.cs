@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManejoFondo.Services;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -112,14 +113,19 @@ namespace ManejoFondo.Common
         /// </summary>
         public Email()
         {
+            FondoParametrosService fondoParametrosService = new FondoParametrosService();
+            String correoEmpresa = fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroCorreoEmpresa).V_Valor;
+            String passwordCorreoEmpresa = fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroPasswordCorreoEmpresa).V_Valor;
+            String nombreCorreo = fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroOrigenCorreos).V_Valor;
+
             //asigna las propiedades de conexion al servidor SMTP, eamil y nombre de quien envia
             SmtpServer = ConfigurationManager.AppSettings["SMTP_SERVER"];
             SmtpPort = int.Parse(ConfigurationManager.AppSettings["SMTP_PORT"]);
-            SmtpLogin = ConfigurationManager.AppSettings["SMTP_LOGIN"];
-            SmtpPassword = ConfigurationManager.AppSettings["SMTP_PASSWORD"];
-            AliasFromName = ConfigurationManager.AppSettings["ALIAS_FROM_NAME"];
-            FromName = ConfigurationManager.AppSettings["FROM_NAME"];
-            FromEmail = ConfigurationManager.AppSettings["FROM_EMAIL"];
+            SmtpLogin = correoEmpresa;
+            SmtpPassword = passwordCorreoEmpresa;
+            AliasFromName = correoEmpresa;
+            FromName = nombreCorreo;
+            FromEmail = correoEmpresa;
             EnableSsl = bool.Parse(ConfigurationManager.AppSettings["ENABLE_SSL"]);
         }
 
@@ -134,6 +140,11 @@ namespace ManejoFondo.Common
         /// <param name="rutaFooter"></param>
         public Email(string pDestinatarios, string pCC, string pAsunto, string pMensaje, string rutaHeader, string rutaFooter)
         {
+            FondoParametrosService fondoParametrosService = new FondoParametrosService();
+            String correoEmpresa = fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroCorreoEmpresa).V_Valor;
+            String passwordCorreoEmpresa = fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroPasswordCorreoEmpresa).V_Valor;
+            String nombreCorreo = fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroOrigenCorreos).V_Valor;
+
             this.Destinatarios = pDestinatarios;
             this.CarbonCopy = pCC;
             this.Asunto = pAsunto;
@@ -144,11 +155,11 @@ namespace ManejoFondo.Common
             //asigna las propiedades de conexion al servidor SMTP, eamil y nombre de quien envia
             SmtpServer = ConfigurationManager.AppSettings["SMTP_SERVER"];
             SmtpPort = int.Parse(ConfigurationManager.AppSettings["SMTP_PORT"]);
-            SmtpLogin = ConfigurationManager.AppSettings["SMTP_LOGIN"];
-            SmtpPassword = ConfigurationManager.AppSettings["SMTP_PASSWORD"];
-            AliasFromName = ConfigurationManager.AppSettings["ALIAS_FROM_NAME"];
-            FromName = ConfigurationManager.AppSettings["FROM_NAME"];
-            FromEmail = ConfigurationManager.AppSettings["FROM_EMAIL"];
+            SmtpLogin = correoEmpresa;
+            SmtpPassword = passwordCorreoEmpresa;
+            AliasFromName = correoEmpresa;
+            FromName = nombreCorreo;
+            FromEmail = correoEmpresa;
             EnableSsl = bool.Parse(ConfigurationManager.AppSettings["ENABLE_SSL"]);
         }
 

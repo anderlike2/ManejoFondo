@@ -17,7 +17,6 @@ namespace ManejoFondo.Entities
         public string V_Usuario { get; set; }
         public string V_Password { get; set; }
         public DateTime F_Ultimo_Inicio_Sesion { get; set; }
-        public string V_Correo { get; set; }
         public string V_Nombre_Usuario { get; set; }
     }
 }

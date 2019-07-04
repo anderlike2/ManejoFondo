@@ -38,8 +38,8 @@ namespace ManejoFondo
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             //Quitar
-            textBoxUsuario.Text = "Anderson";
-            textBoxPassword.Text = "Admin1980";
+            //textBoxUsuario.Text = "Anderson";
+            //textBoxPassword.Text = "Admin1980";
         }
 
         /// <summary>
@@ -160,6 +160,79 @@ namespace ManejoFondo
             {
                 loginButtonAceptar.Enabled = true;
                 Log.Registrar_Log(ex.Message, "FormLogin - CrearUsuario", LogErrorEnumeration.Critico);
+                General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
+            }
+        }
+
+        /// <summary>
+        /// Metodo para recuperar la contraseña de un usuario
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
+        private void RecuperarPassword(object sender, EventArgs e)
+        {
+            FondoLoginService fondoLoginServie = new FondoLoginService();
+
+            try
+            {
+                FormModalRecuperarPassword formModalRecuperarPassword = new FormModalRecuperarPassword();
+                formModalRecuperarPassword.ShowDialog();
+                bool enviarCorreo = formModalRecuperarPassword.enviarCorreo;
+                if (enviarCorreo)
+                {
+                    fondoLoginServie.RecuperarPasswordUsuarioLogin();
+                    General.MostrarPanelError(Constantes.CodigoExito, Constantes.MsjExitoEnviarCorreo);
+                }
+                loginButtonAceptar.Enabled = true;
+            }
+            catch (BusinessException ex)
+            {
+                loginButtonAceptar.Enabled = true;
+                General.MostrarPanelError(Constantes.CodigoWarning, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                loginButtonAceptar.Enabled = true;
+                Log.Registrar_Log(ex.Message, "FormLogin - RecuperarPassword", LogErrorEnumeration.Critico);
+                General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
+            }
+        }
+
+        /// <summary>
+        /// Metodo para eliminar el usuario administrador
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param></param>
+        private void EliminarUsuario(object sender, EventArgs e)
+        {
+            FondoLoginService fondoLoginServie = new FondoLoginService();
+
+            try
+            {
+                loginButtonAceptar.Enabled = false;
+                FormModalEliminarUsuario formModalEliminarUsuario = new FormModalEliminarUsuario();
+                formModalEliminarUsuario.ShowDialog();
+                String resultado = formModalEliminarUsuario.jsonUsuario;
+                if (!General.EsVacioNulo(resultado))
+                {
+                    FondoLoginEntity usuarioCrear = new JavaScriptSerializer().Deserialize<FondoLoginEntity>(resultado);
+                    fondoLoginServie.EliminarUsuario(usuarioCrear);
+
+                    General.MostrarPanelError(Constantes.CodigoExito, Constantes.MsjExitoEliminar);
+                }
+                loginButtonAceptar.Enabled = true;
+            }
+            catch (BusinessException ex)
+            {
+                loginButtonAceptar.Enabled = true;
+                General.MostrarPanelError(Constantes.CodigoWarning, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                loginButtonAceptar.Enabled = true;
+                Log.Registrar_Log(ex.Message, "FormLogin - EliminarUsuario", LogErrorEnumeration.Critico);
                 General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
             }
         }

@@ -47,14 +47,9 @@
             this.textBoxCrearUsuarioNombreUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.labelCrearUsuarioNombreUsuario = new System.Windows.Forms.Label();
-            this.textBoxCrearUsuarioCorreoRepetir = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.labelCrearUsuarioCorreoRepetir = new System.Windows.Forms.Label();
-            this.textBoxCrearUsuarioCorreo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.labelCrearUsuarioCorreo = new System.Windows.Forms.Label();
             this.checkBoxCrearUsuarioEnviarCorreo = new Bunifu.Framework.UI.BunifuCheckbox();
             this.labelCrearUsuarioEnviarCorreo = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -321,92 +316,6 @@
             this.labelCrearUsuarioNombreUsuario.TabIndex = 39;
             this.labelCrearUsuarioNombreUsuario.Text = "Nombres y Apellidos";
             // 
-            // textBoxCrearUsuarioCorreoRepetir
-            // 
-            this.textBoxCrearUsuarioCorreoRepetir.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxCrearUsuarioCorreoRepetir.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textBoxCrearUsuarioCorreoRepetir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxCrearUsuarioCorreoRepetir.HintForeColor = System.Drawing.Color.Empty;
-            this.textBoxCrearUsuarioCorreoRepetir.HintText = "";
-            this.textBoxCrearUsuarioCorreoRepetir.isPassword = false;
-            this.textBoxCrearUsuarioCorreoRepetir.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxCrearUsuarioCorreoRepetir.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxCrearUsuarioCorreoRepetir.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxCrearUsuarioCorreoRepetir.LineThickness = 3;
-            this.textBoxCrearUsuarioCorreoRepetir.Location = new System.Drawing.Point(456, 356);
-            this.textBoxCrearUsuarioCorreoRepetir.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxCrearUsuarioCorreoRepetir.Name = "textBoxCrearUsuarioCorreoRepetir";
-            this.textBoxCrearUsuarioCorreoRepetir.Size = new System.Drawing.Size(297, 28);
-            this.textBoxCrearUsuarioCorreoRepetir.TabIndex = 47;
-            this.textBoxCrearUsuarioCorreoRepetir.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(782, 356);
-            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(22, 29);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "*";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // labelCrearUsuarioCorreoRepetir
-            // 
-            this.labelCrearUsuarioCorreoRepetir.AutoSize = true;
-            this.labelCrearUsuarioCorreoRepetir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCrearUsuarioCorreoRepetir.ForeColor = System.Drawing.Color.Black;
-            this.labelCrearUsuarioCorreoRepetir.Location = new System.Drawing.Point(453, 337);
-            this.labelCrearUsuarioCorreoRepetir.Name = "labelCrearUsuarioCorreoRepetir";
-            this.labelCrearUsuarioCorreoRepetir.Size = new System.Drawing.Size(123, 21);
-            this.labelCrearUsuarioCorreoRepetir.TabIndex = 45;
-            this.labelCrearUsuarioCorreoRepetir.Text = "Repetir Correo";
-            // 
-            // textBoxCrearUsuarioCorreo
-            // 
-            this.textBoxCrearUsuarioCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxCrearUsuarioCorreo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textBoxCrearUsuarioCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxCrearUsuarioCorreo.HintForeColor = System.Drawing.Color.Empty;
-            this.textBoxCrearUsuarioCorreo.HintText = "";
-            this.textBoxCrearUsuarioCorreo.isPassword = false;
-            this.textBoxCrearUsuarioCorreo.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxCrearUsuarioCorreo.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxCrearUsuarioCorreo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.textBoxCrearUsuarioCorreo.LineThickness = 3;
-            this.textBoxCrearUsuarioCorreo.Location = new System.Drawing.Point(66, 356);
-            this.textBoxCrearUsuarioCorreo.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxCrearUsuarioCorreo.Name = "textBoxCrearUsuarioCorreo";
-            this.textBoxCrearUsuarioCorreo.Size = new System.Drawing.Size(297, 28);
-            this.textBoxCrearUsuarioCorreo.TabIndex = 44;
-            this.textBoxCrearUsuarioCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(392, 356);
-            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(22, 29);
-            this.label9.TabIndex = 43;
-            this.label9.Text = "*";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // labelCrearUsuarioCorreo
-            // 
-            this.labelCrearUsuarioCorreo.AutoSize = true;
-            this.labelCrearUsuarioCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCrearUsuarioCorreo.ForeColor = System.Drawing.Color.Black;
-            this.labelCrearUsuarioCorreo.Location = new System.Drawing.Point(63, 337);
-            this.labelCrearUsuarioCorreo.Name = "labelCrearUsuarioCorreo";
-            this.labelCrearUsuarioCorreo.Size = new System.Drawing.Size(63, 21);
-            this.labelCrearUsuarioCorreo.TabIndex = 42;
-            this.labelCrearUsuarioCorreo.Text = "Correo";
-            // 
             // checkBoxCrearUsuarioEnviarCorreo
             // 
             this.checkBoxCrearUsuarioEnviarCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
@@ -414,7 +323,7 @@
             this.checkBoxCrearUsuarioEnviarCorreo.Checked = true;
             this.checkBoxCrearUsuarioEnviarCorreo.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.checkBoxCrearUsuarioEnviarCorreo.ForeColor = System.Drawing.Color.White;
-            this.checkBoxCrearUsuarioEnviarCorreo.Location = new System.Drawing.Point(67, 415);
+            this.checkBoxCrearUsuarioEnviarCorreo.Location = new System.Drawing.Point(61, 357);
             this.checkBoxCrearUsuarioEnviarCorreo.Name = "checkBoxCrearUsuarioEnviarCorreo";
             this.checkBoxCrearUsuarioEnviarCorreo.Size = new System.Drawing.Size(20, 20);
             this.checkBoxCrearUsuarioEnviarCorreo.TabIndex = 48;
@@ -424,12 +333,24 @@
             this.labelCrearUsuarioEnviarCorreo.AutoSize = true;
             this.labelCrearUsuarioEnviarCorreo.BackColor = System.Drawing.Color.White;
             this.labelCrearUsuarioEnviarCorreo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCrearUsuarioEnviarCorreo.Location = new System.Drawing.Point(101, 417);
+            this.labelCrearUsuarioEnviarCorreo.Location = new System.Drawing.Point(95, 359);
             this.labelCrearUsuarioEnviarCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCrearUsuarioEnviarCorreo.Name = "labelCrearUsuarioEnviarCorreo";
             this.labelCrearUsuarioEnviarCorreo.Size = new System.Drawing.Size(480, 18);
             this.labelCrearUsuarioEnviarCorreo.TabIndex = 49;
             this.labelCrearUsuarioEnviarCorreo.Text = "Desea recibir un correo electrónico con la información diligenciada?";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(95, 377);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(295, 18);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "(Esta acción requiere conexión a Internet)";
             // 
             // FormModalCrearUsuario
             // 
@@ -437,14 +358,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(839, 590);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.labelCrearUsuarioEnviarCorreo);
             this.Controls.Add(this.checkBoxCrearUsuarioEnviarCorreo);
-            this.Controls.Add(this.textBoxCrearUsuarioCorreoRepetir);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.labelCrearUsuarioCorreoRepetir);
-            this.Controls.Add(this.textBoxCrearUsuarioCorreo);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.labelCrearUsuarioCorreo);
             this.Controls.Add(this.textBoxCrearUsuarioNombreUsuario);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.labelCrearUsuarioNombreUsuario);
@@ -493,13 +409,8 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxCrearUsuarioNombreUsuario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelCrearUsuarioNombreUsuario;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxCrearUsuarioCorreoRepetir;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label labelCrearUsuarioCorreoRepetir;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxCrearUsuarioCorreo;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label labelCrearUsuarioCorreo;
         private Bunifu.Framework.UI.BunifuCheckbox checkBoxCrearUsuarioEnviarCorreo;
         private System.Windows.Forms.Label labelCrearUsuarioEnviarCorreo;
+        private System.Windows.Forms.Label label7;
     }
 }

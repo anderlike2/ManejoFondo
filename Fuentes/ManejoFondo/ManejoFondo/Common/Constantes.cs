@@ -35,6 +35,8 @@ namespace ManejoFondo.Common
         public const string MsjErrorSeguridad = "Su sistema ha caducado, por favor consulte con el Administrador del Sistema.";
         public const string MsjeReinicioFormulario = "Se ha eliminado la información ingresada. Por favor diligencie nuevamente toda la información requerida.";
         public const string MsjExitoGuardar = "La información se ha almacenado con éxito.";
+        public const string MsjExitoEliminar = "La información se ha eliminado con éxito.";
+        public const string MsjExitoEnviarCorreo = "El correo se ha enviado satisfactoriamente al Administrador del sistema.";
         public const string MsjUsuarioExiste = "El usuario que usted desea ingresar ya se encuentra registrado en el sistema.";
         public const string MsjUsuarioNoExiste = "El usuario que usted ha ingresado no se encuentra registrado en el sistema.";
         public const string MsjAhorroExistenteMes = "El usuario ya tiene un ahorro para el mes seleccionado.";
@@ -46,8 +48,9 @@ namespace ManejoFondo.Common
         public const string MsjPasswordCrearUsuarioNoCoincide = "Las contraseñas del usuario no coinciden.";
         public const string MsjCorreoCrearUsuarioNoCoincide = "Los correos del usuario no coinciden.";
         public const string MsjCorreoCrearUsuarioInvalido = "El correo ingresado es inválido.";
-        public const string MsjNoInternetErrorEnviarCorreo = "Usted no se encuentra conectado a internet, no ha sido posible enviar el correo con las credenciales del usuario.";
-        public const string MsjCrearUsuarioYaTieneAdministrador = "Usted ya tiene un usuario registrado en el Sistema, si ha olvidado su contraseña por favor seleccione la opción 'Olvidó su contraseña?' y contacte con el Administrador del sistema.";
+        public const string MsjNoInternetErrorEnviarCorreo = "Usted no se encuentra conectado a internet, no ha sido posible enviar el correo electrónico.";
+        public const string MsjCrearUsuarioYaTieneAdministrador = "Usted ya tiene un usuario registrado en el Sistema, si ha olvidado su contraseña por favor seleccione la opción 'Olvidó su credenciales de Acceso?'";
+        public const string MsjNoTieneAdministrador = "Usted no tiene un usuario registrado en el Sistema. Por favor crear un nuevo usuario.";
         #endregion
 
         #region MensajesTooltips
@@ -82,6 +85,12 @@ namespace ManejoFondo.Common
         public const string ParametroAhorroCuotaMinima = "AHORRO_CUOTA_MINIMA";
         public const string ParametroAhorroCuotaMaxima = "AHORRO_CUOTA_MAXIMA";
         public const string ParametroPlantillaCorreoCreacionUsuario = "PLANTILLA_CORREO_CREACION_USUARIO";
+        public const string ParametroPlantillaCorreoRecuperarPassword = "PLANTILLA_CORREO_RECUPERAR_PASSWORD";
+        public const string ParametroNombreEmpresa = "NOMBRE_EMPRESA";
+        public const string ParametroTelefonoEmpresa = "TELEFONO_EMPRESA";
+        public const string ParametroCorreoEmpresa = "CORREO_EMPRESA";
+        public const string ParametroPasswordCorreoEmpresa = "PASSWORD_CORREO_EMPRESA";
+        public const string ParametroOrigenCorreos = "ORIGEN_CORREOS";
         #endregion
     }
 }

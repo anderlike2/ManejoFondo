@@ -134,7 +134,6 @@ namespace ManejoFondo.Services
             {
                 V_Usuario = usuario.V_Usuario,
                 V_Password = General.EncriptarCadena(usuario.V_Password),
-                V_Correo = usuario.V_Correo,
                 V_Nombre_Usuario = usuario.V_Nombre_Usuario
             };
             //Se valida si ya tiene un usuario Administrador
@@ -158,6 +157,63 @@ namespace ManejoFondo.Services
                 }
             }     
             return true;
+        }
+
+        /// <summary>
+        /// Metodo para enviar el correo de recuperacion de password del usuario Loggin
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        public bool RecuperarPasswordUsuarioLogin()
+        {
+            EmailService emailService = new EmailService();
+
+            //Se valida si ya tiene un usuario Administrador
+            List<FondoLoginEntity> usuariosConsulta = ConsultarTodosUsuarios();
+            if (usuariosConsulta.Count <= 0)
+            {
+                throw new BusinessException(Constantes.MsjNoTieneAdministrador);
+            }
+            if (General.TestConexionInternet())
+            {
+                emailService.enviarEmailRecuperarPassword(usuariosConsulta.FirstOrDefault());
+            }
+            else
+            {
+                throw new BusinessException(Constantes.MsjNoInternetErrorEnviarCorreo);
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Metodo para eliminar un usuario mediante el id usuario
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="usuario"></param>
+        public bool EliminarUsuarioPorId(FondoLoginEntity usuario)
+        {
+            FondoLoginDao fondoLoginDao = new FondoLoginDao();
+            return fondoLoginDao.EliminarUsuarioPorId(usuario);
+        }
+
+        /// <summary>
+        /// Metodo para borrar la informacion del usuario administrador
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="usuario"></param>
+        public bool EliminarUsuario(FondoLoginEntity usuario)
+        {
+            //Se valida si ya tiene un usuario Administrador
+            List<FondoLoginEntity> usuariosConsulta = ConsultarTodosUsuarios();
+            if (usuariosConsulta.Count <= 0)
+            {
+                throw new BusinessException(Constantes.MsjNoTieneAdministrador);
+            }
+            //Se consulta mediante las credenciales
+            FondoLoginEntity usuarioConsulta = ConsultarUsuario(usuario.V_Usuario, usuario.V_Password);
+            return EliminarUsuarioPorId(usuarioConsulta);
         }
     }
 }

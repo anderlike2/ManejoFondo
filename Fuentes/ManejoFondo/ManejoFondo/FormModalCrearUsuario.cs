@@ -56,8 +56,6 @@ namespace ManejoFondo
             textBoxCrearUsuarioNombreUsuario.Text = "";
             textBoxCrearUsuarioPassword.Text = "";
             textBoxCrearUsuarioPasswordRepetir.Text = "";
-            textBoxCrearUsuarioCorreo.Text = "";
-            textBoxCrearUsuarioCorreoRepetir.Text = "";
         }
 
         /// <summary>
@@ -76,23 +74,12 @@ namespace ManejoFondo
                     {
                         throw new BusinessException(Constantes.MsjPasswordCrearUsuarioNoCoincide);
                     }
-                    //Validar igualdad correos
-                    if (!textBoxCrearUsuarioCorreo.Text.Equals(textBoxCrearUsuarioCorreoRepetir.Text))
-                    {
-                        throw new BusinessException(Constantes.MsjCorreoCrearUsuarioNoCoincide);
-                    }
-                    //Validar validez correo
-                    if (!esCorreoValido(textBoxCrearUsuarioCorreo.Text))
-                    {
-                        throw new BusinessException(Constantes.MsjCorreoCrearUsuarioInvalido);
-                    }
 
                     //Se retorna el objeto con el usuario
                     FondoLoginEntity crearUsuario = new FondoLoginEntity();
                     crearUsuario.V_Usuario = textBoxCrearUsuarioUsuario.Text;
                     crearUsuario.V_Nombre_Usuario = textBoxCrearUsuarioNombreUsuario.Text;
                     crearUsuario.V_Password = textBoxCrearUsuarioPassword.Text;
-                    crearUsuario.V_Correo = textBoxCrearUsuarioCorreo.Text;
                     jsonUsuario = new JavaScriptSerializer().Serialize(crearUsuario);
 
                     //Enviar correo
@@ -125,8 +112,7 @@ namespace ManejoFondo
         private bool ValidarInformacionUsuario()
         {
             if (General.EsVacioNulo(textBoxCrearUsuarioUsuario.Text) || General.EsVacioNulo(textBoxCrearUsuarioNombreUsuario.Text) ||
-                General.EsVacioNulo(textBoxCrearUsuarioPassword.Text) || General.EsVacioNulo(textBoxCrearUsuarioPasswordRepetir.Text) ||
-                General.EsVacioNulo(textBoxCrearUsuarioCorreo.Text) || General.EsVacioNulo(textBoxCrearUsuarioCorreoRepetir.Text))
+                General.EsVacioNulo(textBoxCrearUsuarioPassword.Text) || General.EsVacioNulo(textBoxCrearUsuarioPasswordRepetir.Text))
             {
                 return false;
             }
@@ -198,25 +184,6 @@ namespace ManejoFondo
         private void OcultarPasswordRepetir(object sender, EventArgs e)
         {
             textBoxCrearUsuarioPasswordRepetir.isPassword = true;
-        }
-
-        /// <summary>
-        /// Metodo para validar el correo ingresado
-        /// Autor: Anderson Benavides
-        /// 2019-05-23
-        /// </summary>
-        /// <param name="correo"></param>
-        public bool esCorreoValido(string correo)
-        {
-            try
-            {
-                MailAddress m = new MailAddress(correo);
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
         }
     }
 }

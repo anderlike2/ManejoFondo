@@ -42,6 +42,7 @@
             this.textBoxPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.textBoxUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.loginPicture = new System.Windows.Forms.PictureBox();
+            this.linkLabelEliminarUsuario = new System.Windows.Forms.LinkLabel();
             this.loginPanelDerecho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +96,7 @@
             // 
             this.loginPanelDerecho.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.loginPanelDerecho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loginPanelDerecho.Controls.Add(this.linkLabelEliminarUsuario);
             this.loginPanelDerecho.Controls.Add(this.linkLabelOlvidoPassword);
             this.loginPanelDerecho.Controls.Add(this.linkLabelCrearUsuario);
             this.loginPanelDerecho.Controls.Add(this.labelVerPassword);
@@ -115,10 +117,11 @@
             this.linkLabelOlvidoPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.linkLabelOlvidoPassword.Location = new System.Drawing.Point(96, 234);
             this.linkLabelOlvidoPassword.Name = "linkLabelOlvidoPassword";
-            this.linkLabelOlvidoPassword.Size = new System.Drawing.Size(113, 13);
+            this.linkLabelOlvidoPassword.Size = new System.Drawing.Size(179, 13);
             this.linkLabelOlvidoPassword.TabIndex = 33;
             this.linkLabelOlvidoPassword.TabStop = true;
-            this.linkLabelOlvidoPassword.Text = "Olvidó su contraseña?";
+            this.linkLabelOlvidoPassword.Text = "Olvidó sus credenciales de Acceso?";
+            this.linkLabelOlvidoPassword.Click += new System.EventHandler(this.RecuperarPassword);
             // 
             // linkLabelCrearUsuario
             // 
@@ -222,6 +225,19 @@
             this.loginPicture.TabIndex = 2;
             this.loginPicture.TabStop = false;
             // 
+            // linkLabelEliminarUsuario
+            // 
+            this.linkLabelEliminarUsuario.AutoSize = true;
+            this.linkLabelEliminarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabelEliminarUsuario.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.linkLabelEliminarUsuario.Location = new System.Drawing.Point(290, 234);
+            this.linkLabelEliminarUsuario.Name = "linkLabelEliminarUsuario";
+            this.linkLabelEliminarUsuario.Size = new System.Drawing.Size(82, 13);
+            this.linkLabelEliminarUsuario.TabIndex = 34;
+            this.linkLabelEliminarUsuario.TabStop = true;
+            this.linkLabelEliminarUsuario.Text = "Eliminar Usuario";
+            this.linkLabelEliminarUsuario.Click += new System.EventHandler(this.EliminarUsuario);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +275,7 @@
         private System.Windows.Forms.Label labelVerPassword;
         private System.Windows.Forms.LinkLabel linkLabelCrearUsuario;
         private System.Windows.Forms.LinkLabel linkLabelOlvidoPassword;
+        private System.Windows.Forms.LinkLabel linkLabelEliminarUsuario;
     }
 }
 

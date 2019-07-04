@@ -174,6 +174,12 @@
     <Compile Include="FormModalEditarParametro.Designer.cs">
       <DependentUpon>FormModalEditarParametro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModalRecuperarPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModalRecuperarPassword.Designer.cs">
+      <DependentUpon>FormModalRecuperarPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOptAhorroCuotaMensual.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,12 @@
     <Compile Include="Services\FondoParametrosService.cs" />
     <Compile Include="Services\FondoProcUsuarioService.cs" />
     <Compile Include="Services\FondoUsuarioService.cs" />
+    <Compile Include="FormModalEliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModalEliminarUsuario.Designer.cs">
+      <DependentUpon>FormModalEliminarUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormModalAgregarNucleoFamiliar.resx">
       <DependentUpon>FormModalAgregarNucleoFamiliar.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModalEditarParametro.resx">
       <DependentUpon>FormModalEditarParametro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModalRecuperarPassword.resx">
+      <DependentUpon>FormModalRecuperarPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOptAhorroCuotaMensual.resx">
       <DependentUpon>FormOptAhorroCuotaMensual.cs</DependentUpon>
@@ -300,6 +315,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="FormModalEliminarUsuario.resx">
+      <DependentUpon>FormModalEliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="BaseDatos\manejoFondo.sqlite" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ManejoFondo.Entities.FondoParametrosEntity.datasource" />
