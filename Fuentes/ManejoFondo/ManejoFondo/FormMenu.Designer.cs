@@ -30,9 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.opcionesPanelCerrarSesion = new System.Windows.Forms.Panel();
-            this.opcionesLabelCerrarSesion = new System.Windows.Forms.Label();
+            this.panelFooterTexto = new System.Windows.Forms.Panel();
+            this.labelFooterTexto = new System.Windows.Forms.Label();
             this.panelDifuminadoOpciones = new ManejoFondo.PanelDifuminado();
             this.opcionesPanelParametrizacion = new System.Windows.Forms.Panel();
+            this.panelFooterImagenMenu = new System.Windows.Forms.Panel();
             this.opcionesPanelCambiarClave = new System.Windows.Forms.Panel();
             this.opcionesPanelSolicitudCredito = new System.Windows.Forms.Panel();
             this.opcionesPanelIndicadores = new System.Windows.Forms.Panel();
@@ -46,6 +48,7 @@
             this.opcionLabelAhorra = new System.Windows.Forms.Label();
             this.opcionPanelLinea = new System.Windows.Forms.Panel();
             this.loginPicture = new System.Windows.Forms.PictureBox();
+            this.panelFooterTexto.SuspendLayout();
             this.panelDifuminadoOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).BeginInit();
             this.SuspendLayout();
@@ -56,27 +59,37 @@
             this.opcionesPanelCerrarSesion.BackgroundImage = global::ManejoFondo.Properties.Resources.cerrarSesion;
             this.opcionesPanelCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.opcionesPanelCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.opcionesPanelCerrarSesion.Location = new System.Drawing.Point(425, 512);
+            this.opcionesPanelCerrarSesion.Location = new System.Drawing.Point(12, 499);
             this.opcionesPanelCerrarSesion.Name = "opcionesPanelCerrarSesion";
-            this.opcionesPanelCerrarSesion.Size = new System.Drawing.Size(64, 64);
+            this.opcionesPanelCerrarSesion.Size = new System.Drawing.Size(42, 42);
             this.opcionesPanelCerrarSesion.TabIndex = 1;
             this.opcionesPanelCerrarSesion.Click += new System.EventHandler(this.CerrarSesion);
             // 
-            // opcionesLabelCerrarSesion
+            // panelFooterTexto
             // 
-            this.opcionesLabelCerrarSesion.AutoSize = true;
-            this.opcionesLabelCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opcionesLabelCerrarSesion.Location = new System.Drawing.Point(412, 579);
-            this.opcionesLabelCerrarSesion.Name = "opcionesLabelCerrarSesion";
-            this.opcionesLabelCerrarSesion.Size = new System.Drawing.Size(90, 16);
-            this.opcionesLabelCerrarSesion.TabIndex = 14;
-            this.opcionesLabelCerrarSesion.Text = "Cerrar Sesión";
+            this.panelFooterTexto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.panelFooterTexto.Controls.Add(this.labelFooterTexto);
+            this.panelFooterTexto.Location = new System.Drawing.Point(3, 605);
+            this.panelFooterTexto.Name = "panelFooterTexto";
+            this.panelFooterTexto.Size = new System.Drawing.Size(906, 30);
+            this.panelFooterTexto.TabIndex = 3;
+            // 
+            // labelFooterTexto
+            // 
+            this.labelFooterTexto.AutoSize = true;
+            this.labelFooterTexto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFooterTexto.Location = new System.Drawing.Point(6, 10);
+            this.labelFooterTexto.Name = "labelFooterTexto";
+            this.labelFooterTexto.Size = new System.Drawing.Size(103, 16);
+            this.labelFooterTexto.TabIndex = 4;
+            this.labelFooterTexto.Text = "© 2019 AVISON";
             // 
             // panelDifuminadoOpciones
             // 
             this.panelDifuminadoOpciones.ColorAbajo = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panelDifuminadoOpciones.ColorArriba = System.Drawing.Color.White;
             this.panelDifuminadoOpciones.Controls.Add(this.opcionesPanelParametrizacion);
+            this.panelDifuminadoOpciones.Controls.Add(this.panelFooterImagenMenu);
             this.panelDifuminadoOpciones.Controls.Add(this.opcionesPanelCambiarClave);
             this.panelDifuminadoOpciones.Controls.Add(this.opcionesPanelSolicitudCredito);
             this.panelDifuminadoOpciones.Controls.Add(this.opcionesPanelIndicadores);
@@ -106,6 +119,16 @@
             this.opcionesPanelParametrizacion.Size = new System.Drawing.Size(221, 137);
             this.opcionesPanelParametrizacion.TabIndex = 13;
             this.opcionesPanelParametrizacion.Click += new System.EventHandler(this.AbrirFormularioParametrizacion);
+            // 
+            // panelFooterImagenMenu
+            // 
+            this.panelFooterImagenMenu.BackColor = System.Drawing.Color.White;
+            this.panelFooterImagenMenu.BackgroundImage = global::ManejoFondo.Properties.Resources.Avison;
+            this.panelFooterImagenMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelFooterImagenMenu.Location = new System.Drawing.Point(12, 3);
+            this.panelFooterImagenMenu.Name = "panelFooterImagenMenu";
+            this.panelFooterImagenMenu.Size = new System.Drawing.Size(51, 44);
+            this.panelFooterImagenMenu.TabIndex = 2;
             // 
             // opcionesPanelCambiarClave
             // 
@@ -193,7 +216,7 @@
             this.opcionLabelUsername.AutoSize = true;
             this.opcionLabelUsername.BackColor = System.Drawing.Color.Transparent;
             this.opcionLabelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.opcionLabelUsername.Location = new System.Drawing.Point(768, 23);
+            this.opcionLabelUsername.Location = new System.Drawing.Point(100, 49);
             this.opcionLabelUsername.Name = "opcionLabelUsername";
             this.opcionLabelUsername.Size = new System.Drawing.Size(0, 16);
             this.opcionLabelUsername.TabIndex = 8;
@@ -203,7 +226,7 @@
             this.opcionLabelBienvenido.AutoSize = true;
             this.opcionLabelBienvenido.BackColor = System.Drawing.Color.Transparent;
             this.opcionLabelBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.opcionLabelBienvenido.Location = new System.Drawing.Point(677, 23);
+            this.opcionLabelBienvenido.Location = new System.Drawing.Point(9, 49);
             this.opcionLabelBienvenido.Name = "opcionLabelBienvenido";
             this.opcionLabelBienvenido.Size = new System.Drawing.Size(85, 16);
             this.opcionLabelBienvenido.TabIndex = 7;
@@ -254,19 +277,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 609);
-            this.Controls.Add(this.opcionesLabelCerrarSesion);
+            this.ClientSize = new System.Drawing.Size(910, 637);
+            this.Controls.Add(this.panelFooterTexto);
             this.Controls.Add(this.opcionesPanelCerrarSesion);
             this.Controls.Add(this.panelDifuminadoOpciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormMenu";
             this.Text = "Opciones";
+            this.panelFooterTexto.ResumeLayout(false);
+            this.panelFooterTexto.PerformLayout();
             this.panelDifuminadoOpciones.ResumeLayout(false);
             this.panelDifuminadoOpciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginPicture)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -288,6 +312,8 @@
         private System.Windows.Forms.Panel opcionesPanelSolicitudCredito;
         private System.Windows.Forms.Panel opcionesPanelIndicadores;
         private System.Windows.Forms.Panel opcionesPanelCerrarSesion;
-        private System.Windows.Forms.Label opcionesLabelCerrarSesion;
+        private System.Windows.Forms.Panel panelFooterImagenMenu;
+        private System.Windows.Forms.Panel panelFooterTexto;
+        private System.Windows.Forms.Label labelFooterTexto;
     }
 }

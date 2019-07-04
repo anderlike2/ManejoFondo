@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelIngresoCuotaMensual = new System.Windows.Forms.Panel();
+            this.panelFooterTexto = new System.Windows.Forms.Panel();
+            this.labelFooterTexto = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxCuotaMensualMes = new System.Windows.Forms.ComboBox();
             this.labelCuotaMensualMes = new System.Windows.Forms.Label();
@@ -57,16 +59,18 @@
             this.textBoxCuotaMensualNumeroIdentificacion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.labelCuotaMensualNumeroIdentificacion = new System.Windows.Forms.Label();
-            this.labelTituloDatosAhorro = new System.Windows.Forms.Label();
             this.panelImagenCuotaAhorroMes = new System.Windows.Forms.Panel();
+            this.labelTituloDatosAhorro = new System.Windows.Forms.Label();
             this.panelRegresarMenu = new System.Windows.Forms.Panel();
             this.panelIngresoCuotaMensual.SuspendLayout();
+            this.panelFooterTexto.SuspendLayout();
             this.groupBoxAhorroMensual.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelIngresoCuotaMensual
             // 
             this.panelIngresoCuotaMensual.BackColor = System.Drawing.Color.White;
+            this.panelIngresoCuotaMensual.Controls.Add(this.panelFooterTexto);
             this.panelIngresoCuotaMensual.Controls.Add(this.label2);
             this.panelIngresoCuotaMensual.Controls.Add(this.comboBoxCuotaMensualMes);
             this.panelIngresoCuotaMensual.Controls.Add(this.labelCuotaMensualMes);
@@ -91,12 +95,31 @@
             this.panelIngresoCuotaMensual.Size = new System.Drawing.Size(1344, 647);
             this.panelIngresoCuotaMensual.TabIndex = 3;
             // 
+            // panelFooterTexto
+            // 
+            this.panelFooterTexto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.panelFooterTexto.Controls.Add(this.labelFooterTexto);
+            this.panelFooterTexto.Location = new System.Drawing.Point(3, 614);
+            this.panelFooterTexto.Name = "panelFooterTexto";
+            this.panelFooterTexto.Size = new System.Drawing.Size(1338, 30);
+            this.panelFooterTexto.TabIndex = 24;
+            // 
+            // labelFooterTexto
+            // 
+            this.labelFooterTexto.AutoSize = true;
+            this.labelFooterTexto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFooterTexto.Location = new System.Drawing.Point(6, 10);
+            this.labelFooterTexto.Name = "labelFooterTexto";
+            this.labelFooterTexto.Size = new System.Drawing.Size(103, 16);
+            this.labelFooterTexto.TabIndex = 4;
+            this.labelFooterTexto.Text = "© 2019 AVISON";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(550, 552);
+            this.label2.Location = new System.Drawing.Point(550, 523);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 29);
@@ -109,7 +132,7 @@
             this.comboBoxCuotaMensualMes.BackColor = System.Drawing.Color.White;
             this.comboBoxCuotaMensualMes.Enabled = false;
             this.comboBoxCuotaMensualMes.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxCuotaMensualMes.Location = new System.Drawing.Point(104, 556);
+            this.comboBoxCuotaMensualMes.Location = new System.Drawing.Point(104, 527);
             this.comboBoxCuotaMensualMes.Name = "comboBoxCuotaMensualMes";
             this.comboBoxCuotaMensualMes.Size = new System.Drawing.Size(427, 21);
             this.comboBoxCuotaMensualMes.TabIndex = 22;
@@ -119,7 +142,7 @@
             this.labelCuotaMensualMes.AutoSize = true;
             this.labelCuotaMensualMes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCuotaMensualMes.ForeColor = System.Drawing.Color.Black;
-            this.labelCuotaMensualMes.Location = new System.Drawing.Point(100, 527);
+            this.labelCuotaMensualMes.Location = new System.Drawing.Point(100, 498);
             this.labelCuotaMensualMes.Name = "labelCuotaMensualMes";
             this.labelCuotaMensualMes.Size = new System.Drawing.Size(41, 21);
             this.labelCuotaMensualMes.TabIndex = 21;
@@ -166,7 +189,7 @@
             this.buttonCuotaMensualGuardarCuota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCuotaMensualGuardarCuota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCuotaMensualGuardarCuota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
-            this.buttonCuotaMensualGuardarCuota.Location = new System.Drawing.Point(1120, 542);
+            this.buttonCuotaMensualGuardarCuota.Location = new System.Drawing.Point(1120, 513);
             this.buttonCuotaMensualGuardarCuota.Name = "buttonCuotaMensualGuardarCuota";
             this.buttonCuotaMensualGuardarCuota.Size = new System.Drawing.Size(171, 39);
             this.buttonCuotaMensualGuardarCuota.TabIndex = 17;
@@ -187,7 +210,7 @@
             this.textBoxCuotaMensualAhorroMensual.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxCuotaMensualAhorroMensual.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.textBoxCuotaMensualAhorroMensual.LineThickness = 3;
-            this.textBoxCuotaMensualAhorroMensual.Location = new System.Drawing.Point(632, 551);
+            this.textBoxCuotaMensualAhorroMensual.Location = new System.Drawing.Point(632, 522);
             this.textBoxCuotaMensualAhorroMensual.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCuotaMensualAhorroMensual.Name = "textBoxCuotaMensualAhorroMensual";
             this.textBoxCuotaMensualAhorroMensual.Size = new System.Drawing.Size(425, 29);
@@ -200,7 +223,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(1078, 551);
+            this.label1.Location = new System.Drawing.Point(1078, 522);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 29);
@@ -213,7 +236,7 @@
             this.labelCuotaMensualAporteMes.AutoSize = true;
             this.labelCuotaMensualAporteMes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCuotaMensualAporteMes.ForeColor = System.Drawing.Color.Black;
-            this.labelCuotaMensualAporteMes.Location = new System.Drawing.Point(628, 527);
+            this.labelCuotaMensualAporteMes.Location = new System.Drawing.Point(628, 498);
             this.labelCuotaMensualAporteMes.Name = "labelCuotaMensualAporteMes";
             this.labelCuotaMensualAporteMes.Size = new System.Drawing.Size(211, 21);
             this.labelCuotaMensualAporteMes.TabIndex = 14;
@@ -234,7 +257,7 @@
             this.groupBoxAhorroMensual.Controls.Add(this.textBoxCuotaMensualNombres);
             this.groupBoxAhorroMensual.Controls.Add(this.labelCuotaMensualNombres);
             this.groupBoxAhorroMensual.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.groupBoxAhorroMensual.Location = new System.Drawing.Point(26, 288);
+            this.groupBoxAhorroMensual.Location = new System.Drawing.Point(26, 259);
             this.groupBoxAhorroMensual.Name = "groupBoxAhorroMensual";
             this.groupBoxAhorroMensual.Size = new System.Drawing.Size(1295, 213);
             this.groupBoxAhorroMensual.TabIndex = 13;
@@ -501,6 +524,16 @@
             this.labelCuotaMensualNumeroIdentificacion.TabIndex = 5;
             this.labelCuotaMensualNumeroIdentificacion.Text = "Número de Identificación";
             // 
+            // panelImagenCuotaAhorroMes
+            // 
+            this.panelImagenCuotaAhorroMes.BackColor = System.Drawing.Color.White;
+            this.panelImagenCuotaAhorroMes.BackgroundImage = global::ManejoFondo.Properties.Resources.ahorroCuotaMes;
+            this.panelImagenCuotaAhorroMes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelImagenCuotaAhorroMes.Location = new System.Drawing.Point(1213, 12);
+            this.panelImagenCuotaAhorroMes.Name = "panelImagenCuotaAhorroMes";
+            this.panelImagenCuotaAhorroMes.Size = new System.Drawing.Size(108, 106);
+            this.panelImagenCuotaAhorroMes.TabIndex = 4;
+            // 
             // labelTituloDatosAhorro
             // 
             this.labelTituloDatosAhorro.AutoSize = true;
@@ -511,16 +544,6 @@
             this.labelTituloDatosAhorro.Size = new System.Drawing.Size(572, 22);
             this.labelTituloDatosAhorro.TabIndex = 3;
             this.labelTituloDatosAhorro.Text = "POR FAVOR INGRESAR LA INFORMACIÓN PARA SU AHORRO";
-            // 
-            // panelImagenCuotaAhorroMes
-            // 
-            this.panelImagenCuotaAhorroMes.BackColor = System.Drawing.Color.White;
-            this.panelImagenCuotaAhorroMes.BackgroundImage = global::ManejoFondo.Properties.Resources.ahorroCuotaMes;
-            this.panelImagenCuotaAhorroMes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelImagenCuotaAhorroMes.Location = new System.Drawing.Point(1213, 12);
-            this.panelImagenCuotaAhorroMes.Name = "panelImagenCuotaAhorroMes";
-            this.panelImagenCuotaAhorroMes.Size = new System.Drawing.Size(108, 106);
-            this.panelImagenCuotaAhorroMes.TabIndex = 4;
             // 
             // panelRegresarMenu
             // 
@@ -549,6 +572,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelIngresoCuotaMensual.ResumeLayout(false);
             this.panelIngresoCuotaMensual.PerformLayout();
+            this.panelFooterTexto.ResumeLayout(false);
+            this.panelFooterTexto.PerformLayout();
             this.groupBoxAhorroMensual.ResumeLayout(false);
             this.groupBoxAhorroMensual.PerformLayout();
             this.ResumeLayout(false);
@@ -589,5 +614,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxCuotaMensualMes;
         private System.Windows.Forms.Label labelCuotaMensualMes;
+        private System.Windows.Forms.Panel panelFooterTexto;
+        private System.Windows.Forms.Label labelFooterTexto;
     }
 }

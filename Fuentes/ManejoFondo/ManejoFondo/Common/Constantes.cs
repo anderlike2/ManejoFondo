@@ -62,6 +62,7 @@ namespace ManejoFondo.Common
         public const string MsjTooltipIndicadores = "Consulte los indicadores relacionados con los ahorros de los asociados.";
         public const string MsjTooltipCambiarClave = "Realice un cambio de clave para el usuario Administrador.";
         public const string MsjTooltipParametrizacion = "Realice parametrización de informacion básica del sistema.";
+        public const string MsjTooltipCerrarSesion = "Cerrar sesión.";
 
         public const string MsjAceptar = "Almacenar información.";
         public const string MsjCancelar = "Limpiar información.";

@@ -121,26 +121,26 @@
   <data name="regresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\regresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OpcionConsultarUsuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\OpcionConsultarUsuarios.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="editarInformacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\editarInformacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="datosPersonales" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\datosPersonales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ayudasGobierno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\ayudasGobierno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="agregarUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\agregarUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OpcionAsociado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\OpcionAsociado.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cambiarClaveUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\cambiarClaveUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OpcionSolicitud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\OpcionSolicitud.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loginLogo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\loginLogo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="parametrizacionSistema" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\parametrizacionSistema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="consultaUsuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\consultaUsuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,8 +154,8 @@
   <data name="OpcionReporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\OpcionReporte.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="opcionIndicador" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\opcionIndicador.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cerrarSesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\cerrarSesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loginLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\loginLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +163,11 @@
   <data name="loginBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\loginBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cerrarSesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\cerrarSesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nucleoFamiliar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\nucleoFamiliar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OpcionConsultarUsuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\OpcionConsultarUsuarios.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,17 +178,17 @@
   <data name="ingresos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\ingresos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cambiarClaveUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\cambiarClaveUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="parametrizacionSistema" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\parametrizacionSistema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregarInformacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\agregarInformacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="editarInformacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\editarInformacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ayudasGobierno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\ayudasGobierno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nucleoFamiliar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\nucleoFamiliar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="opcionIndicador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\opcionIndicador.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OpcionCambiarClave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\OpcionCambiarClave.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,7 +196,7 @@
   <data name="Cargando" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Cargando.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregarUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\agregarUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Avison" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Avison.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
