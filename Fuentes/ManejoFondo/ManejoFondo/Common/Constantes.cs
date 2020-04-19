@@ -58,6 +58,7 @@ namespace ManejoFondo.Common
         public const string MsjTooltipAsociados = "Ingrese un nuevo asociado a la entidad.";
         public const string MsjTooltipAhorro = "Haga el ahorro mensual de un asociado.";
         public const string MsjTooltipSolicitudCredito = "Realice aquí una solicitud de crédito para el asociado.";
+        public const string MsjTooltipAmortizacionCredito = "Realice aquí amortización de su crédito.";
         public const string MsjTooltipReportes = "Genere un reporte de información de los asociados.";
         public const string MsjTooltipIndicadores = "Consulte los indicadores relacionados con los ahorros de los asociados.";
         public const string MsjTooltipCambiarClave = "Realice un cambio de clave para el usuario Administrador.";
