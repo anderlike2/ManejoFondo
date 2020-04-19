@@ -157,5 +157,18 @@ namespace ManejoFondo
             formOptConsultarUsuarios.ShowDialog();
             Close();
         }
+
+        /// <summary>
+        /// Abrir Formulario Solicitud de Credito
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void AbrirFormularioSolicitudCredito(object sender, EventArgs e)
+        {
+            FormOptSolicitudCredito formOptSolicitudCredito = new FormOptSolicitudCredito(usuarioSesion);
+            Hide();
+            formOptSolicitudCredito.ShowDialog();
+            Close();
+        }
     }
 }

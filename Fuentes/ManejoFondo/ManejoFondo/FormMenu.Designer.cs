@@ -32,13 +32,8 @@
             this.panelFooterTexto = new System.Windows.Forms.Panel();
             this.labelFooterTexto = new System.Windows.Forms.Label();
             this.panelDifuminadoOpciones = new ManejoFondo.PanelDifuminado();
-            this.opcionLabelUsername = new System.Windows.Forms.Label();
-            this.opcionLabelBienvenido = new System.Windows.Forms.Label();
-            this.opcionElegirOpcion = new System.Windows.Forms.Label();
-            this.opcionLabelAhorra = new System.Windows.Forms.Label();
-            this.opcionPanelLinea = new System.Windows.Forms.Panel();
-            this.opcionesPanelCerrarSesion = new System.Windows.Forms.Panel();
             this.opcionesPanelAmortizacionCredito = new System.Windows.Forms.Panel();
+            this.opcionesPanelCerrarSesion = new System.Windows.Forms.Panel();
             this.opcionesPanelParametrizacion = new System.Windows.Forms.Panel();
             this.panelFooterImagenMenu = new System.Windows.Forms.Panel();
             this.opcionesPanelCambiarClave = new System.Windows.Forms.Panel();
@@ -48,6 +43,11 @@
             this.opcionesPanelAhorro = new System.Windows.Forms.Panel();
             this.opcionesPanelAsociado = new System.Windows.Forms.Panel();
             this.opcionesPanelConsultarUsuarios = new System.Windows.Forms.Panel();
+            this.opcionLabelUsername = new System.Windows.Forms.Label();
+            this.opcionLabelBienvenido = new System.Windows.Forms.Label();
+            this.opcionElegirOpcion = new System.Windows.Forms.Label();
+            this.opcionLabelAhorra = new System.Windows.Forms.Label();
+            this.opcionPanelLinea = new System.Windows.Forms.Panel();
             this.loginPicture = new System.Windows.Forms.PictureBox();
             this.panelFooterTexto.SuspendLayout();
             this.panelDifuminadoOpciones.SuspendLayout();
@@ -59,7 +59,7 @@
             this.panelFooterTexto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
             this.panelFooterTexto.Controls.Add(this.labelFooterTexto);
             this.panelFooterTexto.Location = new System.Drawing.Point(4, 741);
-            this.panelFooterTexto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelFooterTexto.Margin = new System.Windows.Forms.Padding(4);
             this.panelFooterTexto.Name = "panelFooterTexto";
             this.panelFooterTexto.Size = new System.Drawing.Size(1208, 44);
             this.panelFooterTexto.TabIndex = 3;
@@ -97,66 +97,22 @@
             this.panelDifuminadoOpciones.Controls.Add(this.opcionPanelLinea);
             this.panelDifuminadoOpciones.Controls.Add(this.loginPicture);
             this.panelDifuminadoOpciones.Location = new System.Drawing.Point(4, 5);
-            this.panelDifuminadoOpciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDifuminadoOpciones.Margin = new System.Windows.Forms.Padding(4);
             this.panelDifuminadoOpciones.Name = "panelDifuminadoOpciones";
             this.panelDifuminadoOpciones.Size = new System.Drawing.Size(1208, 730);
             this.panelDifuminadoOpciones.TabIndex = 0;
             // 
-            // opcionLabelUsername
+            // opcionesPanelAmortizacionCredito
             // 
-            this.opcionLabelUsername.AutoSize = true;
-            this.opcionLabelUsername.BackColor = System.Drawing.Color.Transparent;
-            this.opcionLabelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.opcionLabelUsername.Location = new System.Drawing.Point(133, 60);
-            this.opcionLabelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.opcionLabelUsername.Name = "opcionLabelUsername";
-            this.opcionLabelUsername.Size = new System.Drawing.Size(0, 20);
-            this.opcionLabelUsername.TabIndex = 8;
-            // 
-            // opcionLabelBienvenido
-            // 
-            this.opcionLabelBienvenido.AutoSize = true;
-            this.opcionLabelBienvenido.BackColor = System.Drawing.Color.Transparent;
-            this.opcionLabelBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.opcionLabelBienvenido.Location = new System.Drawing.Point(12, 60);
-            this.opcionLabelBienvenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.opcionLabelBienvenido.Name = "opcionLabelBienvenido";
-            this.opcionLabelBienvenido.Size = new System.Drawing.Size(104, 20);
-            this.opcionLabelBienvenido.TabIndex = 7;
-            this.opcionLabelBienvenido.Text = "Bienvenid@:";
-            // 
-            // opcionElegirOpcion
-            // 
-            this.opcionElegirOpcion.AutoSize = true;
-            this.opcionElegirOpcion.BackColor = System.Drawing.Color.Transparent;
-            this.opcionElegirOpcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opcionElegirOpcion.Location = new System.Drawing.Point(331, 185);
-            this.opcionElegirOpcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.opcionElegirOpcion.Name = "opcionElegirOpcion";
-            this.opcionElegirOpcion.Size = new System.Drawing.Size(474, 29);
-            this.opcionElegirOpcion.TabIndex = 6;
-            this.opcionElegirOpcion.Text = "SELECCIONA UNA DE LAS OPCIONES";
-            // 
-            // opcionLabelAhorra
-            // 
-            this.opcionLabelAhorra.AutoSize = true;
-            this.opcionLabelAhorra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opcionLabelAhorra.Location = new System.Drawing.Point(591, 148);
-            this.opcionLabelAhorra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.opcionLabelAhorra.Name = "opcionLabelAhorra";
-            this.opcionLabelAhorra.Size = new System.Drawing.Size(161, 20);
-            this.opcionLabelAhorra.TabIndex = 5;
-            this.opcionLabelAhorra.Text = "Ahorra con nosotros";
-            // 
-            // opcionPanelLinea
-            // 
-            this.opcionPanelLinea.AutoScroll = true;
-            this.opcionPanelLinea.BackColor = System.Drawing.Color.Black;
-            this.opcionPanelLinea.Location = new System.Drawing.Point(419, 142);
-            this.opcionPanelLinea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.opcionPanelLinea.Name = "opcionPanelLinea";
-            this.opcionPanelLinea.Size = new System.Drawing.Size(337, 2);
-            this.opcionPanelLinea.TabIndex = 4;
+            this.opcionesPanelAmortizacionCredito.BackColor = System.Drawing.Color.Transparent;
+            this.opcionesPanelAmortizacionCredito.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionAmortizacion;
+            this.opcionesPanelAmortizacionCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.opcionesPanelAmortizacionCredito.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opcionesPanelAmortizacionCredito.Location = new System.Drawing.Point(12, 386);
+            this.opcionesPanelAmortizacionCredito.Margin = new System.Windows.Forms.Padding(4);
+            this.opcionesPanelAmortizacionCredito.Name = "opcionesPanelAmortizacionCredito";
+            this.opcionesPanelAmortizacionCredito.Size = new System.Drawing.Size(295, 169);
+            this.opcionesPanelAmortizacionCredito.TabIndex = 12;
             // 
             // opcionesPanelCerrarSesion
             // 
@@ -170,18 +126,6 @@
             this.opcionesPanelCerrarSesion.Size = new System.Drawing.Size(56, 52);
             this.opcionesPanelCerrarSesion.TabIndex = 1;
             this.opcionesPanelCerrarSesion.Click += new System.EventHandler(this.CerrarSesion);
-            // 
-            // opcionesPanelAmortizacionCredito
-            // 
-            this.opcionesPanelAmortizacionCredito.BackColor = System.Drawing.Color.Transparent;
-            this.opcionesPanelAmortizacionCredito.BackgroundImage = global::ManejoFondo.Properties.Resources.OpcionAmortizacion;
-            this.opcionesPanelAmortizacionCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.opcionesPanelAmortizacionCredito.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.opcionesPanelAmortizacionCredito.Location = new System.Drawing.Point(12, 386);
-            this.opcionesPanelAmortizacionCredito.Margin = new System.Windows.Forms.Padding(4);
-            this.opcionesPanelAmortizacionCredito.Name = "opcionesPanelAmortizacionCredito";
-            this.opcionesPanelAmortizacionCredito.Size = new System.Drawing.Size(295, 169);
-            this.opcionesPanelAmortizacionCredito.TabIndex = 12;
             // 
             // opcionesPanelParametrizacion
             // 
@@ -231,6 +175,7 @@
             this.opcionesPanelSolicitudCredito.Name = "opcionesPanelSolicitudCredito";
             this.opcionesPanelSolicitudCredito.Size = new System.Drawing.Size(295, 169);
             this.opcionesPanelSolicitudCredito.TabIndex = 11;
+            this.opcionesPanelSolicitudCredito.Click += new System.EventHandler(this.AbrirFormularioSolicitudCredito);
             // 
             // opcionesPanelIndicadores
             // 
@@ -295,6 +240,62 @@
             this.opcionesPanelConsultarUsuarios.TabIndex = 9;
             this.opcionesPanelConsultarUsuarios.Click += new System.EventHandler(this.AbrirFormularioConsultarUsuarios);
             // 
+            // opcionLabelUsername
+            // 
+            this.opcionLabelUsername.AutoSize = true;
+            this.opcionLabelUsername.BackColor = System.Drawing.Color.Transparent;
+            this.opcionLabelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.opcionLabelUsername.Location = new System.Drawing.Point(133, 60);
+            this.opcionLabelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.opcionLabelUsername.Name = "opcionLabelUsername";
+            this.opcionLabelUsername.Size = new System.Drawing.Size(0, 20);
+            this.opcionLabelUsername.TabIndex = 8;
+            // 
+            // opcionLabelBienvenido
+            // 
+            this.opcionLabelBienvenido.AutoSize = true;
+            this.opcionLabelBienvenido.BackColor = System.Drawing.Color.Transparent;
+            this.opcionLabelBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.opcionLabelBienvenido.Location = new System.Drawing.Point(12, 60);
+            this.opcionLabelBienvenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.opcionLabelBienvenido.Name = "opcionLabelBienvenido";
+            this.opcionLabelBienvenido.Size = new System.Drawing.Size(104, 20);
+            this.opcionLabelBienvenido.TabIndex = 7;
+            this.opcionLabelBienvenido.Text = "Bienvenid@:";
+            // 
+            // opcionElegirOpcion
+            // 
+            this.opcionElegirOpcion.AutoSize = true;
+            this.opcionElegirOpcion.BackColor = System.Drawing.Color.Transparent;
+            this.opcionElegirOpcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opcionElegirOpcion.Location = new System.Drawing.Point(331, 185);
+            this.opcionElegirOpcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.opcionElegirOpcion.Name = "opcionElegirOpcion";
+            this.opcionElegirOpcion.Size = new System.Drawing.Size(474, 29);
+            this.opcionElegirOpcion.TabIndex = 6;
+            this.opcionElegirOpcion.Text = "SELECCIONA UNA DE LAS OPCIONES";
+            // 
+            // opcionLabelAhorra
+            // 
+            this.opcionLabelAhorra.AutoSize = true;
+            this.opcionLabelAhorra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opcionLabelAhorra.Location = new System.Drawing.Point(591, 148);
+            this.opcionLabelAhorra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.opcionLabelAhorra.Name = "opcionLabelAhorra";
+            this.opcionLabelAhorra.Size = new System.Drawing.Size(161, 20);
+            this.opcionLabelAhorra.TabIndex = 5;
+            this.opcionLabelAhorra.Text = "Ahorra con nosotros";
+            // 
+            // opcionPanelLinea
+            // 
+            this.opcionPanelLinea.AutoScroll = true;
+            this.opcionPanelLinea.BackColor = System.Drawing.Color.Black;
+            this.opcionPanelLinea.Location = new System.Drawing.Point(419, 142);
+            this.opcionPanelLinea.Margin = new System.Windows.Forms.Padding(4);
+            this.opcionPanelLinea.Name = "opcionPanelLinea";
+            this.opcionPanelLinea.Size = new System.Drawing.Size(337, 2);
+            this.opcionPanelLinea.TabIndex = 4;
+            // 
             // loginPicture
             // 
             this.loginPicture.BackColor = System.Drawing.Color.Transparent;
@@ -315,7 +316,7 @@
             this.Controls.Add(this.panelFooterTexto);
             this.Controls.Add(this.panelDifuminadoOpciones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FormMenu";
             this.Text = "Opciones";
