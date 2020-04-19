@@ -607,7 +607,7 @@ namespace ManejoFondo
             {
                 ingresoAsociadoAceptar.Enabled = false;
                 ingresoAsociadoCancelar.Enabled = false;
-                if (!ValidarInformacionIngresos())
+                if (!ValidarInformacionIngresos() || !ValidarInformacionPersona() || !ValidarInformacionNucleoFamiliar() || !ValidarInformacionAyudaGobierno())
                 {
                     tabIngresarAsociado.SelectedIndex = 3;
                     General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);

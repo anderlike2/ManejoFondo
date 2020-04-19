@@ -358,6 +358,7 @@
     <Content Include="Resources\Images\agregarUsuario.png" />
     <Content Include="Resources\Images\ahorro.png" />
     <Content Include="Resources\Images\ahorroCuotaMes.png" />
+    <Content Include="Resources\Images\amortizacion.png" />
     <Content Include="Resources\Images\asociado.png" />
     <Content Include="Resources\Images\Avison.png" />
     <Content Include="Resources\Images\ayudasGobierno.png" />
@@ -378,6 +379,7 @@
     <Content Include="Resources\Images\loginLogo2.png" />
     <Content Include="Resources\Images\nucleoFamiliar.png" />
     <Content Include="Resources\Images\OpcionAhorro.PNG" />
+    <Content Include="Resources\Images\OpcionAmortizacion.png" />
     <Content Include="Resources\Images\OpcionAsociado.PNG" />
     <Content Include="Resources\Images\OpcionCambiarClave.PNG" />
     <Content Include="Resources\Images\OpcionConsultarUsuarios.PNG" />

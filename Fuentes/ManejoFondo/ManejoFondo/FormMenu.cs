@@ -79,6 +79,7 @@ namespace ManejoFondo
             toolTip.SetToolTip(opcionesPanelAsociado, Constantes.MsjTooltipAsociados);
             toolTip.SetToolTip(opcionesPanelAhorro, Constantes.MsjTooltipAhorro);
             toolTip.SetToolTip(opcionesPanelSolicitudCredito, Constantes.MsjTooltipSolicitudCredito);
+            toolTip.SetToolTip(opcionesPanelAmortizacionCredito, Constantes.MsjTooltipAmortizacionCredito);
             toolTip.SetToolTip(opcionesPanelReportes, Constantes.MsjTooltipReportes);
             toolTip.SetToolTip(opcionesPanelIndicadores, Constantes.MsjTooltipIndicadores);
             toolTip.SetToolTip(opcionesPanelCambiarClave, Constantes.MsjTooltipCambiarClave);
