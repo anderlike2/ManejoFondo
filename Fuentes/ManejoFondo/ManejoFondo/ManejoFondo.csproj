@@ -271,6 +271,7 @@
     <Compile Include="Services\FondoLoginService.cs" />
     <Compile Include="Services\FondoParametrosService.cs" />
     <Compile Include="Services\FondoProcUsuarioService.cs" />
+    <Compile Include="Services\FondoSolicitudCreditoService.cs" />
     <Compile Include="Services\FondoUsuarioService.cs" />
     <Compile Include="FormModalEliminarUsuario.cs">
       <SubType>Form</SubType>

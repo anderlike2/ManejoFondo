@@ -61,5 +61,17 @@ namespace ManejoFondo.Services
             FondoAhorroMensualDao fondoAhorroMensualDao = new FondoAhorroMensualDao();
             return fondoAhorroMensualDao.ConsultarAhorroMensualUsuario(ahorroMensual);
         }
+
+        /// <summary>
+        /// Metodo para consultar un ahorro de un usuario mediante identificacion
+        /// Autor: Anderson Benavides
+        /// 2020-04-19
+        /// </summary>
+        /// <param name="ahorroMensual"></param>
+        public List<FondoAhorroMensualEntity> ConsultarAhorroMensualUsuarioIdentificacion(FondoAhorroMensualEntity ahorroMensual)
+        {
+            FondoAhorroMensualDao fondoAhorroMensualDao = new FondoAhorroMensualDao();
+            return fondoAhorroMensualDao.ConsultarAhorroMensualUsuarioIdentificacion(ahorroMensual);
+        }
     }
 }

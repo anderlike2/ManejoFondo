@@ -24,7 +24,7 @@ namespace ManejoFondo
     {
         //Variable para guardar el usuario que inicio sesion
         FondoLoginEntity usuarioSesion;
-        FondoUsuarioService fondoUsuarioService = new FondoUsuarioService();
+        FondoSolicitudCreditoService fondoSolicitudCreditoService = new FondoSolicitudCreditoService();
 
         public FormOptSolicitudCredito(FondoLoginEntity usuario)
         {
@@ -84,6 +84,57 @@ namespace ManejoFondo
                 Log.Registrar_Log(ex.Message, "FormOptSolicitudCredito - CargarCombobox", LogErrorEnumeration.Critico);
                 General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
             }
+        }
+
+        /// <summary>
+        /// Consulta la informacion del usuario (Ahorro y nombres)
+        /// Autor: Anderson Benavides
+        /// 2020-04-19
+        /// </summary>
+        private void ConsultarInformacionUsuario(object sender, EventArgs e)
+        {
+            try
+            {
+                LimpiarCamposCredito();
+                if (General.EsVacioNulo(textBoxSolicitudCreditoNumeroIdentificacion.Text))
+                {
+                    General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjCamposObligatorios);
+                    return;
+                }
+
+                //Consulta nombre del asociado
+                FondoUsuarioEntity fondoUsuarioConsulta = new FondoUsuarioEntity();
+                FondoDominiosEntity tipoIdentificacion = (FondoDominiosEntity)comboBoxSolicitudCreditoTipoIdentificacion.SelectedItem;                
+                fondoUsuarioConsulta.V_Tipo_Identificacion = tipoIdentificacion.V_Codigo;
+                fondoUsuarioConsulta.V_Numero_Identificacion = Convert.ToInt64(textBoxSolicitudCreditoNumeroIdentificacion.Text);
+                textBoxSolicitudCreditoNombres.Text = fondoSolicitudCreditoService.ConsultarNombreAsociado(fondoUsuarioConsulta);
+
+                //Consulta ahorro del asociado
+                FondoAhorroMensualEntity fondoAhorroMensualEntity = new FondoAhorroMensualEntity();
+                fondoAhorroMensualEntity.N_Id_Usuario = Convert.ToInt64(textBoxSolicitudCreditoNumeroIdentificacion.Text);
+                textBoxSolicitudCreditoValorAportes.Text = fondoSolicitudCreditoService.ConsultarAhorroAsociado(fondoAhorroMensualEntity);
+            }
+            catch (BusinessException ex)
+            {
+                General.MostrarPanelError(Constantes.CodigoWarning, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Log.Registrar_Log(ex.Message, "FormOptSolicitudCredito - ConsultarInformacionUsuario", LogErrorEnumeration.Critico);
+                General.MostrarPanelError(Constantes.CodigoError, Constantes.MsjErrorInesperado);
+            }            
+        }
+
+        /// <summary>
+        /// Limpiar los datos precargados
+        /// Autor: Anderson Benavides
+        /// 2020-04-19
+        /// </summary>
+        private void LimpiarCamposCredito()
+        {
+            textBoxSolicitudCreditoNombres.Text = "";
+            textBoxSolicitudCreditoValorAportes.Text = "";
+            textBoxSolicitudCreditoValorSolicitado.Text = "";
         }
     }
 }

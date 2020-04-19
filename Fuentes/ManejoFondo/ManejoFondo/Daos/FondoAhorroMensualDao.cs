@@ -51,5 +51,23 @@ namespace ManejoFondo.Daos
                 return result;
             }
         }
+
+        /// <summary>
+        /// Metodo para consultar un ahorro de un usuario mediante identificacion
+        /// Autor: Anderson Benavides
+        /// 2020-04-19
+        /// </summary>
+        /// <param name="ahorroMensual"></param>
+        public List<FondoAhorroMensualEntity> ConsultarAhorroMensualUsuarioIdentificacion(FondoAhorroMensualEntity ahorroMensual)
+        {
+            using (var cnn = SqlLiteConexion.SimpleDbConnection())
+            {
+                List<FondoAhorroMensualEntity> result = cnn.Query<FondoAhorroMensualEntity>(
+                   @"SELECT N_ID, N_ID_USUARIO, N_VALOR_CUOTA, F_FECHA_REGISTRO, N_MES_AHORRO, N_ANIO_AHORRO
+                    FROM FONDOAHORROMENSUAL WHERE N_ID_USUARIO = @N_ID_USUARIO",
+                   new { ahorroMensual.N_Id_Usuario }).ToList();
+                return result;
+            }
+        }
     }
 }

@@ -51,6 +51,8 @@ namespace ManejoFondo.Common
         public const string MsjNoInternetErrorEnviarCorreo = "Usted no se encuentra conectado a internet, no ha sido posible enviar el correo electrónico.";
         public const string MsjCrearUsuarioYaTieneAdministrador = "Usted ya tiene un usuario registrado en el Sistema, si ha olvidado su contraseña por favor seleccione la opción 'Olvidó su credenciales de Acceso?'";
         public const string MsjNoTieneAdministrador = "Usted no tiene un usuario registrado en el Sistema. Por favor crear un nuevo usuario.";
+        public const string MsjUsuarioNoEncontrado = "El usuario no se encuentra registrado en el sistema.";
+        public const string MsjUsuarioNoAhorro = "El usuario no tiene ningún ahorro registrado.";
         #endregion
 
         #region MensajesTooltips
