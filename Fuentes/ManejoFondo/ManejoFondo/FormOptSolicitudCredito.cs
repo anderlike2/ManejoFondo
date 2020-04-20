@@ -74,6 +74,16 @@ namespace ManejoFondo
                 comboBoxSolicitudCreditoTipoIdentificacion.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTiposIdentificacion, false);
                 comboBoxSolicitudCreditoTipoIdentificacion.DisplayMember = "V_VALOR";
                 comboBoxSolicitudCreditoTipoIdentificacion.ValueMember = "V_CODIGO";
+
+                //Para tipo de Actividad
+                comboBoxSolicitudCreditoTipoActividad.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTipoActividad, false); ;
+                comboBoxSolicitudCreditoTipoActividad.DisplayMember = "V_VALOR";
+                comboBoxSolicitudCreditoTipoActividad.ValueMember = "V_CODIGO";
+
+                //Para tipo de Actividad Otros Ingresos
+                comboBoxSolicitudCreditoTipoActividadOtrosIngresos.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTipoActividad, false); ;
+                comboBoxSolicitudCreditoTipoActividadOtrosIngresos.DisplayMember = "V_VALOR";
+                comboBoxSolicitudCreditoTipoActividadOtrosIngresos.ValueMember = "V_CODIGO";
             }
             catch (BusinessException ex)
             {
