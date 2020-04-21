@@ -29,6 +29,22 @@
         private void InitializeComponent()
         {
             this.panelSolicitudCredito = new System.Windows.Forms.Panel();
+            this.textBoxSolicitudCreditoTotalEgresos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.labelSolicitudCreditoTotalEgresos = new System.Windows.Forms.Label();
+            this.textBoxSolicitudCreditoTotalIngresos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.labelSolicitudCreditoTotalIngresos = new System.Windows.Forms.Label();
+            this.lineaSolicitudCreditoResultado = new System.Windows.Forms.Panel();
+            this.labelSolicitudCreditoResultado = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBoxSolicitudCreditoCapacidadPago = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.labelSolicitudCreditoCapacidadPago = new System.Windows.Forms.Label();
             this.textBoxSolicitudCreditoTotalDisponible = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -81,22 +97,6 @@
             this.panelImagenSolicitudCredito = new System.Windows.Forms.Panel();
             this.labelTituloSolicitudCredito = new System.Windows.Forms.Label();
             this.panelRegresarMenu = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lineaSolicitudCreditoResultado = new System.Windows.Forms.Panel();
-            this.labelSolicitudCreditoResultado = new System.Windows.Forms.Label();
-            this.labelSolicitudCreditoTotalIngresos = new System.Windows.Forms.Label();
-            this.textBoxSolicitudCreditoTotalIngresos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.textBoxSolicitudCreditoTotalEgresos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.labelSolicitudCreditoTotalEgresos = new System.Windows.Forms.Label();
             this.panelSolicitudCredito.SuspendLayout();
             this.panelFooterTexto.SuspendLayout();
             this.SuspendLayout();
@@ -176,6 +176,220 @@
             this.panelSolicitudCredito.Name = "panelSolicitudCredito";
             this.panelSolicitudCredito.Size = new System.Drawing.Size(1770, 796);
             this.panelSolicitudCredito.TabIndex = 0;
+            // 
+            // textBoxSolicitudCreditoTotalEgresos
+            // 
+            this.textBoxSolicitudCreditoTotalEgresos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxSolicitudCreditoTotalEgresos.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxSolicitudCreditoTotalEgresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxSolicitudCreditoTotalEgresos.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxSolicitudCreditoTotalEgresos.HintText = "";
+            this.textBoxSolicitudCreditoTotalEgresos.isPassword = false;
+            this.textBoxSolicitudCreditoTotalEgresos.LineFocusedColor = System.Drawing.Color.Red;
+            this.textBoxSolicitudCreditoTotalEgresos.LineIdleColor = System.Drawing.Color.Red;
+            this.textBoxSolicitudCreditoTotalEgresos.LineMouseHoverColor = System.Drawing.Color.Red;
+            this.textBoxSolicitudCreditoTotalEgresos.LineThickness = 3;
+            this.textBoxSolicitudCreditoTotalEgresos.Location = new System.Drawing.Point(1556, 456);
+            this.textBoxSolicitudCreditoTotalEgresos.Margin = new System.Windows.Forms.Padding(5);
+            this.textBoxSolicitudCreditoTotalEgresos.Name = "textBoxSolicitudCreditoTotalEgresos";
+            this.textBoxSolicitudCreditoTotalEgresos.Size = new System.Drawing.Size(199, 36);
+            this.textBoxSolicitudCreditoTotalEgresos.TabIndex = 126;
+            this.textBoxSolicitudCreditoTotalEgresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // labelSolicitudCreditoTotalEgresos
+            // 
+            this.labelSolicitudCreditoTotalEgresos.AutoSize = true;
+            this.labelSolicitudCreditoTotalEgresos.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSolicitudCreditoTotalEgresos.ForeColor = System.Drawing.Color.Black;
+            this.labelSolicitudCreditoTotalEgresos.Location = new System.Drawing.Point(1576, 429);
+            this.labelSolicitudCreditoTotalEgresos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSolicitudCreditoTotalEgresos.Name = "labelSolicitudCreditoTotalEgresos";
+            this.labelSolicitudCreditoTotalEgresos.Size = new System.Drawing.Size(149, 26);
+            this.labelSolicitudCreditoTotalEgresos.TabIndex = 125;
+            this.labelSolicitudCreditoTotalEgresos.Text = "Total Egresos";
+            // 
+            // textBoxSolicitudCreditoTotalIngresos
+            // 
+            this.textBoxSolicitudCreditoTotalIngresos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxSolicitudCreditoTotalIngresos.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxSolicitudCreditoTotalIngresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxSolicitudCreditoTotalIngresos.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxSolicitudCreditoTotalIngresos.HintText = "";
+            this.textBoxSolicitudCreditoTotalIngresos.isPassword = false;
+            this.textBoxSolicitudCreditoTotalIngresos.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textBoxSolicitudCreditoTotalIngresos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textBoxSolicitudCreditoTotalIngresos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textBoxSolicitudCreditoTotalIngresos.LineThickness = 3;
+            this.textBoxSolicitudCreditoTotalIngresos.Location = new System.Drawing.Point(1556, 290);
+            this.textBoxSolicitudCreditoTotalIngresos.Margin = new System.Windows.Forms.Padding(5);
+            this.textBoxSolicitudCreditoTotalIngresos.Name = "textBoxSolicitudCreditoTotalIngresos";
+            this.textBoxSolicitudCreditoTotalIngresos.Size = new System.Drawing.Size(199, 36);
+            this.textBoxSolicitudCreditoTotalIngresos.TabIndex = 124;
+            this.textBoxSolicitudCreditoTotalIngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // labelSolicitudCreditoTotalIngresos
+            // 
+            this.labelSolicitudCreditoTotalIngresos.AutoSize = true;
+            this.labelSolicitudCreditoTotalIngresos.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSolicitudCreditoTotalIngresos.ForeColor = System.Drawing.Color.Black;
+            this.labelSolicitudCreditoTotalIngresos.Location = new System.Drawing.Point(1576, 263);
+            this.labelSolicitudCreditoTotalIngresos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSolicitudCreditoTotalIngresos.Name = "labelSolicitudCreditoTotalIngresos";
+            this.labelSolicitudCreditoTotalIngresos.Size = new System.Drawing.Size(157, 26);
+            this.labelSolicitudCreditoTotalIngresos.TabIndex = 123;
+            this.labelSolicitudCreditoTotalIngresos.Text = "Total Ingresos";
+            // 
+            // lineaSolicitudCreditoResultado
+            // 
+            this.lineaSolicitudCreditoResultado.AutoScroll = true;
+            this.lineaSolicitudCreditoResultado.BackColor = System.Drawing.Color.Black;
+            this.lineaSolicitudCreditoResultado.Location = new System.Drawing.Point(127, 644);
+            this.lineaSolicitudCreditoResultado.Margin = new System.Windows.Forms.Padding(4);
+            this.lineaSolicitudCreditoResultado.Name = "lineaSolicitudCreditoResultado";
+            this.lineaSolicitudCreditoResultado.Size = new System.Drawing.Size(1315, 3);
+            this.lineaSolicitudCreditoResultado.TabIndex = 122;
+            // 
+            // labelSolicitudCreditoResultado
+            // 
+            this.labelSolicitudCreditoResultado.AutoSize = true;
+            this.labelSolicitudCreditoResultado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSolicitudCreditoResultado.ForeColor = System.Drawing.Color.Black;
+            this.labelSolicitudCreditoResultado.Location = new System.Drawing.Point(122, 616);
+            this.labelSolicitudCreditoResultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSolicitudCreditoResultado.Name = "labelSolicitudCreditoResultado";
+            this.labelSolicitudCreditoResultado.Size = new System.Drawing.Size(106, 23);
+            this.labelSolicitudCreditoResultado.TabIndex = 121;
+            this.labelSolicitudCreditoResultado.Text = "Resultado";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(984, 687);
+            this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(27, 35);
+            this.label12.TabIndex = 120;
+            this.label12.Text = "*";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(539, 687);
+            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 35);
+            this.label11.TabIndex = 119;
+            this.label11.Text = "*";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(984, 550);
+            this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(27, 35);
+            this.label10.TabIndex = 118;
+            this.label10.Text = "*";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(539, 550);
+            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(27, 35);
+            this.label9.TabIndex = 117;
+            this.label9.Text = "*";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(1445, 291);
+            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(27, 35);
+            this.label8.TabIndex = 116;
+            this.label8.Text = "*";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(1224, 291);
+            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(27, 35);
+            this.label7.TabIndex = 115;
+            this.label7.Text = "*";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(984, 291);
+            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(27, 35);
+            this.label6.TabIndex = 114;
+            this.label6.Text = "*";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(539, 291);
+            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 35);
+            this.label5.TabIndex = 113;
+            this.label5.Text = "*";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(539, 162);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 35);
+            this.label4.TabIndex = 112;
+            this.label4.Text = "*";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(984, 162);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 35);
+            this.label3.TabIndex = 111;
+            this.label3.Text = "*";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // textBoxSolicitudCreditoCapacidadPago
             // 
@@ -299,9 +513,9 @@
             this.labelSolicitudCreditoCuotasEntidadesFinancieras.Location = new System.Drawing.Point(1026, 525);
             this.labelSolicitudCreditoCuotasEntidadesFinancieras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSolicitudCreditoCuotasEntidadesFinancieras.Name = "labelSolicitudCreditoCuotasEntidadesFinancieras";
-            this.labelSolicitudCreditoCuotasEntidadesFinancieras.Size = new System.Drawing.Size(235, 23);
+            this.labelSolicitudCreditoCuotasEntidadesFinancieras.Size = new System.Drawing.Size(218, 23);
             this.labelSolicitudCreditoCuotasEntidadesFinancieras.TabIndex = 103;
-            this.labelSolicitudCreditoCuotasEntidadesFinancieras.Text = "Cuotas Ent. Financieras";
+            this.labelSolicitudCreditoCuotasEntidadesFinancieras.Text = "Cuotas Entidades Fin.";
             // 
             // textBoxSolicitudCreditoGastosProduccion
             // 
@@ -671,9 +885,9 @@
             this.labelSolicitudCreditoNombres.Location = new System.Drawing.Point(122, 134);
             this.labelSolicitudCreditoNombres.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSolicitudCreditoNombres.Name = "labelSolicitudCreditoNombres";
-            this.labelSolicitudCreditoNombres.Size = new System.Drawing.Size(98, 23);
+            this.labelSolicitudCreditoNombres.Size = new System.Drawing.Size(211, 23);
             this.labelSolicitudCreditoNombres.TabIndex = 76;
-            this.labelSolicitudCreditoNombres.Text = "Nombres";
+            this.labelSolicitudCreditoNombres.Text = "Nombres y Apellidos";
             // 
             // panelFooterTexto
             // 
@@ -906,220 +1120,6 @@
             this.panelRegresarMenu.Size = new System.Drawing.Size(41, 38);
             this.panelRegresarMenu.TabIndex = 5;
             this.panelRegresarMenu.Click += new System.EventHandler(this.RegresarMenuPrincipal);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(984, 162);
-            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 35);
-            this.label3.TabIndex = 111;
-            this.label3.Text = "*";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(539, 162);
-            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 35);
-            this.label4.TabIndex = 112;
-            this.label4.Text = "*";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(539, 291);
-            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 35);
-            this.label5.TabIndex = 113;
-            this.label5.Text = "*";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(984, 291);
-            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 35);
-            this.label6.TabIndex = 114;
-            this.label6.Text = "*";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(1224, 291);
-            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 35);
-            this.label7.TabIndex = 115;
-            this.label7.Text = "*";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(1445, 291);
-            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 35);
-            this.label8.TabIndex = 116;
-            this.label8.Text = "*";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(539, 550);
-            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(27, 35);
-            this.label9.TabIndex = 117;
-            this.label9.Text = "*";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(984, 550);
-            this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 35);
-            this.label10.TabIndex = 118;
-            this.label10.Text = "*";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(539, 687);
-            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 35);
-            this.label11.TabIndex = 119;
-            this.label11.Text = "*";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(984, 687);
-            this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(27, 35);
-            this.label12.TabIndex = 120;
-            this.label12.Text = "*";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // lineaSolicitudCreditoResultado
-            // 
-            this.lineaSolicitudCreditoResultado.AutoScroll = true;
-            this.lineaSolicitudCreditoResultado.BackColor = System.Drawing.Color.Black;
-            this.lineaSolicitudCreditoResultado.Location = new System.Drawing.Point(127, 644);
-            this.lineaSolicitudCreditoResultado.Margin = new System.Windows.Forms.Padding(4);
-            this.lineaSolicitudCreditoResultado.Name = "lineaSolicitudCreditoResultado";
-            this.lineaSolicitudCreditoResultado.Size = new System.Drawing.Size(1315, 3);
-            this.lineaSolicitudCreditoResultado.TabIndex = 122;
-            // 
-            // labelSolicitudCreditoResultado
-            // 
-            this.labelSolicitudCreditoResultado.AutoSize = true;
-            this.labelSolicitudCreditoResultado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSolicitudCreditoResultado.ForeColor = System.Drawing.Color.Black;
-            this.labelSolicitudCreditoResultado.Location = new System.Drawing.Point(122, 616);
-            this.labelSolicitudCreditoResultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSolicitudCreditoResultado.Name = "labelSolicitudCreditoResultado";
-            this.labelSolicitudCreditoResultado.Size = new System.Drawing.Size(106, 23);
-            this.labelSolicitudCreditoResultado.TabIndex = 121;
-            this.labelSolicitudCreditoResultado.Text = "Resultado";
-            // 
-            // labelSolicitudCreditoTotalIngresos
-            // 
-            this.labelSolicitudCreditoTotalIngresos.AutoSize = true;
-            this.labelSolicitudCreditoTotalIngresos.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSolicitudCreditoTotalIngresos.ForeColor = System.Drawing.Color.Black;
-            this.labelSolicitudCreditoTotalIngresos.Location = new System.Drawing.Point(1576, 263);
-            this.labelSolicitudCreditoTotalIngresos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSolicitudCreditoTotalIngresos.Name = "labelSolicitudCreditoTotalIngresos";
-            this.labelSolicitudCreditoTotalIngresos.Size = new System.Drawing.Size(157, 26);
-            this.labelSolicitudCreditoTotalIngresos.TabIndex = 123;
-            this.labelSolicitudCreditoTotalIngresos.Text = "Total Ingresos";
-            // 
-            // textBoxSolicitudCreditoTotalIngresos
-            // 
-            this.textBoxSolicitudCreditoTotalIngresos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxSolicitudCreditoTotalIngresos.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textBoxSolicitudCreditoTotalIngresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxSolicitudCreditoTotalIngresos.HintForeColor = System.Drawing.Color.Empty;
-            this.textBoxSolicitudCreditoTotalIngresos.HintText = "";
-            this.textBoxSolicitudCreditoTotalIngresos.isPassword = false;
-            this.textBoxSolicitudCreditoTotalIngresos.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBoxSolicitudCreditoTotalIngresos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBoxSolicitudCreditoTotalIngresos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBoxSolicitudCreditoTotalIngresos.LineThickness = 3;
-            this.textBoxSolicitudCreditoTotalIngresos.Location = new System.Drawing.Point(1556, 290);
-            this.textBoxSolicitudCreditoTotalIngresos.Margin = new System.Windows.Forms.Padding(5);
-            this.textBoxSolicitudCreditoTotalIngresos.Name = "textBoxSolicitudCreditoTotalIngresos";
-            this.textBoxSolicitudCreditoTotalIngresos.Size = new System.Drawing.Size(199, 36);
-            this.textBoxSolicitudCreditoTotalIngresos.TabIndex = 124;
-            this.textBoxSolicitudCreditoTotalIngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // textBoxSolicitudCreditoTotalEgresos
-            // 
-            this.textBoxSolicitudCreditoTotalEgresos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxSolicitudCreditoTotalEgresos.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textBoxSolicitudCreditoTotalEgresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxSolicitudCreditoTotalEgresos.HintForeColor = System.Drawing.Color.Empty;
-            this.textBoxSolicitudCreditoTotalEgresos.HintText = "";
-            this.textBoxSolicitudCreditoTotalEgresos.isPassword = false;
-            this.textBoxSolicitudCreditoTotalEgresos.LineFocusedColor = System.Drawing.Color.Red;
-            this.textBoxSolicitudCreditoTotalEgresos.LineIdleColor = System.Drawing.Color.Red;
-            this.textBoxSolicitudCreditoTotalEgresos.LineMouseHoverColor = System.Drawing.Color.Red;
-            this.textBoxSolicitudCreditoTotalEgresos.LineThickness = 3;
-            this.textBoxSolicitudCreditoTotalEgresos.Location = new System.Drawing.Point(1556, 456);
-            this.textBoxSolicitudCreditoTotalEgresos.Margin = new System.Windows.Forms.Padding(5);
-            this.textBoxSolicitudCreditoTotalEgresos.Name = "textBoxSolicitudCreditoTotalEgresos";
-            this.textBoxSolicitudCreditoTotalEgresos.Size = new System.Drawing.Size(199, 36);
-            this.textBoxSolicitudCreditoTotalEgresos.TabIndex = 126;
-            this.textBoxSolicitudCreditoTotalEgresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // labelSolicitudCreditoTotalEgresos
-            // 
-            this.labelSolicitudCreditoTotalEgresos.AutoSize = true;
-            this.labelSolicitudCreditoTotalEgresos.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSolicitudCreditoTotalEgresos.ForeColor = System.Drawing.Color.Black;
-            this.labelSolicitudCreditoTotalEgresos.Location = new System.Drawing.Point(1576, 429);
-            this.labelSolicitudCreditoTotalEgresos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSolicitudCreditoTotalEgresos.Name = "labelSolicitudCreditoTotalEgresos";
-            this.labelSolicitudCreditoTotalEgresos.Size = new System.Drawing.Size(149, 26);
-            this.labelSolicitudCreditoTotalEgresos.TabIndex = 125;
-            this.labelSolicitudCreditoTotalEgresos.Text = "Total Egresos";
             // 
             // FormOptSolicitudCredito
             // 
