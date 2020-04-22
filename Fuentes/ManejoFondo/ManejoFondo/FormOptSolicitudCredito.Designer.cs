@@ -97,6 +97,8 @@
             this.panelImagenSolicitudCredito = new System.Windows.Forms.Panel();
             this.labelTituloSolicitudCredito = new System.Windows.Forms.Label();
             this.panelRegresarMenu = new System.Windows.Forms.Panel();
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.labelSolicitudCreditoCadaCuantoOtrosIngresos = new System.Windows.Forms.Label();
             this.panelSolicitudCredito.SuspendLayout();
             this.panelFooterTexto.SuspendLayout();
             this.SuspendLayout();
@@ -104,6 +106,8 @@
             // panelSolicitudCredito
             // 
             this.panelSolicitudCredito.BackColor = System.Drawing.Color.White;
+            this.panelSolicitudCredito.Controls.Add(this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos);
+            this.panelSolicitudCredito.Controls.Add(this.labelSolicitudCreditoCadaCuantoOtrosIngresos);
             this.panelSolicitudCredito.Controls.Add(this.textBoxSolicitudCreditoTotalEgresos);
             this.panelSolicitudCredito.Controls.Add(this.labelSolicitudCreditoTotalEgresos);
             this.panelSolicitudCredito.Controls.Add(this.textBoxSolicitudCreditoTotalIngresos);
@@ -616,7 +620,7 @@
             this.textBoxSolicitudCreditoValorOtrosInngresos.Location = new System.Drawing.Point(1034, 417);
             this.textBoxSolicitudCreditoValorOtrosInngresos.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxSolicitudCreditoValorOtrosInngresos.Name = "textBoxSolicitudCreditoValorOtrosInngresos";
-            this.textBoxSolicitudCreditoValorOtrosInngresos.Size = new System.Drawing.Size(407, 36);
+            this.textBoxSolicitudCreditoValorOtrosInngresos.Size = new System.Drawing.Size(184, 36);
             this.textBoxSolicitudCreditoValorOtrosInngresos.TabIndex = 96;
             this.textBoxSolicitudCreditoValorOtrosInngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -1121,6 +1125,37 @@
             this.panelRegresarMenu.TabIndex = 5;
             this.panelRegresarMenu.Click += new System.EventHandler(this.RegresarMenuPrincipal);
             // 
+            // textBoxSolicitudCreditoCadaCuantoOtrosInngresos
+            // 
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.HintText = "";
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.isPassword = false;
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(88)))), ((int)(((byte)(160)))));
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.LineThickness = 3;
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.Location = new System.Drawing.Point(1292, 417);
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.Margin = new System.Windows.Forms.Padding(5);
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.Name = "textBoxSolicitudCreditoCadaCuantoOtrosInngresos";
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.Size = new System.Drawing.Size(156, 36);
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.TabIndex = 128;
+            this.textBoxSolicitudCreditoCadaCuantoOtrosInngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // labelSolicitudCreditoCadaCuantoOtrosIngresos
+            // 
+            this.labelSolicitudCreditoCadaCuantoOtrosIngresos.AutoSize = true;
+            this.labelSolicitudCreditoCadaCuantoOtrosIngresos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSolicitudCreditoCadaCuantoOtrosIngresos.ForeColor = System.Drawing.Color.Black;
+            this.labelSolicitudCreditoCadaCuantoOtrosIngresos.Location = new System.Drawing.Point(1294, 393);
+            this.labelSolicitudCreditoCadaCuantoOtrosIngresos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSolicitudCreditoCadaCuantoOtrosIngresos.Name = "labelSolicitudCreditoCadaCuantoOtrosIngresos";
+            this.labelSolicitudCreditoCadaCuantoOtrosIngresos.Size = new System.Drawing.Size(166, 23);
+            this.labelSolicitudCreditoCadaCuantoOtrosIngresos.TabIndex = 127;
+            this.labelSolicitudCreditoCadaCuantoOtrosIngresos.Text = "Cada Cuanto ?";
+            // 
             // FormOptSolicitudCredito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1211,5 +1246,7 @@
         private System.Windows.Forms.Label labelSolicitudCreditoTotalEgresos;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxSolicitudCreditoTotalIngresos;
         private System.Windows.Forms.Label labelSolicitudCreditoTotalIngresos;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxSolicitudCreditoCadaCuantoOtrosInngresos;
+        private System.Windows.Forms.Label labelSolicitudCreditoCadaCuantoOtrosIngresos;
     }
 }

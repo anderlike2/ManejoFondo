@@ -1,4 +1,5 @@
 ﻿using ManejoFondo.Common;
+using ManejoFondo.Daos;
 using ManejoFondo.Entities;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace ManejoFondo.Services
     /// </summary>
     public class FondoSolicitudCreditoService
     {
+        FondoSolicitudCreditoDao fondoSolicitudCreditoDao = new FondoSolicitudCreditoDao();
         FondoUsuarioService fondoUsuarioService = new FondoUsuarioService();
         FondoAhorroMensualService fondoAhorroMensualService = new FondoAhorroMensualService();
 
@@ -56,6 +58,17 @@ namespace ManejoFondo.Services
                 respuesta = respuesta + ahorro.N_Valor_Cuota;
             }
             return respuesta.ToString();
+        }
+
+        // <summary>
+        /// Metodo para insertar una solicitud de Credito
+        /// Autor: Anderson Benavides
+        /// 2020-04-23
+        /// </summary>
+        /// <param name="usuario"></param>
+        public bool InsertarSolicitudCredito(FondoSolicitudCreditoEntity solicitudCredito)
+        {
+            return fondoSolicitudCreditoDao.InsertarSolicitudCredito(solicitudCredito);
         }
     }
 }

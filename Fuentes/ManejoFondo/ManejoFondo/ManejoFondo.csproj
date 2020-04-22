@@ -158,7 +158,9 @@
     <Compile Include="Daos\FondoIngresosUsuarioDao.cs" />
     <Compile Include="Daos\FondoParametrosDao.cs" />
     <Compile Include="Daos\FondoProcUsuarioDao.cs" />
+    <Compile Include="Daos\FondoSolicitudCreditoDao.cs" />
     <Compile Include="Daos\FondoUsuarioDao.cs" />
+    <Compile Include="Entities\FondoSolicitudCreditoEntity.cs" />
     <Compile Include="FormModalAgregarNucleoFamiliar.cs">
       <SubType>Form</SubType>
     </Compile>
