@@ -53,6 +53,8 @@ namespace ManejoFondo.Common
         public const string MsjNoTieneAdministrador = "Usted no tiene un usuario registrado en el Sistema. Por favor crear un nuevo usuario.";
         public const string MsjUsuarioNoEncontrado = "El usuario no se encuentra registrado en el sistema.";
         public const string MsjUsuarioNoAhorro = "El usuario no tiene ningún ahorro registrado.";
+        public const string MsjIngresarNumeroIdentificacion= "Por favor ingrese el número de identificación del asociado.";
+        public const string MsjExitoSolicitudCredito = "La solicitud de crédito se ha almacenado correctamente.";
         #endregion
 
         #region MensajesTooltips
@@ -95,6 +97,7 @@ namespace ManejoFondo.Common
         public const string ParametroCorreoEmpresa = "CORREO_EMPRESA";
         public const string ParametroPasswordCorreoEmpresa = "PASSWORD_CORREO_EMPRESA";
         public const string ParametroOrigenCorreos = "ORIGEN_CORREOS";
+        public const string ParametroPorcentajeCapacidadPago = "PORCENTAJE_CAPACIDAD_PAGO";
         #endregion
     }
 }
