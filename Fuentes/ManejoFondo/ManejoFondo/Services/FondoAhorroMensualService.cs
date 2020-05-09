@@ -36,8 +36,8 @@ namespace ManejoFondo.Services
             }
 
             //Se valida los topes maximos y minimos de la cuota
-            double valorMinimoCuota = Convert.ToDouble(fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroAhorroCuotaMinima).V_Valor);
-            double valorMaximoCuota = Convert.ToDouble(fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroAhorroCuotaMaxima).V_Valor);
+            decimal valorMinimoCuota = Convert.ToDecimal(fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroAhorroCuotaMinima).V_Valor);
+            decimal valorMaximoCuota = Convert.ToDecimal(fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroAhorroCuotaMaxima).V_Valor);
             if(ahorroMensual.N_Valor_Cuota < valorMinimoCuota)
             {
                 throw new BusinessException(Constantes.MsjValidarMinimoCuota.Replace("<minimoCuota>", valorMinimoCuota.ToString()));

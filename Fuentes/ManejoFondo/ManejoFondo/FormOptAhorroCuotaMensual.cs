@@ -291,7 +291,7 @@ namespace ManejoFondo
                     ValoresModel ahorroMesSeleccionado = (ValoresModel)comboBoxCuotaMensualMes.SelectedItem;
 
                     ahorroUsuario.N_Id_Usuario = Convert.ToInt64(textBoxCuotaMensualNumeroIdentificacion.Text);
-                    ahorroUsuario.N_Valor_Cuota = Convert.ToDouble(textBoxCuotaMensualAhorroMensual.Text);
+                    ahorroUsuario.N_Valor_Cuota = Convert.ToDecimal(textBoxCuotaMensualAhorroMensual.Text);
                     ahorroUsuario.F_Fecha_Registro = DateTime.Now;
                     ahorroUsuario.N_Mes_Ahorro = Convert.ToInt32(ahorroMesSeleccionado.Codigo);
                     ahorroUsuario.N_Anio_Ahorro = DateTime.Now.Year;

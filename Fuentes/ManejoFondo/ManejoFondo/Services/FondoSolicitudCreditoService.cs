@@ -46,7 +46,7 @@ namespace ManejoFondo.Services
         /// <param name="usuario"></param>
         public string ConsultarAhorroAsociado(FondoAhorroMensualEntity ahorroMensual)
         {
-            double respuesta = 0;
+            decimal respuesta = 0;
             List<FondoAhorroMensualEntity> resultado = fondoAhorroMensualService.ConsultarAhorroMensualUsuarioIdentificacion(ahorroMensual);
             if (resultado == null || resultado.Count <= 0)
             {
@@ -60,6 +60,17 @@ namespace ManejoFondo.Services
             return respuesta.ToString();
         }
 
+        /// <summary>
+        /// Metodo para consultar creditos Activos del Asociado o No Asociado
+        /// Autor: Anderson Benavides
+        /// 2020-05-09
+        /// </summary>
+        /// <param name="solicitudCredito"></param>
+        public List<FondoSolicitudCreditoEntity> ConsultarCreditosActivos(FondoSolicitudCreditoEntity solicitudCredito)
+        {
+            return fondoSolicitudCreditoDao.ConsultarCreditosActivos(solicitudCredito);
+        }
+
         // <summary>
         /// Metodo para insertar una solicitud de Credito
         /// Autor: Anderson Benavides
@@ -68,6 +79,25 @@ namespace ManejoFondo.Services
         /// <param name="usuario"></param>
         public bool InsertarSolicitudCredito(FondoSolicitudCreditoEntity solicitudCredito)
         {
+            //Validacion para solicitud doble de ahorro para Asociados
+            if (solicitudCredito.V_Tipo_Persona.Equals(Constantes.DominioTipoPersonaAsociado))
+            {
+                if (2 * (solicitudCredito.N_Valor_Aportes) < solicitudCredito.N_Valor_Solicitado)
+                {
+                    throw new BusinessException(Constantes.MsjSolicitudDobleAhorro);
+                }
+            }            
+
+            //Validacion de credito unico Activo por Asociado
+            List<FondoSolicitudCreditoEntity> lstSolicitudesActivas = ConsultarCreditosActivos(solicitudCredito);
+            if(lstSolicitudesActivas != null && lstSolicitudesActivas.Count > 0)
+            {
+                throw new BusinessException(Constantes.MsjSolicitudActiva);
+            }
+
+            //Validacion de Capacidad de pago (Pendiente)
+            //************************************************
+
             return fondoSolicitudCreditoDao.InsertarSolicitudCredito(solicitudCredito);
         }
     }

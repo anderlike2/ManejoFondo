@@ -99,6 +99,11 @@ namespace ManejoFondo
                 comboBoxSolicitudCreditoTipoActividadOtrosIngresos.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTipoActividad, false); ;
                 comboBoxSolicitudCreditoTipoActividadOtrosIngresos.DisplayMember = "V_VALOR";
                 comboBoxSolicitudCreditoTipoActividadOtrosIngresos.ValueMember = "V_CODIGO";
+
+                //Para tipo de Persona
+                comboBoxSolicitudCreditoTipoPersona.DataSource = fondoDominioService.ConsultarDominiosPorPadre(Constantes.DominioTipoPersona, false); ;
+                comboBoxSolicitudCreditoTipoPersona.DisplayMember = "V_VALOR";
+                comboBoxSolicitudCreditoTipoPersona.ValueMember = "V_CODIGO";
             }
             catch (BusinessException ex)
             {
@@ -120,25 +125,42 @@ namespace ManejoFondo
         {
             try
             {
-                textBoxSolicitudCreditoNombres.Text = "";
-                textBoxSolicitudCreditoValorAportes.Text = "";
-                if (General.EsVacioNulo(textBoxSolicitudCreditoNumeroIdentificacion.Text))
+                //Para asociados se consulta la informacion en BD
+                FondoDominiosEntity tipoPersona = (FondoDominiosEntity)comboBoxSolicitudCreditoTipoPersona.SelectedItem;
+                if (tipoPersona.V_Codigo.Equals(Constantes.DominioTipoPersonaAsociado))
                 {
-                    General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjIngresarNumeroIdentificacion);
-                    return;
+                    textBoxSolicitudCreditoNombres.Enabled = false;
+                    textBoxSolicitudCreditoValorAportes.Enabled = false;
+                    textBoxSolicitudCreditoNombres.Text = "";
+                    textBoxSolicitudCreditoValorAportes.Text = "";
+                    if (General.EsVacioNulo(textBoxSolicitudCreditoNumeroIdentificacion.Text))
+                    {
+                        General.MostrarPanelError(Constantes.CodigoWarning, Constantes.MsjIngresarNumeroIdentificacion);
+                        return;
+                    }
+
+                    //Consulta nombre del asociado
+                    FondoUsuarioEntity fondoUsuarioConsulta = new FondoUsuarioEntity();
+                    FondoDominiosEntity tipoIdentificacion = (FondoDominiosEntity)comboBoxSolicitudCreditoTipoIdentificacion.SelectedItem;
+                    fondoUsuarioConsulta.V_Tipo_Identificacion = tipoIdentificacion.V_Codigo;
+                    fondoUsuarioConsulta.V_Numero_Identificacion = Convert.ToInt64(textBoxSolicitudCreditoNumeroIdentificacion.Text);
+                    textBoxSolicitudCreditoNombres.Text = fondoSolicitudCreditoService.ConsultarNombreAsociado(fondoUsuarioConsulta);
+
+                    //Consulta ahorro del asociado
+                    FondoAhorroMensualEntity fondoAhorroMensualEntity = new FondoAhorroMensualEntity();
+                    fondoAhorroMensualEntity.N_Id_Usuario = Convert.ToInt64(textBoxSolicitudCreditoNumeroIdentificacion.Text);
+                    textBoxSolicitudCreditoValorAportes.Text = fondoSolicitudCreditoService.ConsultarAhorroAsociado(fondoAhorroMensualEntity);
+                }
+                else
+                {
+                    //Para no asociados la informacion se debe diligenciar
+                    textBoxSolicitudCreditoNombres.Enabled = true;
+                    textBoxSolicitudCreditoValorAportes.Enabled = true;
+                    textBoxSolicitudCreditoNombres.Text = "";
+                    textBoxSolicitudCreditoValorAportes.Text = "0";
                 }
 
-                //Consulta nombre del asociado
-                FondoUsuarioEntity fondoUsuarioConsulta = new FondoUsuarioEntity();
-                FondoDominiosEntity tipoIdentificacion = (FondoDominiosEntity)comboBoxSolicitudCreditoTipoIdentificacion.SelectedItem;                
-                fondoUsuarioConsulta.V_Tipo_Identificacion = tipoIdentificacion.V_Codigo;
-                fondoUsuarioConsulta.V_Numero_Identificacion = Convert.ToInt64(textBoxSolicitudCreditoNumeroIdentificacion.Text);
-                textBoxSolicitudCreditoNombres.Text = fondoSolicitudCreditoService.ConsultarNombreAsociado(fondoUsuarioConsulta);
-
-                //Consulta ahorro del asociado
-                FondoAhorroMensualEntity fondoAhorroMensualEntity = new FondoAhorroMensualEntity();
-                fondoAhorroMensualEntity.N_Id_Usuario = Convert.ToInt64(textBoxSolicitudCreditoNumeroIdentificacion.Text);
-                textBoxSolicitudCreditoValorAportes.Text = fondoSolicitudCreditoService.ConsultarAhorroAsociado(fondoAhorroMensualEntity);
+               
             }
             catch (BusinessException ex)
             {
@@ -189,6 +211,7 @@ namespace ManejoFondo
             textBoxSolicitudCreditoCapacidadPago.Text = "";
             textBoxSolicitudCreditoTotalIngresos.Text = "";
             textBoxSolicitudCreditoTotalEgresos.Text = "";
+            comboBoxSolicitudCreditoTipoPersona.SelectedIndex = 0;
         }
 
         /// <summary>
@@ -211,34 +234,39 @@ namespace ManejoFondo
                 FondoDominiosEntity solicitudCreditoTipoIdentificacion = (FondoDominiosEntity)comboBoxSolicitudCreditoTipoIdentificacion.SelectedItem;
                 FondoDominiosEntity solicitudCreditoTipoActividad = (FondoDominiosEntity)comboBoxSolicitudCreditoTipoActividad.SelectedItem;
                 FondoDominiosEntity solicitudCreditoTipoActividadOtro = (FondoDominiosEntity)comboBoxSolicitudCreditoTipoActividadOtrosIngresos.SelectedItem;
+                FondoDominiosEntity solicitudCreditoTipoPersona = (FondoDominiosEntity)comboBoxSolicitudCreditoTipoPersona.SelectedItem;
 
                 fondoSolicitudCreditoEntity.V_Tipo_Identificacion = solicitudCreditoTipoIdentificacion.V_Codigo;
                 fondoSolicitudCreditoEntity.N_Id_Usuario = Convert.ToInt64(textBoxSolicitudCreditoNumeroIdentificacion.Text);
                 fondoSolicitudCreditoEntity.D_Fecha_Solicitud = DateTime.Now;
                 fondoSolicitudCreditoEntity.V_Estado = "A"; //Estado Activo
-
-                fondoSolicitudCreditoEntity.N_Valor_Solicitado = Convert.ToInt64(textBoxSolicitudCreditoValorSolicitado.Text);
+                
+                fondoSolicitudCreditoEntity.N_Valor_Aportes = Convert.ToDecimal(textBoxSolicitudCreditoValorAportes.Text);
+                fondoSolicitudCreditoEntity.N_Valor_Solicitado = Convert.ToDecimal(textBoxSolicitudCreditoValorSolicitado.Text);
 
                 fondoSolicitudCreditoEntity.V_Ing_Tipo_Actividad = solicitudCreditoTipoActividad.V_Codigo;
                 fondoSolicitudCreditoEntity.V_Ing_Cual = textBoxSolicitudCreditoCual.Text;
-                fondoSolicitudCreditoEntity.N_Ing_Valor = Convert.ToInt64(textBoxSolicitudCreditoValor.Text);
+                fondoSolicitudCreditoEntity.N_Ing_Valor = Convert.ToDecimal(textBoxSolicitudCreditoValor.Text);
                 fondoSolicitudCreditoEntity.N_Ing_Cada_Cuanto = Convert.ToInt64(textBoxSolicitudCreditoCadaCuanto.Text);
 
                 //Como hacer para inactivar esta parte y no almacenarla
                 fondoSolicitudCreditoEntity.V_Ot_Ing_Tipo_Actividad = solicitudCreditoTipoActividadOtro.V_Codigo;
                 fondoSolicitudCreditoEntity.V_Ot_Ing_Cual = textBoxSolicitudCreditoCualOtrosIngresos.Text;
-                fondoSolicitudCreditoEntity.N_Ot_Ing_Valor = Convert.ToInt64(textBoxSolicitudCreditoValorOtrosIngresos.Text);
+                fondoSolicitudCreditoEntity.N_Ot_Ing_Valor = Convert.ToDecimal(textBoxSolicitudCreditoValorOtrosIngresos.Text);
                 fondoSolicitudCreditoEntity.N_Ot_Ing_Cada_Cuanto = Convert.ToInt64(textBoxSolicitudCreditoCadaCuantoOtrosIngresos.Text);
 
-                fondoSolicitudCreditoEntity.N_Egr_Gastos_Fam = Convert.ToInt64(textBoxSolicitudCreditoGastosFamiliares.Text);
-                fondoSolicitudCreditoEntity.N_Egr_Gastos_Prod = Convert.ToInt64(textBoxSolicitudCreditoGastosProduccion.Text);
+                fondoSolicitudCreditoEntity.N_Egr_Gastos_Fam = Convert.ToDecimal(textBoxSolicitudCreditoGastosFamiliares.Text);
+                fondoSolicitudCreditoEntity.N_Egr_Gastos_Prod = Convert.ToDecimal(textBoxSolicitudCreditoGastosProduccion.Text);
                 fondoSolicitudCreditoEntity.N_Egr_Cuotas_Financ = Convert.ToInt64(textBoxSolicitudCreditoCuotasEntidadesFinancieras.Text);
                 fondoSolicitudCreditoEntity.N_Egr_Cuotas_Partic = Convert.ToInt64(textBoxSolicitudCreditoCuotasParticulares.Text);
 
-                fondoSolicitudCreditoEntity.N_Total_Disponible = Convert.ToInt64(textBoxSolicitudCreditoTotalDisponible.Text);
-                fondoSolicitudCreditoEntity.N_Capacidad_Pago = Convert.ToInt64(textBoxSolicitudCreditoCapacidadPago.Text);
-                fondoSolicitudCreditoEntity.N_Total_Ingresos = Convert.ToInt64(textBoxSolicitudCreditoTotalIngresos.Text);
-                fondoSolicitudCreditoEntity.N_Total_Egresos = Convert.ToInt64(textBoxSolicitudCreditoTotalEgresos.Text);
+                fondoSolicitudCreditoEntity.N_Total_Disponible = Convert.ToDecimal(textBoxSolicitudCreditoTotalDisponible.Text);
+                fondoSolicitudCreditoEntity.N_Capacidad_Pago = Convert.ToDecimal(textBoxSolicitudCreditoCapacidadPago.Text);
+                fondoSolicitudCreditoEntity.N_Total_Ingresos = Convert.ToDecimal(textBoxSolicitudCreditoTotalIngresos.Text);
+                fondoSolicitudCreditoEntity.N_Total_Egresos = Convert.ToDecimal(textBoxSolicitudCreditoTotalEgresos.Text);
+
+                fondoSolicitudCreditoEntity.V_Tipo_Persona = solicitudCreditoTipoPersona.V_Codigo;
+                fondoSolicitudCreditoEntity.V_Nombre_Completo = textBoxSolicitudCreditoNombres.Text;
 
                 fondoSolicitudCreditoService.InsertarSolicitudCredito(fondoSolicitudCreditoEntity);
                 General.MostrarPanelError(Constantes.CodigoExito, Constantes.MsjExitoSolicitudCredito);
@@ -362,6 +390,29 @@ namespace ManejoFondo
             //Para Capacidad de Pago     
             porcentajeCapacidadPago = Convert.ToDouble(fondoParametrosService.ConsultarParametroPorNombre(Constantes.ParametroPorcentajeCapacidadPago).V_Valor) / 100;
             textBoxSolicitudCreditoCapacidadPago.Text = (Convert.ToDouble(textBoxSolicitudCreditoTotalDisponible.Text) * porcentajeCapacidadPago).ToString();
+        }
+
+        /// <summary>
+        /// Funcion para limpiar los campos del asociado
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        private void LimpiarInformacionAsociado(object sender, EventArgs e)
+        {
+            FondoDominiosEntity tipoPersona = (FondoDominiosEntity)comboBoxSolicitudCreditoTipoPersona.SelectedItem;
+            if (tipoPersona.V_Codigo.Equals(Constantes.DominioTipoPersonaAsociado))
+            {
+                textBoxSolicitudCreditoNombres.Enabled = false;
+                textBoxSolicitudCreditoValorAportes.Enabled = false;
+            }
+            else
+            {
+                textBoxSolicitudCreditoNombres.Enabled = true;
+                textBoxSolicitudCreditoValorAportes.Enabled = true;
+            }
+            textBoxSolicitudCreditoNumeroIdentificacion.Text = "";
+            textBoxSolicitudCreditoNombres.Text = "";
+            textBoxSolicitudCreditoValorAportes.Text = "";
         }
     }
 }

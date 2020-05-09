@@ -55,6 +55,8 @@ namespace ManejoFondo.Common
         public const string MsjUsuarioNoAhorro = "El usuario no tiene ningún ahorro registrado.";
         public const string MsjIngresarNumeroIdentificacion= "Por favor ingrese el número de identificación del asociado.";
         public const string MsjExitoSolicitudCredito = "La solicitud de crédito se ha almacenado correctamente.";
+        public const string MsjSolicitudDobleAhorro = "La solicitud es más del doble de su ahorro, no es posible realizar la solicitud.";
+        public const string MsjSolicitudActiva = "El Asociado tiene un crédito pendiente por pagar, no es posible realizar la solicitud.";
         #endregion
 
         #region MensajesTooltips
@@ -85,6 +87,9 @@ namespace ManejoFondo.Common
         public const string DominioTipoActividad = "TIPO_ACTIVIDAD";
         public const string DominioParentesco = "PARENTESCO";
         public const string DominioConyuge = "PARENT_CONYUGE";
+        public const string DominioTipoPersona = "TIPO_PERSONA";
+        public const string DominioTipoPersonaAsociado = "TIPO_PERSONA_ASOCIADO";
+        public const string DominioTipoPersonaNoAsociado = "TIPO_PERSONA_NO_ASOCIADO";
         #endregion
 
         #region Parametros
