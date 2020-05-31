@@ -170,5 +170,18 @@ namespace ManejoFondo
             formOptSolicitudCredito.ShowDialog();
             Close();
         }
+
+        /// <summary>
+        /// Abrir Formulario Amortizacion de Credito
+        /// Autor: Anderson Benavides
+        /// 2020-05-31
+        /// </summary>
+        private void AbrirFormularioAmortizacionCredito(object sender, EventArgs e)
+        {
+            FormOptAmortizacionCredito formOptAmortizacionCredito = new FormOptAmortizacionCredito(usuarioSesion);
+            Hide();
+            formOptAmortizacionCredito.ShowDialog();
+            Close();
+        }
     }
 }

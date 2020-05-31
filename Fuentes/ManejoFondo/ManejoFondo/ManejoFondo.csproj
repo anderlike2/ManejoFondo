@@ -191,6 +191,12 @@
     <Compile Include="FormOptAhorroCuotaMensual.Designer.cs">
       <DependentUpon>FormOptAhorroCuotaMensual.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOptAmortizacionCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOptAmortizacionCredito.Designer.cs">
+      <DependentUpon>FormOptAmortizacionCredito.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOptCambiarClave.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,9 @@
     <EmbeddedResource Include="FormOptAhorroCuotaMensual.resx">
       <DependentUpon>FormOptAhorroCuotaMensual.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOptAmortizacionCredito.resx">
+      <DependentUpon>FormOptAmortizacionCredito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormOptCambiarClave.resx">
       <DependentUpon>FormOptCambiarClave.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +380,7 @@
     <Content Include="Resources\Images\ahorro.png" />
     <Content Include="Resources\Images\ahorroCuotaMes.png" />
     <Content Include="Resources\Images\amortizacion.png" />
+    <None Include="Resources\Images\amortizacionCredito.png" />
     <Content Include="Resources\Images\asociado.png" />
     <Content Include="Resources\Images\Avison.png" />
     <Content Include="Resources\Images\ayudasGobierno.png" />

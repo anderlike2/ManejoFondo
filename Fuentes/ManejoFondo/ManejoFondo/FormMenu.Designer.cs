@@ -113,6 +113,7 @@
             this.opcionesPanelAmortizacionCredito.Name = "opcionesPanelAmortizacionCredito";
             this.opcionesPanelAmortizacionCredito.Size = new System.Drawing.Size(295, 169);
             this.opcionesPanelAmortizacionCredito.TabIndex = 12;
+            this.opcionesPanelAmortizacionCredito.Click += new System.EventHandler(this.AbrirFormularioAmortizacionCredito);
             // 
             // opcionesPanelCerrarSesion
             // 

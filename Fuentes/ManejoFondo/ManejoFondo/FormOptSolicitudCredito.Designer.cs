@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panelSolicitudCredito = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBoxSolicitudCreditoTipoPersona = new System.Windows.Forms.ComboBox();
+            this.labelSolicitudCreditoTipoPersona = new System.Windows.Forms.Label();
             this.textBoxSolicitudCreditoCadaCuantoOtrosIngresos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.labelSolicitudCreditoCadaCuantoOtrosIngresos = new System.Windows.Forms.Label();
             this.textBoxSolicitudCreditoTotalEgresos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -96,12 +99,9 @@
             this.textBoxSolicitudCreditoNumeroIdentificacion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.labelSolicitudCreditoNumeroIdentificacion = new System.Windows.Forms.Label();
             this.labelSolicitudCreditoTipoIdentificacion = new System.Windows.Forms.Label();
+            this.labelTituloAmortizacionCredito = new System.Windows.Forms.Label();
             this.panelImagenSolicitudCredito = new System.Windows.Forms.Panel();
-            this.labelTituloSolicitudCredito = new System.Windows.Forms.Label();
             this.panelRegresarMenu = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBoxSolicitudCreditoTipoPersona = new System.Windows.Forms.ComboBox();
-            this.labelSolicitudCreditoTipoPersona = new System.Windows.Forms.Label();
             this.panelSolicitudCredito.SuspendLayout();
             this.panelFooterTexto.SuspendLayout();
             this.SuspendLayout();
@@ -179,13 +179,49 @@
             this.panelSolicitudCredito.Controls.Add(this.labelSolicitudCreditoNumeroIdentificacion);
             this.panelSolicitudCredito.Controls.Add(this.labelSolicitudCreditoTipoIdentificacion);
             this.panelSolicitudCredito.Controls.Add(this.panelImagenSolicitudCredito);
-            this.panelSolicitudCredito.Controls.Add(this.labelTituloSolicitudCredito);
+            this.panelSolicitudCredito.Controls.Add(this.labelTituloAmortizacionCredito);
             this.panelSolicitudCredito.Controls.Add(this.panelRegresarMenu);
             this.panelSolicitudCredito.Location = new System.Drawing.Point(20, 70);
             this.panelSolicitudCredito.Margin = new System.Windows.Forms.Padding(4);
             this.panelSolicitudCredito.Name = "panelSolicitudCredito";
             this.panelSolicitudCredito.Size = new System.Drawing.Size(1770, 796);
             this.panelSolicitudCredito.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(539, 79);
+            this.label14.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(27, 35);
+            this.label14.TabIndex = 131;
+            this.label14.Text = "*";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // comboBoxSolicitudCreditoTipoPersona
+            // 
+            this.comboBoxSolicitudCreditoTipoPersona.BackColor = System.Drawing.Color.White;
+            this.comboBoxSolicitudCreditoTipoPersona.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxSolicitudCreditoTipoPersona.Location = new System.Drawing.Point(127, 95);
+            this.comboBoxSolicitudCreditoTipoPersona.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxSolicitudCreditoTipoPersona.Name = "comboBoxSolicitudCreditoTipoPersona";
+            this.comboBoxSolicitudCreditoTipoPersona.Size = new System.Drawing.Size(407, 24);
+            this.comboBoxSolicitudCreditoTipoPersona.TabIndex = 130;
+            this.comboBoxSolicitudCreditoTipoPersona.SelectedIndexChanged += new System.EventHandler(this.LimpiarInformacionAsociado);
+            // 
+            // labelSolicitudCreditoTipoPersona
+            // 
+            this.labelSolicitudCreditoTipoPersona.AutoSize = true;
+            this.labelSolicitudCreditoTipoPersona.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSolicitudCreditoTipoPersona.ForeColor = System.Drawing.Color.Black;
+            this.labelSolicitudCreditoTipoPersona.Location = new System.Drawing.Point(123, 55);
+            this.labelSolicitudCreditoTipoPersona.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSolicitudCreditoTipoPersona.Name = "labelSolicitudCreditoTipoPersona";
+            this.labelSolicitudCreditoTipoPersona.Size = new System.Drawing.Size(132, 23);
+            this.labelSolicitudCreditoTipoPersona.TabIndex = 129;
+            this.labelSolicitudCreditoTipoPersona.Text = "Tipo Persona";
             // 
             // textBoxSolicitudCreditoCadaCuantoOtrosIngresos
             // 
@@ -1145,6 +1181,18 @@
             this.labelSolicitudCreditoTipoIdentificacion.TabIndex = 32;
             this.labelSolicitudCreditoTipoIdentificacion.Text = "Tipo Identificación";
             // 
+            // labelTituloAmortizacionCredito
+            // 
+            this.labelTituloAmortizacionCredito.AutoSize = true;
+            this.labelTituloAmortizacionCredito.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTituloAmortizacionCredito.ForeColor = System.Drawing.Color.Black;
+            this.labelTituloAmortizacionCredito.Location = new System.Drawing.Point(360, 18);
+            this.labelTituloAmortizacionCredito.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTituloAmortizacionCredito.Name = "labelTituloAmortizacionCredito";
+            this.labelTituloAmortizacionCredito.Size = new System.Drawing.Size(873, 27);
+            this.labelTituloAmortizacionCredito.TabIndex = 6;
+            this.labelTituloAmortizacionCredito.Text = "POR FAVOR INGRESAR LA INFORMACIÓN PARA LA SOLICITUD DE CREDITO";
+            // 
             // panelImagenSolicitudCredito
             // 
             this.panelImagenSolicitudCredito.BackColor = System.Drawing.Color.White;
@@ -1155,18 +1203,6 @@
             this.panelImagenSolicitudCredito.Name = "panelImagenSolicitudCredito";
             this.panelImagenSolicitudCredito.Size = new System.Drawing.Size(146, 139);
             this.panelImagenSolicitudCredito.TabIndex = 7;
-            // 
-            // labelTituloSolicitudCredito
-            // 
-            this.labelTituloSolicitudCredito.AutoSize = true;
-            this.labelTituloSolicitudCredito.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTituloSolicitudCredito.ForeColor = System.Drawing.Color.Black;
-            this.labelTituloSolicitudCredito.Location = new System.Drawing.Point(360, 18);
-            this.labelTituloSolicitudCredito.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTituloSolicitudCredito.Name = "labelTituloSolicitudCredito";
-            this.labelTituloSolicitudCredito.Size = new System.Drawing.Size(873, 27);
-            this.labelTituloSolicitudCredito.TabIndex = 6;
-            this.labelTituloSolicitudCredito.Text = "POR FAVOR INGRESAR LA INFORMACIÓN PARA LA SOLICITUD DE CREDITO";
             // 
             // panelRegresarMenu
             // 
@@ -1182,42 +1218,6 @@
             this.panelRegresarMenu.Size = new System.Drawing.Size(41, 38);
             this.panelRegresarMenu.TabIndex = 5;
             this.panelRegresarMenu.Click += new System.EventHandler(this.RegresarMenuPrincipal);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(539, 79);
-            this.label14.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(27, 35);
-            this.label14.TabIndex = 131;
-            this.label14.Text = "*";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // comboBoxSolicitudCreditoTipoPersona
-            // 
-            this.comboBoxSolicitudCreditoTipoPersona.BackColor = System.Drawing.Color.White;
-            this.comboBoxSolicitudCreditoTipoPersona.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxSolicitudCreditoTipoPersona.Location = new System.Drawing.Point(127, 95);
-            this.comboBoxSolicitudCreditoTipoPersona.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBoxSolicitudCreditoTipoPersona.Name = "comboBoxSolicitudCreditoTipoPersona";
-            this.comboBoxSolicitudCreditoTipoPersona.Size = new System.Drawing.Size(407, 24);
-            this.comboBoxSolicitudCreditoTipoPersona.TabIndex = 130;
-            this.comboBoxSolicitudCreditoTipoPersona.SelectedIndexChanged += new System.EventHandler(this.LimpiarInformacionAsociado);
-            // 
-            // labelSolicitudCreditoTipoPersona
-            // 
-            this.labelSolicitudCreditoTipoPersona.AutoSize = true;
-            this.labelSolicitudCreditoTipoPersona.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSolicitudCreditoTipoPersona.ForeColor = System.Drawing.Color.Black;
-            this.labelSolicitudCreditoTipoPersona.Location = new System.Drawing.Point(123, 55);
-            this.labelSolicitudCreditoTipoPersona.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSolicitudCreditoTipoPersona.Name = "labelSolicitudCreditoTipoPersona";
-            this.labelSolicitudCreditoTipoPersona.Size = new System.Drawing.Size(132, 23);
-            this.labelSolicitudCreditoTipoPersona.TabIndex = 129;
-            this.labelSolicitudCreditoTipoPersona.Text = "Tipo Persona";
             // 
             // FormOptSolicitudCredito
             // 
@@ -1256,7 +1256,7 @@
         private System.Windows.Forms.Label labelSolicitudCreditoNumeroIdentificacion;
         private System.Windows.Forms.Label labelSolicitudCreditoTipoIdentificacion;
         private System.Windows.Forms.Panel panelImagenSolicitudCredito;
-        private System.Windows.Forms.Label labelTituloSolicitudCredito;
+        private System.Windows.Forms.Label labelTituloAmortizacionCredito;
         private System.Windows.Forms.Panel panelRegresarMenu;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxSolicitudCreditoNombres;
         private System.Windows.Forms.Label labelSolicitudCreditoNombres;

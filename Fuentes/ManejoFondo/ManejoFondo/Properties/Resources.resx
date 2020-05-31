@@ -145,9 +145,6 @@
   <data name="regresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\regresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="datosPersonales" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\datosPersonales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="OpcionAmortizacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\OpcionAmortizacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -165,6 +162,9 @@
   </data>
   <data name="OpcionSolicitud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\OpcionSolicitud.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Avison" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Avison.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="editarInformacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\editarInformacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,6 +190,9 @@
   <data name="Cargando" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Cargando.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="solicitudCredito" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\solicitudCredito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cambiarClaveUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\cambiarClaveUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,10 +202,10 @@
   <data name="OpcionConsultarUsuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\OpcionConsultarUsuarios.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Avison" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Avison.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="datosPersonales" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\datosPersonales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="solicitudCredito" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\solicitudCredito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="amortizacionCredito" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\amortizacionCredito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
