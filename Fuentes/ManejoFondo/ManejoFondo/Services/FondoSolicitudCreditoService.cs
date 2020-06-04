@@ -60,6 +60,29 @@ namespace ManejoFondo.Services
             return respuesta.ToString();
         }
 
+        // <summary>
+        /// Metodo para consultar el nombre del asociado
+        /// Autor: Anderson Benavides
+        /// 2019-05-23
+        /// </summary>
+        /// <param name="usuario"></param>
+        public string ConsultarMontoCreditoAsociado(FondoSolicitudCreditoEntity solicitudCredito)
+        {
+            decimal valorCredito = 0;
+            List<FondoSolicitudCreditoEntity> lstCreditos = ConsultarCreditosActivos(solicitudCredito);
+            if(lstCreditos == null || lstCreditos.Count <= 0)
+            {
+                throw new BusinessException(Constantes.MsjUsuarioNoCreditoActivo);
+            }
+
+            foreach(FondoSolicitudCreditoEntity credito in lstCreditos)
+            {
+                valorCredito = valorCredito + credito.N_Valor_Solicitado;
+            }
+
+            return valorCredito.ToString();
+        }
+
         /// <summary>
         /// Metodo para consultar creditos Activos del Asociado o No Asociado
         /// Autor: Anderson Benavides

@@ -263,6 +263,7 @@
     <Compile Include="Inicio.cs" />
     <Compile Include="Loggers\LogErrorEnumeration.cs" />
     <Compile Include="Modelos\EmailDto.cs" />
+    <Compile Include="Modelos\SimulacionCreditoModel.cs" />
     <Compile Include="Modelos\UsuarioConsultaModel.cs" />
     <Compile Include="Modelos\UsuarioModel.cs" />
     <Compile Include="Modelos\ValoresModel.cs" />
@@ -345,6 +346,7 @@
     <None Include="BaseDatos\manejoFondo.sqlite" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ManejoFondo.Entities.FondoParametrosEntity.datasource" />
+    <None Include="Properties\DataSources\ManejoFondo.Modelos.SimulacionCreditoModel.datasource" />
     <None Include="Properties\DataSources\ManejoFondo.Modelos.UsuarioConsultaModel.datasource" />
     <None Include="Properties\DataSources\ManejoFondo.Modelos.UsuarioModel.datasource" />
     <None Include="Properties\Settings.settings">
